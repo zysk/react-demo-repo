@@ -23,7 +23,12 @@ const IndexPage = () => (
         <Navbar />
       </div>
       <div class="intrinsic-box">
-        <a-scene embedded timeout="10" className="a-frame-1">
+        <a-scene
+          embedded
+          timeout="10"
+          className="a-frame-1"
+          vr-mode-ui="enabled: false"
+        >
           <a-assets>
             <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg" />
             <img
@@ -41,12 +46,12 @@ const IndexPage = () => (
             position="0 2 -5"
             rotation="0 45 45"
             scale="2 2 2"
-            animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
           ></a-box>
 
           <a-sky
             src="#skyTexture"
-            animation="property: position; to: 1 8 -10; dur: 2000; easing: linear; loop: true"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
           ></a-sky>
 
           <a-light type="ambient" color="#445451"></a-light>

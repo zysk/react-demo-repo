@@ -34,37 +34,37 @@ module.exports = {
         src: "https://aframe.io/releases/1.2.0/aframe.min.js",
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-load-script",
-    //   options: {
-    //     // When do you want to disable it ?
-    //     src:
-    //       "https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js",
-    //   },
-    // },
-    // {
-    //   resolve: "gatsby-plugin-load-script",
-    //   options: {
-    //     // When do you want to disable it ?
-    //     src:
-    //       "https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js",
-    //   },
-    // },
-    // {
-    //   resolve: "gatsby-plugin-load-script",
-    //   options: {
-    //     // When do you want to disable it ?
-    //     src:
-    //       "https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js",
-    //   },
-    // },
-    // {
-    //   resolve: "gatsby-plugin-load-script",
-    //   options: {
-    //     // When do you want to disable it ?
-    //     src: "./src/js/orb.js",
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        // When do you want to disable it ?
+        src:
+          "https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        // When do you want to disable it ?
+        src:
+          "https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        // When do you want to disable it ?
+        src:
+          "https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        // When do you want to disable it ?
+        src: "./src/js/orb.js",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

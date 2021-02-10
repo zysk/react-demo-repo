@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet"
 const IndexPage = () => (
   <>
     <Header />
-    <Helmet>
+    {/* <Helmet>
       <title>INVI-VERSE</title>
       <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
       <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
@@ -16,7 +16,7 @@ const IndexPage = () => (
       <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
 
       <script src="../js/orb.js"></script>
-    </Helmet>
+    </Helmet> */}
     <div className="home">
       <SEO title="Home" />
       <div className=" content">
