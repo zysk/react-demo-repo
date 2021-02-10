@@ -1,0 +1,18 @@
+.home,
+.about {
+  background-color: #feeee5;
+  height: 100vh;
+}
+a-scene {
+  width: 100% !important;
+  height: 650px !important;
+}
+.intrinsic-box {
+  /* width: 100vh; */
+  /* margin-left: 30%;
+  margin-top: 10%; */
+  /* margin: 150px 500px; */
+}
+.navbar {
+  /* background-color: #0c0a3e; */
+}
