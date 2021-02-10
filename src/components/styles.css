@@ -4,14 +4,16 @@
   height: 100vh;
 }
 a-scene {
-  width: 100% !important;
+  width: 900px !important;
   height: 650px !important;
 }
+
 .intrinsic-box {
   /* width: 100vh; */
   /* margin-left: 30%;
   margin-top: 10%; */
   /* margin: 150px 500px; */
+  margin-left: 300px;
 }
 .navbar {
   /* background-color: #0c0a3e; */

@@ -27,13 +27,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-load-script",
-    //   options: {
-    //     // When do you want to disable it ?
-    //     src: "https://aframe.io/releases/1.2.0/aframe.min.js",
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        // When do you want to disable it ?
+        src: "https://aframe.io/releases/1.2.0/aframe.min.js",
+      },
+    },
     // {
     //   resolve: "gatsby-plugin-load-script",
     //   options: {
