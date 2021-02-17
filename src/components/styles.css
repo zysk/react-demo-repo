@@ -1,0 +1,97 @@
+/* Temp code for Navbar mobile  */
+/* @media (max-width: 1440px) {
+  .navbar .navbar-collapse {
+    background: #000;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center !important;
+    z-index: 9;
+  }
+  .navbar .navbar-toggler,
+  .navbar-brand {
+    z-index: 999;
+  }
+  .navbar-nav {
+    margin-left: initial !important;
+  }
+  .navbar .navbar-collapse.collapse {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .navbar .navbar-collapse.collapsing[style*="height"] {
+    opacity: 1;
+    height: 100% !important;
+  }
+  .navbar .navbar-collapse.collapsing {
+    opacity: 0;
+    height: 100%;
+  }
+  .navbar .navbar-collapse.collapse.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .navbar .navbar-collapse .navbar-nav {
+    margin-right: initial !important;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .logo {
+    height: 2.5rem;
+  }
+} */
+.navbar-collapse {
+  height: 100vh !important;
+  overflow-y: hidden !important;
+}
+.navbar-inverse {
+  background: none !important;
+}
+.navbar-toggler-icon {
+  color: black;
+}
+/* Home Page */
+.home,
+.about {
+  background-color: #feeee5;
+  height: 100vh;
+}
+/* a-scene {
+  width: 900px !important;
+  height: 650px !important;
+} */
+
+/* Services Page */
+.animation-img {
+  z-index: 100 !important;
+}
+.services-background {
+  height: 50vh;
+}
+.hr-line {
+  width: 50px !important;
+  margin-left: 10px;
+}
+.testimonials {
+  /* height: 30vh !important; */
+  background-color: #feeee5;
+}
+.comments {
+  /* height: 40vh !important; */
+  background-color: #feeee5;
+  color: gray;
+}
+.arrows {
+  color: gray !important;
+}
+.contact {
+  background-color: #ddcfc7;
+}
