@@ -180,7 +180,7 @@ export const query = graphql`
     icon: file(relativePath: { eq: "quotes-icon.png" }) {
       childImageSharp {
         fixed(width: 30, height: 30) {
-          ...GatsbyImageSharpFixed_tracedSVG
+          ...GatsbyImageSharpFixed
         }
       }
     }
