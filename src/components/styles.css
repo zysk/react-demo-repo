@@ -72,6 +72,17 @@
 /* Services Page */
 .animation-img {
   z-index: 100 !important;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+}
+.virtual-img {
+  z-index: 100 !important;
+  border-bottom-right-radius: 15%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
 }
 .services-background {
   height: 50vh;
@@ -79,6 +90,7 @@
 .hr-line {
   width: 50px !important;
   margin-left: 10px;
+  color: rgb(214, 59, 32);
 }
 .testimonials {
   /* height: 30vh !important; */

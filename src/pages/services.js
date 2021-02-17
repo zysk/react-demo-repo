@@ -9,14 +9,14 @@ import Contact from "../components/Contact"
 const services = ({ data }) => {
   return (
     <section className="Services position-relative">
-      {/* <Navbar className="services-navbar position-absolute" /> */}
+      <Navbar className="services-navbar position-absolute" />
       <BackgroundImage
         className="services-background"
         fluid={data.image.childImageSharp.fluid}
       >
-        <Navbar className="services-navbar position-absolute" />
+        {/* <Navbar className="services-navbar position-absolute" /> */}
         <div className="d-flex flex-column align-items-center">
-          <h2 className="title text-white  text-center display-4 pt-3 ">
+          <h2 className="title text-white  text-center display-4 m-5 ">
             What We Do?
           </h2>
           <h4 className="text-white text-center">
@@ -26,15 +26,15 @@ const services = ({ data }) => {
         </div>
       </BackgroundImage>
       <div className="container my-5">
-        <div className="row">
-          <div className="col-6">
+        <div className="row m-3">
+          <div className="col-md-6">
             <Image
               fluid={data.animation.childImageSharp.fluid}
               alt="Animation"
               className="animation-img"
             />
           </div>
-          <div className="col-6 pl-5">
+          <div className="col-md-6 p-5">
             <h3 className="heading">Animation</h3>
             <hr className=" hr-line border-danger" />
             <p>
@@ -47,17 +47,17 @@ const services = ({ data }) => {
               sint, quam impedit distinctio libero pariatur assumenda cum labore
               numquam.
             </p>
-            <button className="btn btn-lg btn-outline-danger mt-4 text-uppercase">
+            <button className="btn btn-md btn-outline-danger mt-4 text-uppercase">
               View Our Work
             </button>
           </div>
         </div>
 
-        <div className="row mt-5">
-          <div className="col-6">
-            <h3 className="heading">Virtual</h3>
+        <div className="row m-3">
+          <div className="col-md-6 p-5">
+            <h3 className="heading mt-5 ">Virtual</h3>
             <hr className=" hr-line border-danger" />
-            <p>
+            <p className="align-items-end">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque,
               at?Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Expedita animi, reiciendis tempore laudantium ab incidunt autem
@@ -67,15 +67,15 @@ const services = ({ data }) => {
               sint, quam impedit distinctio libero pariatur assumenda cum labore
               numquam.
             </p>
-            <button className="btn btn-lg btn-outline-danger mt-4 text-uppercase">
+            <button className="btn btn-md btn-outline-danger mt-4 text-uppercase">
               View Our Work
             </button>
           </div>
-          <div className="col-6 pl-5">
+          <div className="col-md-6">
             <Image
               fluid={data.animation.childImageSharp.fluid}
               alt="Animation"
-              className="animation-img"
+              className="virtual-img"
             />
           </div>
         </div>
@@ -130,7 +130,7 @@ const services = ({ data }) => {
                 d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
               />
             </svg>
-            <span className="sr-only">Previous</span>
+            <span className="visually-hidden">Previous</span>
           </a>
           <a
             className="carousel-control-next text-dark"
@@ -153,7 +153,7 @@ const services = ({ data }) => {
               />
             </svg>
 
-            <span className="sr-only">Next</span>
+            <span className="visually-hidden">Next</span>
           </a>
         </div>
       </div>
