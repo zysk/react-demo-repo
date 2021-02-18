@@ -14,7 +14,7 @@ const index = ({ data }) => {
       {/* <Header />
     <SEO title="Home" /> */}
 
-      <div className="pb-5 ">
+      {/* <div className="pb-5 ">
         <a-scene embedded className="a-frame-1" vr-mode-ui="enabled: false">
           <a-entity
             position="0 2.25 -15"
@@ -63,7 +63,7 @@ const index = ({ data }) => {
           ></a-plane>
           <a-sky color="gray"></a-sky>
         </a-scene>
-      </div>
+      </div> */}
 
       <div className=" content container-fluid">
         <Navbar />
