@@ -5,11 +5,13 @@ import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Image from "gatsby-image"
 import Contact from "../components/Contact"
+import Overlay from "../components/Overlay"
 
 const services = ({ data }) => {
   return (
     <section className="Services position-relative">
-      <Navbar className="services-navbar position-absolute" />
+      {/* <Navbar className="services-navbar position-absolute" /> */}
+      <Overlay />
       <BackgroundImage
         className="services-background"
         fluid={data.image.childImageSharp.fluid}

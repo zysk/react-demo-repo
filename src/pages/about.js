@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/styles.css"
+import Overlay from "../components/Overlay"
 const about = ({ data }) => {
   return (
     <div className="about">

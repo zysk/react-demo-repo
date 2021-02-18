@@ -6,7 +6,7 @@ const Navbar = ({ className }) => {
   return (
     <>
       <Header />
-      <nav className="navbar navbar-inverse navbar-dark bg-dark">
+      <nav className="navbar navbar-inverse navbar-static-top navbar-dark bg-dark ">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             invi

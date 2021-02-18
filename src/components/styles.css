@@ -52,7 +52,7 @@
   height: 100vh !important;
   overflow-y: hidden !important;
 }
-.navbar-inverse {
+.navbar {
   background: none !important;
 }
 .navbar-toggler-icon {
@@ -107,3 +107,4 @@
 .contact {
   background-color: #ddcfc7;
 }
+/* Overlay Navigation */
