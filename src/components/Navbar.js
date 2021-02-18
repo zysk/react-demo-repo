@@ -6,8 +6,8 @@ const Navbar = ({ className }) => {
   return (
     <>
       <Header />
-      <nav className="navbar navbar-inverse navbar-static-top navbar-dark bg-dark ">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg bg-transparent">
+        <div className="container">
           <a className="navbar-brand" href="#">
             invi
           </a>
@@ -24,7 +24,7 @@ const Navbar = ({ className }) => {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ol className="navbar-nav me-auto mb-2 mb-lg-0" type="roman">
+            <ol className="navbar-nav ml-auto mb-2 mb-lg-0" type="roman">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
                   Home
@@ -38,6 +38,16 @@ const Navbar = ({ className }) => {
               <li className="nav-item">
                 <a className="nav-link" href="/services">
                   Services
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Team
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Contact Us
                 </a>
               </li>
             </ol>

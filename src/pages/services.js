@@ -11,14 +11,14 @@ const services = ({ data }) => {
   return (
     <section className="Services position-relative">
       {/* <Navbar className="services-navbar position-absolute" /> */}
-      <Overlay />
+
       <BackgroundImage
         className="services-background"
         fluid={data.image.childImageSharp.fluid}
       >
-        {/* <Navbar className="services-navbar position-absolute" /> */}
+        <Navbar className="services-navbar position-absolute" />
         <div className="d-flex flex-column align-items-center">
-          <h2 className="title text-white  text-center display-4 m-5 ">
+          <h2 className="title text-white  text-center display-4 m-5 pt-5">
             What We Do?
           </h2>
           <h4 className="text-white text-center">

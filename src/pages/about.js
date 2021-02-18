@@ -4,13 +4,26 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/styles.css"
-import Overlay from "../components/Overlay"
+import Header from "../components/header"
+import BackgroundImage from "gatsby-background-image"
 const about = ({ data }) => {
   return (
     <div className="about">
-      <Navbar />
-      <div className="container mt-5">
-        <div className="row m-5">
+      <Header />
+      {/* <Navbar /> */}
+      <BackgroundImage
+        className="services-background"
+        fluid={data.image.childImageSharp.fluid}
+      >
+        <Navbar className="" />
+        <div className="d-flex flex-column align-items-center">
+          <h2 className="title text-white  text-center display-4 m-5 pt-5">
+            About Us
+          </h2>
+        </div>
+      </BackgroundImage>
+      <div className="container ">
+        <div className="row mt-5 p-5">
           <div className="col-6">
             <Image fluid={data.about.childImageSharp.fluid} />
           </div>
@@ -36,6 +49,13 @@ const about = ({ data }) => {
 export const query = graphql`
   {
     about: file(relativePath: { eq: "img-1.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    image: file(relativePath: { eq: "services-background.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

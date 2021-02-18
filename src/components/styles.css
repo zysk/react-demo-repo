@@ -48,12 +48,24 @@
     height: 2.5rem;
   }
 } */
-.navbar-collapse {
-  height: 100vh !important;
-  overflow-y: hidden !important;
-}
+
 .navbar {
-  background: none !important;
+  background: transparent !important;
+}
+.navbar-brand {
+  color: black !important;
+  font-size: 40px !important;
+}
+.navbar-nav a {
+  color: white;
+  font-size: 20px;
+  padding: 0 50px;
+}
+.navbar-nav {
+  margin-left: auto !important;
+}
+.navbar a:hover {
+  color: red;
 }
 .navbar-toggler-icon {
   color: black;
@@ -63,6 +75,9 @@
 .about {
   background-color: #feeee5;
   height: 100vh;
+}
+.about {
+  height: 100% !important;
 }
 /* a-scene {
   width: 900px !important;
