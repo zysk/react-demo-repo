@@ -11,6 +11,7 @@ import Services from "../components/HomeServices"
 const index = ({ data }) => {
   return (
     <div className="home position-relative">
+      <Navbar />
       {/* <Header />
     <SEO title="Home" /> */}
 
@@ -65,11 +66,11 @@ const index = ({ data }) => {
         </a-scene>
       </div> */}
 
-      <div className=" content container-fluid">
+      {/* <div className=" content container-fluid">
         <Navbar />
-      </div>
+      </div> */}
       {/* <Services /> */}
-      <section className="Services">
+      <section className="Services pb-5">
         <div className="container">
           <h3 className="home-heading">Services</h3>
           <hr className="hr-line border-danger mt-2"></hr>
