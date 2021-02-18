@@ -14,12 +14,7 @@ const index = ({ data }) => {
     <SEO title="Home" /> */}
 
       <div className="pb-5 ">
-        <a-scene
-          embedded
-          timeout="10"
-          className="a-frame-1"
-          vr-mode-ui="enabled: false"
-        >
+        <a-scene embedded className="a-frame-1" vr-mode-ui="enabled: false">
           <a-entity
             position="0 2.25 -15"
             particle-system="color: #EF0000,#44CC00"
