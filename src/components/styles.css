@@ -73,7 +73,7 @@
 /* Home Page */
 .home,
 .about {
-  background-color: #feeee5;
+  /* background-color: #feeee5; */
   height: 100vh;
 }
 .about {
@@ -122,4 +122,35 @@
 .contact {
   background-color: #ddcfc7;
 }
-/* Overlay Navigation */
+/* Index Page */
+.vcol-1 {
+  /* margin-left: 40px; */
+}
+.virtualWorld-img {
+  height: 380px !important;
+  /* width: 300px; */
+}
+.home-heading {
+  font-size: 50px;
+  letter-spacing: 0.3rem;
+  font-weight: normal !important;
+}
+a-scene {
+  /* width: 900px !important; */
+  height: 100vh !important;
+}
+.home {
+  position: relative;
+}
+.content {
+  position: absolute;
+  top: 0 !important;
+}
+/*Subscribe */
+.subscribe-heading {
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+}
+.subscribe-bg {
+  height: 300px !important;
+}

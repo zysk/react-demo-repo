@@ -16,7 +16,9 @@ const Header = () => {
         crossorigin="anonymous"
       />
 
-      <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+      <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+      {/* <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script> */}
+      <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
     </Helmet>
   )
 }
