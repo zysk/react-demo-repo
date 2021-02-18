@@ -24,7 +24,7 @@ const Contact = () => {
       <Header />
       <div className="container-fluid">
         <div className="row ">
-          <div className="col-md-6 contact ">
+          <div className="col-md-6 contact pb-2">
             <h3 className="">
               Contact <h3>---</h3>
             </h3>

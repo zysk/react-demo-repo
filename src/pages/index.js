@@ -116,7 +116,7 @@ const index = ({ data }) => {
                 Go To Virtual World
               </button>
             </div>
-            <div className="col-md-3 vcol-1 mx-5">
+            <div className="col-md-3 vcol-1 mx-lg-5">
               <Image
                 fluid={data.image.childImageSharp.fluid}
                 className="virtualWorld-img"
