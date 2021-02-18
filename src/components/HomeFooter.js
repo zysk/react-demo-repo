@@ -11,7 +11,7 @@ const Contact = () => {
       query {
         image: file(relativePath: { eq: "services-background.jpg" }) {
           childImageSharp {
-            fluid {
+            fluid(quality: 90) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
@@ -79,20 +79,20 @@ const Contact = () => {
               <h3 className="subscribe-heading text-center text-white pt-5">
                 Subscribe to our Newsletter
               </h3>
-              <hr className="border-danger hr-line mx-auto my-5"></hr>
+              <hr className="border-danger hr-line mx-auto my-lg-5"></hr>
               <form className="form-inline form-lg justify-content-center">
                 <label className="visually-hidden" for="inlineFormInputName2">
                   Email
                 </label>
                 <input
                   type="text"
-                  className="form-control mb-4 mx-auto  w-75 rounded-0 "
+                  className="form-control  mb-2 mb-lg-4 mx-auto  w-75 rounded-0 "
                   id="inlineFormInputName2"
                   placeholder="Your email address"
                 />
 
-                <div class="pb-2 mb-5 mx-auto d-flex flex-column align-items-center">
-                  <button className="py-2 btn btn-outline-light btn-md button-text text-uppercase px-2 px-lg-4">
+                <div class="mx-auto d-flex flex-column align-items-center">
+                  <button className="py-2 btn btn-outline-light btn-md button-text text-uppercase  px-lg-4">
                     Submit
                   </button>
                 </div>

@@ -57,15 +57,18 @@
   font-size: 40px !important;
 }
 .navbar-nav a {
-  color: black;
+  color: black !important;
   font-size: 20px;
   padding: 0 50px;
+}
+.navbar-toggler-icon {
+  color: black;
 }
 .navbar-nav {
   margin-left: auto !important;
 }
 .navbar a:hover {
-  color: red;
+  color: red !important;
 }
 .navbar-toggler-icon {
   color: black;
@@ -137,10 +140,12 @@
 }
 a-scene {
   /* width: 900px !important; */
+  /* width: 100% !important; */
   height: 100vh !important;
 }
 .home {
   position: relative;
+  overflow-x: hidden !important;
 }
 .content {
   position: absolute;

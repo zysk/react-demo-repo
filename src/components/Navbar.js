@@ -6,7 +6,7 @@ const Navbar = ({ className }) => {
   return (
     <>
       <Header />
-      <nav className="navbar navbar-expand-lg bg-transparent">
+      <nav className="navbar navbar-expand-lg bg-transparent navbar-light ">
         <div className="container">
           <a className="navbar-brand" href="#">
             invi
@@ -20,7 +20,7 @@ const Navbar = ({ className }) => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon text-dark"></span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
