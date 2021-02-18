@@ -6,6 +6,7 @@ import "../components/styles.css"
 import Contact from "../components/Contact"
 import Subscribe from "../components/Subscribe"
 import Footer from "../components/HomeFooter"
+import Services from "../components/HomeServices"
 
 const index = ({ data }) => {
   return (
@@ -67,32 +68,33 @@ const index = ({ data }) => {
       <div className=" content container-fluid">
         <Navbar />
       </div>
+      {/* <Services /> */}
       <section className="Services">
         <div className="container">
           <h3 className="home-heading">Services</h3>
           <hr className="hr-line border-danger mt-2"></hr>
           <div className="row">
-            <div className="col-md-6 text-center py-5 my-5">
+            <div className="col-md-6 text-center py-5 my-5  d-flex flex-column align-items-center">
               <h4 className="home-subheading text-uppercase">Animation</h4>
               <button className="btn btn-lg btn-outline-danger mt-3 ">
                 EXPLORE
               </button>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6  d-flex flex-column align-items-center">
               <Image
-                fluid={data.image.childImageSharp.fluid}
+                fixed={data.animation.childImageSharp.fixed}
                 className="services-img"
               />
             </div>
           </div>
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 d-flex flex-column align-items-center">
               <Image
-                fluid={data.image.childImageSharp.fluid}
+                fixed={data.virtual.childImageSharp.fixed}
                 className="services-img"
               />
             </div>
-            <div className="col-md-6 text-center py-5 my-5">
+            <div className="col-md-6 text-center py-5 my-5 d-flex flex-column align-items-center">
               <h4 className="home-subheading text-uppercase ">
                 Virtual Environment
               </h4>
@@ -164,6 +166,20 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    animation: file(relativePath: { eq: "animations-icon.png" }) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed_tracedSVG
+        }
+      }
+    }
+    virtual: file(relativePath: { eq: "virtual-icon.png" }) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
