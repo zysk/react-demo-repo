@@ -70,7 +70,7 @@ const index = ({ data }) => {
         <Navbar />
       </div> */}
       {/* <Services /> */}
-      <section className="Services pb-5">
+      <section className="home-Services pb-5">
         <div className="container">
           <h3 className="home-heading">Services</h3>
           <hr className="hr-line border-danger mt-2"></hr>

@@ -102,13 +102,42 @@
   border-top-right-radius: 15%;
   border-bottom-left-radius: 15%;
 }
+.virtual-img:hover,
+.animation-img:hover {
+  animation: myfirst 1s 3;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+@keyframes myfirst {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  20% {
+    left: 15px;
+    top: 2px;
+    right: 5px;
+  }
+  30% {
+    left: 7px;
+    top: 10px;
+    right: 10px;
+  }
+  40% {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
 .services-background {
   height: 50vh;
 }
 .hr-line {
-  width: 50px !important;
+  width: 60px !important;
+  height: 0.1rem !important;
   margin-left: 10px;
-  color: rgb(214, 59, 32);
+  color: rgb(163, 14, 14);
 }
 .testimonials {
   /* height: 30vh !important; */
@@ -158,7 +187,10 @@ a-scene {
 }
 .subscribe-bg {
   height: 300px !important;
+  /* background-blend-mode: lighten !important; */
+  /* background: linear-gradient(#0f020b, #d13531); */
+  background-blend-mode: luminosity !important;
 }
-.Services {
+.home-Services {
   background: #feeee5;
 }
