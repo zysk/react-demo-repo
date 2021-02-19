@@ -7,6 +7,8 @@ import Contact from "../components/Contact"
 import Subscribe from "../components/Subscribe"
 import Footer from "../components/HomeFooter"
 import Services from "../components/HomeServices"
+import "aframe"
+import "aframe-particle-system-component"
 
 const index = ({ data }) => {
   return (
