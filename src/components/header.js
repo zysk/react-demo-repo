@@ -15,10 +15,13 @@ const Header = () => {
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
         crossorigin="anonymous"
       />
-
-      <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
       {/* <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script> */}
       <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+      <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+      <script src="https://unpkg.com/aframe-gradient-sky@1.2.0/dist/gradientsky.min.js"></script>
+      <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+      {/* <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script> */}
+      {/* <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> */}
     </Helmet>
   )
 }
