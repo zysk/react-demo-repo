@@ -16,23 +16,11 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `INVI`,
-        short_name: `invi`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
       resolve: "gatsby-plugin-load-script",
       options: {
-        src: "https://code.jquery.com/jquery-3.2.1.slim.min.js",
+        src: "https://code.jquery.com/jquery-3.5.1.slim.min.js",
         integrity:
-          "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN",
+          "sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj",
         crossorigin: "anonymous",
       },
     },
@@ -40,44 +28,11 @@ module.exports = {
       resolve: "gatsby-plugin-load-script",
       options: {
         src:
-          "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js",
+          "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js",
         integrity:
-          "sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW",
+          "sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns",
         crossorigin: "anonymous",
       },
     },
-    {
-      resolve: "gatsby-plugin-load-script",
-      options: {
-        src:
-          "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js",
-        integrity:
-          "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q",
-        crossorigin: "anonymous",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-load-script",
-      options: {
-        src:
-          "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
-        integrity:
-          "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl",
-        crossorigin: "anonymous",
-      },
-    },
-    // {
-    //   resolve: `gatsby-source-wordpress`,
-    //   options: {
-    //     /*
-    //      * The full URL of the WordPress site's GraphQL API.
-    //      * Example : 'https://www.example-site.com/graphql'
-    //      */
-    //     url: `http://invi.zysk.in`,
-    //   },
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

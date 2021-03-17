@@ -1,57 +1,91 @@
 import React from "react"
 import Header from "./header"
-import "./styles.css"
-
+import img from "../images/invi-logo.png"
+import "./main.css"
+import "./index.css"
+import { Link } from "gatsby"
 const Navbar = ({ className }) => {
   return (
     <>
       <Header />
-      <nav className="navbar navbar-expand-lg bg-transparent navbar-light ">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            invi
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon text-dark"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ol className="navbar-nav ml-auto mb-2 mb-lg-0" type="roman">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/about">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/services">
-                  Services
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Team
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Contact Us
-                </a>
-              </li>
-            </ol>
-          </div>
+      <nav className="navbar navbar-expand-lg navbar-light container py-3">
+        <a className="navbar-brand" href="#">
+          <img src={img} alt="Invi Logo" />
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav mx-auto">
+            <li className="nav-item ">
+              <Link to="../" activeClassName="active" className="nav-link">
+                HOME<span className="sr-only ">(current)</span>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/about"
+                className="nav-link"
+                activeClassName="active"
+                activeStyle={{ color: "#eb483f" }}
+                partiallyActive={true}
+              >
+                ABOUT
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/services"
+                className="nav-link"
+                activeClassName="active"
+                activeStyle={{ color: "#eb483f" }}
+                partiallyActive={true}
+              >
+                SERVICES
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/stories"
+                className="nav-link"
+                activeClassName="active"
+                activeStyle={{ color: "#eb483f" }}
+                partiallyActive={true}
+              >
+                STORIES
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/works/works"
+                className="nav-link"
+                activeClassName="active"
+                activeStyle={{ color: "#eb483f" }}
+                partiallyActive={true}
+              >
+                WORKS
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/say-hello"
+                className="nav-link"
+                activeClassName="active"
+                activeStyle={{ color: "#eb483f" }}
+                partiallyActive={true}
+              >
+                SAY HELLO
+              </Link>
+            </li>
+          </ul>
         </div>
       </nav>
     </>

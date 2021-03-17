@@ -5,23 +5,35 @@ const Header = () => {
   return (
     <Helmet>
       <meta charset="utf-8" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
       <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
         rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
         crossorigin="anonymous"
       />
-      {/* <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script> */}
-      <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-      <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
-      <script src="https://unpkg.com/aframe-gradient-sky@1.2.0/dist/gradientsky.min.js"></script>
-      <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-      {/* <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script> */}
-      {/* <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> */}
+
+      <link rel="icon" type="image/jpg" href="./images/invi-fav-icon.jpg" />
+
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+        rel="stylesheet"
+      />
+
+      <link rel="stylesheet" href="./css/main.css" />
+      <link rel="stylesheet" href="./css/index.css" />
+
+      <script
+        src="https://kit.fontawesome.com/ff32cb2647.js"
+        crossorigin="anonymous"
+      ></script>
+
+      <title>INVI - Innovative Visuals</title>
     </Helmet>
   )
 }

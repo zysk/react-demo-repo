@@ -1,0 +1,111 @@
+body,
+.home,
+.about,
+.contact,
+.services,
+.works,
+.stories {
+  font-family: "Lato", sans-serif !important;
+  background-color: #f6caba;
+  font-weight: 300;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  color: #0471bc;
+  font-weight: 700;
+}
+.title-desc {
+  color: #0471bc;
+}
+.description {
+  font-size: 17px;
+  color: rgb(25, 25, 27);
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+
+.title,
+footer span,
+.footer-heading,
+.virtual {
+  letter-spacing: 3px !important;
+}
+
+.footer-heading {
+  color: #eb483f;
+  font-weight: bold;
+}
+
+.virtual {
+  background: transparent;
+  color: #0471bc !important;
+  font-size: 12px;
+  font-weight: bold;
+  /* border-radius: 30px; */
+  border-color: transparent;
+  /* background: radial-gradient(#eb483f 0% 2%, 2% 100% #fff);
+  text-shadow: 5px 3px 20px #eb483f, -4px 1px 30px #eb483f;
+  box-shadow: 4px 4px 8px #d0ab9e, -4px -4px 8px rgba(255, 255, 255, 0.1); */
+}
+.virtual:hover {
+  color: #eb483f;
+}
+footer {
+  background: linear-gradient(to top, #a1bac3 20%, transparent),
+    linear-gradient(to bottom, #f6caba, transparent);
+}
+
+.animation-img,
+.virtual-img {
+  border-radius: 50%;
+}
+
+.box-shadow {
+  background: linear-gradient(145deg, #ffd7c7, #ddb5a7);
+  box-shadow: 4px 4px 8px #d0ab9e, -4px -4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.icon-box {
+  padding: 30px 40px;
+  background: #f6caba;
+  border-radius: 20px !important;
+}
+
+.subscribe-button {
+  border-top-right-radius: 30px !important;
+  border-bottom-right-radius: 30px !important;
+  border-color: transparent !important;
+  background: #f5c9ba !important;
+  padding: 10px !important;
+  color: #eb483f !important;
+}
+
+.team-col {
+  background-color: #fde2d6;
+}
+
+.team-description {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.team h5 {
+  color: #0471bc;
+  font-weight: bold;
+}
+
+.row-space {
+  padding-top: 7.5rem;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .team-title {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+  .team-description {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
