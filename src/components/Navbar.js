@@ -65,7 +65,7 @@ const Navbar = ({ className }) => {
             </li>
             <li className="nav-item">
               <Link
-                to="/works/works"
+                to="/works/"
                 className="nav-link"
                 activeClassName="active"
                 activeStyle={{ color: "#eb483f" }}

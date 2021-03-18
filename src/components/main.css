@@ -4,7 +4,8 @@ body,
 .contact,
 .services,
 .works,
-.stories {
+.stories,
+.projects {
   font-family: "Lato", sans-serif !important;
   background-color: #f6caba;
   font-weight: 300;

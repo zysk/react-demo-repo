@@ -284,6 +284,9 @@ textarea {
 .works-video {
   border: none !important;
 }
+/* .container-fluid {
+  padding: 0 !important;
+} */
 .projects {
   background: linear-gradient(to bottom, #a1bac3 10%, transparent),
     linear-gradient(to top, #f6caba, transparent);
@@ -381,10 +384,6 @@ textarea {
   }
 }
 
-.animation-services {
-  background: url("../images/services-animation.png");
-  background-size: cover;
-}
 #video-wrapper {
   height: 600px !important;
 }
@@ -404,6 +403,10 @@ textarea {
 }
 video:hover {
   cursor: pointer;
+}
+.videos {
+  border-radius: 0 !important;
+  border: none !important;
 }
 /* Circle Works Menu */
 .circle-item {
