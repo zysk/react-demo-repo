@@ -158,6 +158,53 @@ const drawing = ({ data }) => {
       </section>
       {/* 
     <!--======= Creative Process=======--> */}
+
+      {/* <!--=========Pagination Buttons=======--> */}
+      <div className="container py-3">
+        <div className="row ">
+          <div className="col-12 pt-lg-5 pb-lg-3 d-flex justify-content-between">
+            <ul className="pagination">
+              <li className="page-item">
+                <a href="./" className="page-link" aria-label="Previous">
+                  <i className="fas fa-arrow-left" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li className="page-item">
+                <a className="page-link text-center" href="./">
+                  <span>Prev </span>
+                  <br />
+                  <span className="project-title text-dark font-weight-bold">
+                    WORKS
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <ul className="pagination">
+              <li className="page-item">
+                <a className="page-link text-center" href="./artForJustice">
+                  Next <br />
+                  <span className="project-title text-dark font-weight-bold ">
+                    #ARTFORJUSTICE
+                  </span>
+                </a>
+              </li>
+              <li className="page-item">
+                <a
+                  href="./artForJustice"
+                  className="page-link"
+                  aria-label="Next"
+                >
+                  <span aria-hidden="true">
+                    {" "}
+                    <i className="fas fa-arrow-right " aria-hidden="true"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* // <!--=========Pagination Buttons=======--> */}
       <Footer />
     </div>
   )

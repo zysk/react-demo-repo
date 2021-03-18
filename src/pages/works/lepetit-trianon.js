@@ -200,6 +200,63 @@ const project = ({ data }) => {
       </section>
       {/* 
     <!--======= Creative Process=======--> */}
+      {/* <!--=========Pagination Buttons=======--> */}
+      <div className="container py-3">
+        <div className="row ">
+          <div className="col-12 pt-lg-5 pb-lg-3 d-flex justify-content-between">
+            <ul className="pagination">
+              <li className="page-item">
+                <a
+                  href="./graffiti-city-park"
+                  className="page-link"
+                  aria-label="Previous"
+                >
+                  <i className="fas fa-arrow-left" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li className="page-item">
+                <a
+                  className="page-link text-center"
+                  href="./graffiti-city-park"
+                >
+                  <span>Prev </span>
+                  <br />
+                  <span className="project-title text-dark font-weight-bold">
+                    GRAFFITI CITY PARK
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <ul className="pagination">
+              <li className="page-item">
+                <a
+                  className="page-link text-center"
+                  href="./southern-plains-museum"
+                >
+                  Next <br />
+                  <span className="project-title text-dark font-weight-bold ">
+                    SOUTHERN PLAINS MUSEUM
+                    <br /> AND CULTURAL CENTER
+                  </span>
+                </a>
+              </li>
+              <li className="page-item">
+                <a
+                  href="./southern-plains-museum"
+                  className="page-link"
+                  aria-label="Next"
+                >
+                  <span aria-hidden="true">
+                    {" "}
+                    <i className="fas fa-arrow-right " aria-hidden="true"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* // <!--=========Pagination Buttons=======--> */}
       <Footer />
     </div>
   )

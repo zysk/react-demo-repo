@@ -171,7 +171,15 @@ footer .fa {
   border: none !important;
   box-shadow: 0 2px 5px transparent !important;
 }
-
+/* @media (max-width: 768px) {
+  .page-link {
+    padding: 0.3rem;
+  }
+  .project-title {
+    line-height: 0 !important;
+    font-size: 10px !important;
+  }
+} */
 .primary-text {
   color: #0471bc;
 }
