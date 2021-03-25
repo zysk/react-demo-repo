@@ -14,7 +14,7 @@ const project = ({ data }) => {
         <Navbar />
         <div className=" d-flex flex-wrap h-75">
           <div className="d-flex col-12 align-items-center justify-content-center">
-            <h1 className="title text-uppercase text-center">
+            <h1 className="title text-center text-lg-left text-uppercase text-center">
               LE PETIT TRIANON EXHIBITION
             </h1>
           </div>
@@ -22,23 +22,35 @@ const project = ({ data }) => {
       </div>
       {/* <!--========Video Section=======--> */}
       <section className=" pt-5 pb-2">
-        <div className="works-video embed-responsive embed-responsive-16by9">
-          <video controls muted autoplay className="videos">
-            <source src={video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
         <div className="container-fluid">
+          <div className="row  d-flex justify-content-between px-2">
+            <div className="col-md-6">
+              <div className="works-video embed-responsive embed-responsive-16by9">
+                <video controls muted autoPlay className="videos w-100">
+                  <source src={video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="works-video embed-responsive embed-responsive-16by9">
+                <video controls muted autoPlay className="videos w-100">
+                  <source src={video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
           <div className="row d-flex justify-content-between px-2 py-2">
-            <div className="col-md-4 col-3">
+            <div className="col-md-4 col-12">
               <p className="small text-justify decription">
                 {" "}
                 <span className="font-weight-bold pr-2">PRODUCT: </span>{" "}
                 ANIMATION
               </p>
             </div>
-            <div className="col-md-4 col-3">
-              <p className="small text-justify decription d-flex justify-content-center">
+            <div className="col-md-4 col-12">
+              <p className="small text-justify decription d-flex justify-content-md-center">
                 {" "}
                 <span className="font-weight-bold pr-2">
                   CLIENT:{" "}
@@ -48,7 +60,7 @@ const project = ({ data }) => {
                 </span>
               </p>
             </div>
-            <div className="col-md-4 col-3 d-flex justify-content-end">
+            <div className="col-md-4 col-12 d-flex justify-content-md-end">
               <p className="small text-justify decription">
                 {" "}
                 <span className="font-weight-bold pr-2">LAUNCHED: </span>{" "}
@@ -65,7 +77,7 @@ const project = ({ data }) => {
       <section className="product container py-md-5 mt-md-5">
         <div className="row">
           <div className="col-md-5 my-md-0 my-3 d-flex justify-content-center">
-            <h2 className="title">
+            <h2 className="title text-center text-lg-left">
               How do we reimagine virtual art exhibition in a physical space?
             </h2>
           </div>
@@ -107,56 +119,56 @@ const project = ({ data }) => {
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 pb-5 pl-md-3">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image2.childImageSharp.fluid}
               className="img-fluid"
               alt="image2"
             />
           </div>
-          <div className="col-md-6 pb-5">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image3.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 pb-5">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image4.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 pb-5">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image5.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 pb-5">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image9.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 pb-5">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image7.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 pb-5">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image8.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-12 pb-5">
+          <div className="col-md-12 pb-5 zoom">
             <Image
               fluid={data.image6.childImageSharp.fluid}
               alt="image1"
@@ -172,7 +184,7 @@ const project = ({ data }) => {
       <section className="product container py-md-5">
         <div className="row ">
           <div className="col-md-5 my-md-0 my-3 ">
-            <h2 className="title">Creative Process</h2>
+            <h2 className="title text-center text-lg-left">Creative Process</h2>
           </div>
           <div className="description col-md-7 text-justify">
             <p>
@@ -207,7 +219,7 @@ const project = ({ data }) => {
             <ul className="pagination">
               <li className="page-item">
                 <a
-                  href="./graffiti-city-park"
+                  href="/works/southern-plains-museum"
                   className="page-link"
                   aria-label="Previous"
                 >
@@ -217,12 +229,12 @@ const project = ({ data }) => {
               <li className="page-item">
                 <a
                   className="page-link text-center"
-                  href="./graffiti-city-park"
+                  href="/works/southern-plains-museum"
                 >
                   <span>Prev </span>
                   <br />
                   <span className="project-title text-dark font-weight-bold">
-                    GRAFFITI CITY PARK
+                    SOUTHERN PLAINS MUSEUM <br /> AND CULTURAL CENTER
                   </span>
                 </a>
               </li>
@@ -231,18 +243,17 @@ const project = ({ data }) => {
               <li className="page-item">
                 <a
                   className="page-link text-center"
-                  href="./southern-plains-museum"
+                  href="/works/graffiti-city-park"
                 >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
-                    SOUTHERN PLAINS MUSEUM
-                    <br /> AND CULTURAL CENTER
+                    GRAFFITI CITY PARK
                   </span>
                 </a>
               </li>
               <li className="page-item">
                 <a
-                  href="./southern-plains-museum"
+                  href="/works/graffiti-city-park"
                   className="page-link"
                   aria-label="Next"
                 >

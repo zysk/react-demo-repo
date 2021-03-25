@@ -5,9 +5,8 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
 import "../components/index.css"
-import contact from "../images/contact.gif"
 
-const sayhello = () => {
+const sayhello = ({ data }) => {
   return (
     <>
       {" "}
@@ -28,6 +27,7 @@ const sayhello = () => {
                     className="form-control w-100"
                     id="name"
                     placeholder="Full Name"
+                    required
                   />
                 </div>
                 <div className="mb-5">
@@ -39,6 +39,7 @@ const sayhello = () => {
                     className="form-control w-100"
                     id="Email"
                     placeholder="Email Address"
+                    required
                   />
                 </div>
                 <div className="mb-3 comment">
@@ -52,7 +53,7 @@ const sayhello = () => {
                     placeholder="Comment"
                   ></textarea>
                 </div>
-                <div className="text-right mt-5">
+                <div className="text-lg-right text-center mt-5">
                   <button
                     type="submit"
                     className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold"
@@ -64,9 +65,9 @@ const sayhello = () => {
             </div>
             <div className="col-md-6 mt-5 mt-md-0">
               {" "}
-              <img
-                src={contact}
-                className="img-fluid gif-image"
+              <Image
+                fluid={data.intro.childImageSharp.fluid}
+                className="img-fluid"
                 alt="contact-gif"
               />
             </div>
@@ -79,5 +80,15 @@ const sayhello = () => {
     </>
   )
 }
-
+export const query = graphql`
+  {
+    intro: file(relativePath: { eq: "invi-cloud-design.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 export default sayhello

@@ -32,8 +32,8 @@ const services = ({ data }) => {
 
         {/* <!-- =======  Services ======= --> */}
         <section className="container">
-          <div className=" row d-flex justify-content-between align-items-center row-space">
-            <div className="col-md-6 d-flex justify-content-center justify-content-lg-start py-3">
+          <div className="  d-flex flex-wrap justify-content-between align-items-center">
+            <div className="col-lg-6 d-flex justify-content-center justify-content-lg-start py-3 py-lg-0">
               <div className="rc">
                 <HoverVideoPlayer
                   videoSrc={video1}
@@ -43,8 +43,10 @@ const services = ({ data }) => {
                 />
               </div>
             </div>
-            <div className=" col-md-5">
-              <h1 className="title">ANIMATION</h1>
+            <div className=" col-lg-5">
+              <h1 className="title text-center text-lg-left text-center text-lg-left">
+                ANIMATION
+              </h1>
               <div className="divider"></div>
               <p className="description py-4 text-justify">
                 We tell stories through cinematic animations captured by
@@ -59,15 +61,27 @@ const services = ({ data }) => {
               </p>
               <a
                 href="../works/"
-                className="virtual my-md-3 ml-lg-2 d-block font-weight-bold"
+                className="virtual my-3 ml-lg-2 d-block font-weight-bold text-center text-lg-left"
               >
                 VIEW OUR WORK
               </a>
             </div>
           </div>
-          <div className="row d-flex justify-content-between align-items-center row-space">
-            <div className="col-md-5">
-              <h1 className="title">VIRTUAL</h1>
+          <div className="row d-flex justify-content-between align-items-center pt-5">
+            <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center py-5 py-lg-0 order-lg-12 ">
+              <div className="rc img-fluid py-3">
+                <HoverVideoPlayer
+                  videoSrc={video2}
+                  className="video-circle virtual-video"
+                  muted
+                  loop
+                />
+              </div>
+            </div>
+            <div className="col-lg-5 order-lg-1">
+              <h1 className="title text-center text-lg-left text-center text-lg-left">
+                VIRTUAL
+              </h1>
               <div className="divider"></div>
               <p className="description py-4 text-justify">
                 We design virtual experiences through graphics, architecture,
@@ -83,24 +97,94 @@ const services = ({ data }) => {
               </p>
               <a
                 href="../works/"
-                className="virtual my-3 ml-lg-2 d-block font-weight-bold"
+                className="virtual my-3 ml-lg-2 d-block font-weight-bold text-center text-lg-left"
               >
                 VIEW OUR WORK
               </a>
             </div>
-            <div className="col-md-6 d-flex justify-content-center justify-content-lg-end ">
-              <div className="rc img-fluid py-3">
-                <HoverVideoPlayer
-                  videoSrc={video2}
-                  className="video-circle virtual-video"
-                  muted
-                  loop
-                />
-              </div>
-            </div>
           </div>
         </section>
         {/* <!-- =======  Services ======= --> */}
+        {/* <!-- =======  Testimonials ======= --> */}
+
+        <div className="container row-space my-lg-4 pb-5">
+          <h1 className="title text-center">TESTIMONIALS</h1>
+          <div
+            id="demo"
+            className="carousel slide mt-lg-2"
+            data-ride="carousel"
+          >
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <div className="carousel-caption mx-4">
+                  <p>
+                    I had the pleasure of working with INVI on a virtual
+                    community art initiative, and I was so blown away by their
+                    team's creativity, professionalism, and attention to detail.
+                    INVI is uniquely positioned to turn visionary ideas into
+                    virtual realities. Their staff is thoughtful and
+                    exceptionally gifted at bringing concepts to fruition in
+                    timely and captivating ways. I'd recommend using their
+                    services and engaging them as thought partners.
+                    <br />
+                    <br />
+                  </p>
+                  <div id="image-caption" className="pt-lg-4 font-weight-bold">
+                    KARIM FARISHTA (#ArtForJustice Project)
+                  </div>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="carousel-caption mx-4">
+                  <p>
+                    I had a great feeling about the team at INVI from the minute
+                    they grasped the project creatively and technically. They
+                    were excellent listeners, communicators. They delivered
+                    everything on time and did a superlative job that all our
+                    clients are raving about. But the main thing I love about
+                    them is they try and go above and beyond to accommodate your
+                    project. Easy to work with, knowledgeable and also willing
+                    to push themselves creatively. I believe their talents are
+                    going to take them far and wide and we will be for sure,
+                    doing more exciting projects with them.
+                  </p>
+                  <div id="image-caption" className="pt-lg-4 font-weight-bold">
+                    ALEX RAY, Eye of the Huntress (Le Petit Trianon Project)
+                  </div>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="carousel-caption mx-4">
+                  <p>
+                    Tien and Afreen at INVI were an excellent resource for the
+                    Southern Plains Museum and Cultural Center (SPMCC). INVI was
+                    extremely responsive and worked collaboratively with the
+                    project host, the Southern Apache Museum. INVI listened to
+                    their wishes and concerns and approached the subject matter
+                    with sensitivity. They delivered the project right on time
+                    for Native American Heritage Month and we were amazed by the
+                    virtual experience! -Houston Mayor's Office of Cultural
+                    Affairs
+                  </p>
+                  <div id="image-caption" className="pt-lg-4 font-weight-bold">
+                    HoustonMOCA, City of Houston (Southern Plains Museum and
+                    Cultural Center Project)
+                  </div>
+                </div>
+              </div>
+            </div>{" "}
+            <a className="carousel-control-prev" href="#demo" data-slide="prev">
+              {" "}
+              <i className="fas fa-arrow-left fa-2x"></i>
+            </a>{" "}
+            <a className="carousel-control-next" href="#demo" data-slide="next">
+              {" "}
+              <i className="fas fa-arrow-right fa-2x"></i>
+            </a>
+          </div>
+        </div>
+
+        {/* <!-- =======  Testimonials ======= --> */}
         <Footer />
       </div>
     </div>

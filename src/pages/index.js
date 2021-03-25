@@ -6,6 +6,7 @@ import Image from "gatsby-image"
 import "../components/main.css"
 import "../components/index.css"
 import animation from "../images/animation-illustration.gif"
+import virtual from "../images/virtual-envirnament-invi.gif"
 
 const index = ({ data }) => {
   return (
@@ -35,7 +36,10 @@ const index = ({ data }) => {
               looking for new clients. We are designers of virtual experiences.
               At the center of our design process is YOU.
             </p>
-            <button className="text-left virtual mt-4">CREATE NOW</button>
+            <a href="#" className="btn text-left virtual mt-4 font-weight-bold">
+              CREATE NOW
+            </a>
+            {/* <button className="text-left virtual mt-4">CREATE NOW</button> */}
           </div>
 
           <div className="col-md-5 pt-5 pt-md-0">
@@ -52,7 +56,7 @@ const index = ({ data }) => {
       {/* <!-- ======= Services Section ======= --> */}
 
       <section className="container pb-4 pt-1">
-        <h1 className="title text-center">SERVICES</h1>
+        <h1 className="title text-center text-lg-left text-center">SERVICES</h1>
         <div className="row py-3 ">
           <div className="col-md-6 text-center">
             <div className="icon-box mt-5 mt-lg-0 ">
@@ -69,8 +73,8 @@ const index = ({ data }) => {
           </div>
           <div className="col-md-6 text-center">
             <div className="icon-box mt-4 mt-lg-0 ">
-              <img src={animation} alt="Animation" className="img-fluid" />
-              <h2 className="py-3">Virtual</h2>
+              <img src={virtual} alt="Animation" className="img-fluid" />
+              <h2 className="pt-md-5 pb-md-3 py-lg-3">Virtual</h2>
               <a href="./services/" className="font-weight-bold">
                 Explore{" "}
                 <i

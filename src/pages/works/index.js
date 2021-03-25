@@ -10,169 +10,130 @@ const index = ({ data }) => {
   return (
     <div className="works">
       <Navbar />
-      {/* <!-- ======= Menu Section ======= --> */}
-
-      <section className="circle-section" id="portfolio">
+      <section className="circle-section pt-5" id="portfolio">
+        <h2 className="title text-center">OUR WORKS</h2>
         <div className="container py-5">
           <div className="content-section-heading text-center">
             <h3 className="my-5 title"></h3>
           </div>
           <div className="row d-flex justify-content-between align-items-center">
-            <div className="col-lg-4 col-md-6 pb-5 mb-5 ">
-              <a className="circle-item" href="./drawing">
+            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
+              <a className="circle-item" href="./archvilla">
                 <div className="caption">
-                  <div className="caption-content">
-                    <div className="caption-heading h2 font-weight-bold">
-                      DRAWING GALLERY
+                  <div className="caption-content mt-auto mx-auto mb-5">
+                    <div className="caption-heading h2 font-weight-bold text-center d-flex justify-content-center">
+                      ARCHVILLA
                     </div>
-                    <p className="mb-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestias at nulla pariatur eveniet excepturi quas.
-                    </p>
                   </div>
                 </div>
                 <Image
-                  className="img-fluid "
-                  fluid={data.drawing.childImageSharp.fluid}
+                  fluid={data.archvilla.childImageSharp.fluid}
                   alt="Drawing Gallery"
+                  className="img-fluid"
                 />
               </a>
             </div>
-            <div className="col-lg-4 col-md-6 pb-5 mb-5">
-              <a className="circle-item" href="./artForJustice">
+            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
+              <a className="circle-item" href="./granada-theatre/">
                 <div className="caption">
-                  <div className="caption-content">
-                    <div className="caption-heading h2 font-weight-bold">
-                      #ARTFORJUSTICE
-                    </div>
-                    <p className="mb-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestias at nulla pariatur eveniet excepturi quas.
-                    </p>
-                  </div>
-                </div>
-                <Image
-                  className="img-fluid "
-                  fluid={data.art.childImageSharp.fluid}
-                  alt="#ARTFORJUSTICE"
-                />
-              </a>
-            </div>
-            <div className="col-lg-4 col-md-6 pb-5 mb-5 ">
-              <a className="circle-item" href="./granada-theatre">
-                <div className="caption">
-                  <div className="caption-content">
-                    <div className="caption-heading h2 font-weight-bold">
+                  <div className="caption-content mt-auto mx-auto mb-5">
+                    <div className="caption-heading h2 font-weight-bold text-center">
                       GRANADA THEATRE
                     </div>
-                    <p className="mb-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestias at nulla pariatur eveniet excepturi quas.
-                    </p>
                   </div>
                 </div>
                 <Image
-                  className="img-fluid "
                   fluid={data.granada.childImageSharp.fluid}
-                  alt="GRANADA THEATRE"
+                  alt="Drawing Gallery"
+                  classNameName="img-fluid"
                 />
               </a>
             </div>
-            <div className="col-lg-4 col-md-6">
-              <a className="circle-item" href="./graffiti-city-park">
+            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
+              <a className="circle-item" href="./southern-plains-museum">
                 <div className="caption">
-                  <div className="caption-content">
-                    <div className="caption-heading h2 font-weight-bold">
-                      GRAFFITI CITY PARK
+                  <div className="caption-content mt-auto mx-5 mb-5">
+                    <div className="caption-heading h2 font-weight-bold text-center">
+                      SOUTHERN PLAINS MUSEUM AND CULTURAL CENTER
                     </div>
-                    <p className="mb-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestias at nulla pariatur eveniet excepturi quas.
-                    </p>
                   </div>
                 </div>
                 <Image
-                  className="img-fluid "
-                  fluid={data.graffiti.childImageSharp.fluid}
-                  alt="GRAFFITI CITY PARK"
+                  fluid={data.southern.childImageSharp.fluid}
+                  className="img-fluid"
+                  alt="SOUTHERN PLAINS MUSEUM"
                 />
               </a>
             </div>
-            <div className="col-lg-4 col-md-6  ">
+            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
               <a className="circle-item" href="./lepetit-trianon">
                 <div className="caption">
-                  <div className="caption-content">
-                    <div className="caption-heading h2 font-weight-bold">
+                  <div className="caption-content mt-auto mx-5 mb-5">
+                    <div className="caption-heading h2 font-weight-bold text-center">
                       LE PETIT TRIANON EXHIBITION
                     </div>
-                    <p className="mb-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestias at nulla pariatur eveniet excepturi quas.
-                    </p>
                   </div>
                 </div>
                 <Image
-                  className="img-fluid "
                   fluid={data.lepetit.childImageSharp.fluid}
+                  className="img-fluid"
                   alt="LE PETIT TRIANON EXHIBITION"
                 />
               </a>
             </div>
-            <div className="col-lg-4 col-md-6 ">
-              <a className="circle-item" href="./southern-plains-museum">
+            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
+              <a className="circle-item" href="./graffiti-city-park">
                 <div className="caption">
-                  <div className="caption-content">
-                    <div className="caption-heading h2 font-weight-bold">
-                      SOUTHERN PLAINS MUSEUM AND CULTURAL CENTER
+                  <div className="caption-content mt-auto mx-auto mb-5">
+                    <div className="caption-heading h2 font-weight-bold text-center">
+                      GRAFFITI CITY PARK
                     </div>
-                    <p className="mb-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestias at nulla pariatur eveniet excepturi quas.
-                    </p>
                   </div>
                 </div>
                 <Image
-                  className="img-fluid "
-                  fluid={data.southern.childImageSharp.fluid}
-                  alt="SOUTHERN PLAINS MUSEUM"
+                  fluid={data.graffiti.childImageSharp.fluid}
+                  className="img-fluid"
+                  alt="GRAFFITI CITY PARK"
+                />
+              </a>
+            </div>
+            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
+              <a className="circle-item" href="./artforjustice/">
+                <div className="caption">
+                  <div className="caption-content mt-auto mx-auto mb-5">
+                    <div className="caption-heading h2 font-weight-bold text-center">
+                      #ARTFORJUSTICE
+                    </div>
+                  </div>
+                </div>
+                <Image
+                  fluid={data.art.childImageSharp.fluid}
+                  className="img-fluid"
+                  alt="#ARTFORJUSTICE"
+                />
+              </a>
+            </div>
+            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
+              <a className="circle-item" href="./drawing-gallery/">
+                <div className="caption">
+                  <div className="caption-content mt-auto mx-auto mb-5">
+                    <div className="caption-heading h2 font-weight-bold text-center">
+                      DRAWING GALLERY
+                    </div>
+                  </div>
+                </div>
+                <Image
+                  fluid={data.drawing.childImageSharp.fluid}
+                  className="img-fluid"
+                  alt="drawing gallery"
                 />
               </a>
             </div>
           </div>
         </div>
       </section>
-      {/* 
-<!-- ======= Menu Section =======--> */}
-      {/* <!--====== Pagination ==========--> */}
-      <div className="d-flex justify-content-center py-lg-5">
-        <ul className="pagination">
-          <li className="page-item">
-            <a href="#" className="page-link" aria-label="Previous">
-              <i className="fas fa-arrow-left" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li className="page-item active">
-            <a className="page-link" href="#">
-              1
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              2
-            </a>
-          </li>
-          <li className="page-item">
-            <a href="#" className="page-link" aria-label="Next">
-              <span aria-hidden="true">
-                {" "}
-                <i className="fas fa-arrow-right " aria-hidden="true"></i>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      {/* // <!--====== Pagination ==========--> */}
-      <Footer classNameName="contact-footer" />
+
+      <Footer classNameNameNameName="contact-footer" />
     </div>
   )
 }
@@ -218,6 +179,13 @@ export const query = graphql`
     southern: file(
       relativePath: { eq: "archvilla/circle-southern-plains.png" }
     ) {
+      childImageSharp {
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    archvilla: file(relativePath: { eq: "archvilla/circle-archvilla.png" }) {
       childImageSharp {
         fluid(quality: 90) {
           ...GatsbyImageSharpFluid_tracedSVG

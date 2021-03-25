@@ -14,29 +14,31 @@ const project = ({ data }) => {
         <Navbar />
         <div className=" d-flex flex-wrap h-75">
           <div className="d-flex col-12 align-items-center justify-content-center">
-            <h1 className="title text-uppercase text-center">#ARTFORJUSTICE</h1>
+            <h1 className="title text-center text-lg-left text-uppercase text-center">
+              #ARTFORJUSTICE
+            </h1>
           </div>
         </div>
       </div>
       {/* <!--========Video Section=======--> */}
       <section className=" pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
-          <video controls muted autoplay className="videos">
+          <video controls muted autoPlay className="videos w-100">
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
         <div className="container-fluid">
           <div className="row d-flex justify-content-between px-2 py-2">
-            <div className="col-md-4 col-3">
-              <p className="small text-justify decription">
+            <div className="col-md-4 col-12">
+              <p className="small-info text-justify decription">
                 {" "}
                 <span className="font-weight-bold pr-2">PRODUCT: </span> 360
                 VIRTUAL WORLD
               </p>
             </div>
-            <div className="col-md-4 col-3">
-              <p className="small text-justify decription d-flex justify-content-center">
+            <div className="col-md-4 col-12">
+              <p className="small-info text-justify decription d-flex justify-content-center">
                 {" "}
                 <span className="font-weight-bold pr-2">
                   CLIENT:{" "}
@@ -46,13 +48,19 @@ const project = ({ data }) => {
                 </span>
               </p>
             </div>
-            <div className="col-md-4 col-3 d-flex justify-content-end">
-              <p className="small text-justify decription">
+            <div className="col-md-4 col-12 d-flex justify-content-md-end">
+              <p className="small-info text-justify decription">
                 {" "}
                 <span className="font-weight-bold pr-2">LAUNCHED: </span> JUNE
                 2020
               </p>
             </div>
+          </div>
+          <div className="text-center mt-5 m-2">
+            {" "}
+            <a href="#" className="navigate btn btn-md text-center">
+              CLICK HERE TO LEARN HOW TO NAVIGATE
+            </a>
           </div>
         </div>
       </section>
@@ -63,7 +71,7 @@ const project = ({ data }) => {
       <section className="product container py-md-5 mt-md-5">
         <div className="row">
           <div className="col-md-5 my-md-0 my-3 d-flex justify-content-center">
-            <h2 className="title">
+            <h2 className="title text-center text-lg-left">
               How do we commemorate George Floyd and support the Black Lives
               Matter Movement?
             </h2>
@@ -128,27 +136,36 @@ const project = ({ data }) => {
 
       <div className="images container py-md-5">
         <div className="row d-flex align-items-center">
-          <div className="col-md-6 pb-5 pr-md-3">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image1.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 pb-5 pl-md-3">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image2.childImageSharp.fluid}
               className="img-fluid"
               alt="image2"
             />
           </div>
-          <div className="col-md-12 pb-5">
+          <div className="col-md-12 pb-5 zoom">
             <Image
               fluid={data.image3.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
               width="1400"
             />
+          </div>
+          <div className="col-md-12">
+            {" "}
+            <div className="works-video embed-responsive embed-responsive-16by9">
+              <video controls muted autoPlay className="videos w-100">
+                <source src={video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </div>
@@ -158,7 +175,7 @@ const project = ({ data }) => {
       <section className="product container py-md-5">
         <div className="row ">
           <div className="col-md-5 my-md-0 my-3 ">
-            <h2 className="title">Creative Process</h2>
+            <h2 className="title text-center text-lg-left">Creative Process</h2>
           </div>
           <div className="description col-md-7 text-justify">
             <p>
@@ -186,38 +203,119 @@ const project = ({ data }) => {
       </section>
       {/* 
     <!--======= Creative Process=======--> */}
+      {/* <!--===========Benefatcors=================--> */}
+      <section className="container py-md-5">
+        <div className="row  d-flex justify-content-between">
+          <div className="col-md-12 d-flex justify-content-start">
+            {" "}
+            <p>
+              We thank all the following individuals and Institutions for their
+              generous contributions:
+            </p>
+          </div>
+          <div className="col-md-3 d-flex justify-content-start">
+            <ul type="none" className="pl-0">
+              <li>
+                <h4 className="title-desc">Benefactors</h4>
+              </li>
+              <li> Afshi Charania</li>
+              <li> Faisal Charania</li>
+              <li> Kristin Frentzel</li>
+              <li> Judge KP George</li>
+              <li>Sri Preston Kulkarni</li>
+              <li>Padma Maitland</li>
+              <li>Brandon Weiss</li>
+              <li>John White</li>
+              <li>Anne Burton</li>
+              <li>Kali Shiller</li>
+              <li>Nichole Lum</li>
+            </ul>
+          </div>
+          <div className="col-md-3 d-flex justify-content-md-center">
+            <ul type="none" className="pl-0">
+              <li>
+                {" "}
+                <h4 className="title-desc">Organizers</h4>
+              </li>
+              <li> Delilah Agho-Otoghile</li>
+              <li> Neel Gonuguntla</li>
+              <li> Dexter McCoy</li>
+              <li> Hannah Michael</li>
+              <li>Cristina Toppin</li>
+              <li>Nathan Truong</li>
+              <br />
+              <li>
+                California Polytechnic State University,
+                <br />
+                Center for Expressive Technologies
+              </li>
+            </ul>
+          </div>
+          <div className="col-md-3  d-flex justify-content-md-end">
+            <ul type="none" className="pl-0">
+              <li>
+                <h4 className="title-desc"> Advisors</h4>
+              </li>
+              <li> Debbie Alfred</li>
+              <li> Mehul Bhagat</li>
+              <li> Kelsey Donohue</li>
+              <li> Dan Gordon</li>
+              <li>Zaibab Khuwaja-Ali</li>
+              <li>Sultana Mangalji</li>
+              <li> Fahad Punjwani</li>
+              <li>Taral Patel</li>
+              <li> Eva Heinstein</li>
+            </ul>
+          </div>
+          <div className="col-md-12">
+            {" "}
+            <p>
+              <span className="h5 title-desc">Music credit:</span> Black Lives
+              Matter Beat produced by FANA
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* <!--=========Pagination Buttons=======--> */}
       <div className="container py-3">
         <div className="row ">
           <div className="col-12 pt-lg-5 pb-lg-3 d-flex justify-content-between">
             <ul className="pagination">
               <li className="page-item">
-                <a href="./drawing" className="page-link" aria-label="Previous">
+                <a
+                  href="/works/graffiti-city-park"
+                  className="page-link"
+                  aria-label="Previous"
+                >
                   <i className="fas fa-arrow-left" aria-hidden="true"></i>
                 </a>
               </li>
               <li className="page-item">
-                <a className="page-link text-center" href="./drawing">
+                <a
+                  className="page-link text-center"
+                  href="/works/graffiti-city-park"
+                >
                   <span>Prev </span>
                   <br />
                   <span className="project-title text-dark font-weight-bold">
-                    DRAWING GALLERY
+                    GRAFFITI CITY PARK
                   </span>
                 </a>
               </li>
             </ul>
             <ul className="pagination">
               <li className="page-item">
-                <a className="page-link text-center" href="./granada-theatre">
+                <a className="page-link text-center" href="/works/drawing">
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
-                    GRANADA THEATRE
+                    DRAWING GALLERY
                   </span>
                 </a>
               </li>
               <li className="page-item">
                 <a
-                  href="./granada-theatre"
+                  href="/works/drawing"
                   className="page-link"
                   aria-label="Next"
                 >

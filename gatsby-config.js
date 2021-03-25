@@ -24,6 +24,7 @@ module.exports = {
         crossorigin: "anonymous",
       },
     },
+
     {
       resolve: "gatsby-plugin-load-script",
       options: {
@@ -32,6 +33,13 @@ module.exports = {
         integrity:
           "sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns",
         crossorigin: "anonymous",
+      },
+    },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // the only required plugin option for WordPress is the GraphQL url.
+        url: `http://invi.zysk.in/graphql`,
       },
     },
   ],

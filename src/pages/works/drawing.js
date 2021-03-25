@@ -14,7 +14,7 @@ const drawing = ({ data }) => {
         <Navbar />
         <div className=" d-flex flex-wrap h-75">
           <div className="d-flex col-12 align-items-center justify-content-center">
-            <h1 className="title text-uppercase text-center">
+            <h1 className="title text-center text-lg-left text-uppercase text-center">
               DRAWING GALLERY
             </h1>
           </div>
@@ -31,14 +31,14 @@ const drawing = ({ data }) => {
         <div className="container-fluid">
           <div className="row d-flex justify-content-between px-2 py-2">
             <div className="col-md-4 col-3">
-              <p className="small text-justify decription">
+              <p className="small-info text-justify decription">
                 {" "}
                 <span className="font-weight-bold pr-2">PRODUCT: </span>{" "}
                 ANIMATION
               </p>
             </div>
             <div className="col-md-4 col-3">
-              <p className="small text-justify decription d-flex justify-content-center">
+              <p className="small-info text-justify decription d-flex justify-content-center">
                 {" "}
                 <span className="font-weight-bold pr-2">
                   CLIENT:{" "}
@@ -47,7 +47,7 @@ const drawing = ({ data }) => {
               </p>
             </div>
             <div className="col-md-4 col-3 d-flex justify-content-end">
-              <p className="small text-justify decription">
+              <p className="small-info text-justify decription">
                 {" "}
                 <span className="font-weight-bold pr-2">LAUNCHED: </span> MAY
                 2020
@@ -63,7 +63,7 @@ const drawing = ({ data }) => {
       <section className="product container py-md-5 mt-md-5">
         <div className="row">
           <div className="col-md-5 my-md-0 my-3 d-flex justify-content-center">
-            <h2 className="title">
+            <h2 className="title text-center text-lg-left">
               How to create an immersive story through Art and Architecture?{" "}
             </h2>
           </div>
@@ -94,28 +94,28 @@ const drawing = ({ data }) => {
 
       <div className="images container py-md-5">
         <div className="row d-flex align-items-center">
-          <div className="col-md-6 pb-5 pr-md-3">
+          <div className="col-md-6 pb-5 pr-md-3 zoom">
             <Image
               fluid={data.image1.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 pb-5 pl-md-3">
+          <div className="col-md-6 pb-5 pl-md-3 zoom">
             <Image
               fluid={data.image2.childImageSharp.fluid}
               className="img-fluid"
               alt="image2"
             />
           </div>
-          <div className="col-md-6 pb-5 pr-md-3">
+          <div className="col-md-6 pb-5 pr-md-3 zoom">
             <Image
               fluid={data.image3.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 pb-5 pl-md-3">
+          <div className="col-md-6 pb-5 pl-md-3 zoom">
             <Image
               fluid={data.image4.childImageSharp.fluid}
               className="img-fluid"
@@ -130,7 +130,7 @@ const drawing = ({ data }) => {
       <section className="product container py-md-5">
         <div className="row ">
           <div className="col-md-5 my-md-0 my-3 ">
-            <h2 className="title">Creative Process</h2>
+            <h2 className="title text-center text-lg-left">Creative Process</h2>
           </div>
           <div className="description col-md-7 text-justify">
             <p>
@@ -170,18 +170,21 @@ const drawing = ({ data }) => {
                 </a>
               </li>
               <li className="page-item">
-                <a className="page-link text-center" href="./">
+                <a
+                  className="page-link text-center"
+                  href="/works/artForJustice"
+                >
                   <span>Prev </span>
                   <br />
                   <span className="project-title text-dark font-weight-bold">
-                    WORKS
+                    #ARTFORJUSTICE
                   </span>
                 </a>
               </li>
             </ul>
-            <ul className="pagination">
+            {/* <ul className="pagination">
               <li className="page-item">
-                <a className="page-link text-center" href="./artForJustice">
+                <a className="page-link text-center" href="/works/artForJusticeartForJustice">
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
                     #ARTFORJUSTICE
@@ -200,7 +203,7 @@ const drawing = ({ data }) => {
                   </span>
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

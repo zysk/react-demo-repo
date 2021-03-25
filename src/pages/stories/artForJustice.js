@@ -203,7 +203,7 @@ const artForJustice = ({ data }) => {
             <ul className="pagination">
               <li className="page-item">
                 <a
-                  href="./reimagine-virtual-art/"
+                  href="/stories/new-startup/"
                   className="page-link"
                   aria-label="Previous"
                 >
@@ -213,13 +213,13 @@ const artForJustice = ({ data }) => {
               <li className="page-item">
                 <a
                   className="page-link text-center"
-                  href="./reimagine-virtual-art/"
+                  href="/stories/new-startup/"
                 >
                   <span>Prev </span>
                 </a>
               </li>
             </ul>
-            <ul className="pagination">
+            {/* <ul className="pagination">
               <li className="page-item">
                 <a className="page-link text-center" href="#">
                   Next
@@ -233,7 +233,7 @@ const artForJustice = ({ data }) => {
                   </span>
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

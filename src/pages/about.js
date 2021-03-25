@@ -26,8 +26,13 @@ const about = ({ data }) => {
       <Navbar className="About" />
       <section className="container py-5 mt-lg-4">
         <div className="row d-flex align-items-center justify-content-between">
-          <div className="col-md-5 text-left pt-5 pt-lg-0">
-            <h1 className="title m-0 pb-4 pb-md-0">OUR STORY</h1>
+          <div className="col-lg-6 order-lg-12">
+            <Image fluid={data.image.childImageSharp.fluid} alt="Our Story" />
+          </div>
+          <div className="col-lg-5 text-left pt-5 pt-lg-0 order-lg-1">
+            <h1 className="title text-center text-lg-left text-center text-lg-left m-0 pb-4 pb-lg-0">
+              OUR STORY
+            </h1>
             <p className="py-lg-5 description text-justify">
               Founded in March 2020, INVI is a Virtual Experience Design Studio
               that helps clients create virtual experiences through
@@ -39,9 +44,6 @@ const about = ({ data }) => {
               emphasize the client’s vision or content in the most effective and
               visually stunning way.
             </p>
-          </div>
-          <div className="col-md-6">
-            <Image fluid={data.image.childImageSharp.fluid} alt="Our Story" />
           </div>
         </div>
       </section>

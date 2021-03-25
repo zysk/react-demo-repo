@@ -6,6 +6,8 @@ import Image from "gatsby-image"
 import "../../components/main.css"
 import "../../components/index.css"
 import video from "../../images/drawing-gallery/video1.mp4"
+import icon1 from "../../images/icon.png"
+import icon2 from "../../images/icon-mac.png"
 
 const drawing = ({ data }) => {
   return (
@@ -14,44 +16,45 @@ const drawing = ({ data }) => {
         <Navbar />
         <div className=" d-flex flex-wrap h-75">
           <div className="d-flex col-12 align-items-center justify-content-center">
-            <h1 className="title text-uppercase text-center">
+            <h1 className="title text-center text-lg-left text-uppercase text-center">
               SOUTHERN PLAINS MUSEUM AND CULTURAL CENTER
             </h1>
           </div>
         </div>
       </div>
       {/* <!--========Video Section=======--> */}
-      <section className=" pt-5 pb-2">
+      <section className="pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
-          <video controls muted autoplay className="videos">
+          <video controls muted autoPlay className="videos w-100">
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
         <div className="container-fluid">
-          <div className="row d-flex justify-content-between px-2 py-2">
-            <div className="col-md-4 col-3">
-              <p className="small text-justify decription">
+          <div className="row d-flex justify-content-between px-2 py-2 flex-wrap">
+            <div className="col-md-4 col-12">
+              <p className="small-info text-justify decription">
                 {" "}
-                <span className="font-weight-bold pr-2">PRODUCT: </span> VIRTUAL
-                WALK-THRU
+                <span className="font-weight-bold pr-2">PRODUCT: </span>
+                VIRTUAL WALK-THRU
               </p>
             </div>
-            <div className="col-md-4 col-3">
-              <p className="small text-justify decription d-flex justify-content-center">
+            <div className="col-md-4 col-12">
+              <p className="small-info text-justify decription d-flex justify-content-md-center">
                 {" "}
                 <span className="font-weight-bold pr-2">
                   CLIENT:{" "}
                   <span className="font-weight-normal pl-md-2">
-                    CHANCE LANDRY & FUNDED BY CITY OF HOUSTON{" "}
+                    {" "}
+                    CHANCE LANDRY & FUNDED BY CITY OF HOUSTON
                   </span>
                 </span>
               </p>
             </div>
-            <div className="col-md-4 col-3 d-flex justify-content-end">
-              <p className="small text-justify decription">
+            <div className="col-md-4 col-12 d-flex justify-content-md-end">
+              <p className="small-info text-justify decription">
                 {" "}
-                <span className="font-weight-bold pr-2">LAUNCHED: </span>{" "}
+                <span className="font-weight-bold pr-2">LAUNCHED: </span>
                 NOVEMBER 2020
               </p>
             </div>
@@ -65,7 +68,7 @@ const drawing = ({ data }) => {
       <section className="product container py-md-5 mt-md-5">
         <div className="row">
           <div className="col-md-5 my-md-0 my-3 d-flex justify-content-center">
-            <h2 className="title">
+            <h2 className="title text-center text-lg-left text-center text-md-left">
               How do we share the stories and history of the Native American
               community with the rest of the world in a safe and accessible way?
             </h2>
@@ -106,19 +109,87 @@ const drawing = ({ data }) => {
       </section>
 
       {/* <!-- ======= Product Section =======--> */}
+      {/* <!--======== Credits==========--> */}
+      <section className="container my-5">
+        <div className="row text-center d-flex justify-content-center">
+          <div className="col-md-8">
+            <h4 className="pb-3">
+              <u>CREDITS</u>
+            </h4>
+            <p className="decription">
+              Contents: Chance Landry and the Native American community.
+            </p>
+            <p className="decription">
+              Music Artist: James Stephenson from the Lumbee Nation
+            </p>
+            <p className="decription">
+              Music Album: Easter Wind, Northern Lights (available for purchase
+              at Canyon Records)
+            </p>
+            <p className="decription">
+              ​Disclaimer: Please excuse any spelling, grammatical, and typo
+              errors
+            </p>
+          </div>
+          <div className="col-md-8 pb-4">
+            <h4 className="py-3 font-italic">
+              For a fully immersive and interactive experience
+              <br />
+              <br />
+              Download application to enter Virtual Tour
+            </h4>
+            <div className="row text-center d-flex justify-content-center align-items-center">
+              <div className="col-md-3 pb-3 pb-md-0">
+                <a href="#">
+                  <img src={icon2} alt="windows" className="img-fluid" />
+                </a>
+              </div>
+              <div className="col-md-3">
+                <a href="#">
+                  {" "}
+                  <img src={icon2} alt="mac" className="img-fluid" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-8">
+            <p className="description ">
+              ​
+              <span className="font-italic">
+                {" "}
+                For setup video tutorial, please click on this link{" "}
+              </span>
+              -<a href="#"> Video Tutorial</a>
+            </p>
+            <p className="description ">
+              <span className="font-italic">
+                {" "}
+                For setup instructions, please click on this link{" "}
+              </span>
+              - <a href="#"> Readme.txt</a>
+            </p>
+            <p className="description ">
+              <span className="font-italic"> Email</span>{" "}
+              <a href="#"> I N V I </a>{" "}
+              <span className="font-italic"> for any technical issues</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* <!--======== Credits==========--> */}
 
       {/* <!-- ======= Images Section ======= --> */}
 
       <div className="images container py-md-5">
         <div className="row d-flex align-items-center">
-          <div className="col-md-6 pb-5 pr-md-3">
+          <div className="col-md-6 pb-5 pr-md-3 zoom">
             <Image
               fluid={data.image1.childImageSharp.fluid}
               alt="image1"
               className="img-fluid"
             />
           </div>
-          <div className="col-md-6 pb-5 pl-md-3">
+          <div className="col-md-6 pb-5 pl-md-3 zoom">
             <Image
               fluid={data.image2.childImageSharp.fluid}
               className="img-fluid"
@@ -133,7 +204,7 @@ const drawing = ({ data }) => {
       <section className="product container py-md-5">
         <div className="row ">
           <div className="col-md-5 my-md-0 my-3 ">
-            <h2 className="title">Creative Process</h2>
+            <h2 className="title text-center text-lg-left">Creative Process</h2>
           </div>
           <div className="description col-md-7 text-justify">
             <p>
@@ -168,7 +239,7 @@ const drawing = ({ data }) => {
             <ul className="pagination">
               <li className="page-item">
                 <a
-                  href="./lepetit-trianon"
+                  href="/works/granada-theatre"
                   className="page-link"
                   aria-label="Previous"
                 >
@@ -176,18 +247,24 @@ const drawing = ({ data }) => {
                 </a>
               </li>
               <li className="page-item">
-                <a className="page-link text-center" href="./lepetit-trianon">
+                <a
+                  className="page-link text-center"
+                  href="/works/granada-theatre"
+                >
                   <span>Prev </span>
                   <br />
                   <span className="project-title text-dark font-weight-bold">
-                    LE PETIT TRIANON EXHIBITION
+                    GRANADA THEATRE
                   </span>
                 </a>
               </li>
             </ul>
-            {/* <ul className="pagination">
+            <ul className="pagination">
               <li className="page-item">
-                <a className="page-link text-center" href="./lepetit-trianon">
+                <a
+                  className="page-link text-center"
+                  href="/works/lepetit-trianon"
+                >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
                     LE PETIT TRIANON EXHIBITION
@@ -196,7 +273,7 @@ const drawing = ({ data }) => {
               </li>
               <li className="page-item">
                 <a
-                  href="./lepetit-trianon"
+                  href="/works/lepetit-trianon"
                   className="page-link"
                   aria-label="Next"
                 >
@@ -206,7 +283,7 @@ const drawing = ({ data }) => {
                   </span>
                 </a>
               </li>
-            </ul> */}
+            </ul>
           </div>
         </div>
       </div>

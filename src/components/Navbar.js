@@ -8,7 +8,7 @@ const Navbar = ({ className }) => {
   return (
     <>
       <Header />
-      <nav className="navbar navbar-expand-lg navbar-light container py-3">
+      <nav className="navbar navbar-expand-lg navbar-light container-fluid py-3">
         <a className="navbar-brand" href="#">
           <img src={img} alt="Invi Logo" />
         </a>
@@ -24,7 +24,7 @@ const Navbar = ({ className }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto">
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item ">
               <Link to="../" activeClassName="active" className="nav-link">
                 HOME<span className="sr-only ">(current)</span>
@@ -54,7 +54,7 @@ const Navbar = ({ className }) => {
             </li>
             <li className="nav-item">
               <Link
-                to="/stories"
+                to="/stories/"
                 className="nav-link"
                 activeClassName="active"
                 activeStyle={{ color: "#eb483f" }}
@@ -77,7 +77,7 @@ const Navbar = ({ className }) => {
             <li className="nav-item">
               <Link
                 to="/say-hello"
-                className="nav-link"
+                className="nav-link say-hello"
                 activeClassName="active"
                 activeStyle={{ color: "#eb483f" }}
                 partiallyActive={true}
