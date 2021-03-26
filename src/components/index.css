@@ -361,7 +361,7 @@ video:hover {
   overflow: hidden;
   max-width: 540px;
   margin: auto auto 1rem;
-  border-radius: 50%;
+  border-radius: 100%;
   -moz-clip-path: circle(100%);
   -o-clip-path: circle(100%);
   -webkit-clip-path: circle(100%);
@@ -380,7 +380,7 @@ video:hover {
   -moz-clip-path: circle(100%);
   -o-clip-path: circle(100%);
   clip-path: circle(100%);
-  border-radius: 50% !important;
+  border-radius: 100% !important;
 }
 .circle-item .caption .caption-content .caption-heading {
   letter-spacing: 0.2rem;
@@ -401,7 +401,7 @@ video:hover {
   -moz-clip-path: circle(100%);
   -o-clip-path: circle(100%);
   clip-path: circle(100%);
-  border-radius: 50% !important;
+  border-radius: 100% !important;
 }
 @media (min-width: 1440px) {
   .circle-item .caption .caption-content .caption-heading {
