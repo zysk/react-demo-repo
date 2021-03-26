@@ -104,7 +104,7 @@ const artForJustice = ({ data }) => {
               <ul type="none" className="pl-0">
                 <li className="py-1">
                   <i
-                    className="fa fa-arrow-circle-o-right"
+                    className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
                   <a href="#">
@@ -115,7 +115,7 @@ const artForJustice = ({ data }) => {
                 </li>
                 <li className="py-1">
                   <i
-                    className="fa fa-arrow-circle-o-right"
+                    className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
                   <a href="#">
@@ -126,7 +126,7 @@ const artForJustice = ({ data }) => {
                 </li>
                 <li className="py-1">
                   <i
-                    className="fa fa-arrow-circle-o-right"
+                    className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
                   <a href="#">
@@ -137,7 +137,7 @@ const artForJustice = ({ data }) => {
                 </li>
                 <li className="py-1">
                   <i
-                    className="fa fa-arrow-circle-o-right"
+                    className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
                   <a href="#">
@@ -148,7 +148,7 @@ const artForJustice = ({ data }) => {
                 </li>
                 <li className="py-1">
                   <i
-                    className="fa fa-arrow-circle-o-right"
+                    className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
                   <a href="#">
