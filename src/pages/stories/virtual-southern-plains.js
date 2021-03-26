@@ -22,7 +22,7 @@ const artForJustice = ({ data }) => {
               className="img-fluid"
             />
           </div>
-          <div className="col-md-9">
+          <div className="col-md-6">
             <h3 className="font-weight-bold pt-5 px-lg-4 title">
               The First Virtual Southern Plains Museum and Cultural Center for
               Native Americans in Houston

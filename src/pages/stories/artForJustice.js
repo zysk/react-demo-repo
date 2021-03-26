@@ -19,6 +19,8 @@ const artForJustice = ({ data }) => {
               alt="Art For Museum"
               className="img-fluid"
             />
+          </div>
+          <div className="col-md-6">
             <h3 className="font-weight-bold pt-5 px-lg-4 title">
               #ArtForJustice Virtual Museum Launch
               <br /> Commemorating George Floyd and Supporting the Black Lives
