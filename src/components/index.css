@@ -362,6 +362,8 @@ video:hover {
   max-width: 540px;
   margin: auto auto 1rem;
   border-radius: 50%;
+  -moz-clip-path: circle(100%);
+  -o-clip-path: circle(100%);
   -webkit-clip-path: circle(100%);
   clip-path: circle(100%);
 }
@@ -375,6 +377,8 @@ video:hover {
   bottom: 0;
   z-index: 1;
   -webkit-clip-path: circle(100%);
+  -moz-clip-path: circle(100%);
+  -o-clip-path: circle(100%);
   clip-path: circle(100%);
   border-radius: 50% !important;
 }
@@ -394,6 +398,8 @@ video:hover {
 .circle-item img {
   transition: transform 1s !important;
   -webkit-clip-path: circle(100%);
+  -moz-clip-path: circle(100%);
+  -o-clip-path: circle(100%);
   clip-path: circle(100%);
   border-radius: 50% !important;
 }
