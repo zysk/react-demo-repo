@@ -123,7 +123,7 @@ const drawing = ({ data }) => {
               alt="image2"
             />
           </div>
-          <div className="col-md-12 pb-5 zoom">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image5.childImageSharp.fluid}
               className="img-fluid"

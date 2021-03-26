@@ -139,17 +139,16 @@ const project = ({ data }) => {
               width="1400"
             />
           </div>
-          <div className=" col-md-12">
-            <div className="works-video embed-responsive embed-responsive-16by9">
-              <video controls muted autoPlay className="videos w-100">
-                <source src={video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
         </div>
       </div>
-
+      <section className=" pt-5 pb-2">
+        <div className="works-video embed-responsive embed-responsive-16by9">
+          <video controls muted autoPlay className="videos w-100">
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
       {/* <!-- ======= Images Section =======--> */}
       {/* <!--======= Creative Process=======--> */}
       <section className="product container py-md-5">
@@ -205,7 +204,7 @@ const project = ({ data }) => {
                   <span>Prev </span>
                   <br />
                   <span className="project-title text-dark font-weight-bold">
-                    LE PETIT TRIANON EXHIBITION
+                    LE PETIT TRIANON
                   </span>
                 </a>
               </li>

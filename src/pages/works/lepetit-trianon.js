@@ -15,7 +15,7 @@ const project = ({ data }) => {
         <div className=" d-flex flex-wrap h-75">
           <div className="d-flex col-12 align-items-center justify-content-center">
             <h1 className="title text-center text-lg-left text-uppercase text-center">
-              LE PETIT TRIANON EXHIBITION
+              LE PETIT TRIANON
             </h1>
           </div>
         </div>
@@ -26,18 +26,12 @@ const project = ({ data }) => {
           <div className="row  d-flex justify-content-between px-2">
             <div className="col-md-6">
               <div className="works-video embed-responsive embed-responsive-16by9">
-                <video controls muted autoPlay className="videos w-100">
-                  <source src={video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <iframe src="https://www.youtube.com/embed/_5XF47ooAa4?autoplay=1&mute=1"></iframe>
               </div>
             </div>
             <div className="col-md-6">
               <div className="works-video embed-responsive embed-responsive-16by9">
-                <video controls muted autoPlay className="videos w-100">
-                  <source src={video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <iframe src="https://www.youtube.com/embed/1qS1bL6Zcyo?autoplay=1&mute=1"></iframe>
               </div>
             </div>
           </div>
@@ -168,7 +162,7 @@ const project = ({ data }) => {
               className="img-fluid"
             />
           </div>
-          <div className="col-md-12 pb-5 zoom">
+          <div className="col-md-6 pb-5 zoom">
             <Image
               fluid={data.image6.childImageSharp.fluid}
               alt="image1"
@@ -295,7 +289,7 @@ export const query = graphql`
         }
       }
     }
-    image4: file(relativePath: { eq: "lepetit-trianon/image1.jpg" }) {
+    image4: file(relativePath: { eq: "lepetit-trianon/image4.jpg" }) {
       childImageSharp {
         fluid(quality: 90) {
           ...GatsbyImageSharpFluid_tracedSVG

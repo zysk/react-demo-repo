@@ -9,7 +9,7 @@ body,
   font-family: "Lato", sans-serif !important;
   background-color: #f6caba;
   font-weight: 300;
-  min-height: 100vh !important;
+  /* min-height: 100vh !important; */
 }
 
 .title {
@@ -288,11 +288,14 @@ footer .fa {
   color: #eb483f !important;
   bottom: 0;
 }
-@media (min-width: 1600px) and (min-height: 1055px) {
+@media (min-width: 1440px) and (min-height: 1055px) {
   .contact-footer {
     width: 100%;
     bottom: 0 !important;
     position: absolute;
+  }
+  .contact {
+    min-height: 100vh;
   }
 }
 .form-control:focus {

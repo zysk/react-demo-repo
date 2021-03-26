@@ -67,9 +67,9 @@ const index = ({ data }) => {
             <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
               <a className="circle-item" href="./lepetit-trianon">
                 <div className="caption">
-                  <div className="caption-content mt-auto mx-5 mb-5">
+                  <div className="caption-content mt-auto mx-auto mb-5">
                     <div className="caption-heading h2 font-weight-bold text-center">
-                      LE PETIT TRIANON EXHIBITION
+                      LE PETIT TRIANON
                     </div>
                   </div>
                 </div>

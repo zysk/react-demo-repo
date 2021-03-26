@@ -200,6 +200,7 @@ const drawing = ({ data }) => {
       </div>
 
       {/* <!-- ======= Images Section =======--> */}
+
       {/* <!--======= Creative Process=======--> */}
       <section className="product container py-md-5">
         <div className="row ">
@@ -267,7 +268,7 @@ const drawing = ({ data }) => {
                 >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
-                    LE PETIT TRIANON EXHIBITION
+                    LE PETIT TRIANON
                   </span>
                 </a>
               </li>
