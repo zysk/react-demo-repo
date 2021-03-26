@@ -2,7 +2,7 @@ import React from "react"
 import Header from "./header"
 import img from "../images/invi-logo.png"
 import "./main.css"
-import "./index.css"
+
 import { Link } from "gatsby"
 const Navbar = ({ className }) => {
   return (

@@ -4,7 +4,7 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
-import "../components/index.css"
+
 import animation from "../images/animation-illustration.gif"
 import virtual from "../images/virtual-envirnament-invi.gif"
 

@@ -4,7 +4,7 @@ import Footer from "../../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../../components/main.css"
-import "../../components/index.css"
+
 import video from "../../images/drawing-gallery/video1.mp4"
 import icon1 from "../../images/icon.png"
 import icon2 from "../../images/icon-mac.png"

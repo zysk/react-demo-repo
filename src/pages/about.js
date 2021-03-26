@@ -4,7 +4,7 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
-import "../components/index.css"
+
 import tiensvg from "../images/tien-img.svg"
 import afreensvg from "../images/afreen-ali.svg"
 import afreengif from "../images/afreen-ali.gif"

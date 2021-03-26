@@ -4,7 +4,7 @@ import Footer from "../../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../../components/main.css"
-import "../../components/index.css"
+
 import video from "../../images/granada-theatre/granada-theatre.mp4"
 
 const project = ({ data }) => {
