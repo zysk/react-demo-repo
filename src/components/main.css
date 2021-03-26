@@ -9,6 +9,7 @@ body,
   font-family: "Lato", sans-serif !important;
   background-color: #f6caba;
   font-weight: 300;
+  min-height: 100vh !important;
 }
 
 .title {
@@ -166,43 +167,3 @@ video:hover {
   cursor: pointer;
 }
 /* WORKS PAGE */
-
-.box img {
-  display: block;
-  transition: transform 0.8s;
-  filter: brightness(80%);
-  background-color: rgba(8, 8, 8, 0.2) !important;
-}
-.box {
-  /* position: relative;
-  display: inline-block;
-  background-color: rgba(8, 8, 8, 0.2) !important;
-  -webkit-clip-path: circle(100%);
-  clip-path: circle(100%);
-  max-width: 540px;
-  margin: auto auto 1rem;
-  overflow: hidden; */
-  border-radius: 50% !important;
-  -webkit-clip-path: circle(100%);
-  clip-path: circle(100%) !important;
-}
-.box .text {
-  color: #fff;
-  letter-spacing: 0.2rem;
-  line-height: 1.8rem;
-  font-size: 15px;
-  position: absolute !important;
-  bottom: 13%;
-  left: 15%;
-  right: 15%;
-  z-index: 1 !important;
-}
-.box:hover img {
-  transform: scale(1.3);
-  transform-origin: 50% 50%;
-}
-@media (min-width: 1440px) {
-  .box .text {
-    font-size: 20px;
-  }
-}
