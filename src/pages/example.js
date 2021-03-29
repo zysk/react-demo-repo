@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
 import "../components/index.css"
-import "../components/lightbox"
 
 const index = ({ data }) => {
   return (
