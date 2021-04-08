@@ -24,6 +24,8 @@
     "gatsby-transformer-sharp": "^2.12.0",
     "jquery": "^3.5.1",
     "lightbox2": "^2.11.3",
+    "pano": "^1.1.1",
+    "panolens.js": "0.0.0",
     "popper.js": "^1.14.3",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",

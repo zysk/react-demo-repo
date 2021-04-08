@@ -633,7 +633,7 @@ video:hover {
   left: 100%;
 }
 .middle-1 {
-  left: -55%;
+  left: -70%;
 }
 .middle-2 {
   left: -100%;
@@ -667,4 +667,55 @@ video:hover {
   -o-clip-path: circle(100%);
   clip-path: circle(100%);
   border-radius: 100% !important;
+}
+@media (max-width: 576px) {
+  .content_img {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .image {
+    border-radius: 50%;
+    background-color: #f6caba;
+    border: 4px solid #0471bc;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+  .text {
+    width: 100%;
+    letter-spacing: 0.1rem;
+    color: #0471bc;
+    font-size: 18px;
+    padding: 0;
+    text-align: center;
+  }
+  .middle-1,
+  .middle-2,
+  .middle {
+    top: 100%;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 1;
+    padding: 10px 0 0 0;
+  }
+  .middle {
+    left: 0%;
+  }
+  .middle-1 {
+    left: 0%;
+  }
+  .middle-2 {
+    left: 0%;
+  }
+  .content_img:hover .image {
+    cursor: pointer;
+    transition: box-shadow 300ms ease;
+    box-shadow: 0 0 0 0px #f6caba, 0 0 0 0.5px #0471bc, 0 0 0 5px #f6caba,
+      0 0 0 7px #0471bc, 0 0 0 12px #f6caba, 0 0 0 13px #0471bc;
+  }
 }

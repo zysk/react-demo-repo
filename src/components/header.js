@@ -27,6 +27,22 @@ const Header = () => {
         crossOrigin="anonymous"
       ></script>
 
+      <script
+        type="text/javascript"
+        src="node_modules/panolens.js/panolens.min.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="node_modules/pano/dist/pano.min.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="//sinanbolel.firebaseapp.com/cdn/panolens-1.0.1-beta.min.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="//sinanbolel.firebaseapp.com/cdn/pano-2.0.0.min.js"
+      ></script>
       <title>INVI - Innovative Visuals</title>
     </Helmet>
   )

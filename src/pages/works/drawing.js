@@ -23,7 +23,7 @@ const drawing = ({ data }) => {
       {/* <!--========Video Section=======--> */}
       <section className=" pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
-          <video controls muted autoplay className="videos">
+          <video controls muted autoplay className="videos w-100">
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
