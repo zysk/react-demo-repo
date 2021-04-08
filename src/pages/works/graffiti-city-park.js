@@ -28,8 +28,8 @@ const project = ({ data }) => {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="container-fluid">
-          <div className="row d-flex justify-content-between px-2 py-2">
+        <div className="container">
+          <div className="row d-flex justify-content-between  py-2">
             <div className="col-md-4 col-3">
               <p className="small text-justify decription">
                 {" "}

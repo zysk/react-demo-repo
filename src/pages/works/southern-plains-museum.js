@@ -30,8 +30,8 @@ const drawing = ({ data }) => {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="container-fluid">
-          <div className="row d-flex justify-content-between px-2 py-2 flex-wrap">
+        <div className="container">
+          <div className="row d-flex justify-content-between  py-2 flex-wrap">
             <div className="col-md-4 col-12">
               <p className="small-info text-justify decription">
                 {" "}

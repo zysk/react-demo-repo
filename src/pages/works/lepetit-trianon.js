@@ -22,8 +22,8 @@ const project = ({ data }) => {
       </div>
       {/* <!--========Video Section=======--> */}
       <section className=" pt-5 pb-2">
-        <div className="container-fluid">
-          <div className="row  d-flex justify-content-between px-2">
+        <div className="container">
+          <div className="row  d-flex justify-content-between py-2">
             <div className="col-md-6">
               <div className="works-video embed-responsive embed-responsive-16by9">
                 <iframe src="https://www.youtube.com/embed/_5XF47ooAa4?autoplay=1&mute=1"></iframe>
