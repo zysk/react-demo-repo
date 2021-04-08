@@ -6,7 +6,7 @@ import Image from "gatsby-image"
 import "../components/main.css"
 
 import animation from "../images/animation-illustration.gif"
-import virtual from "../images/virtual-envirnament-invi.gif"
+import virtual from "../images/invi-virtual.gif"
 
 const index = ({ data }) => {
   return (
