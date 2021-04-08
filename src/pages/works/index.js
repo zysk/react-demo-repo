@@ -146,7 +146,7 @@ const index = ({ data }) => {
         </div>
       </section>
 
-      <Footer className="contact-footer" />
+      <Footer />
     </div>
   )
 }
