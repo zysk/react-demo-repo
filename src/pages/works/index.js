@@ -16,13 +16,14 @@ const index = ({ data }) => {
             <h3 className="my-5 title"></h3>
           </div>
           <div className="row d-flex justify-content-md-start justify-content-center align-items-center pb-md-3">
+            <div className="col-md-1"></div>
             <div className="col-md-3">
               <div class="content_img">
                 <a className="item" href="/works/archvilla">
                   <Image
                     fluid={data.archvilla.childImageSharp.fluid}
                     alt="Archvilla"
-                    className="img-fluid image m-md-5"
+                    className="img-fluid image"
                   />
                 </a>
                 <div class="middle">
@@ -33,7 +34,7 @@ const index = ({ data }) => {
               </div>
             </div>
             <div className="col-md-2"></div>
-            <div className="col-md-4 mt-5 pt-5 mt-md-0 pt-md-0">
+            <div className="col-md-3 mt-5 pt-5 mt-md-0 pt-md-0">
               <div class="content_img">
                 <a className="item" href="/works/granada-theatre">
                   <Image
@@ -69,7 +70,7 @@ const index = ({ data }) => {
                 </div>
               </div>
             </div>
-            {/* <div className="col-2"></div> */}
+            <div className="col-md-1"></div>
             <div className="col-md-3 mt-5 pt-5">
               <div class="content_img">
                 <a className="item" href="/works/lepetit-trianon">
@@ -108,7 +109,7 @@ const index = ({ data }) => {
             </div>
           </div>
 
-          <div className="row d-flex justify-content-between align-items-center  ">
+          <div className="row d-flex justify-content-between align-items-start  p-0">
             {/* <div className="col-3"></div> */}
             <div className="col-md-3 mt-5 pt-5 mt-md-0 pt-md-0">
               <div class="content_img">
@@ -126,7 +127,7 @@ const index = ({ data }) => {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mt-5 pt-5 last-col">
+            <div className="col-md-3 mt-5 pt-5 last-col pr-md-3 pr-lg-0">
               <div class="content_img">
                 <a className="item" href="/works/drawing">
                   <Image

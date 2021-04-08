@@ -9,11 +9,11 @@ const Navbar = ({ className }) => {
     <>
       <Header />
       <a className="navbar-brand logo text-center w-100" href="#">
-        <img src={img} alt="Invi Logo" width="200" />
+        <img src={img} alt="Invi Logo" width="150" />
       </a>
       <nav className="navbar navbar-expand-lg navbar-light container-fluid py-3">
         <a className="navbar-brand d-lg-none" href="#">
-          <img src={img} alt="Invi Logo" width="200" />
+          <img src={img} alt="Invi Logo" width="150" />
         </a>
         <button
           className="navbar-toggler"
