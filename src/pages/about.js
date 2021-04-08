@@ -51,7 +51,7 @@ const about = ({ data }) => {
 
       {/* <!-- ======= Team ======= --> */}
       <section className="container py-5 team">
-        <div className="row justify-content-between">
+        <div className="row justify-content-md-between justify-content-center">
           <div className="col-md-4 d-flex flex-column justify-content-between team-col px-0 p-4 mb-4 mb-md-0">
             <div>
               <h1 className="team-title title mb-2 pb-4 pb-md-0">

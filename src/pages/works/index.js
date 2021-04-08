@@ -15,118 +15,132 @@ const index = ({ data }) => {
           <div className="content-section-heading text-center">
             <h3 className="my-5 title"></h3>
           </div>
-          <div className="row d-flex justify-content-between align-items-center">
-            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
-              <a className="circle-item" href="./archvilla">
-                <div className="caption">
-                  <div className="caption-content mt-auto mx-auto mb-5">
-                    <div className="caption-heading h2 font-weight-bold text-center d-flex justify-content-center">
-                      ARCHVILLA
-                    </div>
+          <div className="row d-flex justify-content-start align-items-center">
+            <div className="col-lg-4">
+              <div class="content_img">
+                <a className="item" href="./archvilla">
+                  <Image
+                    fluid={data.archvilla.childImageSharp.fluid}
+                    alt="Archvilla"
+                    className="img-fluid image m-5"
+                  />
+                </a>
+                <div class="middle">
+                  <div class="text text-uppercase font-weight-bold">
+                    ARCHVILLA
                   </div>
                 </div>
-                <Image
-                  fluid={data.archvilla.childImageSharp.fluid}
-                  alt="Drawing Gallery"
-                  className="img-fluid"
-                />
-              </a>
+              </div>
             </div>
-            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
-              <a className="circle-item" href="./granada-theatre/">
-                <div className="caption">
-                  <div className="caption-content mt-auto mx-auto mb-5">
-                    <div className="caption-heading h2 font-weight-bold text-center">
-                      GRANADA THEATRE
-                    </div>
+            <div className="col-2"></div>
+            <div className="col-lg-4">
+              <div class="content_img">
+                <a className="item" href="./granada-theatre">
+                  <Image
+                    fluid={data.granada.childImageSharp.fluid}
+                    alt="Granada Theatre"
+                    className="img-fluid image m-5"
+                  />
+                </a>
+                <div class="middle">
+                  <div class="text text-uppercase font-weight-bold">
+                    GRANADA THEATRE
                   </div>
                 </div>
-                <Image
-                  fluid={data.granada.childImageSharp.fluid}
-                  alt="Drawing Gallery"
-                  classNameName="img-fluid"
-                />
-              </a>
+              </div>
             </div>
-            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
-              <a className="circle-item" href="./southern-plains-museum">
-                <div className="caption">
-                  <div className="caption-content mt-auto mx-5 mb-5">
-                    <div className="caption-heading h2 font-weight-bold text-center">
-                      SOUTHERN PLAINS MUSEUM AND CULTURAL CENTER
-                    </div>
+          </div>
+
+          <div className="row d-flex justify-content-center align-items-center">
+            {/* <div className="col-2"></div> */}
+            <div className="col-lg-5">
+              <div class="content_img">
+                <a className="item" href="./graffiti-city-park">
+                  <Image
+                    fluid={data.graffiti.childImageSharp.fluid}
+                    alt="GRAFFITI CITY PARK"
+                    className="img-fluid image"
+                  />
+                </a>
+                <div class="middle-1">
+                  <div class="text text-uppercase font-weight-bold pl-5">
+                    GRAFFITI CITY PARK
                   </div>
                 </div>
-                <Image
-                  fluid={data.southern.childImageSharp.fluid}
-                  className="img-fluid"
-                  alt="SOUTHERN PLAINS MUSEUM"
-                />
-              </a>
+              </div>
             </div>
-            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
-              <a className="circle-item" href="./lepetit-trianon">
-                <div className="caption">
-                  <div className="caption-content mt-auto mx-auto mb-5">
-                    <div className="caption-heading h2 font-weight-bold text-center">
-                      LE PETIT TRIANON
-                    </div>
+            {/* <div className="col-2"></div> */}
+            <div className="col-lg-3">
+              <div class="content_img">
+                <a className="item" href="./lepetit-trianon">
+                  <Image
+                    fluid={data.lepetit.childImageSharp.fluid}
+                    alt="Le Petit Trianon"
+                    className="img-fluid image m-5"
+                  />
+                </a>
+                <div class="middle">
+                  <div class="text text-uppercase font-weight-bold w-100">
+                    Le Petit Trianon
                   </div>
                 </div>
-                <Image
-                  fluid={data.lepetit.childImageSharp.fluid}
-                  className="img-fluid"
-                  alt="LE PETIT TRIANON EXHIBITION"
-                />
-              </a>
+              </div>
             </div>
-            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
-              <a className="circle-item" href="./graffiti-city-park">
-                <div className="caption">
-                  <div className="caption-content mt-auto mx-auto mb-5">
-                    <div className="caption-heading h2 font-weight-bold text-center">
-                      GRAFFITI CITY PARK
-                    </div>
+          </div>
+
+          <div className="row d-flex justify-content-center align-items-center">
+            <div className="col-1"></div>
+            <div className="col-lg-5">
+              <div class="content_img">
+                <a className="item" href="./southern-plains-museum">
+                  <Image
+                    fluid={data.southern.childImageSharp.fluid}
+                    alt="Southern Plains Museum and Cultural Center"
+                    className="img-fluid image m-4"
+                  />
+                </a>
+                <div class="middle-2">
+                  <div class="text text-uppercase font-weight-bold w-100">
+                    Southern Plains Museum and Cultural Center
                   </div>
                 </div>
-                <Image
-                  fluid={data.graffiti.childImageSharp.fluid}
-                  className="img-fluid"
-                  alt="GRAFFITI CITY PARK"
-                />
-              </a>
+              </div>
             </div>
-            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
-              <a className="circle-item" href="./artforjustice/">
-                <div className="caption">
-                  <div className="caption-content mt-auto mx-auto mb-5">
-                    <div className="caption-heading h2 font-weight-bold text-center">
-                      #ARTFORJUSTICE
-                    </div>
+          </div>
+
+          <div className="row d-flex justify-content-between align-items-center pb-5">
+            {/* <div className="col-3"></div> */}
+            <div className="col-lg-4">
+              <div class="content_img">
+                <a className="item" href="./artForJustice">
+                  <Image
+                    fluid={data.art.childImageSharp.fluid}
+                    alt="ArtForJustice"
+                    className="img-fluid image m-4"
+                  />
+                </a>
+                <div class="middle">
+                  <div class="text text-uppercase font-weight-bold">
+                    #ARTFORJUSTICE
                   </div>
                 </div>
-                <Image
-                  fluid={data.art.childImageSharp.fluid}
-                  className="img-fluid"
-                  alt="#ARTFORJUSTICE"
-                />
-              </a>
+              </div>
             </div>
-            <div className="col-lg-4 col-md-6 pb-5 mb-3 px-4">
-              <a className="circle-item" href="./drawing-gallery/">
-                <div className="caption">
-                  <div className="caption-content mt-auto mx-auto mb-5">
-                    <div className="caption-heading h2 font-weight-bold text-center">
-                      DRAWING GALLERY
-                    </div>
+            <div className="col-lg-3 mt-5 pt-5 last-col">
+              <div class="content_img">
+                <a className="item" href="./drawing">
+                  <Image
+                    fluid={data.drawing.childImageSharp.fluid}
+                    alt="Drawing Gallery"
+                    className="img-fluid image m-4"
+                  />
+                </a>
+                <div class="middle-2">
+                  <div class="text text-uppercase font-weight-bold pr-4">
+                    DRAWING GALLERY
                   </div>
                 </div>
-                <Image
-                  fluid={data.drawing.childImageSharp.fluid}
-                  className="img-fluid"
-                  alt="drawing gallery"
-                />
-              </a>
+              </div>
             </div>
           </div>
         </div>

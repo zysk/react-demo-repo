@@ -22,7 +22,7 @@ const services = ({ data }) => {
           design.
         </p>
 
-        <div className="container-fluid mt-5">
+        <div className="container py-5">
           <div className="row ">
             <div className="col-12">
               <Image fluid={data.image.childImageSharp.fluid} alt="services" />
@@ -33,7 +33,7 @@ const services = ({ data }) => {
         {/* <!-- =======  Services ======= --> */}
         <section className="container">
           <div className="  d-flex flex-wrap justify-content-between align-items-center">
-            <div className="col-lg-6 d-flex justify-content-center justify-content-lg-start py-3 py-lg-0">
+            <div className="col-lg-6 d-flex justify-content-center justify-content-lg-start py-5 py-lg-0 mx-lg-0 px-lg-0">
               <div className="rc">
                 <HoverVideoPlayer
                   videoSrc={video1}
@@ -68,7 +68,7 @@ const services = ({ data }) => {
             </div>
           </div>
           <div className="row d-flex justify-content-between align-items-center pt-5">
-            <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center py-5 py-lg-0 order-lg-12 ">
+            <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center py-5 py-lg-0 mx-lg-0 px-lg-0 order-lg-12 ">
               <div className="rc img-fluid py-3">
                 <HoverVideoPlayer
                   videoSrc={video2}

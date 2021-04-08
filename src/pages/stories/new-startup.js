@@ -13,15 +13,14 @@ const artForJustice = ({ data }) => {
       {/* <!-- ======= Stories ======= --> */}
       <section className="container py-5">
         <div className="row text-center justify-content-center">
-          <div className="col-md-9">
+          <div className="col-md-8">
             <Image
               fluid={data.image.childImageSharp.fluid}
               alt="Art For Museum"
               alt="Reimagine Virtual Art"
               className="img-fluid"
             />
-          </div>
-          <div className="col-md-6">
+
             <h3 className="font-weight-bold pt-5 px-lg-2 title">
               THE SUCCESS OF A NEW STARTUP DURING COVID-19
             </h3>

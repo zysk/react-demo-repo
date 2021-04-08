@@ -54,6 +54,11 @@ const Footer = ({ className }) => {
                   <i className="fa fa-youtube fa-2x" aria-hidden="true"></i>
                 </a>
               </div>
+              <div className="social-icons d-inline p-2 mr-2">
+                <a href="https://g.page/invi-llc?gm" target="_blank">
+                  <i className="fa fa-google fa-2x" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
 
             <div className="col-md-6 col-lg-4 text-lg-right">

@@ -56,7 +56,7 @@ const index = ({ data }) => {
       {/* <!-- ======= Services Section ======= --> */}
 
       <section className="container pb-4 pt-1">
-        <h1 className="title text-center text-lg-left text-center">SERVICES</h1>
+        <h1 className="title text-center">SERVICES</h1>
         <div className="row py-3 ">
           <div className="col-md-6 text-center">
             <div className="icon-box mt-5 mt-lg-0 ">

@@ -8,9 +8,12 @@ const Navbar = ({ className }) => {
   return (
     <>
       <Header />
+      <a className="navbar-brand logo text-center w-100" href="#">
+        <img src={img} alt="Invi Logo" width="200" />
+      </a>
       <nav className="navbar navbar-expand-lg navbar-light container-fluid py-3">
-        <a className="navbar-brand" href="#">
-          <img src={img} alt="Invi Logo" />
+        <a className="navbar-brand d-lg-none" href="#">
+          <img src={img} alt="Invi Logo" width="200" />
         </a>
         <button
           className="navbar-toggler"
@@ -24,7 +27,7 @@ const Navbar = ({ className }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav mx-auto">
             <li className="nav-item ">
               <Link to="../" activeClassName="active" className="nav-link">
                 HOME<span className="sr-only ">(current)</span>
