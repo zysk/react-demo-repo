@@ -2,6 +2,11 @@ import React from "react"
 import "./main.css"
 import { Formik, Form, Field } from "formik"
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 const Footer = ({ className }) => {
   return (
     <>
@@ -73,17 +78,30 @@ const Footer = ({ className }) => {
                   email: "",
                 }}
                 onSubmit={(values, actions) => {
-                  alert(
-                    "Thank you for subscribing! We wil get back to you soon"
-                  )
-                  actions.resetForm()
+                  fetch("/", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: encode({ "form-name": "contact-demo", ...values }),
+                  })
+                    .then(() => {
+                      alert(
+                        "Thank you for subscribing! We will get back to you soon"
+                      )
+                      actions.resetForm()
+                    })
+                    .catch(() => {
+                      alert("Error")
+                    })
+                    .finally(() => actions.setSubmitting(false))
                 }}
               >
                 {() => (
                   <Form
                     name="subscribe"
                     method="post"
-                    data-netlify="true"
+                    data-netlify={true}
                     data-netlify-honeypot="bot-field"
                   >
                     <input type="hidden" name="form-name" value="subscribe" />
