@@ -4,6 +4,7 @@ import Footer from "../../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../../components/main.css"
+import { SRLWrapper } from "simple-react-lightbox"
 
 import video from "../../images/drawing-gallery/video1.mp4"
 
@@ -130,6 +131,13 @@ const drawing = ({ data }) => {
               alt="image2"
             />
           </div>
+          <div className="col-md-6 pb-5 zoom">
+            <Image
+              fluid={data.image6.childImageSharp.fluid}
+              className="img-fluid"
+              alt="image2"
+            />
+          </div>
         </div>
       </div>
 
@@ -250,6 +258,13 @@ export const query = graphql`
       }
     }
     image5: file(relativePath: { eq: "archvilla/image5.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    image6: file(relativePath: { eq: "archvilla/image6.jpg" }) {
       childImageSharp {
         fluid(quality: 90) {
           ...GatsbyImageSharpFluid_tracedSVG

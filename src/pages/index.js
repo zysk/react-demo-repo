@@ -28,7 +28,7 @@ const index = ({ data }) => {
       <section className="container py-5">
         <h1 className="text-center title">CREATE YOUR VIRTUAL WORLD</h1>
         <div className="row justify-content-between align-items-center py-5">
-          <div className="col-md-6 ">
+          <div className="col-md-6 text-center text-md-left">
             <p className="description text-justify ">
               We work with Clients who are passionate about their work, want to
               tell a story or share a message. Our products are a creative and
@@ -36,10 +36,12 @@ const index = ({ data }) => {
               looking for new clients. We are designers of virtual experiences.
               At the center of our design process is YOU.
             </p>
-            <a href="#" className="btn text-left virtual mt-4 font-weight-bold">
+            <a
+              href="#"
+              className="btn text-left virtual mt-4 font-weight-bold pl-0"
+            >
               CREATE NOW
             </a>
-            {/* <button className="text-left virtual mt-4">CREATE NOW</button> */}
           </div>
 
           <div className="col-md-5 pt-5 pt-md-0">

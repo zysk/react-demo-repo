@@ -27,7 +27,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle">
-                  <div className="text text-uppercase font-weight-bold pt-4 pt-md-0">
+                  <div className="text text-uppercase font-weight-bold pt-4 pt-md-0 pl-lg-5">
                     ARCHVILLA
                   </div>
                 </div>
