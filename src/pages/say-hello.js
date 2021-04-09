@@ -6,6 +6,11 @@ import Image from "gatsby-image"
 import "../components/main.css"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 const sayhello = ({ data }) => {
   return (
     <>
@@ -24,8 +29,23 @@ const sayhello = ({ data }) => {
                   comment: "",
                 }}
                 onSubmit={(values, actions) => {
-                  alert("Thank you ! We wil get back to you soon")
-                  actions.resetForm()
+                  fetch("/", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: encode({ "form-name": "contact", ...values }),
+                  })
+                    .then(() => {
+                      alert(
+                        "Thank you for subscribing! We will get back to you soon"
+                      )
+                      actions.resetForm()
+                    })
+                    .catch(() => {
+                      alert("Error")
+                    })
+                    .finally(() => actions.setSubmitting(false))
                 }}
                 validate={values => {
                   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
