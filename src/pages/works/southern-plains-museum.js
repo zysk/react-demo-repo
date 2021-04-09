@@ -140,12 +140,12 @@ const drawing = ({ data }) => {
             </h4>
             <div className="row text-center d-flex justify-content-center align-items-center">
               <div className="col-md-3 pb-3 pb-md-0">
-                <a href="#">
+                <a target="_blank" href="#">
                   <img src={icon2} alt="windows" className="img-fluid" />
                 </a>
               </div>
               <div className="col-md-3">
-                <a href="#">
+                <a target="_blank" href="#">
                   {" "}
                   <img src={icon2} alt="mac" className="img-fluid" />
                 </a>
@@ -159,18 +159,35 @@ const drawing = ({ data }) => {
                 {" "}
                 For setup video tutorial, please click on this link{" "}
               </span>
-              -<a href="#"> Video Tutorial</a>
+              -
+              <a
+                target="_blank"
+                href="https://www.youtube.com/watch?v=HfBEW8e9zMQ"
+              >
+                {" "}
+                Video Tutorial
+              </a>
             </p>
             <p className="description ">
               <span className="font-italic">
                 {" "}
                 For setup instructions, please click on this link{" "}
               </span>
-              - <a href="#"> Readme.txt</a>
+              -{" "}
+              <a
+                target="_blank"
+                href="https://apache-museum.s3.us-east-2.amazonaws.com/README.txt"
+              >
+                {" "}
+                Readme.txt
+              </a>
             </p>
             <p className="description ">
               <span className="font-italic"> Email</span>{" "}
-              <a href="#"> I N V I </a>{" "}
+              <a target="_blank" href="mailto:hello@invi.us">
+                {" "}
+                I N V I{" "}
+              </a>{" "}
               <span className="font-italic"> for any technical issues</span>
             </p>
           </div>

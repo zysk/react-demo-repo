@@ -68,6 +68,7 @@ const artForJustice = ({ data }) => {
               Enter Virtual Museum:{" "}
               <span class="font-weight-normal">
                 <a
+                  target="_blank"
                   href="http://www.apachemuseum.org/southern-plains-museum-and-cultural-center.html
                     "
                 >

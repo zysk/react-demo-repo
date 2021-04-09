@@ -83,7 +83,10 @@ const artForJustice = ({ data }) => {
               Please Visit:
               <span>
                 {" "}
-                <a href="#"> https://invi.us/ARTFORJUSTICE/</a>
+                <a target="_blank" href="https://invi.us/ARTFORJUSTICE/">
+                  {" "}
+                  https://invi.us/ARTFORJUSTICE/
+                </a>
               </span>
             </p>
 
@@ -95,7 +98,10 @@ const artForJustice = ({ data }) => {
                     className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://preview.houstonchronicle.com/art-exhibits/houston-s-artforjustice-virtual-museum-launches-15325591"
+                  >
                     {" "}
                     Houston Chronicle: Houston’s ArtForJustice Virtual Museum
                     launches in the spirit of George Floyd
@@ -106,7 +112,10 @@ const artForJustice = ({ data }) => {
                     className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://www.fox26houston.com/news/virtual-art-gallery-honoring-george-floyd-launched-from-fort-bend-co"
+                  >
                     {" "}
                     FOX 26 - Virtual art gallery honoring George Floyd launched
                     from Fort Bend Co.
@@ -117,7 +126,10 @@ const artForJustice = ({ data }) => {
                     className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://www.chron.com/houston/slideshow/Artistic-renderings-commemorating-George-Floyd-on-203441.php?cmpid=hpctp"
+                  >
                     {" "}
                     Houston Chronicle: Artistic renderings commemorating George
                     Floyd on display through #ArtForJustice
@@ -128,7 +140,10 @@ const artForJustice = ({ data }) => {
                     className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://www.click2houston.com/features/2020/06/09/photos-virtual-art-gallery-artforjustice-unveiled-by-houston-fort-bend-county-founders-monday/"
+                  >
                     {" "}
                     KPRC Channel 2 - PHOTOS: Virtual art gallery #ArtForJustice
                     unveiled by Houston, Fort Bend County founders Monday
@@ -139,7 +154,10 @@ const artForJustice = ({ data }) => {
                     className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="http://www.fortbendstar.com/fort-bend-art-for-justice-gallery-promotes-worldwide-solidarity/"
+                  >
                     {" "}
                     Fort Bend Sun: Fort Bend ‘Art For Justice’ gallery promotes
                     worldwide solidarity
@@ -150,7 +168,10 @@ const artForJustice = ({ data }) => {
                     className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://communityimpact.com/houston/sugar-land-missouri-city/2020/06/15/gallery-artforjustice-takes-viewers-inside-virtual-museum-dedicated-to-george-floyd-black-lives-matter-movement/"
+                  >
                     {" "}
                     COMMUNITY IMPACT - GALLERY: #ArtforJustice takes viewers
                     inside virtual museum dedicated to George Floyd, Black Lives
@@ -162,7 +183,10 @@ const artForJustice = ({ data }) => {
                     className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://www.dallasnews.com/news/2020/06/11/irving-children-create-artwork-to-honor-george-floyd-and-the-black-community/"
+                  >
                     {" "}
                     Dallas Morning News: Irving children create artwork to honor
                     George Floyd and the black community
@@ -173,7 +197,10 @@ const artForJustice = ({ data }) => {
                     className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://www.houstoniamag.com/arts-and-culture/2020/06/houstonians-open-virtual-museum-in-tribute-to-george-floyd"
+                  >
                     {" "}
                     HOUSTONIA - Houstonians Open Virtual Museum in Tribute to
                     George Floyd
@@ -184,7 +211,10 @@ const artForJustice = ({ data }) => {
                     className="fa fa-arrow-circle-o-right pr-1"
                     aria-hidden="true"
                   ></i>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    href="https://myemail.constantcontact.com/NEA-Design---Creative-Placemaking--July-2020.html?soid=1103211031308&aid=x7RVyjSUd_8"
+                  >
                     {" "}
                     National Endowment for the Arts - Nerdy Design Thing We Are
                     Following
