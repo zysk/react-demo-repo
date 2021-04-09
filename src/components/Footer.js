@@ -70,40 +70,43 @@ const Footer = ({ className }) => {
               </p>
               <Formik
                 initialValues={{
-                  name: "",
                   email: "",
-                  message: "",
                 }}
                 onSubmit={(values, actions) => {
                   alert(
-                    "Thank you for subscribing! We wil get back to you soonS"
+                    "Thank you for subscribing! We wil get back to you soon"
                   )
-                  actions.setSubmitting(false)
+                  actions.resetForm()
                 }}
               >
-                <Form
-                  name="subscribe"
-                  method="post"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                >
-                  <input type="hidden" name="form-name" value="subscribe" />
-                  <div class="input-group pt-3">
-                    <input
-                      type="email"
-                      className="form-control input-button p-4"
-                      placeholder="Enter your email"
-                      required
-                    />
-                    <span class="input-group-addon">
-                      <input
-                        type="submit"
-                        className="btn subscribe-button font-weight-bold px-4"
-                        value="Subscribe"
+                {() => (
+                  <Form
+                    name="subscribe"
+                    method="post"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                  >
+                    <input type="hidden" name="form-name" value="subscribe" />
+                    <div class="input-group pt-3">
+                      <Field
+                        type="email"
+                        className="form-control input-button p-4"
+                        placeholder="Enter your email"
+                        required
+                        name="email"
+                        id="email"
                       />
-                    </span>
-                  </div>
-                </Form>
+
+                      <span class="input-group-addon">
+                        <input
+                          type="submit"
+                          className="btn subscribe-button font-weight-bold px-4"
+                          value="Subscribe"
+                        />
+                      </span>
+                    </div>
+                  </Form>
+                )}
               </Formik>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from "react"
 import "../components/main.css"
-import { Formik, Form, Field } from "formik"
+import { Formik, Form, Field, ErrorMessage } from "formik"
 const Footer = ({ className }) => {
   return (
     <>
@@ -18,38 +18,86 @@ const Footer = ({ className }) => {
                   initialValues={{
                     name: "",
                     email: "",
-                    message: "",
+                    comment: "",
                   }}
                   onSubmit={(values, actions) => {
-                    alert(
-                      "Thank you for subscribing! We wil get back to you soonS"
-                    )
-                    actions.setSubmitting(false)
+                    alert("Thank you ! We wil get back to you soon")
+                    actions.resetForm()
+                  }}
+                  validate={values => {
+                    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                    const errors = {}
+                    if (!values.name) {
+                      errors.name = "Name Required*"
+                    }
+                    if (!values.email || !emailRegex.test(values.email)) {
+                      errors.email = "Valid Email Required*"
+                    }
+                    if (!values.comment) {
+                      errors.comment = "Message Required*"
+                    }
+                    return errors
                   }}
                 >
-                  <Form
-                    name="subscribe"
-                    method="post"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                  >
-                    <input type="hidden" name="form-name" value="subscribe" />
-                    <div class="input-group">
-                      <input
-                        type="email"
-                        className="form-control input-button p-4"
-                        placeholder="Enter your email"
-                        required
-                      />
-                      <span class="input-group-addon">
-                        <input
-                          type="submit"
-                          className="btn subscribe-button font-weight-bold px-4"
-                          value="Subscribe"
+                  {() => (
+                    <Form
+                      name="contact"
+                      method="post"
+                      data-netlify="true"
+                      data-netlify-honeypot="bot-field"
+                    >
+                      <input type="hidden" name="form-name" value="contact" />
+
+                      <div className="mb-5">
+                        <label for="Name" className="form-label invisible">
+                          Full Name
+                        </label>
+                        <Field
+                          type="text"
+                          className="form-control w-100"
+                          id="name"
+                          placeholder="Full Name"
+                          name="name"
                         />
-                      </span>
-                    </div>
-                  </Form>
+                        <ErrorMessage name="name" className="error" />
+                      </div>
+                      <div className="mb-5">
+                        <label for="Email" className="form-label invisible">
+                          Email Address
+                        </label>
+                        <Field
+                          type="text"
+                          name="email"
+                          className="form-control w-100"
+                          id="Email"
+                          placeholder="Email Address"
+                        />
+                        <ErrorMessage name="email" className="error" />
+                      </div>
+                      <div className="mb-3 comment">
+                        <label for="comment" className="form-label invisible">
+                          Comment
+                        </label>
+                        <Field
+                          className="form-control w-100"
+                          name="comment"
+                          component="textarea"
+                          id="comment"
+                          rows="5"
+                          placeholder="Comment"
+                        />
+                        <ErrorMessage name="comment" className="error" />
+                      </div>
+                      <div className="text-lg-right text-center mt-5">
+                        <button
+                          type="submit"
+                          className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold"
+                        >
+                          Send Message
+                        </button>
+                      </div>
+                    </Form>
+                  )}
                 </Formik>
               </div>
             </div>

@@ -447,6 +447,11 @@ textarea {
 .comment {
   margin-top: 5rem;
 }
+.error {
+  color: #eb483f;
+  letter-spacing: 0.1rem;
+  font-size: 14px !important;
+}
 @media (max-width: 768px) {
   .submit-btn {
     width: 50% !important;
@@ -511,60 +516,7 @@ video:hover {
   border-radius: 0 !important;
   border: none !important;
 }
-/* Circle Works Menu */
-/* .circle-item {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  max-width: 540px;
-  margin: auto auto 1rem;
-  border-radius: 100%;
-  -moz-clip-path: circle(100%);
-  -o-clip-path: circle(100%);
-  -webkit-clip-path: circle(100%);
-  clip-path: circle(100%);
-}
-.circle-item .caption {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(8, 8, 8, 0.2);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  -webkit-clip-path: circle(100%);
-  -moz-clip-path: circle(100%);
-  -o-clip-path: circle(100%);
-  clip-path: circle(100%);
-  border-radius: 100% !important;
-}
-.circle-item .caption .caption-content .caption-heading {
-  letter-spacing: 0.2rem;
-  line-height: 1.8rem;
-  font-size: 16px;
-}
-.circle-item .caption .caption-content {
-  color: #fff;
-  text-align: center;
-  font-weight: 300;
-}
-.circle-item:hover img {
-  transform: scale(1.3) !important;
-}
-.circle-item img {
-  transition: transform 1s !important;
-  -webkit-clip-path: circle(100%);
-  -moz-clip-path: circle(100%);
-  -o-clip-path: circle(100%);
-  clip-path: circle(100%);
-  border-radius: 100% !important;
-}
-@media (min-width: 1440px) {
-  .circle-item .caption .caption-content .caption-heading {
-    font-size: 20px;
-  }
-} */
+
 .static {
   position: absolute;
 }
