@@ -10,7 +10,7 @@ const Footer = ({ className }) => {
             <div className="col-lg-5 pb-4 pb-lg-0">
               <h5 className="pb-3 pb-lg-5 footer-heading">CONTACT</h5>
               <p>
-                <a href="to:+8323567656">
+                <a href="to:+1832-356-7656">
                   <i className=" fa fa-phone pr-2" aria-hidden="true"></i>
                   (832) 356-7656
                 </a>
