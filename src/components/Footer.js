@@ -68,19 +68,27 @@ const Footer = ({ className }) => {
                 <br /> behind-the-scene stories, and exciting projects
               </p>
               <div className="input-group pt-3">
-                <input
-                  type="email"
-                  className="form-control input-button p-4"
-                  placeholder="Enter your email"
-                  required
-                />
-                <div className="input-group-append">
+                <form
+                  name="subscribe"
+                  method="post"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                >
+                  <input type="hidden" name="form-name" value="subscribe" />
                   <input
-                    type="submit"
-                    className="btn subscribe-button font-weight-bold px-4"
-                    value="Subscribe"
+                    type="email"
+                    className="form-control input-button p-4"
+                    placeholder="Enter your email"
+                    required
                   />
-                </div>
+                  <div className="input-group-append">
+                    <input
+                      type="submit"
+                      className="btn subscribe-button font-weight-bold px-4"
+                      value="Subscribe"
+                    />
+                  </div>
+                </form>
               </div>
             </div>
           </div>
