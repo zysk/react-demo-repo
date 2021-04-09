@@ -1,5 +1,6 @@
 import React from "react"
 import "./main.css"
+import { Formik, Form, Field } from "formik"
 
 const Footer = ({ className }) => {
   return (
@@ -67,29 +68,43 @@ const Footer = ({ className }) => {
                 Subscribe to INVI for all latest news,
                 <br /> behind-the-scene stories, and exciting projects
               </p>
-              <div className="input-group pt-3">
-                <form
+              <Formik
+                initialValues={{
+                  name: "",
+                  email: "",
+                  message: "",
+                }}
+                onSubmit={(values, actions) => {
+                  alert(
+                    "Thank you for subscribing! We wil get back to you soonS"
+                  )
+                  actions.setSubmitting(false)
+                }}
+              >
+                <Form
                   name="subscribe"
                   method="post"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                 >
                   <input type="hidden" name="form-name" value="subscribe" />
-                  <input
-                    type="email"
-                    className="form-control input-button p-4"
-                    placeholder="Enter your email"
-                    required
-                  />
-                  <div className="input-group-append">
+                  <div class="input-group pt-3">
                     <input
-                      type="submit"
-                      className="btn subscribe-button font-weight-bold px-4"
-                      value="Subscribe"
+                      type="email"
+                      className="form-control input-button p-4"
+                      placeholder="Enter your email"
+                      required
                     />
+                    <span class="input-group-addon">
+                      <input
+                        type="submit"
+                        className="btn subscribe-button font-weight-bold px-4"
+                        value="Subscribe"
+                      />
+                    </span>
                   </div>
-                </form>
-              </div>
+                </Form>
+              </Formik>
             </div>
           </div>
         </div>
