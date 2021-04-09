@@ -18,7 +18,7 @@ const index = ({ data }) => {
           <div className="row d-flex justify-content-md-start justify-content-center align-items-center pb-md-3">
             <div className="col-md-1"></div>
             <div className="col-md-3">
-              <div class="content_img">
+              <div className="content_img">
                 <a className="item" href="/works/archvilla">
                   <Image
                     fluid={data.archvilla.childImageSharp.fluid}
@@ -26,8 +26,8 @@ const index = ({ data }) => {
                     className="img-fluid image"
                   />
                 </a>
-                <div class="middle">
-                  <div class="text text-uppercase font-weight-bold pt-4 pt-md-0">
+                <div className="middle">
+                  <div className="text text-uppercase font-weight-bold pt-4 pt-md-0">
                     ARCHVILLA
                   </div>
                 </div>
@@ -35,17 +35,17 @@ const index = ({ data }) => {
             </div>
             <div className="col-md-2"></div>
             <div className="col-md-3 mt-5 pt-5 mt-md-0 pt-md-0">
-              <div class="content_img">
-                <a className="item" href="/works/granada-theatre">
+              <div className="content_img">
+                <a className="item" href="/works/southern-plains-museum">
                   <Image
-                    fluid={data.granada.childImageSharp.fluid}
-                    alt="Granada Theatre"
-                    className="img-fluid image m-md-5"
+                    fluid={data.southern.childImageSharp.fluid}
+                    alt="Southern Plains Museum and Cultural Center"
+                    className="img-fluid image m-md-4"
                   />
                 </a>
-                <div class="middle">
-                  <div class="text text-uppercase font-weight-bold pt-4 pt-md-0">
-                    GRANADA THEATRE
+                <div className="middle">
+                  <div className="text text-uppercase font-weight-bold w-100 pt-4 pt-md-0">
+                    Southern Plains Museum and Cultural Center
                   </div>
                 </div>
               </div>
@@ -55,24 +55,7 @@ const index = ({ data }) => {
           <div className="row d-flex justify-content-center align-items-center pb-md-3">
             {/* <div className="col-2"></div> */}
             <div className="col-md-4 mt-5 pt-5 mt-md-0 pt-md-0">
-              <div class="content_img">
-                <a className="item" href="/works/graffiti-city-park">
-                  <Image
-                    fluid={data.graffiti.childImageSharp.fluid}
-                    alt="GRAFFITI CITY PARK"
-                    className="img-fluid image"
-                  />
-                </a>
-                <div class="middle-1">
-                  <div class="text text-uppercase font-weight-bold pl-md-5 pt-4 pt-md-0">
-                    GRAFFITI CITY PARK
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-1"></div>
-            <div className="col-md-3 mt-5 pt-5">
-              <div class="content_img">
+              <div className="content_img">
                 <a className="item" href="/works/lepetit-trianon">
                   <Image
                     fluid={data.lepetit.childImageSharp.fluid}
@@ -80,9 +63,26 @@ const index = ({ data }) => {
                     className="img-fluid image m-md-5"
                   />
                 </a>
-                <div class="middle">
-                  <div class="text text-uppercase font-weight-bold w-100 pt-4 pt-md-0">
+                <div className="middle-1">
+                  <div className="text text-uppercase font-weight-bold  pt-4 pt-md-0">
                     Le Petit Trianon
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-1"></div>
+            <div className="col-md-3 mt-5 pt-5">
+              <div className="content_img">
+                <a className="item" href="/works/graffiti-city-park">
+                  <Image
+                    fluid={data.graffiti.childImageSharp.fluid}
+                    alt="GRAFFITI CITY PARK"
+                    className="img-fluid image"
+                  />
+                </a>
+                <div className="middle">
+                  <div className="text text-uppercase font-weight-bold pl-xl-5 pt-4 pt-md-0">
+                    GRAFFITI CITY PARK
                   </div>
                 </div>
               </div>
@@ -92,27 +92,27 @@ const index = ({ data }) => {
           <div className="row d-flex justify-content-center align-items-center py-md-0">
             <div className="col-md-1"></div>
             <div className="col-md-4 mt-5 pt-5 mt-md-0 pt-md-0">
-              <div class="content_img">
-                <a className="item" href="/works/southern-plains-museum">
+              <div className="content_img">
+                <a className="item" href="/works/granada-theatre">
                   <Image
-                    fluid={data.southern.childImageSharp.fluid}
-                    alt="Southern Plains Museum and Cultural Center"
-                    className="img-fluid image m-md-4"
+                    fluid={data.granada.childImageSharp.fluid}
+                    alt="Granada Theatre"
+                    className="img-fluid image m-md-5"
                   />
                 </a>
-                <div class="middle-2">
-                  <div class="text text-uppercase font-weight-bold w-100 pt-4 pt-md-0">
-                    Southern Plains Museum and Cultural Center
+                <div className="middle-1">
+                  <div className="text text-uppercase font-weight-bold pt-4 pt-md-0">
+                    GRANADA THEATRE
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="row d-flex justify-content-between align-items-start  p-0">
+          <div className="row d-flex justify-content-xl-between justify-content-md-between align-items-start">
             {/* <div className="col-3"></div> */}
             <div className="col-md-3 mt-5 pt-5 mt-md-0 pt-md-0">
-              <div class="content_img">
+              <div className="content_img">
                 <a className="item" href="/works/artForJustice">
                   <Image
                     fluid={data.art.childImageSharp.fluid}
@@ -120,24 +120,24 @@ const index = ({ data }) => {
                     className="img-fluid image m-md-4"
                   />
                 </a>
-                <div class="middle">
-                  <div class="text text-uppercase font-weight-bold pt-4 pt-md-0">
+                <div className="middle">
+                  <div className="text text-uppercase font-weight-bold pt-4 pt-md-0">
                     #ARTFORJUSTICE
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mt-5 pt-5 last-col pr-md-3 pr-lg-0">
-              <div class="content_img">
+            <div className="col-md-3 mt-5 pt-5 last-col ">
+              <div className="content_img">
                 <a className="item" href="/works/drawing">
                   <Image
                     fluid={data.drawing.childImageSharp.fluid}
                     alt="Drawing Gallery"
-                    className="img-fluid image m-md-4"
+                    className="img-fluid image m-lg-4"
                   />
                 </a>
-                <div class="middle-2">
-                  <div class="text text-uppercase font-weight-bold pr-md-4 pt-3">
+                <div className="middle-2">
+                  <div className="text text-uppercase font-weight-bold pr-md-4 pt-3">
                     DRAWING GALLERY
                   </div>
                 </div>
