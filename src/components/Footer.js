@@ -83,7 +83,7 @@ const Footer = ({ className }) => {
                     headers: {
                       "Content-Type": "application/x-www-form-urlencoded",
                     },
-                    body: encode({ "form-name": "contact-demo", ...values }),
+                    body: encode({ "form-name": "subscribe", ...values }),
                   })
                     .then(() => {
                       alert(
