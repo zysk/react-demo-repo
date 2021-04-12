@@ -16,7 +16,7 @@ const index = ({ data }) => {
           </div>
           <div className="row d-flex justify-content-md-start justify-content-center align-items-center pb-md-3">
             <div className="col-md-1"></div>
-            <div className="col-md-3">
+            <div className="col-md-3 px-5 px-lg-0  pb-5 pb-lg-0">
               <div className="content_img">
                 <a className="item" href="/works/archvilla">
                   <Image
@@ -26,14 +26,14 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle">
-                  <div className="text text-uppercase font-weight-bold pt-4 pt-md-0 pl-lg-5">
+                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0 pl-lg-5">
                     ARCHVILLA
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-md-2"></div>
-            <div className="col-md-3  pt-5 pt-lg-0  first-col">
+            <div className="col-md-3  pt-5 pt-lg-0 pb-5 pb-lg-0 first-col px-5 px-lg-0">
               <div className="content_img">
                 <a className="item" href="/works/southern-plains-museum">
                   <Image
@@ -43,7 +43,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle">
-                  <div className="text text-uppercase font-weight-bold w-100 pt-4 pt-md-0">
+                  <div className="text text-uppercase font-weight-bold w-100 pt-3 pt-md-0 ">
                     Southern Plains Museum and Cultural Center
                   </div>
                 </div>
@@ -53,7 +53,7 @@ const index = ({ data }) => {
 
           <div className="row d-flex justify-content-center align-items-center pb-md-3">
             {/* <div className="col-2"></div> */}
-            <div className="col-md-4 mt-5 pt-5 mt-md-0 pt-md-0">
+            <div className="col-md-4 mt-5 pt-5  pb-5 pb-lg-0 mt-md-0 pt-md-0 px-5 px-lg-0">
               <div className="content_img">
                 <a className="item" href="/works/lepetit-trianon">
                   <Image
@@ -63,14 +63,14 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle-1">
-                  <div className="text text-uppercase font-weight-bold  pt-4 pt-md-0">
+                  <div className="text text-uppercase font-weight-bold  pt-5 pt-md-0">
                     Le Petit Trianon
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-md-1"></div>
-            <div className="col-md-3 mt-5 pt-5">
+            <div className="col-md-3 mt-5  pb-5 pb-lg-0 pt-5 px-5 px-lg-0">
               <div className="content_img">
                 <a className="item" href="/works/graffiti-city-park">
                   <Image
@@ -80,7 +80,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle">
-                  <div className="text text-uppercase font-weight-bold pl-xl-5 pt-4 pt-md-0">
+                  <div className="text text-uppercase font-weight-bold pl-xl-5 pt-5 pt-md-0">
                     GRAFFITI CITY PARK
                   </div>
                 </div>
@@ -90,7 +90,7 @@ const index = ({ data }) => {
 
           <div className="row d-flex justify-content-between align-items-center py-md-0">
             {/* <div className="col-md-1"></div> */}
-            <div className="col-md-3  pt-5  pt-md-0 first-col">
+            <div className="col-md-3  pt-5  pb-5 pb-lg-0 pt-md-0 first-col px-5 px-lg-0">
               <div className="content_img">
                 <a className="item" href="/works/artForJustice">
                   <Image
@@ -100,13 +100,13 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle">
-                  <div className="text text-uppercase font-weight-bold pt-4 pt-md-0 pl-lg-5 ml-lg-3">
+                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0 pl-lg-5 ml-lg-3">
                     #ARTFORJUSTICE
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-4 mt-5 pt-5 mt-md-0 pt-md-0">
+            <div className="col-md-4 mt-5   pb-5 pb-lg-0 pt-5 mt-md-0 pt-md-0 px-5 px-lg-0">
               <div className="content_img">
                 <a className="item" href="/works/granada-theatre">
                   <Image
@@ -116,7 +116,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle">
-                  <div className="text text-uppercase font-weight-bold pt-4 pt-md-0">
+                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0">
                     GRANADA THEATRE
                   </div>
                 </div>
@@ -126,7 +126,7 @@ const index = ({ data }) => {
           </div>
 
           <div className="row d-flex justify-content-xl-between justify-content-md-between align-items-start last-row">
-            <div className="col-6"></div>
+            <div className="col-md-6"></div>
             {/* <div className="col-md-3 mt-5 pt-5 mt-md-0 pt-md-0">
               <div className="content_img">
                 <a className="item" href="/works/artForJustice">
@@ -143,7 +143,7 @@ const index = ({ data }) => {
                 </div>
               </div>
             </div> */}
-            <div className="col-md-3 mt-5 pt-5 last-col ">
+            <div className="col-md-3 mt-5 pt-5   pb-5 pb-lg-0 last-col px-5 px-lg-0">
               <div className="content_img">
                 <a className="item" href="/works/drawing">
                   <Image
@@ -153,7 +153,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle-2">
-                  <div className="text text-uppercase font-weight-bold pr-md-4 pt-3">
+                  <div className="text text-uppercase font-weight-bold pr-md-4 pt-5">
                     DRAWING GALLERY
                   </div>
                 </div>

@@ -622,11 +622,7 @@ video:hover {
   clip-path: circle(100%);
   border-radius: 100% !important;
 }
-@media (max-width: 576px) {
-  .content_img {
-    justify-content: center;
-  }
-
+@media (max-width: 767px) {
   .text {
     padding: 0;
     text-align: center;
@@ -652,8 +648,8 @@ video:hover {
   .content_img:hover .image {
     cursor: pointer;
     transition: box-shadow 300ms ease;
-    box-shadow: 0 0 0 0px #f6caba, 0 0 0 0.5px #0471bc, 0 0 0 5px #f6caba,
-      0 0 0 7px #0471bc, 0 0 0 12px #f6caba, 0 0 0 13px #0471bc;
+    box-shadow: 0 0 0 0px #f6caba, 0 0 0 0.8px #0471bc, 0 0 0 9px #f6caba,
+      0 0 0 12px #0471bc, 0 0 0 20px #f6caba, 0 0 0 22px #0471bc;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {

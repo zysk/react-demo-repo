@@ -29,7 +29,7 @@ const project = ({ data }) => {
                 <iframe src="https://www.youtube.com/embed/_5XF47ooAa4?autoplay=1&mute=1"></iframe>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 py-4 py-md-0">
               <div className="works-video embed-responsive embed-responsive-16by9">
                 <iframe src="https://www.youtube.com/embed/1qS1bL6Zcyo?autoplay=1&mute=1"></iframe>
               </div>
