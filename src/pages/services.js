@@ -4,7 +4,6 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
-
 import video1 from "../images/animationhover.mp4"
 import video2 from "../images/virtualworld.mp4"
 import HoverVideoPlayer from "react-hover-video-player"

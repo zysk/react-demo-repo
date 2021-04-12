@@ -16,7 +16,7 @@ const Footer = ({ className }) => {
             <div className="col-lg-5 pb-4 pb-lg-0">
               <h5 className="pb-3 pb-lg-5 footer-heading">CONTACT</h5>
               <p>
-                <a href="to:+1 (832) 356-7656">
+                <a href="tel:+1 (832) 356-7656">
                   <i className=" fa fa-phone pr-2" aria-hidden="true"></i>
                   (832) 356-7656
                 </a>
@@ -105,7 +105,7 @@ const Footer = ({ className }) => {
                     data-netlify-honeypot="bot-field"
                   >
                     <input type="hidden" name="form-name" value="subscribe" />
-                    <div class="input-group pt-3">
+                    <div className="input-group pt-3">
                       <Field
                         type="email"
                         className="form-control input-button p-4"
@@ -115,7 +115,7 @@ const Footer = ({ className }) => {
                         id="email"
                       />
 
-                      <span class="input-group-addon">
+                      <span className="input-group-addon">
                         <input
                           type="submit"
                           className="btn subscribe-button font-weight-bold px-4"

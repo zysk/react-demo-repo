@@ -104,93 +104,97 @@ const stories = ({ data }) => {
             </p>
           </div>
         </div> */}
-        <div class="row text-center justify-content-start py-lg-5">
-          <div class="col-md-4 px-3">
+        <div className="row text-center justify-content-start py-lg-5">
+          <div className="col-md-4 px-3">
             <Image
               fluid={data.southernplains.childImageSharp.fluid}
               alt="Southern Plains Museum"
               className="img-fluid"
             />
-            <h3 class="font-weight-bold pt-5 px-lg-4 stories-title">
+            <h3 className="font-weight-bold pt-5 px-lg-4 stories-title">
               <a href="../stories/virtual-southern-plains/">
                 The First Virtual Southern Plains Museum and Cultural Center for
                 Native Americans in Houston
               </a>
             </h3>
-            <h6 class="py-3 text-muted">NOVEMBER 18, 2020 IN STORY TELLING</h6>
-            <p class="description text-justify">
+            <h6 className="py-3 text-muted">
+              NOVEMBER 18, 2020 IN STORY TELLING
+            </h6>
+            <p className="description text-justify">
               INVI had an opportunity to collaborate with the City of Houston
               and Chance L. Landry, President of the Southern Apache Museum, to
               design and create the virtual Southern Plains Museum and Culture
               Center (SPMCC) for Native American Heritage Month.
             </p>
-            <p class="py-3 font-weight-bold">
+            <p className="py-3 font-weight-bold">
               <a href="../stories/virtual-southern-plains/">READ MORE</a>
             </p>
           </div>
-          <div class="col-md-4 px-3">
+          <div className="col-md-4 px-3">
             <Image
               fluid={data.graffiti.childImageSharp.fluid}
               alt="Graffiti City Park"
               className="img-fluid"
             />
-            <h3 class="font-weight-bold pt-5 px-lg-4 stories-title">
+            <h3 className="font-weight-bold pt-5 px-lg-4 stories-title">
               <a href="../stories/graffiti-city-park/">
                 Graffiti City Park and Virtual Real Estate
                 <br />
                 Leaving your Digital Footprints
               </a>
             </h3>
-            <h6 class="py-3 text-muted">AUGUST 02, 2020 IN STORY TELLING</h6>
-            <p class="description text-justify">
+            <h6 className="py-3 text-muted">
+              AUGUST 02, 2020 IN STORY TELLING
+            </h6>
+            <p className="description text-justify">
               Graffiti artists find a way to bring life to the static buildings
               as architecture takes a simplified approach. The colorful paint
               parades across the façade of the local corner store or a
               warehouse, without their consent, the work reaches many audiences.
               The realization of the artwork on the street is controversial.
             </p>
-            <p class="py-3 font-weight-bold">
+            <p className="py-3 font-weight-bold">
               <a href="../stories/graffiti-city-park/">READ MORE</a>
             </p>
           </div>
-          <div class="col-md-4 px-3">
+          <div className="col-md-4 px-3">
             <Image
               fluid={data.virtual.childImageSharp.fluid}
               alt="Reimagine Virtual Art Exhibition"
               className="img-fluid"
             />
-            <h3 class="font-weight-bold pt-5 px-lg-4 stories-title">
+            <h3 className="font-weight-bold pt-5 px-lg-4 stories-title">
               <a href="../stories/reimagine-virtual-art/">
                 Reimagine Virtual Art Exhibition in a Physical Space
               </a>
             </h3>
-            <h6 class="py-3 text-muted">JULY 10, 2020 IN STORY TELLING</h6>
-            <p class="description text-justify">
+            <h6 className="py-3 text-muted">JULY 10, 2020 IN STORY TELLING</h6>
+            <p className="description text-justify">
               INVI is honored to take part in The Eye of the Huntress project,
               collaborating with Alexandra Ray and Catherine Loewe to reimagine
               and rediscover virtual art exhibitions in a physical space. INVI
               helps recreate the Le Petit Trianon (San Francisco) residence into
               a virtual platform, while Alexandra and Catherine ...
             </p>
-            <p class="py-3 font-weight-bold">
+            <p className="py-3 font-weight-bold">
               <a href="../stories/reimagine-virtual-art/">READ MORE</a>
             </p>
           </div>
         </div>
-        <div class="row text-center justify-content-start pt-lg-5">
-          <div class="col-md-4 px-3">
+        <div className="row text-center justify-content-start pt-lg-5">
+          <div className="col-md-4 px-3">
             <Image
               fluid={data.startup.childImageSharp.fluid}
               alt="New Startup"
               className="img-fluid"
             />
-            <h3 class="font-weight-bold pt-5 px-lg-4 stories-title">
+            <h3 className="font-weight-bold pt-5 px-lg-4 stories-title">
               <a href="../stories/new-startup/">
                 THE SUCCESS OF A NEW STARTUP DURING COVID-19
               </a>
             </h3>
-            <h6 class="py-3 text-muted">JUNE 12, 2020 IN STORY TELLING</h6>
-            <p class="description text-justify">
+            <h6 className="py-3 text-muted">JUNE 12, 2020 IN STORY TELLING</h6>
+            <p className="description text-justify">
               INVI is a visualization company that started in March of 2020 in
               Houston, TX, in the midst of the world’s battle against COVID-19,
               a virus that took over the world.Similar with many people around
@@ -201,26 +205,26 @@ const stories = ({ data }) => {
               that many businesses globally will have to take these extreme
               steps as well.
             </p>
-            <p class="py-3 font-weight-bold">
+            <p className="py-3 font-weight-bold">
               <a href="../stories/new-startup/">READ MORE</a>
             </p>
           </div>
-          <div class="col-md-4 px-3">
+          <div className="col-md-4 px-3">
             <Image
               fluid={data.art.childImageSharp.fluid}
               alt="ArtForJustice"
               className="img-fluid"
             />
 
-            <h3 class="font-weight-bold pt-5 px-lg-4 stories-title">
+            <h3 className="font-weight-bold pt-5 px-lg-4 stories-title">
               <a href="../stories/artForJustice/">
                 #ArtForJustice Virtual Museum Launch <br />
                 Commemorating George Floyd and Supporting the Black Lives Matter
                 Movement
               </a>
             </h3>
-            <h6 class="py-3 text-muted">JUNE 08, 2020 IN STORY TELLING</h6>
-            <p class="description text-justify">
+            <h6 className="py-3 text-muted">JUNE 08, 2020 IN STORY TELLING</h6>
+            <p className="description text-justify">
               INVI recently partnered with FORT BEND County to create a 360
               virtual art museum and curated art to commemorate George Floyd and
               the Black Lives Matter Movement as a sign of immense and heartfelt
@@ -228,7 +232,7 @@ const stories = ({ data }) => {
               155 artists from 14 states (CA, CO, CT, DC, FL, GA, HI, MA, NC,
               NJ, TX, VA, WA, WI) and 6 countries...
             </p>
-            <p class="py-3 font-weight-bold">
+            <p className="py-3 font-weight-bold">
               <a href="../stories/artForJustice/">READ MORE</a>
             </p>
           </div>

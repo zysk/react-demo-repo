@@ -72,7 +72,7 @@ const sayhello = ({ data }) => {
                     <input type="hidden" name="form-name" value="contact" />
 
                     <div className="mb-5">
-                      <label for="Name" className="form-label invisible">
+                      <label htmlFor="Name" className="form-label invisible">
                         Full Name
                       </label>
                       <Field
@@ -89,7 +89,7 @@ const sayhello = ({ data }) => {
                       />
                     </div>
                     <div className="mb-5">
-                      <label for="Email" className="form-label invisible">
+                      <label htmlFor="Email" className="form-label invisible">
                         Email Address
                       </label>
                       <Field
@@ -106,7 +106,7 @@ const sayhello = ({ data }) => {
                       />
                     </div>
                     <div className="mb-3 comment">
-                      <label for="comment" className="form-label invisible">
+                      <label htmlFor="comment" className="form-label invisible">
                         Comment
                       </label>
                       <Field
