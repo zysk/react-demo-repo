@@ -107,8 +107,8 @@ const Footer = ({ className }) => {
                     <input type="hidden" name="form-name" value="subscribe" />
                     <div className="input-group pt-3">
                       <Field
-                        type="email"
-                        className="form-control input-button p-4"
+                        type="text"
+                        className="form-control sub-input p-4"
                         placeholder="Enter your email"
                         required
                         name="email"

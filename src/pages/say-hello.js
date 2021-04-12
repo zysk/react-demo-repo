@@ -77,7 +77,7 @@ const sayhello = ({ data }) => {
                       </label>
                       <Field
                         type="text"
-                        className="form-control w-100"
+                        className="form-control contact-input w-100"
                         id="name"
                         placeholder="Full Name"
                         name="name"
@@ -95,7 +95,7 @@ const sayhello = ({ data }) => {
                       <Field
                         type="text"
                         name="email"
-                        className="form-control w-100"
+                        className="form-control contact-input w-100"
                         id="Email"
                         placeholder="Email Address"
                       />
@@ -110,7 +110,7 @@ const sayhello = ({ data }) => {
                         Comment
                       </label>
                       <Field
-                        className="form-control w-100"
+                        className="form-control contact-input w-100"
                         name="comment"
                         component="textarea"
                         id="comment"

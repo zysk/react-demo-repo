@@ -421,14 +421,18 @@ html {
   overflow-x: hidden !important;
 }
 /* Contact Form Styling */
-input[type="text"] {
+.sub-input {
+  background: white !important;
+  border: 1px solid white !important;
+}
+.contact-input {
   padding-bottom: 2rem;
 }
 ::placeholder {
   color: black !important;
 }
 textarea,
-input[type="text"] {
+.contact-input {
   background: transparent !important;
   border-bottom: 1px solid #818181 !important;
   border-top: none !important;
@@ -452,7 +456,7 @@ textarea {
   .submit-btn {
     width: 50% !important;
   }
-  input[type="text"] {
+  .contact-input {
     padding-bottom: 2rem;
   }
 }

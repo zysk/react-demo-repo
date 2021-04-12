@@ -4,7 +4,6 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
-
 import animation from "../images/animation-illustration.gif"
 import virtual from "../images/invi-virtual.gif"
 
@@ -12,6 +11,7 @@ const index = ({ data }) => {
   return (
     <div className="home">
       <Navbar className="Home" />
+
       {/* Aframe Section */}
 
       <section className="container text-center py-4">
