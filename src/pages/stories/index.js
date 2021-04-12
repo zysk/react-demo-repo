@@ -151,7 +151,6 @@ const stories = ({ data }) => {
               as architecture takes a simplified approach. The colorful paint
               parades across the façade of the local corner store or a
               warehouse, without their consent, the work reaches many audiences.
-              The realization of the artwork on the street is controversial.
             </p>
             <p className="py-3 font-weight-bold">
               <a href="../stories/graffiti-city-park/">READ MORE</a>
@@ -174,7 +173,8 @@ const stories = ({ data }) => {
               collaborating with Alexandra Ray and Catherine Loewe to reimagine
               and rediscover virtual art exhibitions in a physical space. INVI
               helps recreate the Le Petit Trianon (San Francisco) residence into
-              a virtual platform, while Alexandra and Catherine ...
+              a virtual platform, while Alexandra and Catherine curate the art
+              work to present to the audience ...
             </p>
             <p className="py-3 font-weight-bold">
               <a href="../stories/reimagine-virtual-art/">READ MORE</a>
@@ -190,7 +190,7 @@ const stories = ({ data }) => {
             />
             <h3 className="font-weight-bold pt-5 px-lg-4 stories-title">
               <a href="../stories/new-startup/">
-                THE SUCCESS OF A NEW STARTUP DURING COVID-19
+                The Sucess of a New Startup During COVID-19
               </a>
             </h3>
             <h6 className="py-3 text-muted">JUNE 12, 2020 IN STORY TELLING</h6>
@@ -229,8 +229,7 @@ const stories = ({ data }) => {
               virtual art museum and curated art to commemorate George Floyd and
               the Black Lives Matter Movement as a sign of immense and heartfelt
               solidarity. We received an outpouring of artistic submissions from
-              155 artists from 14 states (CA, CO, CT, DC, FL, GA, HI, MA, NC,
-              NJ, TX, VA, WA, WI) and 6 countries...
+              155 artists from 14 states...
             </p>
             <p className="py-3 font-weight-bold">
               <a href="../stories/artForJustice/">READ MORE</a>
