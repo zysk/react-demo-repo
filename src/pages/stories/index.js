@@ -190,7 +190,7 @@ const stories = ({ data }) => {
             />
             <h3 className="font-weight-bold pt-5 px-lg-4 stories-title">
               <a href="../stories/new-startup/">
-                The Sucess of a New Startup During COVID-19
+                The Success of a New Startup During COVID-19
               </a>
             </h3>
             <h6 className="py-3 text-muted">JUNE 12, 2020 IN STORY TELLING</h6>
