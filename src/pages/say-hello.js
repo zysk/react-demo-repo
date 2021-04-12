@@ -123,10 +123,10 @@ const sayhello = ({ data }) => {
                         className="error font-weight-bold pt-3"
                       />
                     </div>
-                    <div className="text-lg-right text-center mt-5">
+                    <div className="text-md-right text-center mt-5">
                       <button
                         type="submit"
-                        className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold"
+                        className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold px-4 py-2"
                       >
                         Send Message
                       </button>

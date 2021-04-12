@@ -453,16 +453,11 @@ textarea {
   font-size: 14px !important;
 }
 @media (max-width: 768px) {
-  .submit-btn {
-    width: 50% !important;
-  }
   .contact-input {
     padding-bottom: 2rem;
   }
 }
 .submit-btn {
-  padding: 10px !important;
-  width: 35%;
   font-size: 12px !important;
   border-radius: 0 !important;
   border-color: #eb483f !important;
@@ -646,8 +641,6 @@ video:hover {
   }
 
   .content_img:hover .image {
-    cursor: pointer;
-    transition: box-shadow 300ms ease;
     box-shadow: 0 0 0 0px #f6caba, 0 0 0 0.8px #0471bc, 0 0 0 9px #f6caba,
       0 0 0 12px #0471bc, 0 0 0 20px #f6caba, 0 0 0 22px #0471bc;
   }
