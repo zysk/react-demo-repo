@@ -9,11 +9,11 @@ const index = ({ data }) => {
   return (
     <div className="works">
       <Navbar />
-      <section className="circle-section pt-5" id="portfolio">
-        <h2 className="title text-center">OUR WORKS</h2>
-        <div className="container py-5 mb-5 mb-md-0">
+      <section className="circle-section" id="portfolio">
+        {/* <h2 className="title text-center">OUR WORKS</h2> */}
+        <div className="container pb-5 mb-5 mb-md-0">
           <div className="content-section-heading text-center">
-            <h3 className="my-5 title"></h3>
+            <h3 className="my-5 mb-lg-0 title">OUR WORKS</h3>
           </div>
           <div className="row d-flex justify-content-md-start justify-content-center align-items-center pb-md-3">
             <div className="col-md-1"></div>
@@ -34,7 +34,7 @@ const index = ({ data }) => {
               </div>
             </div>
             <div className="col-md-2"></div>
-            <div className="col-md-3 mt-5 pt-5 ">
+            <div className="col-md-3  pt-5 pt-lg-0  first-col">
               <div className="content_img">
                 <a className="item" href="/works/southern-plains-museum">
                   <Image
@@ -89,8 +89,24 @@ const index = ({ data }) => {
             </div>
           </div>
 
-          <div className="row d-flex justify-content-center align-items-center py-md-0">
-            <div className="col-md-1"></div>
+          <div className="row d-flex justify-content-between align-items-center py-md-0">
+            {/* <div className="col-md-1"></div> */}
+            <div className="col-md-3  pt-5  pt-md-0 first-col">
+              <div className="content_img">
+                <a className="item" href="/works/artForJustice">
+                  <Image
+                    fluid={data.art.childImageSharp.fluid}
+                    alt="ArtForJustice"
+                    className="img-fluid image m-md-4"
+                  />
+                </a>
+                <div className="middle">
+                  <div className="text text-uppercase font-weight-bold pt-4 pt-md-0 pl-lg-5 ml-lg-3">
+                    #ARTFORJUSTICE
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="col-md-4 mt-5 pt-5 mt-md-0 pt-md-0">
               <div className="content_img">
                 <a className="item" href="/works/granada-theatre">
@@ -100,18 +116,19 @@ const index = ({ data }) => {
                     className="img-fluid image m-md-5"
                   />
                 </a>
-                <div className="middle-1">
+                <div className="middle">
                   <div className="text text-uppercase font-weight-bold pt-4 pt-md-0">
                     GRANADA THEATRE
                   </div>
                 </div>
               </div>
             </div>
+            <div className="col-md-2"></div>
           </div>
 
           <div className="row d-flex justify-content-xl-between justify-content-md-between align-items-start last-row">
-            {/* <div className="col-3"></div> */}
-            <div className="col-md-3 mt-5 pt-5 mt-md-0 pt-md-0">
+            <div className="col-6"></div>
+            {/* <div className="col-md-3 mt-5 pt-5 mt-md-0 pt-md-0">
               <div className="content_img">
                 <a className="item" href="/works/artForJustice">
                   <Image
@@ -126,7 +143,7 @@ const index = ({ data }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="col-md-3 mt-5 pt-5 last-col ">
               <div className="content_img">
                 <a className="item" href="/works/drawing">

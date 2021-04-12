@@ -633,6 +633,9 @@ video:hover {
     padding: 0;
     text-align: center;
   }
+  .first-col {
+    margin-top: 3rem;
+  }
   .middle-1,
   .middle-2,
   .middle {
@@ -672,5 +675,8 @@ video:hover {
 @media (min-width: 768px) {
   .last-row {
     margin-top: -20% !important;
+  }
+  .first-col {
+    margin-top: 200px;
   }
 }
