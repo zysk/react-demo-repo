@@ -669,3 +669,8 @@ video:hover {
     left: 140%;
   }
 }
+@media (min-width: 768px) {
+  .last-row {
+    margin-top: -20% !important;
+  }
+}

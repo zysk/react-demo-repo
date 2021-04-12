@@ -34,7 +34,7 @@ const index = ({ data }) => {
               </div>
             </div>
             <div className="col-md-2"></div>
-            <div className="col-md-3 mt-5 pt-5 mt-md-0 pt-md-0">
+            <div className="col-md-3 mt-5 pt-5 ">
               <div className="content_img">
                 <a className="item" href="/works/southern-plains-museum">
                   <Image
@@ -109,7 +109,7 @@ const index = ({ data }) => {
             </div>
           </div>
 
-          <div className="row d-flex justify-content-xl-between justify-content-md-between align-items-start">
+          <div className="row d-flex justify-content-xl-between justify-content-md-between align-items-start last-row">
             {/* <div className="col-3"></div> */}
             <div className="col-md-3 mt-5 pt-5 mt-md-0 pt-md-0">
               <div className="content_img">
