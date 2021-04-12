@@ -10,7 +10,6 @@ const index = ({ data }) => {
     <div className="works">
       <Navbar />
       <section className="circle-section" id="portfolio">
-        {/* <h2 className="title text-center">OUR WORKS</h2> */}
         <div className="container pb-5 mb-5 mb-md-0">
           <div className="content-section-heading text-center">
             <h3 className="my-5 mb-lg-0 title">OUR WORKS</h3>
