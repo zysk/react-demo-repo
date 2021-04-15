@@ -22,7 +22,7 @@ const artForJustice = ({ data }) => {
             />
 
             <h3 className="font-weight-bold pt-5 px-lg-2 title">
-              THE SUCCESS OF A NEW STARTUP DURING COVID-19
+              The Success of a New Startup During COVID-19
             </h3>
 
             <h6 className="py-3 text-muted">JUNE 12, 2020 IN STORY TELLING</h6>
