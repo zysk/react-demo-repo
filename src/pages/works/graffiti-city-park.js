@@ -99,13 +99,15 @@ const project = ({ data }) => {
               environment where you can have access to art, commerce, knowledge,
               and information.
             </p>
-            <a
-              href="http://invi.zysk.in/graffiticitypark/"
-              target="_blank"
-              className="btn text-uppercase text-left virtual mt-4 font-weight-bold pl-0 pb-5 pb-lg-0"
-            >
-              View Live Preview
-            </a>
+            <div className="mt-4 pb-5 pb-md-0">
+              <a
+                href="http://invi.zysk.in/graffiticitypark/"
+                target="_blank"
+                className="text-uppercase text-left virtual  font-weight-bold pl-0"
+              >
+                View Live Preview
+              </a>
+            </div>
           </div>
         </div>
       </section>

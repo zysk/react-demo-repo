@@ -332,10 +332,7 @@ footer .fa {
   outline: none !important;
   border: none !important;
 }
-.virtual:focus {
-  outline-color: none !important;
-  border: transparent !important;
-}
+
 .page-link {
   position: relative;
   display: block;

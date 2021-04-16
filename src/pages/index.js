@@ -38,7 +38,7 @@ const index = ({ data }) => {
             </p>
             <a
               href="#"
-              className="btn text-left virtual mt-4 font-weight-bold pl-0"
+              className=" text-left virtual mt-4 font-weight-bold pl-0"
             >
               CREATE NOW
             </a>
