@@ -14,21 +14,14 @@ const project = ({ data }) => {
         <Navbar />
         <div className=" d-flex flex-wrap">
           <div className="d-flex col-12 align-items-center justify-content-center">
-            <h1 className="title pt-3 text-lg-left text-uppercase text-center">
+            <h1 className="title pt-5 text-lg-left text-uppercase text-center">
               GRAFFITI CITY PARK
             </h1>
           </div>
         </div>
       </div>
       {/* <!--========Video Section=======--> */}
-      <section className=" pt-3 pb-2">
-        <a
-          href="http://invi.zysk.in/graffiticitypark/"
-          target="_blank"
-          className="title"
-        >
-          Link to garden gnome
-        </a>
+      <section className=" pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
           <video controls muted autoPlay className="videos w-100">
             <source src={video} type="video/mp4" />
@@ -106,6 +99,13 @@ const project = ({ data }) => {
               environment where you can have access to art, commerce, knowledge,
               and information.
             </p>
+            <a
+              href="http://invi.zysk.in/graffiticitypark/"
+              target="_blank"
+              className="btn text-uppercase text-left virtual mt-4 font-weight-bold pl-0 pb-5 pb-lg-0"
+            >
+              View Live Preview
+            </a>
           </div>
         </div>
       </section>
