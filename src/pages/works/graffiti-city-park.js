@@ -22,6 +22,13 @@ const project = ({ data }) => {
       </div>
       {/* <!--========Video Section=======--> */}
       <section className=" pt-3 pb-2">
+        <a
+          href="http://invi.zysk.in/graffiticitypark/"
+          target="_blank"
+          className="title"
+        >
+          Link to garden gnome
+        </a>
         <div className="works-video embed-responsive embed-responsive-16by9">
           <video controls muted autoPlay className="videos w-100">
             <source src={video} type="video/mp4" />
