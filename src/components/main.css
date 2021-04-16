@@ -480,7 +480,7 @@ textarea {
 .projects {
   background: linear-gradient(to bottom, #a1bac3 10%, transparent),
     linear-gradient(to top, #f6caba, transparent);
-  height: 50vh;
+  /* height: 30vh; */
 }
 .project-title {
   line-height: 1.8rem;

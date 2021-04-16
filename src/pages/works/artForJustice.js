@@ -12,16 +12,16 @@ const project = ({ data }) => {
     <div className="works">
       <div className="projects">
         <Navbar />
-        <div className=" d-flex flex-wrap h-75">
+        <div className=" d-flex flex-wrap">
           <div className="d-flex col-12 align-items-center justify-content-center">
-            <h1 className="title text-center text-lg-left text-uppercase text-center">
+            <h1 className="title pt-3 text-lg-left text-uppercase text-center">
               #ARTFORJUSTICE
             </h1>
           </div>
         </div>
       </div>
       {/* <!--========Video Section=======--> */}
-      <section className=" pt-5 pb-2">
+      <section className=" pt-3 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
           <video controls muted autoPlay className="videos w-100">
             <source src={video} type="video/mp4" />
@@ -160,7 +160,7 @@ const project = ({ data }) => {
           </div>
         </div>
       </div>
-      <section className=" pt-5 pb-2">
+      <section className=" pb-5">
         <div className="works-video embed-responsive embed-responsive-16by9">
           <video controls muted autoPlay className="videos w-100">
             <source src={video} type="video/mp4" />
@@ -304,7 +304,10 @@ const project = ({ data }) => {
             </ul>
             <ul className="pagination">
               <li className="page-item">
-                <a className="page-link text-center" href="/works/drawing">
+                <a
+                  className="page-link text-center"
+                  href="/works/drawing-gallery"
+                >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
                     DRAWING GALLERY

@@ -12,16 +12,16 @@ const project = ({ data }) => {
     <div className="works">
       <div className="projects">
         <Navbar />
-        <div className=" d-flex flex-wrap h-75">
+        <div className=" d-flex flex-wrap">
           <div className="d-flex col-12 align-items-center justify-content-center">
-            <h1 className="title text-center text-lg-left text-uppercase text-center">
+            <h1 className="title pt-3 text-lg-left text-uppercase text-center">
               LE PETIT TRIANON
             </h1>
           </div>
         </div>
       </div>
       {/* <!--========Video Section=======--> */}
-      <section className=" pt-5 pb-2">
+      <section className=" pt-3 pb-2">
         <div className="container">
           <div className="row  d-flex justify-content-between py-2">
             <div className="col-md-6">

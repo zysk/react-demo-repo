@@ -127,25 +127,9 @@ const index = ({ data }) => {
 
           <div className="row d-flex justify-content-xl-between justify-content-md-between align-items-start last-row">
             <div className="col-md-6"></div>
-            {/* <div className="col-md-3 mt-5 pt-5 mt-md-0 pt-md-0">
-              <div className="content_img">
-                <a className="item" href="/works/artForJustice">
-                  <Image
-                    fluid={data.art.childImageSharp.fluid}
-                    alt="ArtForJustice"
-                    className="img-fluid image m-md-4"
-                  />
-                </a>
-                <div className="middle">
-                  <div className="text text-uppercase font-weight-bold pt-4 pt-md-0">
-                    #ARTFORJUSTICE
-                  </div>
-                </div>
-              </div>
-            </div> */}
             <div className="col-md-3 mt-5 pt-5   pb-5 pb-lg-0 last-col px-5 px-lg-0">
               <div className="content_img">
-                <a className="item" href="/works/drawing">
+                <a className="item" href="/works/drawing-gallery">
                   <Image
                     fluid={data.drawing.childImageSharp.fluid}
                     alt="Drawing Gallery"
