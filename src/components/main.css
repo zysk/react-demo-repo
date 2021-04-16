@@ -308,7 +308,8 @@ footer .fa {
     min-height: 100vh;
   }
 }
-.form-control:focus {
+.form-control:focus,
+.navigate:focus {
   border-color: none !important;
   box-shadow: none !important;
 }
