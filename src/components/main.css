@@ -669,3 +669,14 @@ video:hover {
     margin-top: 200px;
   }
 }
+.graffiti-city-park,
+.southern-plains-museum,
+.reimagine-virtual-art {
+  display: none;
+}
+.new-startup .artForJustice-media {
+  display: none;
+}
+.artForJustice .new-startup-media {
+  display: none;
+}

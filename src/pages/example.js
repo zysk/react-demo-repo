@@ -1,111 +1,114 @@
 import React from "react"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
+import { graphql } from "gatsby"
+import Image from "gatsby-image"
 import "../components/main.css"
-import { Formik, Form, Field, ErrorMessage } from "formik"
-const Footer = ({ className }) => {
-  return (
-    <>
-      <footer className={className}>
-        <div className="container pt-lg-3 py-5">
-          <div className="row d-flex justify-content-between">
-            <div className="col-md-6 col-lg-4 text-lg-right">
-              <h5 className="pb-3 pb-lg-5 footer-heading">NEWSLETTER</h5>
-              <p>
-                Subscribe to INVI for all latest news,
-                <br /> behind-the-scene stories, and exciting projects
-              </p>
-              <div className="input-group pt-3">
-                <Formik
-                  initialValues={{
-                    name: "",
-                    email: "",
-                    comment: "",
-                  }}
-                  onSubmit={(values, actions) => {
-                    alert("Thank you ! We wil get back to you soon")
-                    actions.resetForm()
-                  }}
-                  validate={values => {
-                    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-                    const errors = {}
-                    if (!values.name) {
-                      errors.name = "Name Required*"
-                    }
-                    if (!values.email || !emailRegex.test(values.email)) {
-                      errors.email = "Valid Email Required*"
-                    }
-                    if (!values.comment) {
-                      errors.comment = "Message Required*"
-                    }
-                    return errors
-                  }}
-                >
-                  {() => (
-                    <Form
-                      name="contact"
-                      method="post"
-                      data-netlify="true"
-                      data-netlify-honeypot="bot-field"
-                    >
-                      <input type="hidden" name="form-name" value="contact" />
 
-                      <div className="mb-5">
-                        <label for="Name" className="form-label invisible">
-                          Full Name
-                        </label>
-                        <Field
-                          type="text"
-                          className="form-control w-100"
-                          id="name"
-                          placeholder="Full Name"
-                          name="name"
-                        />
-                        <ErrorMessage name="name" className="error" />
-                      </div>
-                      <div className="mb-5">
-                        <label for="Email" className="form-label invisible">
-                          Email Address
-                        </label>
-                        <Field
-                          type="text"
-                          name="email"
-                          className="form-control w-100"
-                          id="Email"
-                          placeholder="Email Address"
-                        />
-                        <ErrorMessage name="email" className="error" />
-                      </div>
-                      <div className="mb-3 comment">
-                        <label for="comment" className="form-label invisible">
-                          Comment
-                        </label>
-                        <Field
-                          className="form-control w-100"
-                          name="comment"
-                          component="textarea"
-                          id="comment"
-                          rows="5"
-                          placeholder="Comment"
-                        />
-                        <ErrorMessage name="comment" className="error" />
-                      </div>
-                      <div className="text-lg-right text-center mt-5">
-                        <button
-                          type="submit"
-                          className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold"
-                        >
-                          Send Message
-                        </button>
-                      </div>
-                    </Form>
-                  )}
-                </Formik>
-              </div>
-            </div>
+const artForJustice = ({ data }) => {
+  return (
+    <div className="stories">
+      <Navbar />
+
+      {/* <!-- ======= Stories ======= --> */}
+      <section className="container py-5">
+        <div className="row text-center justify-content-center">
+          <div className="col-md-8">
+            <Image
+              fluid={data.story.image.fluid}
+              alt="Art For Museum"
+              alt="Reimagine Virtual Art"
+              className="img-fluid"
+            />
+
+            <h3 className="font-weight-bold pt-5 px-lg-4 title">
+              {data.story.title.title}
+            </h3>
+            <h6 className="py-3 text-muted">{data.story.date}</h6>
+
+            <div
+              className="decription text-justify"
+              dangerouslySetInnerHTML={{
+                __html: data.story.description.childMarkdownRemark.html,
+              }}
+            ></div>
+            {/* <p
+              className="decription text-justify"
+              dangerouslySetInnerHTML={{
+                __html: data.story.description.childMarkdownRemark.html,
+              }}
+            ></p> */}
           </div>
         </div>
-      </footer>
-    </>
+      </section>
+      {/* <!-- ======= Stories ======= --> */}
+      {/* <!--=========Pagination Buttons=======--> */}
+      <div className="container py-3">
+        <div className="row ">
+          <div className="col-12 pt-lg-5 pb-lg-3 d-flex justify-content-between">
+            <ul className="pagination">
+              <li className="page-item">
+                <a
+                  href={data.story.prevLink}
+                  className="page-link"
+                  aria-label="Previous"
+                >
+                  <i className="fas fa-arrow-left" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li className="page-item">
+                <a className="page-link text-center" href={data.story.prevLink}>
+                  <span>Prev </span>
+                </a>
+              </li>
+            </ul>
+            <ul className="pagination">
+              <li className="page-item">
+                <a className="page-link text-center" href={data.story.nextLink}>
+                  Next
+                </a>
+              </li>
+              <li className="page-item">
+                <a
+                  href={data.story.nextLink}
+                  className="page-link"
+                  aria-label="Next"
+                >
+                  <span aria-hidden="true">
+                    <i className="fas fa-arrow-right " aria-hidden="true"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* <!--=========Pagination Buttons=======--> */}
+      <Footer />
+    </div>
   )
 }
-
-export default Footer
+export const query = graphql`
+  {
+    story: contentfulStories(slug: { eq: "graffiti-city-park" }) {
+      image {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+      title {
+        title
+      }
+      slug
+      date
+      description {
+        childMarkdownRemark {
+          html
+        }
+      }
+      nextLink
+      prevLink
+    }
+  }
+`
+export default artForJustice

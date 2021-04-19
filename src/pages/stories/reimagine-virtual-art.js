@@ -16,7 +16,6 @@ const artForJustice = ({ data }) => {
           <div className="col-md-8">
             <Image
               fluid={data.image.childImageSharp.fluid}
-              alt="Art For Museum"
               alt="Reimagine Virtual Art"
               className="img-fluid"
             />

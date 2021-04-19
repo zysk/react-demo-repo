@@ -65,7 +65,7 @@ const artForJustice = ({ data }) => {
               can be shared with friends and family during the days to come.
             </p>
             <p className="description text-left font-weight-bold py-4">
-              Enter Virtual Museum:{" "}
+              Enter Virtual Museum:
               <span class="font-weight-normal">
                 <a
                   target="_blank"

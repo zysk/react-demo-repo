@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `INVI`,
@@ -15,6 +18,22 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     // CommonMark mode (default: true)
+    //     commonmark: true,
+    //     // Footnotes mode (default: true)
+    //     footnotes: true,
+    //     // Pedantic mode (default: true)
+    //     pedantic: true,
+    //     // GitHub Flavored Markdown mode (default: true)
+    //     gfm: true,
+    //     // Plugins configs
+    //     plugins: [],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -33,6 +52,15 @@ module.exports = {
         // Add any options here
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    `@contentful/gatsby-transformer-contentful-richtext`,
     // {
     //   resolve: `gatsby-source-wordpress`,
     //   options: {
