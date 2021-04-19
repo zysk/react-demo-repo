@@ -16,7 +16,7 @@ const index = ({ data }) => {
 
       <section className="container text-center py-4">
         <Image
-          fixed={data.image.childImageSharp.fixed}
+          fixed={data.home.homeImage.fixed}
           alt="aframe"
           className="img-fluid"
         />
@@ -26,15 +26,11 @@ const index = ({ data }) => {
       {/* <!-- ======= Create Your Virtual World ======= --> */}
 
       <section className="container py-5">
-        <h1 className="text-center title">CREATE YOUR VIRTUAL WORLD</h1>
+        <h1 className="text-center title">{data.home.title}</h1>
         <div className="row justify-content-between align-items-center py-5">
           <div className="col-md-6 text-center text-md-left">
             <p className="description text-justify ">
-              We work with Clients who are passionate about their work, want to
-              tell a story or share a message. Our products are a creative and
-              customized solution to engage your audience. We are currently
-              looking for new clients. We are designers of virtual experiences.
-              At the center of our design process is YOU.
+              {data.home.description.description}
             </p>
             <a
               href="#"
@@ -46,7 +42,7 @@ const index = ({ data }) => {
 
           <div className="col-md-5 pt-5 pt-md-0">
             <Image
-              fluid={data.intro.childImageSharp.fluid}
+              fluid={data.home.image1.fluid}
               alt="aframe"
               className="img-fluid"
             />
@@ -58,12 +54,17 @@ const index = ({ data }) => {
       {/* <!-- ======= Services Section ======= --> */}
 
       <section className="container pb-4 pt-1">
-        <h1 className="title text-center">SERVICES</h1>
+        <h1 className="title text-center">{data.home.services}</h1>
         <div className="row py-3 ">
           <div className="col-md-6 text-center">
             <div className="icon-box mt-5 mt-lg-0 ">
+              {/* <Image
+                fluid={data.home.animation.fluid}
+                alt="aframe"
+                className="img-fluid"
+              /> */}
               <img src={animation} alt="Animation" className="img-fluid" />
-              <h2 className="py-3">Animation</h2>
+              <h2 className="py-3">{data.home.animation.title}</h2>
               <a href="./services/" className="font-weight-bold">
                 Explore{" "}
                 <i
@@ -75,8 +76,15 @@ const index = ({ data }) => {
           </div>
           <div className="col-md-6 text-center">
             <div className="icon-box mt-4 mt-lg-0 ">
+              {/* <Image
+                fluid={data.home.virtual.fluid}
+                alt="aframe"
+                className="img-fluid"
+              /> */}
               <img src={virtual} alt="Animation" className="img-fluid" />
-              <h2 className="pt-md-5 pb-md-3 py-lg-3">Virtual</h2>
+              <h2 className="pt-md-5 pb-md-3 py-lg-3">
+                {data.home.virtual.title}
+              </h2>
               <a href="./services/" className="font-weight-bold">
                 Explore{" "}
                 <i
@@ -107,6 +115,36 @@ export const query = graphql`
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
+      }
+    }
+    home: contentfulHomePage {
+      title
+      homeImage {
+        fixed(width: 600, height: 600) {
+          ...GatsbyContentfulFixed
+        }
+      }
+      image1 {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+      description {
+        description
+      }
+      services
+      animation {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        title
+      }
+      virtual {
+        fluid {
+          ...GatsbyContentfulFluid
+          src
+        }
+        title
       }
     }
   }

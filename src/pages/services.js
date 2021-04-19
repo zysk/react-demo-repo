@@ -14,17 +14,14 @@ const services = ({ data }) => {
       <div className="services">
         <Navbar />
         <h1 className="text-center title pt-lg-5 text-uppercase">
-          What We Do ?
+          {data.services.title}
         </h1>
-        <p className="text-center title-desc ">
-          We create virtual experiences through architecture, storytelling, and
-          design.
-        </p>
+        <p className="text-center title-desc ">{data.services.subtitle}</p>
 
         <div className="container py-5">
           <div className="row ">
             <div className="col-12">
-              <Image fluid={data.image.childImageSharp.fluid} alt="services" />
+              <Image fluid={data.services.bannerImage.fluid} alt="services" />
             </div>
           </div>
         </div>
@@ -35,7 +32,7 @@ const services = ({ data }) => {
             <div className="col-lg-6 d-flex justify-content-center justify-content-lg-start py-5 py-lg-0 mx-lg-0 px-lg-0">
               <div className="rc">
                 <HoverVideoPlayer
-                  videoSrc={video1}
+                  videoSrc={data.services.animationVideo.file.url}
                   className="video-circle animation-video"
                   muted
                   loop
@@ -44,19 +41,11 @@ const services = ({ data }) => {
             </div>
             <div className=" col-lg-5">
               <h1 className="title text-center text-lg-left text-center text-lg-left">
-                ANIMATION
+                {data.services.animationTitle}
               </h1>
               <div className="divider"></div>
               <p className="description py-4 text-justify">
-                We tell stories through cinematic animations captured by
-                immersive environments and compelling narrative. Storytelling is
-                often the ability to reach into our minds and find what is
-                beautiful, what is useful, and what is lasting. An effective
-                animation should never allow the eye to settle in one place,
-                instead, it should inspire you to create your own imagination
-                while waking up your various emotions. We hope our product can
-                give you a memorable experience that encourages you to
-                contemplate and reflect.
+                {data.services.animationDescription.animationDescription}
               </p>
               <a
                 href="../works/"
@@ -70,7 +59,7 @@ const services = ({ data }) => {
             <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center py-5 py-lg-0 mx-lg-0 px-lg-0 order-lg-12 ">
               <div className="rc img-fluid py-3">
                 <HoverVideoPlayer
-                  videoSrc={video2}
+                  videoSrc={data.services.virtualVideo.file.url}
                   className="video-circle virtual-video"
                   muted
                   loop
@@ -79,20 +68,11 @@ const services = ({ data }) => {
             </div>
             <div className="col-lg-5 order-lg-1">
               <h1 className="title text-center text-lg-left text-center text-lg-left">
-                VIRTUAL
+                {data.services.virtualTitle}
               </h1>
               <div className="divider"></div>
               <p className="description py-4 text-justify">
-                We design virtual experiences through graphics, architecture,
-                and 360 while blurring the lines between virtual and reality. We
-                aim to tell your stories through our innovative visuals as we
-                redefine how information can be presented in an effective and
-                visually captivating way. This is the world where our
-                expressions become our voices as we highlight the human
-                connections. There is no box, no boundary, and no physical
-                limitations. We do not try to replicate the real, instead, we
-                focus on creating a unique experience that is only imaginable in
-                a space that is unreal.
+                {data.services.virtualDescription.virtualDescription}
               </p>
               <a
                 href="../works/"
@@ -116,58 +96,40 @@ const services = ({ data }) => {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <div className="carousel-caption mx-4">
-                  <p>
-                    I had the pleasure of working with INVI on a virtual
-                    community art initiative, and I was so blown away by their
-                    team's creativity, professionalism, and attention to detail.
-                    INVI is uniquely positioned to turn visionary ideas into
-                    virtual realities. Their staff is thoughtful and
-                    exceptionally gifted at bringing concepts to fruition in
-                    timely and captivating ways. I'd recommend using their
-                    services and engaging them as thought partners.
-                    <br />
-                    <br />
-                  </p>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        data.testimonials1.description.childMarkdownRemark.html,
+                    }}
+                  ></div>
                   <div id="image-caption" className="pt-lg-4 font-weight-bold">
-                    KARIM FARISHTA (#ArtForJustice Project)
+                    {data.testimonials1.descBy}
                   </div>
                 </div>
               </div>
               <div className="carousel-item">
                 <div className="carousel-caption mx-4">
-                  <p>
-                    I had a great feeling about the team at INVI from the minute
-                    they grasped the project creatively and technically. They
-                    were excellent listeners, communicators. They delivered
-                    everything on time and did a superlative job that all our
-                    clients are raving about. But the main thing I love about
-                    them is they try and go above and beyond to accommodate your
-                    project. Easy to work with, knowledgeable and also willing
-                    to push themselves creatively. I believe their talents are
-                    going to take them far and wide and we will be for sure,
-                    doing more exciting projects with them.
-                  </p>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        data.testimonials2.description.childMarkdownRemark.html,
+                    }}
+                  ></div>
                   <div id="image-caption" className="pt-lg-4 font-weight-bold">
-                    ALEX RAY, Eye of the Huntress (Le Petit Trianon Project)
+                    {data.testimonials2.descBy}
                   </div>
                 </div>
               </div>
               <div className="carousel-item">
                 <div className="carousel-caption mx-4">
-                  <p>
-                    Tien and Afreen at INVI were an excellent resource for the
-                    Southern Plains Museum and Cultural Center (SPMCC). INVI was
-                    extremely responsive and worked collaboratively with the
-                    project host, the Southern Apache Museum. INVI listened to
-                    their wishes and concerns and approached the subject matter
-                    with sensitivity. They delivered the project right on time
-                    for Native American Heritage Month and we were amazed by the
-                    virtual experience! -Houston Mayor's Office of Cultural
-                    Affairs
-                  </p>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        data.testimonials3.description.childMarkdownRemark.html,
+                    }}
+                  ></div>
                   <div id="image-caption" className="pt-lg-4 font-weight-bold">
-                    HoustonMOCA, City of Houston (Southern Plains Museum and
-                    Cultural Center Project)
+                    {data.testimonials3.descBy}
                   </div>
                 </div>
               </div>
@@ -204,6 +166,63 @@ export const query = graphql`
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
+    }
+    services: contentfulServices {
+      title
+      subtitle
+      bannerImage {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+      animationTitle
+      animationVideo {
+        file {
+          url
+        }
+      }
+      animationDescription {
+        animationDescription
+      }
+      virtualTitle
+      virtualVideo {
+        file {
+          url
+        }
+      }
+      virtualDescription {
+        virtualDescription
+      }
+    }
+    testimonials1: contentfulServicesTestimonials(
+      title: { eq: "TESTIMONIALS 1" }
+    ) {
+      description {
+        childMarkdownRemark {
+          html
+        }
+      }
+      descBy
+    }
+    testimonials2: contentfulServicesTestimonials(
+      title: { eq: "TESTIMONIALS 2" }
+    ) {
+      description {
+        childMarkdownRemark {
+          html
+        }
+      }
+      descBy
+    }
+    testimonials3: contentfulServicesTestimonials(
+      title: { eq: "TESTIMONIALS 3" }
+    ) {
+      description {
+        childMarkdownRemark {
+          html
+        }
+      }
+      descBy
     }
   }
 `

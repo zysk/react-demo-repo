@@ -1,9 +1,9 @@
 import React from "react"
-import Navbar from "../../components/Navbar"
-import Footer from "../../components/Footer"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
-import "../../components/main.css"
+import "../components/main.css"
 
 const stories = ({ data }) => {
   return (

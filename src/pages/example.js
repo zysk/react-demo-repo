@@ -4,111 +4,98 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
+import video1 from "../images/animationhover.mp4"
+import video2 from "../images/virtualworld.mp4"
+import HoverVideoPlayer from "react-hover-video-player"
 
-const artForJustice = ({ data }) => {
+const services = ({ data }) => {
   return (
-    <div className="stories">
-      <Navbar />
+    <div>
+      <div className="services">
+        <Navbar />
 
-      {/* <!-- ======= Stories ======= --> */}
-      <section className="container py-5">
-        <div className="row text-center justify-content-center">
-          <div className="col-md-8">
-            <Image
-              fluid={data.story.image.fluid}
-              alt="Art For Museum"
-              alt="Reimagine Virtual Art"
-              className="img-fluid"
-            />
+        {/* <!-- =======  Testimonials ======= --> */}
 
-            <h3 className="font-weight-bold pt-5 px-lg-4 title">
-              {data.story.title.title}
-            </h3>
-            <h6 className="py-3 text-muted">{data.story.date}</h6>
-
-            <div
-              className="decription text-justify"
-              dangerouslySetInnerHTML={{
-                __html: data.story.description.childMarkdownRemark.html,
-              }}
-            ></div>
-            {/* <p
-              className="decription text-justify"
-              dangerouslySetInnerHTML={{
-                __html: data.story.description.childMarkdownRemark.html,
-              }}
-            ></p> */}
+        <div className="container row-space my-lg-4 pb-5">
+          <h1 className="title text-center">TESTIMONIALS</h1>
+          <div
+            id="demo"
+            className="carousel slide mt-lg-2"
+            data-ride="carousel"
+          >
+            <div className="carousel-inner">
+              {data.testimonials.edges.map(({ node: testimonial }) => {
+                return (
+                  <div className="carousel-item active">
+                    <div
+                      id="carousel-caption mx-4"
+                      className="pt-lg-4 font-weight-bold"
+                      key={testimonial.id}
+                    >
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            testimonial.description.childMarkdownRemark.html,
+                        }}
+                      ></div>
+                      <div
+                        id="image-caption"
+                        className="pt-lg-4 font-weight-bold"
+                      >
+                        {testimonial.descBy}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+            <a className="carousel-control-prev" href="#demo" data-slide="prev">
+              {" "}
+              <i className="fas fa-arrow-left fa-2x"></i>
+            </a>{" "}
+            <a className="carousel-control-next" href="#demo" data-slide="next">
+              {" "}
+              <i className="fas fa-arrow-right fa-2x"></i>
+            </a>
           </div>
         </div>
-      </section>
-      {/* <!-- ======= Stories ======= --> */}
-      {/* <!--=========Pagination Buttons=======--> */}
-      <div className="container py-3">
-        <div className="row ">
-          <div className="col-12 pt-lg-5 pb-lg-3 d-flex justify-content-between">
-            <ul className="pagination">
-              <li className="page-item">
-                <a
-                  href={data.story.prevLink}
-                  className="page-link"
-                  aria-label="Previous"
-                >
-                  <i className="fas fa-arrow-left" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li className="page-item">
-                <a className="page-link text-center" href={data.story.prevLink}>
-                  <span>Prev </span>
-                </a>
-              </li>
-            </ul>
-            <ul className="pagination">
-              <li className="page-item">
-                <a className="page-link text-center" href={data.story.nextLink}>
-                  Next
-                </a>
-              </li>
-              <li className="page-item">
-                <a
-                  href={data.story.nextLink}
-                  className="page-link"
-                  aria-label="Next"
-                >
-                  <span aria-hidden="true">
-                    <i className="fas fa-arrow-right " aria-hidden="true"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+
+        {/* <!-- =======  Testimonials ======= --> */}
+
+        <Footer />
       </div>
-      {/* <!--=========Pagination Buttons=======--> */}
-      <Footer />
     </div>
   )
 }
 export const query = graphql`
   {
-    story: contentfulStories(slug: { eq: "graffiti-city-park" }) {
-      image {
+    image: file(relativePath: { eq: "invi-services.png" }) {
+      childImageSharp {
         fluid {
-          ...GatsbyContentfulFluid
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
-      title {
-        title
-      }
-      slug
-      date
-      description {
-        childMarkdownRemark {
-          html
+    }
+    intro: file(relativePath: { eq: "invi-cloud-design.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
-      nextLink
-      prevLink
+    }
+    testimonials: allContentfulServicesTestimonials {
+      edges {
+        node {
+          descBy
+          description {
+            childMarkdownRemark {
+              html
+            }
+            id
+          }
+        }
+      }
     }
   }
 `
-export default artForJustice
+export default services

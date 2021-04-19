@@ -317,5 +317,12 @@ export const query = graphql`
       nextLink
       prevLink
     }
+    image2: file(relativePath: { eq: "stories/southern-plains-2.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `

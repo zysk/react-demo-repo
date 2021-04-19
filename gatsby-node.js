@@ -13,7 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   result.data.stories.nodes.forEach(story => {
     createPage({
-      path: `/newstories/${story.slug}`,
+      path: `/stories/${story.slug}`,
       component: path.resolve(`src/pages/templates/stories.js`),
       context: {
         slug: story.slug,
