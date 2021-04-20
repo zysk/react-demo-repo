@@ -4,9 +4,6 @@ import Footer from "../../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../../components/main.css"
-import { SRLWrapper } from "simple-react-lightbox"
-
-import video from "../../images/drawing-gallery/video1.mp4"
 
 const drawing = ({ data }) => {
   return (
@@ -16,7 +13,7 @@ const drawing = ({ data }) => {
         <div className=" d-flex flex-wrap">
           <div className="d-flex col-12 align-items-center justify-content-center">
             <h1 className="title  pt-5 text-lg-left text-uppercase text-center">
-              ARCHVILLA
+              {data.project.projectTitle}
             </h1>
           </div>
         </div>
@@ -25,7 +22,7 @@ const drawing = ({ data }) => {
       <section className="pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
           <video controls muted autoPlay className="videos w-100">
-            <source src={video} type="video/mp4" />
+            <source src={data.project.video.file.url} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -35,7 +32,7 @@ const drawing = ({ data }) => {
               <p className="small-info text-justify decription">
                 {" "}
                 <span className="font-weight-bold pr-2">PRODUCT: </span>
-                360 VIRTUAL WORLD
+                {data.project.product}
               </p>
             </div>
             <div className="col-md-4 col-12">
@@ -43,7 +40,10 @@ const drawing = ({ data }) => {
                 {" "}
                 <span className="font-weight-bold pr-2">
                   CLIENT:{" "}
-                  <span className="font-weight-normal pl-md-2"> I N V I</span>
+                  <span className="font-weight-normal pl-md-2">
+                    {" "}
+                    {data.project.client}
+                  </span>
                 </span>
               </p>
             </div>
@@ -51,7 +51,7 @@ const drawing = ({ data }) => {
               <p className="small-info text-justify decription">
                 {" "}
                 <span className="font-weight-bold pr-2">LAUNCHED: </span>
-                MARCH 2021
+                {data.project.launched}
               </p>
             </div>
           </div>
@@ -64,29 +64,19 @@ const drawing = ({ data }) => {
       <section className="product container py-md-5 mt-md-5">
         <div className="row">
           <div className="col-md-5 my-md-0 my-3 d-flex justify-content-center">
-            <h2 className="title text-center text-lg-left text-center text-md-left">
-              How do we express the unique styles of each Architect in the 360
-              Virtual World?
-            </h2>
+            <h2
+              className="title text-center text-lg-left text-center text-md-left"
+              dangerouslySetInnerHTML={{
+                __html: data.project.contentTitle1.childMarkdownRemark.html,
+              }}
+            ></h2>
           </div>
-          <div className="description col-md-7 text-justify">
-            <p>
-              All architects showcased here are an interpretation by INVI. This
-              study looks at different architects and captures their ethos
-              and/or aesthetics in a 3D 360 virtual immersive experience. The
-              ArchVilla created takes you into each of the architect's minds.
-              The architects studied were chosen because they inspire us to
-              design thoughtfully. Each of these architects centers their design
-              around the people that occupy it. Relax by listening to the music.
-              Excite your eyes with the colors. Engage with the people. Learn in
-              a new form.
-            </p>
-            <p>
-              This project was created to show the potential of expressing our
-              ideas. There is a new medium of 3D worlds that engages the
-              audience using sound, light, and immersive interactions.
-            </p>
-          </div>
+          <div
+            className="description col-md-7 text-justify"
+            dangerouslySetInnerHTML={{
+              __html: data.project.contentDescription1.childMarkdownRemark.html,
+            }}
+          ></div>
         </div>
       </section>
 
@@ -95,49 +85,18 @@ const drawing = ({ data }) => {
       {/* <!-- ======= Images Section ======= --> */}
 
       <div className="images container py-md-5">
-        <div className="row d-flex align-items-center">
-          <div className="col-md-6 pb-5 pr-md-3 zoom">
-            <Image
-              fluid={data.image1.childImageSharp.fluid}
-              alt="image1"
-              className="img-fluid"
-            />
-          </div>
-          <div className="col-md-6 pb-5 pl-md-3 zoom">
-            <Image
-              fluid={data.image2.childImageSharp.fluid}
-              className="img-fluid"
-              alt="image2"
-            />
-          </div>
-          <div className="col-md-6 pb-5 pl-md-3 zoom">
-            <Image
-              fluid={data.image3.childImageSharp.fluid}
-              className="img-fluid"
-              alt="image2"
-            />
-          </div>
-          <div className="col-md-6 pb-5 pl-md-3 zoom">
-            <Image
-              fluid={data.image4.childImageSharp.fluid}
-              className="img-fluid"
-              alt="image2"
-            />
-          </div>
-          <div className="col-md-6 pb-5 zoom">
-            <Image
-              fluid={data.image5.childImageSharp.fluid}
-              className="img-fluid"
-              alt="image2"
-            />
-          </div>
-          <div className="col-md-6 pb-5 zoom">
-            <Image
-              fluid={data.image6.childImageSharp.fluid}
-              className="img-fluid"
-              alt="image2"
-            />
-          </div>
+        <div className="row d-flex align-items-center justify-content-md-between">
+          {data.project.images.map(image => {
+            return (
+              <div className="col-md-6 pb-5  zoom" key={image.id}>
+                <Image
+                  fluid={image.fluid}
+                  alt={image.title}
+                  className="img-fluid p-4"
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
 
@@ -146,30 +105,19 @@ const drawing = ({ data }) => {
       <section className="product container py-md-5">
         <div className="row ">
           <div className="col-md-5 my-md-0 my-3 ">
-            <h2 className="title text-center text-lg-left">Creative Process</h2>
+            <h2
+              className="title text-center text-lg-left"
+              dangerouslySetInnerHTML={{
+                __html: data.project.contentTitle2,
+              }}
+            ></h2>
           </div>
-          <div className="description col-md-7 text-justify">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
-              aliquam exercitationem suscipit debitis. Voluptate ratione
-              assumenda totam, quaerat obcaecati eum impedit repudiandae tenetur
-              quia deleniti distinctio. Voluptatibus porro deleniti architecto,
-              alias excepturi harum atque enim minima sint sunt voluptate Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Modi non
-              explicabo reiciendis molestias sint quos similique ullam,
-              necessitatibus tenetur sapiente atque porro pariatur ad nobis.
-              Ipsam nobis mollitia ut aliquid. Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Laudantium, ipsam!
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus, sit delectus dolores perferendis soluta officiis
-              est obcaecati dignissimos error sequi aliquid. Quas corrupti,
-              distinctio enim iste sint adipisci vitae ducimus, itaque, fugiat
-              id voluptatum! Nobis nesciunt dicta culpa aperiam quos maiores
-              magnam, magni blanditiis optio officiis atque laudantium nulla ad.
-            </p>
-          </div>
+          <div
+            className="description col-md-7 text-justify"
+            dangerouslySetInnerHTML={{
+              __html: data.project.contentDescription2.childMarkdownRemark.html,
+            }}
+          ></div>
         </div>
       </section>
       {/* 
@@ -180,16 +128,23 @@ const drawing = ({ data }) => {
           <div className="col-12 pt-lg-5 pb-lg-3 d-flex justify-content-between">
             <ul className="pagination">
               <li className="page-item">
-                <a href="/works/" className="page-link" aria-label="Previous">
+                <a
+                  href={data.project.prevLink}
+                  className="page-link"
+                  aria-label="Previous"
+                >
                   <i className="fas fa-arrow-left" aria-hidden="true"></i>
                 </a>
               </li>
               <li className="page-item">
-                <a className="page-link text-center" href="/works/">
+                <a
+                  className="page-link text-center"
+                  href={data.project.prevLink}
+                >
                   <span>Prev </span>
                   <br />
                   <span className="project-title text-dark font-weight-bold">
-                    WORKS
+                    {data.project.prevLinkTitle}
                   </span>
                 </a>
               </li>
@@ -198,17 +153,17 @@ const drawing = ({ data }) => {
               <li className="page-item">
                 <a
                   className="page-link text-center"
-                  href="/works/granada-theatre"
+                  href={data.project.nextLink}
                 >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
-                    GRANADA THEATRE
+                    {data.project.nextLinkTitle}
                   </span>
                 </a>
               </li>
               <li className="page-item">
                 <a
-                  href="/works/granada-theatre"
+                  href={data.project.nextLink}
                   className="page-link"
                   aria-label="Next"
                 >
@@ -229,47 +184,43 @@ const drawing = ({ data }) => {
 }
 export const query = graphql`
   {
-    image1: file(relativePath: { eq: "archvilla/image1.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    project: contentfulArchvillaProject(slug: { eq: "archvilla" }) {
+      projectTitle
+      product
+      client
+      launched
+      contentDescription1 {
+        childMarkdownRemark {
+          html
         }
       }
-    }
-    image2: file(relativePath: { eq: "archvilla/image2.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      contentTitle1 {
+        childMarkdownRemark {
+          html
         }
       }
-    }
-    image3: file(relativePath: { eq: "archvilla/image3.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      video {
+        file {
+          url
         }
       }
-    }
-    image4: file(relativePath: { eq: "archvilla/image4.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      images {
+        title
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        id
+      }
+      contentDescription2 {
+        childMarkdownRemark {
+          html
         }
       }
-    }
-    image5: file(relativePath: { eq: "archvilla/image5.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    image6: file(relativePath: { eq: "archvilla/image6.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
+      contentTitle2
+      prevLinkTitle
+      prevLink
+      nextLinkTitle
+      nextLink
     }
   }
 `

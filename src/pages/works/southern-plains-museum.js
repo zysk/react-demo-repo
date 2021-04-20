@@ -161,7 +161,6 @@ const drawing = ({ data }) => {
                 target="_blank"
                 href="https://www.youtube.com/watch?v=HfBEW8e9zMQ"
               >
-                {" "}
                 Video Tutorial
               </a>
             </p>
@@ -175,16 +174,14 @@ const drawing = ({ data }) => {
                 target="_blank"
                 href="https://apache-museum.s3.us-east-2.amazonaws.com/README.txt"
               >
-                {" "}
                 Readme.txt
               </a>
             </p>
             <p className="description ">
               <span className="font-italic"> Email</span>{" "}
               <a target="_blank" href="mailto:hello@invi.us">
-                {" "}
-                I N V I{" "}
-              </a>{" "}
+                I N V I
+              </a>
               <span className="font-italic"> for any technical issues</span>
             </p>
           </div>

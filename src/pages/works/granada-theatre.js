@@ -5,49 +5,50 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../../components/main.css"
 
-import video from "../../images/granada-theatre/granada-theatre.mp4"
-
-const project = ({ data }) => {
+const drawing = ({ data }) => {
   return (
     <div className="works">
       <div className="projects">
         <Navbar />
         <div className=" d-flex flex-wrap">
           <div className="d-flex col-12 align-items-center justify-content-center">
-            <h1 className="title pt-5 text-lg-left text-uppercase text-center">
-              GRANADA THEATER
+            <h1 className="title  pt-5 text-lg-left text-uppercase text-center">
+              {data.project.projectTitle}
             </h1>
           </div>
         </div>
       </div>
       {/* <!--========Video Section=======--> */}
-      <section className=" pt-5 pb-2">
+      <section className="pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
           <iframe src="https://www.youtube.com/embed/3L1xOrY8PP0?autoplay=1&mute=1"></iframe>
         </div>
         <div className="container">
-          <div className="row d-flex justify-content-between  py-2">
-            <div className="col-md-4 col-3">
+          <div className="row d-flex justify-content-between  py-2 flex-wrap">
+            <div className="col-md-4 col-12">
               <p className="small-info text-justify decription">
                 {" "}
-                <span className="font-weight-bold pr-2">PRODUCT: </span> 360
-                ANIMATION
+                <span className="font-weight-bold pr-2">PRODUCT: </span>
+                {data.project.product}
               </p>
             </div>
-            <div className="col-md-4 col-3">
-              <p className="small-info text-justify decription d-flex justify-content-center">
+            <div className="col-md-4 col-12">
+              <p className="small-info text-justify decription d-flex justify-content-md-center">
                 {" "}
                 <span className="font-weight-bold pr-2">
                   CLIENT:{" "}
-                  <span className="font-weight-normal pl-md-2">I N V I</span>
+                  <span className="font-weight-normal pl-md-2">
+                    {" "}
+                    {data.project.client}
+                  </span>
                 </span>
               </p>
             </div>
-            <div className="col-md-4 col-3 d-flex justify-content-end">
+            <div className="col-md-4 col-12 d-flex justify-content-md-end">
               <p className="small-info text-justify decription">
                 {" "}
-                <span className="font-weight-bold pr-2">LAUNCHED: </span>{" "}
-                NOVEMBER 2020
+                <span className="font-weight-bold pr-2">LAUNCHED: </span>
+                {data.project.launched}
               </p>
             </div>
           </div>
@@ -60,31 +61,20 @@ const project = ({ data }) => {
       <section className="product container py-md-5 mt-md-5">
         <div className="row">
           <div className="col-md-5 my-md-0 my-3 d-flex justify-content-center">
-            <h2 className="title text-center text-lg-left">
-              How do we bring an existing building back to life?
-            </h2>
+            <h2
+              className="title text-center text-lg-left text-center text-md-left"
+              dangerouslySetInnerHTML={{
+                __html: data.project.contentTitle1.childMarkdownRemark.html,
+              }}
+            ></h2>
           </div>
           <div className="description col-md-7 text-justify">
-            <p>
-              Granada Theater was opened in 1949. By the late 1950s Jensen Drive
-              was bustling with shopping and entertainment. Two theaters, both
-              built in the late 1940s, drew residents from throughout the area.
-              Jensen Square provided detailed space and was anchored by
-              innovative modern buildings. Once the Eastex Freeway was completed
-              in the late 1950s, Jensen drive began a slow decline. However the
-              beauty and the utility of Jensen drive has not been diminished.
-              The street remains the central corridor in the neighborhood.
-            </p>
-            <p>
-              Granada has been an icon for all those who grew up in the
-              neighborhood. The existing site should service the people of
-              Eastex Jensen. A proposal of creating a cinema and community
-              center is underway. The theater will house all the essentials of
-              functioning cinema but also be a resource for the community
-              members to use. The building will help launch initiatives to
-              engage the school in the area to push the creative talent within
-              the youth.
-            </p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html:
+                  data.project.contentDescription1.childMarkdownRemark.html,
+              }}
+            ></div>
           </div>
         </div>
       </section>
@@ -94,29 +84,18 @@ const project = ({ data }) => {
       {/* <!-- ======= Images Section ======= --> */}
 
       <div className="images container py-md-5">
-        <div className="row d-flex align-items-center">
-          <div className="col-md-6 pb-5 pr-md-3 zoom">
-            <Image
-              fluid={data.image1.childImageSharp.fluid}
-              alt="image1"
-              className="img-fluid"
-            />
-          </div>
-          <div className="col-md-6 pb-5 pl-md-3 zoom">
-            <Image
-              fluid={data.image2.childImageSharp.fluid}
-              className="img-fluid"
-              alt="image2"
-            />
-          </div>
-          <div className="col-md-6 pb-5 zoom">
-            <Image
-              fluid={data.image3.childImageSharp.fluid}
-              alt="image1"
-              className="img-fluid"
-              width="1400"
-            />
-          </div>
+        <div className="row d-flex align-items-center justify-content-md-between">
+          {data.project.images.map(image => {
+            return (
+              <div className="col-md-6 pb-5  zoom" key={image.id}>
+                <Image
+                  fluid={image.fluid}
+                  alt={image.title}
+                  className="img-fluid p-4"
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
 
@@ -125,30 +104,19 @@ const project = ({ data }) => {
       <section className="product container py-md-5">
         <div className="row ">
           <div className="col-md-5 my-md-0 my-3 ">
-            <h2 className="title text-center text-lg-left">Creative Process</h2>
+            <h2
+              className="title text-center text-lg-left"
+              dangerouslySetInnerHTML={{
+                __html: data.project.contentTitle2,
+              }}
+            ></h2>
           </div>
-          <div className="description col-md-7 text-justify">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
-              aliquam exercitationem suscipit debitis. Voluptate ratione
-              assumenda totam, quaerat obcaecati eum impedit repudiandae tenetur
-              quia deleniti distinctio. Voluptatibus porro deleniti architecto,
-              alias excepturi harum atque enim minima sint sunt voluptate Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Modi non
-              explicabo reiciendis molestias sint quos similique ullam,
-              necessitatibus tenetur sapiente atque porro pariatur ad nobis.
-              Ipsam nobis mollitia ut aliquid. Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Laudantium, ipsam!
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus, sit delectus dolores perferendis soluta officiis
-              est obcaecati dignissimos error sequi aliquid. Quas corrupti,
-              distinctio enim iste sint adipisci vitae ducimus, itaque, fugiat
-              id voluptatum! Nobis nesciunt dicta culpa aperiam quos maiores
-              magnam, magni blanditiis optio officiis atque laudantium nulla ad.
-            </p>
-          </div>
+          <div
+            className="description col-md-7 text-justify"
+            dangerouslySetInnerHTML={{
+              __html: data.project.contentDescription2.childMarkdownRemark.html,
+            }}
+          ></div>
         </div>
       </section>
       {/* 
@@ -160,7 +128,7 @@ const project = ({ data }) => {
             <ul className="pagination">
               <li className="page-item">
                 <a
-                  href="/works/archvilla"
+                  href={data.project.prevLink}
                   className="page-link"
                   aria-label="Previous"
                 >
@@ -168,11 +136,14 @@ const project = ({ data }) => {
                 </a>
               </li>
               <li className="page-item">
-                <a className="page-link text-center" href="/works/archvilla">
+                <a
+                  className="page-link text-center"
+                  href={data.project.prevLink}
+                >
                   <span>Prev </span>
                   <br />
                   <span className="project-title text-dark font-weight-bold">
-                    ARCHVILLA
+                    {data.project.prevLinkTitle}
                   </span>
                 </a>
               </li>
@@ -181,7 +152,7 @@ const project = ({ data }) => {
               <li className="page-item">
                 <a
                   className="page-link text-center"
-                  href="/works/southern-plains-museum"
+                  href={data.project.nextLink}
                 >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
@@ -192,7 +163,7 @@ const project = ({ data }) => {
               </li>
               <li className="page-item">
                 <a
-                  href="/works/southern-plains-museum"
+                  href={data.project.nextLink}
                   className="page-link"
                   aria-label="Next"
                 >
@@ -213,27 +184,44 @@ const project = ({ data }) => {
 }
 export const query = graphql`
   {
-    image1: file(relativePath: { eq: "granada-theatre/image2.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    project: contentfulGranadaTheatreProject(slug: { eq: "granada-theatre" }) {
+      projectTitle
+      product
+      client
+      launched
+      contentDescription1 {
+        childMarkdownRemark {
+          html
         }
       }
-    }
-    image2: file(relativePath: { eq: "granada-theatre/image3.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      contentTitle1 {
+        childMarkdownRemark {
+          html
         }
       }
-    }
-    image3: file(relativePath: { eq: "granada-theatre/image1.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      video {
+        file {
+          url
         }
       }
+      images {
+        title
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        id
+      }
+      contentDescription2 {
+        childMarkdownRemark {
+          html
+        }
+      }
+      contentTitle2
+      prevLinkTitle
+      prevLink
+      nextLinkTitle
+      nextLink
     }
   }
 `
-export default project
+export default drawing
