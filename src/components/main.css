@@ -671,7 +671,6 @@ video:hover {
   }
 }
 .graffiti-city-park,
-.southern-plains-museum,
 .reimagine-virtual-art {
   display: none;
 }
@@ -680,4 +679,11 @@ video:hover {
 }
 .artForJustice .new-startup-media {
   display: none;
+}
+.benefactors ul {
+  list-style: none;
+  padding-left: 0;
+}
+.benefactors h3 {
+  color: #0471bc;
 }

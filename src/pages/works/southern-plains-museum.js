@@ -5,10 +5,6 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../../components/main.css"
 
-import video from "../../images/drawing-gallery/video1.mp4"
-import icon1 from "../../images/icon.png"
-import icon2 from "../../images/icon-mac.png"
-
 const drawing = ({ data }) => {
   return (
     <div className="works">
@@ -16,8 +12,8 @@ const drawing = ({ data }) => {
         <Navbar />
         <div className=" d-flex flex-wrap">
           <div className="d-flex col-12 align-items-center justify-content-center">
-            <h1 className="title pt-5 text-lg-left text-uppercase text-center">
-              SOUTHERN PLAINS MUSEUM AND CULTURAL CENTER
+            <h1 className="title  pt-5 text-lg-left text-uppercase text-center">
+              {data.project.projectTitle}
             </h1>
           </div>
         </div>
@@ -25,7 +21,10 @@ const drawing = ({ data }) => {
       {/* <!--========Video Section=======--> */}
       <section className="pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed/YGkKVRQqMkE?autoplay=1&mute=1"></iframe>
+          <video controls muted autoPlay className="videos w-100">
+            <source src={data.project.video.file.url} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div className="container">
           <div className="row d-flex justify-content-between  py-2 flex-wrap">
@@ -33,7 +32,7 @@ const drawing = ({ data }) => {
               <p className="small-info text-justify decription">
                 {" "}
                 <span className="font-weight-bold pr-2">PRODUCT: </span>
-                VIRTUAL WALK-THRU
+                {data.project.product}
               </p>
             </div>
             <div className="col-md-4 col-12">
@@ -43,7 +42,7 @@ const drawing = ({ data }) => {
                   CLIENT:{" "}
                   <span className="font-weight-normal pl-md-2">
                     {" "}
-                    CHANCE LANDRY & FUNDED BY CITY OF HOUSTON
+                    {data.project.client}
                   </span>
                 </span>
               </p>
@@ -52,7 +51,7 @@ const drawing = ({ data }) => {
               <p className="small-info text-justify decription">
                 {" "}
                 <span className="font-weight-bold pr-2">LAUNCHED: </span>
-                NOVEMBER 2020
+                {data.project.launched}
               </p>
             </div>
           </div>
@@ -65,42 +64,20 @@ const drawing = ({ data }) => {
       <section className="product container py-md-5 mt-md-5">
         <div className="row">
           <div className="col-md-5 my-md-0 my-3 d-flex justify-content-center">
-            <h2 className="title text-center text-lg-left text-center text-md-left">
-              How do we share the stories and history of the Native American
-              community with the rest of the world in a safe and accessible way?
-            </h2>
+            <h2
+              className="title text-center text-lg-left text-center text-md-left"
+              dangerouslySetInnerHTML={{
+                __html: data.project.contentTitle1.childMarkdownRemark.html,
+              }}
+            ></h2>
           </div>
           <div className="description col-md-7 text-justify">
-            <p>
-              INVI collaborated with the City of Houston and Chance L. Landry,
-              President of the Southern Apache Museum, to design and create the
-              virtual Southern Plains Museum and Culture Center (SPMCC) for
-              Native American Heritage Month. Our main purpose was to create a
-              COVID-19 safe environment for the community while sharing the
-              stories and history of the Native American community with the rest
-              of the world.
-            </p>
-            <p>
-              INVI worked together with Chance L. Landry to design a virtual
-              space that highlights the narrative and symbolic representation of
-              the Native American community. Through the process, we had a
-              chance to learn about the meanings and history behind each flower,
-              plant, symbol, artifact, etc. It allowed us to not only educate
-              ourselves but also a walk back into the past.
-            </p>
-            <p>
-              The SPMCC’s design includes program spaces for Southern Apache
-              Museum, American Indian Genocide Museum, Library, Garden, Health
-              Clinic, Aztec Pyramid, and Powwow Arena. Each of these spaces is
-              important to the community, visually representing a part of its
-              history, culture, and resources. The virtual platform is an
-              interactive walk-through experience, allowing visitors to explore
-              and learn at their own pace. Virtual platforms allow for global
-              accessibility from almost anywhere in the world at any time,
-              strengthening our connectivity to the world while maximizing the
-              spread of information and knowledge. We hope that this experience
-              can be shared with friends and family during the days to come.
-            </p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html:
+                  data.project.contentDescription1.childMarkdownRemark.html,
+              }}
+            ></div>
           </div>
         </div>
       </section>
@@ -111,80 +88,38 @@ const drawing = ({ data }) => {
         <div className="row text-center d-flex justify-content-center">
           <div className="col-md-8">
             <h4 className="pb-3">
-              <u>CREDITS</u>
+              <u>{data.project.credits}</u>
             </h4>
-            <p className="decription">
-              Contents: Chance Landry and the Native American community.
-            </p>
-            <p className="decription">
-              Music Artist: James Stephenson from the Lumbee Nation
-            </p>
-            <p className="decription">
-              Music Album: Easter Wind, Northern Lights (available for purchase
-              at Canyon Records)
-            </p>
-            <p className="decription">
-              ​Disclaimer: Please excuse any spelling, grammatical, and typo
-              errors
-            </p>
+            <div
+              className="description"
+              dangerouslySetInnerHTML={{
+                __html: data.project.creditsContent.childMarkdownRemark.html,
+              }}
+            ></div>
           </div>
-          <div className="col-md-8 pb-4">
-            <h4 className="py-3 font-italic">
-              For a fully immersive and interactive experience
-              <br />
-              <br />
-              Download application to enter Virtual Tour
-            </h4>
-            <div className="row text-center d-flex justify-content-center align-items-center">
-              <div className="col-md-3 pb-3 pb-md-0">
-                <a target="_blank" href="#">
-                  <img src={icon2} alt="windows" className="img-fluid" />
-                </a>
-              </div>
-              <div className="col-md-3">
-                <a target="_blank" href="#">
-                  {" "}
-                  <img src={icon2} alt="mac" className="img-fluid" />
-                </a>
-              </div>
+          <div className="col-md-8 py-4 text-center">
+            <div className="row d-flex text-center justify-content-center align-itemms-center">
+              {data.project.creditsImages.map(image => {
+                return (
+                  <div className="col-md-3 pb-4" key={image.id}>
+                    <a target="_blank" href="#">
+                      <img
+                        src={image.file.url}
+                        alt={image.title}
+                        className="img-fluid"
+                      />
+                    </a>
+                  </div>
+                )
+              })}
             </div>
           </div>
-          <div className="col-md-8">
-            <p className="description ">
-              ​
-              <span className="font-italic">
-                {" "}
-                For setup video tutorial, please click on this link{" "}
-              </span>
-              -
-              <a
-                target="_blank"
-                href="https://www.youtube.com/watch?v=HfBEW8e9zMQ"
-              >
-                Video Tutorial
-              </a>
-            </p>
-            <p className="description ">
-              <span className="font-italic">
-                {" "}
-                For setup instructions, please click on this link{" "}
-              </span>
-              -{" "}
-              <a
-                target="_blank"
-                href="https://apache-museum.s3.us-east-2.amazonaws.com/README.txt"
-              >
-                Readme.txt
-              </a>
-            </p>
-            <p className="description ">
-              <span className="font-italic"> Email</span>{" "}
-              <a target="_blank" href="mailto:hello@invi.us">
-                I N V I
-              </a>
-              <span className="font-italic"> for any technical issues</span>
-            </p>
-          </div>
+          <div
+            className="col-md-8 description"
+            dangerouslySetInnerHTML={{
+              __html: data.project.creditsLinks.childMarkdownRemark.html,
+            }}
+          ></div>
         </div>
       </section>
       {/* <!--======== Credits==========--> */}
@@ -192,58 +127,44 @@ const drawing = ({ data }) => {
       {/* <!-- ======= Images Section ======= --> */}
 
       <div className="images container py-md-5">
-        <div className="row d-flex align-items-center">
-          <div className="col-md-6 pb-5 pr-md-3 zoom">
-            <Image
-              fluid={data.image1.childImageSharp.fluid}
-              alt="image1"
-              className="img-fluid"
-            />
-          </div>
-          <div className="col-md-6 pb-5 pl-md-3 zoom">
-            <Image
-              fluid={data.image2.childImageSharp.fluid}
-              className="img-fluid"
-              alt="image2"
-            />
-          </div>
+        <div className="row d-flex align-items-center justify-content-md-between">
+          {data.project.images.map(image => {
+            return (
+              <div className="col-md-6 pb-5  zoom" key={image.id}>
+                <Image
+                  fluid={image.fluid}
+                  alt={image.title}
+                  className="img-fluid p-4"
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
 
       {/* <!-- ======= Images Section =======--> */}
-
       {/* <!--======= Creative Process=======--> */}
       <section className="product container py-md-5">
         <div className="row ">
           <div className="col-md-5 my-md-0 my-3 ">
-            <h2 className="title text-center text-lg-left">Creative Process</h2>
+            <h2
+              className="title text-center text-lg-left"
+              dangerouslySetInnerHTML={{
+                __html: data.project.contentTitle2,
+              }}
+            ></h2>
           </div>
-          <div className="description col-md-7 text-justify">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
-              aliquam exercitationem suscipit debitis. Voluptate ratione
-              assumenda totam, quaerat obcaecati eum impedit repudiandae tenetur
-              quia deleniti distinctio. Voluptatibus porro deleniti architecto,
-              alias excepturi harum atque enim minima sint sunt voluptate Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Modi non
-              explicabo reiciendis molestias sint quos similique ullam,
-              necessitatibus tenetur sapiente atque porro pariatur ad nobis.
-              Ipsam nobis mollitia ut aliquid. Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Laudantium, ipsam!
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus, sit delectus dolores perferendis soluta officiis
-              est obcaecati dignissimos error sequi aliquid. Quas corrupti,
-              distinctio enim iste sint adipisci vitae ducimus, itaque, fugiat
-              id voluptatum! Nobis nesciunt dicta culpa aperiam quos maiores
-              magnam, magni blanditiis optio officiis atque laudantium nulla ad.
-            </p>
-          </div>
+          <div
+            className="description col-md-7 text-justify"
+            dangerouslySetInnerHTML={{
+              __html: data.project.contentDescription2.childMarkdownRemark.html,
+            }}
+          ></div>
         </div>
       </section>
       {/* 
     <!--======= Creative Process=======--> */}
+
       {/* <!--=========Pagination Buttons=======--> */}
       <div className="container py-3">
         <div className="row ">
@@ -251,7 +172,7 @@ const drawing = ({ data }) => {
             <ul className="pagination">
               <li className="page-item">
                 <a
-                  href="/works/granada-theatre"
+                  href={data.project.prevLink}
                   className="page-link"
                   aria-label="Previous"
                 >
@@ -261,12 +182,12 @@ const drawing = ({ data }) => {
               <li className="page-item">
                 <a
                   className="page-link text-center"
-                  href="/works/granada-theatre"
+                  href={data.project.prevLink}
                 >
                   <span>Prev </span>
                   <br />
                   <span className="project-title text-dark font-weight-bold">
-                    GRANADA THEATRE
+                    {data.project.prevLinkTitle}
                   </span>
                 </a>
               </li>
@@ -275,17 +196,17 @@ const drawing = ({ data }) => {
               <li className="page-item">
                 <a
                   className="page-link text-center"
-                  href="/works/lepetit-trianon"
+                  href={data.project.nextLink}
                 >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
-                    LE PETIT TRIANON
+                    {data.project.nextLinkTitle}
                   </span>
                 </a>
               </li>
               <li className="page-item">
                 <a
-                  href="/works/lepetit-trianon"
+                  href={data.project.nextLink}
                   className="page-link"
                   aria-label="Next"
                 >
@@ -306,17 +227,64 @@ const drawing = ({ data }) => {
 }
 export const query = graphql`
   {
-    image1: file(relativePath: { eq: "southern-plains/image1.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    project: contentfulSouthernPlainsMuseumProject(
+      slug: { eq: "southern-plains-museum" }
+    ) {
+      projectTitle
+      product
+      client
+      launched
+      contentDescription1 {
+        childMarkdownRemark {
+          html
         }
       }
-    }
-    image2: file(relativePath: { eq: "southern-plains/image2.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      contentTitle1 {
+        childMarkdownRemark {
+          html
+        }
+      }
+      video {
+        file {
+          url
+        }
+      }
+      images {
+        title
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        id
+      }
+      contentDescription2 {
+        childMarkdownRemark {
+          html
+        }
+      }
+      contentTitle2
+      prevLinkTitle
+      prevLink
+      nextLinkTitle
+      nextLink
+      credits
+      creditsContent {
+        childMarkdownRemark {
+          html
+        }
+      }
+      creditsImages {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        file {
+          url
+        }
+        id
+        title
+      }
+      creditsLinks {
+        childMarkdownRemark {
+          html
         }
       }
     }

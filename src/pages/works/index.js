@@ -20,14 +20,14 @@ const index = ({ data }) => {
               <div className="content_img">
                 <a className="item" href="/works/archvilla">
                   <Image
-                    fluid={data.archvilla.childImageSharp.fluid}
+                    fluid={data.archvilla.project.fluid}
                     alt="Archvilla"
                     className="img-fluid image"
                   />
                 </a>
                 <div className="middle">
                   <div className="text text-uppercase font-weight-bold pt-5 pt-md-0 pl-lg-5">
-                    ARCHVILLA
+                    {data.archvilla.name}
                   </div>
                 </div>
               </div>
@@ -37,14 +37,14 @@ const index = ({ data }) => {
               <div className="content_img">
                 <a className="item" href="/works/southern-plains-museum">
                   <Image
-                    fluid={data.southern.childImageSharp.fluid}
+                    fluid={data.southern.project.fluid}
                     alt="Southern Plains Museum and Cultural Center"
                     className="img-fluid image m-md-4"
                   />
                 </a>
                 <div className="middle">
                   <div className="text text-uppercase font-weight-bold w-100 pt-3 pt-md-0 ">
-                    Southern Plains Museum and Cultural Center
+                    {data.southern.name}
                   </div>
                 </div>
               </div>
@@ -57,14 +57,14 @@ const index = ({ data }) => {
               <div className="content_img">
                 <a className="item" href="/works/lepetit-trianon">
                   <Image
-                    fluid={data.lepetit.childImageSharp.fluid}
+                    fluid={data.lepetit.project.fluid}
                     alt="Le Petit Trianon"
                     className="img-fluid image m-md-5"
                   />
                 </a>
                 <div className="middle-1">
                   <div className="text text-uppercase font-weight-bold  pt-5 pt-md-0">
-                    Le Petit Trianon
+                    {data.lepetit.name}
                   </div>
                 </div>
               </div>
@@ -74,14 +74,14 @@ const index = ({ data }) => {
               <div className="content_img">
                 <a className="item" href="/works/graffiti-city-park">
                   <Image
-                    fluid={data.graffiti.childImageSharp.fluid}
+                    fluid={data.graffiti.project.fluid}
                     alt="GRAFFITI CITY PARK"
                     className="img-fluid image"
                   />
                 </a>
                 <div className="middle">
                   <div className="text text-uppercase font-weight-bold pl-xl-5 pt-5 pt-md-0">
-                    GRAFFITI CITY PARK
+                    {data.graffiti.name}
                   </div>
                 </div>
               </div>
@@ -94,14 +94,14 @@ const index = ({ data }) => {
               <div className="content_img">
                 <a className="item" href="/works/artForJustice">
                   <Image
-                    fluid={data.art.childImageSharp.fluid}
+                    fluid={data.art.project.fluid}
                     alt="ArtForJustice"
                     className="img-fluid image m-md-4"
                   />
                 </a>
                 <div className="middle">
                   <div className="text text-uppercase font-weight-bold pt-5 pt-md-0 pl-lg-5 ml-lg-3">
-                    #ARTFORJUSTICE
+                    {data.art.name}
                   </div>
                 </div>
               </div>
@@ -110,14 +110,14 @@ const index = ({ data }) => {
               <div className="content_img">
                 <a className="item" href="/works/granada-theatre">
                   <Image
-                    fluid={data.granada.childImageSharp.fluid}
+                    fluid={data.granada.project.fluid}
                     alt="Granada Theatre"
                     className="img-fluid image m-md-5"
                   />
                 </a>
                 <div className="middle">
                   <div className="text text-uppercase font-weight-bold pt-5 pt-md-0">
-                    GRANADA THEATRE
+                    {data.granada.name}
                   </div>
                 </div>
               </div>
@@ -131,14 +131,14 @@ const index = ({ data }) => {
               <div className="content_img">
                 <a className="item" href="/works/drawing-gallery">
                   <Image
-                    fluid={data.drawing.childImageSharp.fluid}
+                    fluid={data.drawing.project.fluid}
                     alt="Drawing Gallery"
                     className="img-fluid image m-lg-4"
                   />
                 </a>
                 <div className="middle-2">
                   <div className="text text-uppercase font-weight-bold pr-md-4 pt-5">
-                    DRAWING GALLERY
+                    {data.drawing.name}
                   </div>
                 </div>
               </div>
@@ -153,56 +153,62 @@ const index = ({ data }) => {
 }
 export const query = graphql`
   {
-    drawing: file(
-      relativePath: { eq: "archvilla/circle-drawing-gallery.png" }
+    archvilla: contentfulWorksMainPage(name: { eq: "ARCHVILLA" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+
+    granada: contentfulWorksMainPage(name: { eq: "GRANADA THEATRE" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+    graffiti: contentfulWorksMainPage(name: { eq: "GRAFFITI CITY PARK" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+    southern: contentfulWorksMainPage(
+      name: { eq: "SOUTHERN PLAINS MUSEUM AND CULTURAL CENTER" }
     ) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
         }
       }
     }
-    art: file(relativePath: { eq: "archvilla/circle-art-for-justice.png" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    drawing: contentfulWorksMainPage(name: { eq: "DRAWING GALLERY" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
         }
       }
     }
-    granada: file(relativePath: { eq: "archvilla/circle-granada.png" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    lepetit: contentfulWorksMainPage(name: { eq: "LE PETIT TRIANON" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
         }
       }
     }
-    graffiti: file(relativePath: { eq: "archvilla/circle-graffitti.png" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    lepetit: file(relativePath: { eq: "archvilla/circle-lepetit.png" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    southern: file(
-      relativePath: { eq: "archvilla/circle-southern-plains.png" }
-    ) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    archvilla: file(relativePath: { eq: "archvilla/circle-archvilla.png" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    art: contentfulWorksMainPage(name: { eq: "#ARTFORJUSTICE" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
         }
       }
     }

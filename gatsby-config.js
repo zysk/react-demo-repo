@@ -2,6 +2,15 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: false,
+    PRESERVE_WEBPACK_CACHE: false,
+    PRESERVE_FILE_DOWNLOAD_CACHE: false,
+    PARALLEL_SOURCING: false,
+    FAST_REFRESH: false,
+  },
+
   siteMetadata: {
     title: `INVI`,
     description: `INVI is a Virtual Experience Design Studio that helps clients create virtual experiences through architecture, storytelling, and design.`,

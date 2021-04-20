@@ -5,232 +5,213 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
 
-const drawing = ({ data }) => {
+const index = ({ data }) => {
   return (
     <div className="works">
-      <div className="projects">
-        <Navbar />
-        <div className=" d-flex flex-wrap">
-          <div className="d-flex col-12 align-items-center justify-content-center">
-            <h1 className="title  pt-5 text-lg-left text-uppercase text-center">
-              {data.project.projectTitle}
-            </h1>
+      <Navbar />
+      <section className="circle-section" id="portfolio">
+        <div className="container pb-5 mb-5 mb-md-0">
+          <div className="content-section-heading text-center">
+            <h3 className="my-5 mb-lg-0 title">OUR WORKS</h3>
           </div>
-        </div>
-      </div>
-      {/* <!--========Video Section=======--> */}
-      <section className="pt-5 pb-2">
-        <div className="container">
-          <div className="row  d-flex justify-content-between py-2">
-            <div className="col-md-6">
-              <div className="works-video embed-responsive embed-responsive-16by9">
-                <iframe src="https://www.youtube.com/embed/_5XF47ooAa4?autoplay=1&mute=1"></iframe>
+          <div className="row d-flex justify-content-md-start justify-content-center align-items-center pb-md-3">
+            <div className="col-md-1"></div>
+            <div className="col-md-3 px-5 px-lg-0  pb-5 pb-lg-0">
+              <div className="content_img">
+                <a className="item" href="/works/archvilla">
+                  <Image
+                    fluid={data.archvilla.project.fluid}
+                    alt="Archvilla"
+                    className="img-fluid image"
+                  />
+                </a>
+                <div className="middle">
+                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0 pl-lg-5">
+                    {data.archvilla.name}
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="col-md-6 py-4 py-md-0">
-              <div className="works-video embed-responsive embed-responsive-16by9">
-                <iframe src="https://www.youtube.com/embed/1qS1bL6Zcyo?autoplay=1&mute=1"></iframe>
+            <div className="col-md-2"></div>
+            <div className="col-md-3  pt-5 pt-lg-0 pb-5 pb-lg-0 first-col px-5 px-lg-0">
+              <div className="content_img">
+                <a className="item" href="/works/southern-plains-museum">
+                  <Image
+                    fluid={data.southern.project.fluid}
+                    alt="Southern Plains Museum and Cultural Center"
+                    className="img-fluid image m-md-4"
+                  />
+                </a>
+                <div className="middle">
+                  <div className="text text-uppercase font-weight-bold w-100 pt-3 pt-md-0 ">
+                    {data.southern.name}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="row d-flex justify-content-between  py-2 flex-wrap">
-            <div className="col-md-4 col-12">
-              <p className="small-info text-justify decription">
-                {" "}
-                <span className="font-weight-bold pr-2">PRODUCT: </span>
-                {data.project.product}
-              </p>
+
+          <div className="row d-flex justify-content-center align-items-center pb-md-3">
+            {/* <div className="col-2"></div> */}
+            <div className="col-md-4 mt-5 pt-5  pb-5 pb-lg-0 mt-md-0 pt-md-0 px-5 px-lg-0">
+              <div className="content_img">
+                <a className="item" href="/works/lepetit-trianon">
+                  <Image
+                    fluid={data.lepetit.project.fluid}
+                    alt="Le Petit Trianon"
+                    className="img-fluid image m-md-5"
+                  />
+                </a>
+                <div className="middle-1">
+                  <div className="text text-uppercase font-weight-bold  pt-5 pt-md-0">
+                    {data.lepetit.name}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="col-md-4 col-12">
-              <p className="small-info text-justify decription d-flex justify-content-md-center">
-                {" "}
-                <span className="font-weight-bold pr-2">
-                  CLIENT:{" "}
-                  <span className="font-weight-normal pl-md-2">
-                    {" "}
-                    {data.project.client}
-                  </span>
-                </span>
-              </p>
+            <div className="col-md-1"></div>
+            <div className="col-md-3 mt-5  pb-5 pb-lg-0 pt-5 px-5 px-lg-0">
+              <div className="content_img">
+                <a className="item" href="/works/graffiti-city-park">
+                  <Image
+                    fluid={data.graffiti.project.fluid}
+                    alt="GRAFFITI CITY PARK"
+                    className="img-fluid image"
+                  />
+                </a>
+                <div className="middle">
+                  <div className="text text-uppercase font-weight-bold pl-xl-5 pt-5 pt-md-0">
+                    {data.graffiti.name}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="col-md-4 col-12 d-flex justify-content-md-end">
-              <p className="small-info text-justify decription">
-                {" "}
-                <span className="font-weight-bold pr-2">LAUNCHED: </span>
-                {data.project.launched}
-              </p>
+          </div>
+
+          <div className="row d-flex justify-content-between align-items-center py-md-0">
+            {/* <div className="col-md-1"></div> */}
+            <div className="col-md-3  pt-5  pb-5 pb-lg-0 pt-md-0 first-col px-5 px-lg-0">
+              <div className="content_img">
+                <a className="item" href="/works/artForJustice">
+                  <Image
+                    fluid={data.art.project.fluid}
+                    alt="ArtForJustice"
+                    className="img-fluid image m-md-4"
+                  />
+                </a>
+                <div className="middle">
+                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0 pl-lg-5 ml-lg-3">
+                    {data.art.name}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 mt-5   pb-5 pb-lg-0 pt-5 mt-md-0 pt-md-0 px-5 px-lg-0">
+              <div className="content_img">
+                <a className="item" href="/works/granada-theatre">
+                  <Image
+                    fluid={data.granada.project.fluid}
+                    alt="Granada Theatre"
+                    className="img-fluid image m-md-5"
+                  />
+                </a>
+                <div className="middle">
+                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0">
+                    {data.granada.name}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-2"></div>
+          </div>
+
+          <div className="row d-flex justify-content-xl-between justify-content-md-between align-items-start last-row">
+            <div className="col-md-6"></div>
+            <div className="col-md-3 mt-5 pt-5   pb-5 pb-lg-0 last-col px-5 px-lg-0">
+              <div className="content_img">
+                <a className="item" href="/works/drawing-gallery">
+                  <Image
+                    fluid={data.drawing.project.fluid}
+                    alt="Drawing Gallery"
+                    className="img-fluid image m-lg-4"
+                  />
+                </a>
+                <div className="middle-2">
+                  <div className="text text-uppercase font-weight-bold pr-md-4 pt-5">
+                    {data.drawing.name}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <!--========Video Section=======--> */}
 
-      {/* <!-- ======= Product Section ======= --> */}
-
-      <section className="product container py-md-5 mt-md-5">
-        <div className="row">
-          <div className="col-md-5 my-md-0 my-3 d-flex justify-content-center">
-            <h2
-              className="title text-center text-lg-left text-center text-md-left"
-              dangerouslySetInnerHTML={{
-                __html: data.project.contentTitle1.childMarkdownRemark.html,
-              }}
-            ></h2>
-          </div>
-          <div className="description col-md-7 text-justify">
-            <div
-              dangerouslySetInnerHTML={{
-                __html:
-                  data.project.contentDescription1.childMarkdownRemark.html,
-              }}
-            ></div>
-          </div>
-        </div>
-      </section>
-
-      {/* <!-- ======= Product Section =======--> */}
-
-      {/* <!-- ======= Images Section ======= --> */}
-
-      <div className="images container py-md-5">
-        <div className="row d-flex align-items-center justify-content-md-between">
-          {data.project.images.map(image => {
-            return (
-              <div className="col-md-6 pb-5  zoom" key={image.id}>
-                <Image
-                  fluid={image.fluid}
-                  alt={image.title}
-                  className="img-fluid p-4"
-                />
-              </div>
-            )
-          })}
-        </div>
-      </div>
-
-      {/* <!-- ======= Images Section =======--> */}
-      {/* <!--======= Creative Process=======--> */}
-      <section className="product container py-md-5">
-        <div className="row ">
-          <div className="col-md-5 my-md-0 my-3 ">
-            <h2
-              className="title text-center text-lg-left"
-              dangerouslySetInnerHTML={{
-                __html: data.project.contentTitle2,
-              }}
-            ></h2>
-          </div>
-          <div
-            className="description col-md-7 text-justify"
-            dangerouslySetInnerHTML={{
-              __html: data.project.contentDescription2.childMarkdownRemark.html,
-            }}
-          ></div>
-        </div>
-      </section>
-      {/* 
-    <!--======= Creative Process=======--> */}
-      {/* <!--=========Pagination Buttons=======--> */}
-      <div className="container py-3">
-        <div className="row ">
-          <div className="col-12 pt-lg-5 pb-lg-3 d-flex justify-content-between">
-            <ul className="pagination">
-              <li className="page-item">
-                <a
-                  href={data.project.prevLink}
-                  className="page-link"
-                  aria-label="Previous"
-                >
-                  <i className="fas fa-arrow-left" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li className="page-item">
-                <a
-                  className="page-link text-center"
-                  href={data.project.prevLink}
-                >
-                  <span>Prev </span>
-                  <br />
-                  <span className="project-title text-dark font-weight-bold">
-                    SOUTHERN PLAINS MUSEUM
-                    <br /> AND CULTURAL CENTER
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <ul className="pagination">
-              <li className="page-item">
-                <a
-                  className="page-link text-center"
-                  href={data.project.nextLink}
-                >
-                  Next <br />
-                  <span className="project-title text-dark font-weight-bold ">
-                    GRAFFITI CITY <br className="d-md-none" /> PARK
-                  </span>
-                </a>
-              </li>
-              <li className="page-item">
-                <a
-                  href={data.project.nextLink}
-                  className="page-link"
-                  aria-label="Next"
-                >
-                  <span aria-hidden="true">
-                    {" "}
-                    <i className="fas fa-arrow-right " aria-hidden="true"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      {/* // <!--=========Pagination Buttons=======--> */}
       <Footer />
     </div>
   )
 }
 export const query = graphql`
   {
-    project: contentfulLePetitTrianonProject(slug: { eq: "lepetit-trianon" }) {
-      projectTitle
-      product
-      client
-      launched
-      contentDescription1 {
-        childMarkdownRemark {
-          html
-        }
-      }
-      contentTitle1 {
-        childMarkdownRemark {
-          html
-        }
-      }
-      video {
-        file {
-          url
-        }
-      }
-      images {
-        title
+    archvilla: contentfulWorksMainPage(name: { eq: "ARCHVILLA" }) {
+      name
+      project {
         fluid {
           ...GatsbyContentfulFluid
         }
-        id
       }
-      contentDescription2 {
-        childMarkdownRemark {
-          html
+    }
+
+    granada: contentfulWorksMainPage(name: { eq: "GRANADA THEATRE" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
         }
       }
-      contentTitle2
-      prevLinkTitle
-      prevLink
-      nextLinkTitle
-      nextLink
+    }
+    graffiti: contentfulWorksMainPage(name: { eq: "GRAFFITI CITY PARK" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+    southern: contentfulWorksMainPage(
+      name: { eq: "SOUTHERN PLAINS MUSEUM AND CULTURAL CENTER" }
+    ) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+    drawing: contentfulWorksMainPage(name: { eq: "DRAWING GALLERY" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+    lepetit: contentfulWorksMainPage(name: { eq: "LE PETIT TRIANON" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
+    }
+    art: contentfulWorksMainPage(name: { eq: "#ARTFORJUSTICE" }) {
+      name
+      project {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
     }
   }
 `
-export default drawing
+export default index
