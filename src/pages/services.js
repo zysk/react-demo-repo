@@ -141,12 +141,20 @@ const services = ({ data }) => {
 
         {/* <!-- =======  Testimonials ======= --> */}
       </div>
-      <Footer />
+      <Footer data1={data} />
     </div>
   )
 }
 export const query = graphql`
   {
+    contact: contentfulContactFooter {
+      email
+      copyright
+      phoneLink
+      phone
+      mailToLink
+      location
+    }
     testimonials1: contentfulServicesTestimonials(
       title: { eq: "TESTIMONIALS 1" }
     ) {

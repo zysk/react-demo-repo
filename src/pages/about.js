@@ -71,12 +71,20 @@ const about = ({ data }) => {
       </section>
       {/* <!-- ======= Team ======= --> */}
 
-      <Footer />
+      <Footer data1={data} />
     </div>
   )
 }
 export const query = graphql`
   {
+    contact: contentfulContactFooter {
+      email
+      copyright
+      phoneLink
+      phone
+      mailToLink
+      location
+    }
     about: contentfulAboutPageIntroduction {
       title
       description {

@@ -225,12 +225,20 @@ const drawing = ({ data }) => {
         </div>
       </div>
       {/* // <!--=========Pagination Buttons=======--> */}
-      <Footer />
+      <Footer data1={data} />
     </div>
   )
 }
 export const query = graphql`
   {
+    contact: contentfulContactFooter {
+      email
+      copyright
+      phoneLink
+      phone
+      mailToLink
+      location
+    }
     project: contentfulArtForJusticeProject(slug: { eq: "artForJustice" }) {
       projectTitle
       product

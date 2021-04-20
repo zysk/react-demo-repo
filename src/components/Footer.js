@@ -1,13 +1,15 @@
 import React from "react"
 import "./main.css"
+import { graphql } from "gatsby"
 import { Formik, Form, Field } from "formik"
+import { data } from "jquery"
 
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
-const Footer = ({ className }) => {
+const Footer = ({ className, data1 }) => {
   return (
     <>
       <footer className={className}>
@@ -18,19 +20,19 @@ const Footer = ({ className }) => {
               <p>
                 <a href="tel:+1 (832) 356-7656">
                   <i className=" fa fa-phone pr-2" aria-hidden="true"></i>
-                  (832) 356-7656
+                  {data1.contact.phone}
                 </a>
                 <br />
                 <a href="mailto:hello@invi.us">
                   <i className=" fa fa-envelope pr-2" aria-hidden="true"></i>
-                  hello@invi.us
+                  {data1.contact.email}
                 </a>
               </p>
               <p>
                 <i className=" fa fa-map-marker pr-2" aria-hidden="true"></i>
-                Texas, United States
+                {data1.contact.location}
               </p>
-              <p>© 2020 INVI LLC | All Rights Reserved</p>
+              <p>{data1.contact.copyright}</p>
             </div>
 
             <div className="col-lg-3 pb-4 pb-lg-0  text-lg-left ">

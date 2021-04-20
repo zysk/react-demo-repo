@@ -24,12 +24,12 @@ const drawing = ({ data }) => {
           <div className="row  d-flex justify-content-between py-2">
             <div className="col-md-6">
               <div className="works-video embed-responsive embed-responsive-16by9">
-                <iframe src="https://www.youtube.com/embed/_5XF47ooAa4?autoplay=1&mute=1"></iframe>
+                <iframe src={data.project.video.description}></iframe>
               </div>
             </div>
             <div className="col-md-6 py-4 py-md-0">
               <div className="works-video embed-responsive embed-responsive-16by9">
-                <iframe src="https://www.youtube.com/embed/1qS1bL6Zcyo?autoplay=1&mute=1"></iframe>
+                <iframe src={data.project.video2.description}></iframe>
               </div>
             </div>
           </div>
@@ -187,12 +187,20 @@ const drawing = ({ data }) => {
         </div>
       </div>
       {/* // <!--=========Pagination Buttons=======--> */}
-      <Footer />
+      <Footer data1={data} />
     </div>
   )
 }
 export const query = graphql`
   {
+    contact: contentfulContactFooter {
+      email
+      copyright
+      phoneLink
+      phone
+      mailToLink
+      location
+    }
     project: contentfulLePetitTrianonProject(slug: { eq: "lepetit-trianon" }) {
       projectTitle
       product
@@ -212,6 +220,13 @@ export const query = graphql`
         file {
           url
         }
+        description
+      }
+      video2 {
+        file {
+          url
+        }
+        description
       }
       images {
         title

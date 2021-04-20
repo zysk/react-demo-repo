@@ -300,7 +300,7 @@ const stories = ({ data }) => {
         </div>
       </div>
       {/* <!--=========Pagination Buttons=======--> */}
-      <Footer />
+      <Footer data1={data} />
     </div>
   )
 }
@@ -308,6 +308,14 @@ const stories = ({ data }) => {
 export default stories
 export const query = graphql`
   query MyQuery($slug: String) {
+    contact: contentfulContactFooter {
+      email
+      copyright
+      phoneLink
+      phone
+      mailToLink
+      location
+    }
     story: contentfulStories(slug: { eq: $slug }) {
       image {
         title

@@ -95,12 +95,20 @@ const index = ({ data }) => {
         </div>
       </section>
       {/* <!-- ======= Services Section ======= --> */}
-      <Footer />
+      <Footer data1={data} />
     </div>
   )
 }
 export const query = graphql`
   {
+    contact: contentfulContactFooter {
+      email
+      copyright
+      phoneLink
+      phone
+      mailToLink
+      location
+    }
     image: file(relativePath: { eq: "aframe-illustration.png" }) {
       childImageSharp {
         fixed(width: 600, height: 600) {

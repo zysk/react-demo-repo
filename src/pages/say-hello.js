@@ -138,7 +138,7 @@ const sayhello = ({ data }) => {
             <div className="col-md-6 mt-5 mt-md-0">
               {" "}
               <Image
-                fluid={data.intro.childImageSharp.fluid}
+                fluid={data.intro.image.fluid}
                 className="img-fluid"
                 alt="contact-gif"
               />
@@ -147,17 +147,25 @@ const sayhello = ({ data }) => {
         </section>
 
         {/* <!-- ======= Contact Section =======--> */}
-        <Footer className="contact-footer mt-lg-5" />
+        <Footer className="contact-footer mt-lg-5" data1={data} />
       </div>
     </>
   )
 }
 export const query = graphql`
   {
-    intro: file(relativePath: { eq: "invi-cloud-design.png" }) {
-      childImageSharp {
+    contact: contentfulContactFooter {
+      email
+      copyright
+      phoneLink
+      phone
+      mailToLink
+      location
+    }
+    intro: contentfulSayHello {
+      image {
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyContentfulFluid
         }
       }
     }

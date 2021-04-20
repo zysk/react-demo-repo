@@ -21,7 +21,7 @@ const drawing = ({ data }) => {
       {/* <!--========Video Section=======--> */}
       <section className="pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed/3L1xOrY8PP0?autoplay=1&mute=1"></iframe>
+          <iframe src={data.project.video.description}></iframe>
         </div>
         <div className="container">
           <div className="row d-flex justify-content-between  py-2 flex-wrap">
@@ -178,12 +178,20 @@ const drawing = ({ data }) => {
         </div>
       </div>
       {/* // <!--=========Pagination Buttons=======--> */}
-      <Footer />
+      <Footer data1={data} />
     </div>
   )
 }
 export const query = graphql`
   {
+    contact: contentfulContactFooter {
+      email
+      copyright
+      phoneLink
+      phone
+      mailToLink
+      location
+    }
     project: contentfulGranadaTheatreProject(slug: { eq: "granada-theatre" }) {
       projectTitle
       product
@@ -203,6 +211,7 @@ export const query = graphql`
         file {
           url
         }
+        description
       }
       images {
         title
