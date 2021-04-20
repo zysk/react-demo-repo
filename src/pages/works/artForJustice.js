@@ -204,7 +204,7 @@ const drawing = ({ data }) => {
                 >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
-                    GRAFFITI CITY <br className="d-md-none" /> PARK
+                    {data.project.nextLinkTitle}
                   </span>
                 </a>
               </li>
