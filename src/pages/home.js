@@ -5,75 +5,79 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
 
-const stories = ({ data }) => {
+const about = ({ data }) => {
   return (
-    <div className="stories">
-      <Navbar />
-      {/* <!--====== Graphics Section======--> */}
+    <div className="about">
+      <Navbar className="About" />
       <section className="container py-5 mt-lg-4">
-        <div className="row d-flex justify-content-between align-items-center">
-          <div className="col-lg-5 text-lg-left text-center pt-5 pt-lg-0 ">
-            <h1 className="title text-center text-lg-left m-0 pb-4 pb-md-0">
-              {data.intro.title}
+        <div className="row d-flex align-items-center justify-content-between">
+          <div className="col-lg-6 order-lg-12">
+            <Image fluid={data.about.image.fluid} alt="Our Story" />
+          </div>
+          <div className="col-lg-5 text-left pt-5 pt-lg-0 order-lg-1">
+            <h1 className="title text-center text-lg-left text-center text-lg-left m-0 pb-4 pb-lg-0">
+              {data.about.title}
             </h1>
             <div
-              className="text-justify description"
+              className="py-lg-5 description text-justify"
               dangerouslySetInnerHTML={{
-                __html: data.intro.description.childMarkdownRemark.html,
+                __html: data.about.description.childMarkdownRemark.html,
               }}
             ></div>
           </div>
-          <div className="col-lg-6 ">
-            <Image
-              fluid={data.intro.image.fluid}
-              alt=""
-              className="img-fluid"
-              width="700"
-            />
-          </div>
         </div>
       </section>
-      {/* <!--====== Graphics Section======--> */}
+      {/* Our Story */}
 
-      {/* <!-- ======= Stories ======= --> */}
-      <section className="container py-5">
-        <div className="row text-center justify-content-start py-lg-5">
-          {data.stories.edges.map(({ node: story }) => {
+      {/* <!-- ======= Team ======= --> */}
+      <section className="container py-5 team">
+        <div className="row justify-content-md-between justify-content-center">
+          <div className="col-md-4 d-flex flex-column justify-content-between team-col px-0 p-4 mb-4 mb-md-0">
+            <div>
+              <h1 className="team-title title mb-2 pb-4 pb-md-0">
+                {data.about.teamCard}
+              </h1>
+            </div>
+            <div
+              className="team-description decription"
+              dangerouslySetInnerHTML={{
+                __html: data.about.teamCardContent.childMarkdownRemark.html,
+              }}
+            ></div>
+          </div>
+          {data.team.edges.map(({ node: member }) => {
             return (
-              <div className="col-md-4 px-3" key={story.id}>
-                <Image
-                  fluid={story.image.fluid}
-                  alt="Southern Plains Museum"
-                  className="img-fluid"
+              <div
+                className="col-md-4 px-0 text-center pb-4 mb-4 mb-md-0"
+                key={member.id}
+              >
+                <img
+                  src={member.svgImage.file.url}
+                  alt="Giangtien Nguyen"
+                  className="img-fluid tien static"
                 />
-                <h3 className="font-weight-bold pt-5 px-lg-4 stories-title">
-                  <a href={story.readMoreLink}>{story.title.title}</a>
-                </h3>
-                <h6 className="py-3 text-muted">{story.date}</h6>
-                <div
-                  className="text-justify description limited-text"
-                  max-length="100"
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      story.landingPageIntroduction.childMarkdownRemark.html,
-                  }}
-                ></div>
-                <p className="py-3 font-weight-bold">
-                  <a href={story.readMoreLink}>READ MORE</a>
-                </p>
+                <img
+                  src={member.gifImage.file.url}
+                  alt="Giangtien Nguyen"
+                  className="img-fluid tien active"
+                />
+                <h5 className="pt-4">{member.name}</h5>
+                <p>{member.designation}</p>
               </div>
             )
           })}
+          <div className="col-md-4"></div>
         </div>
       </section>
-      {/* <!-- ======= Stories ======= --> */}
+      {/* <!-- ======= Team ======= --> */}
+
       <Footer />
     </div>
   )
 }
 export const query = graphql`
   {
-    intro: contentfulStoriesIntroduction {
+    about: contentfulAboutPageIntroduction {
       title
       description {
         childMarkdownRemark {
@@ -85,31 +89,40 @@ export const query = graphql`
           ...GatsbyContentfulFluid
         }
       }
+      teamCard
+      teamCardContent {
+        childMarkdownRemark {
+          html
+        }
+      }
     }
-    stories: allContentfulStories(
-      sort: { order: DESC, fields: formattedDate }
+    team: allContentfulAboutPageMeetTheTeam(
+      sort: { order: ASC, fields: order }
     ) {
       edges {
         node {
-          slug
-          title {
-            title
-          }
-          date
-          image {
+          id
+          name
+          designation
+          svgImage {
             fluid {
               ...GatsbyContentfulFluid
             }
-          }
-          landingPageIntroduction {
-            childMarkdownRemark {
-              html
+            file {
+              url
             }
           }
-          readMoreLink
+          gifImage {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+            file {
+              url
+            }
+          }
         }
       }
     }
   }
 `
-export default stories
+export default about
