@@ -107,33 +107,27 @@ const services = ({ data }) => {
                   </div>
                 </div>
               </div>
-              <div className="carousel-item">
-                <div className="carousel-caption mx-4">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html:
-                        data.testimonials2.description.childMarkdownRemark.html,
-                    }}
-                  ></div>
-                  <div id="image-caption" className="pt-lg-4 font-weight-bold">
-                    {data.testimonials2.descBy}
+              {data.testimonials.edges.map(({ node: testimonial }) => {
+                return (
+                  <div className="carousel-item ">
+                    <div className="carousel-caption mx-4" key={testimonial.id}>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            testimonial.description.childMarkdownRemark.html,
+                        }}
+                      ></div>
+                      <div
+                        id="image-caption"
+                        className="pt-lg-4 font-weight-bold"
+                      >
+                        {testimonial.descBy}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <div className="carousel-caption mx-4">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html:
-                        data.testimonials3.description.childMarkdownRemark.html,
-                    }}
-                  ></div>
-                  <div id="image-caption" className="pt-lg-4 font-weight-bold">
-                    {data.testimonials3.descBy}
-                  </div>
-                </div>
-              </div>
-            </div>{" "}
+                )
+              })}
+            </div>
             <a className="carousel-control-prev" href="#demo" data-slide="prev">
               {" "}
               <i className="fas fa-arrow-left fa-2x"></i>
@@ -146,24 +140,35 @@ const services = ({ data }) => {
         </div>
 
         {/* <!-- =======  Testimonials ======= --> */}
-        <Footer />
       </div>
+      <Footer />
     </div>
   )
 }
 export const query = graphql`
   {
-    image: file(relativePath: { eq: "invi-services.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+    testimonials1: contentfulServicesTestimonials(
+      title: { eq: "TESTIMONIALS 1" }
+    ) {
+      description {
+        childMarkdownRemark {
+          html
         }
       }
+      descBy
     }
-    intro: file(relativePath: { eq: "invi-cloud-design.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+    testimonials: allContentfulServicesTestimonials(
+      filter: { title: { ne: "TESTIMONIALS 1" } }
+    ) {
+      edges {
+        node {
+          descBy
+          description {
+            childMarkdownRemark {
+              html
+            }
+            id
+          }
         }
       }
     }
@@ -196,26 +201,6 @@ export const query = graphql`
     }
     testimonials1: contentfulServicesTestimonials(
       title: { eq: "TESTIMONIALS 1" }
-    ) {
-      description {
-        childMarkdownRemark {
-          html
-        }
-      }
-      descBy
-    }
-    testimonials2: contentfulServicesTestimonials(
-      title: { eq: "TESTIMONIALS 2" }
-    ) {
-      description {
-        childMarkdownRemark {
-          html
-        }
-      }
-      descBy
-    }
-    testimonials3: contentfulServicesTestimonials(
-      title: { eq: "TESTIMONIALS 3" }
     ) {
       description {
         childMarkdownRemark {

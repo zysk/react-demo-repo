@@ -25,20 +25,26 @@ const stories = ({ data }) => {
             </h3>
             <h6 className="py-3 text-muted">{data.story.date}</h6>
             <div
-              className="decription text-justify"
+              className="decription text-justify pb-4"
               dangerouslySetInnerHTML={{
                 __html: data.story.description.childMarkdownRemark.html,
               }}
             ></div>
-            {/* {data.data.story.mediaCoverage.childMarkdownRemark.html !==
-              null && (
-              <div
-                className="text-left py-3"
-                dangerouslySetInnerHTML={{
-                  __html: data.story.mediaCoverage.childMarkdownRemark.html,
-                }}
-              ></div>
-            )} */}
+            {data.story.description2 !== null && (
+              <div>
+                <Image
+                  fluid={data.story.image2.fluid}
+                  alt={data.story.image.title}
+                  className="southern img-fluid "
+                />
+                <div
+                  className="southern decription text-justify pt-4"
+                  dangerouslySetInnerHTML={{
+                    __html: data.story.description2.childMarkdownRemark.html,
+                  }}
+                ></div>
+              </div>
+            )}
             <div className={data.story.slug}>
               <div className="artForJustice-media">
                 {" "}
@@ -267,24 +273,29 @@ const stories = ({ data }) => {
                 </a>
               </li>
             </ul>
-            <ul className="pagination">
-              <li className="page-item">
-                <a className="page-link text-center" href={data.story.nextLink}>
-                  Next
-                </a>
-              </li>
-              <li className="page-item">
-                <a
-                  href={data.story.nextLink}
-                  className="page-link"
-                  aria-label="Next"
-                >
-                  <span aria-hidden="true">
-                    <i className="fas fa-arrow-right " aria-hidden="true"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
+            {data.story.nextLink !== null && (
+              <ul className="pagination">
+                <li className="page-item">
+                  <a
+                    className="page-link text-center"
+                    href={data.story.nextLink}
+                  >
+                    Next
+                  </a>
+                </li>
+                <li className="page-item">
+                  <a
+                    href={data.story.nextLink}
+                    className="page-link"
+                    aria-label="Next"
+                  >
+                    <span aria-hidden="true">
+                      <i className="fas fa-arrow-right " aria-hidden="true"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            )}
           </div>
         </div>
       </div>
@@ -314,6 +325,16 @@ export const query = graphql`
           html
         }
       }
+      description2 {
+        childMarkdownRemark {
+          html
+        }
+      }
+      image2 {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+      }
       nextLink
       prevLink
     }
@@ -321,6 +342,18 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    southern: contentfulStories(slug: { eq: "southern-plains-museum" }) {
+      description2 {
+        childMarkdownRemark {
+          html
+        }
+      }
+      image2 {
+        fluid {
+          ...GatsbyContentfulFluid
         }
       }
     }

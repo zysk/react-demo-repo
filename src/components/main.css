@@ -674,10 +674,12 @@ video:hover {
 .reimagine-virtual-art {
   display: none;
 }
-.new-startup .artForJustice-media {
+.new-startup .artForJustice-media,
+.southern-plains-museum .artForJustice-media {
   display: none;
 }
-.artForJustice .new-startup-media {
+.artForJustice .new-startup-media,
+.southern-plains-museum .new-startup-media {
   display: none;
 }
 .benefactors ul {
@@ -687,3 +689,7 @@ video:hover {
 .benefactors h3 {
   color: #0471bc;
 }
+/* .new-startup .southern,
+.artForJustice .southern {
+  display: none !important;
+} */

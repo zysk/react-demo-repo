@@ -58,12 +58,11 @@ const index = ({ data }) => {
         <div className="row py-3 ">
           <div className="col-md-6 text-center">
             <div className="icon-box mt-5 mt-lg-0 ">
-              {/* <Image
-                fluid={data.home.animation.fluid}
-                alt="aframe"
+              <img
+                src={data.home.animation.file.url}
+                alt="Animation"
                 className="img-fluid"
-              /> */}
-              <img src={animation} alt="Animation" className="img-fluid" />
+              />
               <h2 className="py-3">{data.home.animation.title}</h2>
               <a href="./services/" className="font-weight-bold">
                 Explore{" "}
@@ -76,12 +75,11 @@ const index = ({ data }) => {
           </div>
           <div className="col-md-6 text-center">
             <div className="icon-box mt-4 mt-lg-0 ">
-              {/* <Image
-                fluid={data.home.virtual.fluid}
-                alt="aframe"
+              <img
+                src={data.home.virtual.file.url}
+                alt="Animation"
                 className="img-fluid"
-              /> */}
-              <img src={virtual} alt="Animation" className="img-fluid" />
+              />
               <h2 className="pt-md-5 pb-md-3 py-lg-3">
                 {data.home.virtual.title}
               </h2>
@@ -138,11 +136,17 @@ export const query = graphql`
           ...GatsbyContentfulFluid
         }
         title
+        file {
+          url
+        }
       }
       virtual {
         fluid {
           ...GatsbyContentfulFluid
           src
+        }
+        file {
+          url
         }
         title
       }
