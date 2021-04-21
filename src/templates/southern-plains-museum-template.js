@@ -1,9 +1,9 @@
 import React from "react"
-import Navbar from "../../components/Navbar"
-import Footer from "../../components/Footer"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
-import "../../components/main.css"
+import "../components/main.css"
 
 const drawing = ({ data }) => {
   return (
@@ -20,25 +20,10 @@ const drawing = ({ data }) => {
       </div>
       {/* <!--========Video Section=======--> */}
       <section className="pt-5 pb-2">
+        <div className="works-video embed-responsive embed-responsive-16by9">
+          <iframe src={data.project.video.description}></iframe>
+        </div>
         <div className="container">
-          <div className="row  d-flex justify-content-between py-2">
-            <div className="col-md-6">
-              <div className="works-video embed-responsive embed-responsive-16by9">
-                <video controls muted autoPlay className="videos w-100">
-                  <source src={data.project.video.file.url} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-            <div className="col-md-6 py-4 py-md-0">
-              <div className="works-video embed-responsive embed-responsive-16by9">
-                <video controls muted autoPlay className="videos w-100">
-                  <source src={data.project.video2.file.url} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-          </div>
           <div className="row d-flex justify-content-between  py-2 flex-wrap">
             <div className="col-md-4 col-12">
               <p className="small-info text-justify decription">
@@ -95,6 +80,46 @@ const drawing = ({ data }) => {
       </section>
 
       {/* <!-- ======= Product Section =======--> */}
+      {/* <!--======== Credits==========--> */}
+      <section className="container my-5">
+        <div className="row text-center d-flex justify-content-center">
+          <div className="col-md-8">
+            <h4 className="pb-3">
+              <u>{data.project.credits}</u>
+            </h4>
+            <div
+              className="description"
+              dangerouslySetInnerHTML={{
+                __html: data.project.creditsContent.childMarkdownRemark.html,
+              }}
+            ></div>
+          </div>
+          <div className="col-md-8 py-4 text-center">
+            <div className="row d-flex text-center justify-content-center align-itemms-center">
+              {data.project.creditsImages.map(image => {
+                return (
+                  <div className="col-md-3 pb-4" key={image.id}>
+                    <a target="_blank" href="#">
+                      <img
+                        src={image.file.url}
+                        alt={image.title}
+                        className="img-fluid"
+                      />
+                    </a>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div
+            className="col-md-8 description"
+            dangerouslySetInnerHTML={{
+              __html: data.project.creditsLinks.childMarkdownRemark.html,
+            }}
+          ></div>
+        </div>
+      </section>
+      {/* <!--======== Credits==========--> */}
 
       {/* <!-- ======= Images Section ======= --> */}
 
@@ -136,6 +161,7 @@ const drawing = ({ data }) => {
       </section>
       {/* 
     <!--======= Creative Process=======--> */}
+
       {/* <!--=========Pagination Buttons=======--> */}
       <div className="container py-3">
         <div className="row ">
@@ -158,8 +184,7 @@ const drawing = ({ data }) => {
                   <span>Prev </span>
                   <br />
                   <span className="project-title text-dark font-weight-bold">
-                    SOUTHERN PLAINS MUSEUM
-                    <br /> AND CULTURAL CENTER
+                    {data.project.prevLinkTitle}
                   </span>
                 </a>
               </li>
@@ -172,7 +197,7 @@ const drawing = ({ data }) => {
                 >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
-                    GRAFFITI CITY <br className="d-md-none" /> PARK
+                    {data.project.nextLinkTitle}
                   </span>
                 </a>
               </li>
@@ -198,7 +223,7 @@ const drawing = ({ data }) => {
   )
 }
 export const query = graphql`
-  {
+  query GetProject5($slug: String) {
     contact: contentfulContactFooter {
       email
       copyright
@@ -207,7 +232,7 @@ export const query = graphql`
       mailToLink
       location
     }
-    project: contentfulLePetitTrianonProject(slug: { eq: "lepetit-trianon" }) {
+    project: contentfulSouthernPlainsMuseumProject(slug: { eq: $slug }) {
       projectTitle
       product
       client
@@ -223,12 +248,6 @@ export const query = graphql`
         }
       }
       video {
-        file {
-          url
-        }
-        description
-      }
-      video2 {
         file {
           url
         }
@@ -251,6 +270,27 @@ export const query = graphql`
       prevLink
       nextLinkTitle
       nextLink
+      credits
+      creditsContent {
+        childMarkdownRemark {
+          html
+        }
+      }
+      creditsImages {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        file {
+          url
+        }
+        id
+        title
+      }
+      creditsLinks {
+        childMarkdownRemark {
+          html
+        }
+      }
     }
   }
 `

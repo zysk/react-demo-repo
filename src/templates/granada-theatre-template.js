@@ -1,9 +1,9 @@
 import React from "react"
-import Navbar from "../../components/Navbar"
-import Footer from "../../components/Footer"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
-import "../../components/main.css"
+import "../components/main.css"
 
 const drawing = ({ data }) => {
   return (
@@ -22,6 +22,7 @@ const drawing = ({ data }) => {
       <section className="pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
           <iframe src={data.project.video.description}></iframe>
+          {/* <iframe src={data.project.video.file.url}></iframe> */}
         </div>
         <div className="container">
           <div className="row d-flex justify-content-between  py-2 flex-wrap">
@@ -80,46 +81,6 @@ const drawing = ({ data }) => {
       </section>
 
       {/* <!-- ======= Product Section =======--> */}
-      {/* <!--======== Credits==========--> */}
-      <section className="container my-5">
-        <div className="row text-center d-flex justify-content-center">
-          <div className="col-md-8">
-            <h4 className="pb-3">
-              <u>{data.project.credits}</u>
-            </h4>
-            <div
-              className="description"
-              dangerouslySetInnerHTML={{
-                __html: data.project.creditsContent.childMarkdownRemark.html,
-              }}
-            ></div>
-          </div>
-          <div className="col-md-8 py-4 text-center">
-            <div className="row d-flex text-center justify-content-center align-itemms-center">
-              {data.project.creditsImages.map(image => {
-                return (
-                  <div className="col-md-3 pb-4" key={image.id}>
-                    <a target="_blank" href="#">
-                      <img
-                        src={image.file.url}
-                        alt={image.title}
-                        className="img-fluid"
-                      />
-                    </a>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-          <div
-            className="col-md-8 description"
-            dangerouslySetInnerHTML={{
-              __html: data.project.creditsLinks.childMarkdownRemark.html,
-            }}
-          ></div>
-        </div>
-      </section>
-      {/* <!--======== Credits==========--> */}
 
       {/* <!-- ======= Images Section ======= --> */}
 
@@ -161,7 +122,6 @@ const drawing = ({ data }) => {
       </section>
       {/* 
     <!--======= Creative Process=======--> */}
-
       {/* <!--=========Pagination Buttons=======--> */}
       <div className="container py-3">
         <div className="row ">
@@ -197,7 +157,8 @@ const drawing = ({ data }) => {
                 >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
-                    {data.project.nextLinkTitle}
+                    SOUTHERN PLAINS MUSEUM
+                    <br /> AND CULTURAL CENTER
                   </span>
                 </a>
               </li>
@@ -223,7 +184,7 @@ const drawing = ({ data }) => {
   )
 }
 export const query = graphql`
-  {
+  query GetProject3($slug: String) {
     contact: contentfulContactFooter {
       email
       copyright
@@ -232,9 +193,7 @@ export const query = graphql`
       mailToLink
       location
     }
-    project: contentfulSouthernPlainsMuseumProject(
-      slug: { eq: "southern-plains-museum" }
-    ) {
+    project: contentfulGranadaTheatreProject(slug: { eq: $slug }) {
       projectTitle
       product
       client
@@ -272,27 +231,6 @@ export const query = graphql`
       prevLink
       nextLinkTitle
       nextLink
-      credits
-      creditsContent {
-        childMarkdownRemark {
-          html
-        }
-      }
-      creditsImages {
-        fluid {
-          ...GatsbyContentfulFluid
-        }
-        file {
-          url
-        }
-        id
-        title
-      }
-      creditsLinks {
-        childMarkdownRemark {
-          html
-        }
-      }
     }
   }
 `

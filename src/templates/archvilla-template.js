@@ -1,9 +1,9 @@
 import React from "react"
-import Navbar from "../../components/Navbar"
-import Footer from "../../components/Footer"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
-import "../../components/main.css"
+import "../components/main.css"
 
 const drawing = ({ data }) => {
   return (
@@ -183,7 +183,7 @@ const drawing = ({ data }) => {
   )
 }
 export const query = graphql`
-  {
+  query GetProject($slug: String) {
     contact: contentfulContactFooter {
       email
       copyright
@@ -192,7 +192,7 @@ export const query = graphql`
       mailToLink
       location
     }
-    project: contentfulArchvillaProject(slug: { eq: "archvilla" }) {
+    project: contentfulArchvillaProject(slug: { eq: $slug }) {
       projectTitle
       product
       client

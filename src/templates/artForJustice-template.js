@@ -1,9 +1,9 @@
 import React from "react"
-import Navbar from "../../components/Navbar"
-import Footer from "../../components/Footer"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
-import "../../components/main.css"
+import "../components/main.css"
 
 const drawing = ({ data }) => {
   return (
@@ -21,8 +21,10 @@ const drawing = ({ data }) => {
       {/* <!--========Video Section=======--> */}
       <section className="pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
-          <iframe src={data.project.video.description}></iframe>
-          {/* <iframe src={data.project.video.file.url}></iframe> */}
+          <video controls muted autoPlay className="videos w-100">
+            <source src={data.project.video.file.url} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div className="container">
           <div className="row d-flex justify-content-between  py-2 flex-wrap">
@@ -52,6 +54,12 @@ const drawing = ({ data }) => {
                 {data.project.launched}
               </p>
             </div>
+          </div>
+          <div className="text-center mt-5 m-2">
+            {" "}
+            <a href="#" className="navigate btn btn-md text-center">
+              CLICK HERE TO LEARN HOW TO NAVIGATE
+            </a>
           </div>
         </div>
       </section>
@@ -122,6 +130,44 @@ const drawing = ({ data }) => {
       </section>
       {/* 
     <!--======= Creative Process=======--> */}
+      {/* <!--===========Benefatcors=================--> */}
+      <section className="container py-md-5">
+        <div className="row  d-flex justify-content-between">
+          <div className="col-md-12 d-flex justify-content-start">
+            {" "}
+            <p>
+              We thank all the following individuals and Institutions for their
+              generous contributions:
+            </p>
+          </div>
+          <div
+            className="benefactors col-md-3 d-flex justify-content-start"
+            dangerouslySetInnerHTML={{
+              __html: data.project.benefactors.childMarkdownRemark.html,
+            }}
+          ></div>
+
+          <div
+            className="benefactors  col-md-3 d-flex justify-content-md-center"
+            dangerouslySetInnerHTML={{
+              __html: data.project.organizers.childMarkdownRemark.html,
+            }}
+          ></div>
+          <div
+            className="benefactors  col-md-3  d-flex justify-content-md-end"
+            dangerouslySetInnerHTML={{
+              __html: data.project.advisors.childMarkdownRemark.html,
+            }}
+          ></div>
+          <div className="col-md-12">
+            {" "}
+            <p>
+              <span className="h5 title-desc">Music credit:</span>{" "}
+              {data.project.musicCredit}
+            </p>
+          </div>
+        </div>
+      </section>
       {/* <!--=========Pagination Buttons=======--> */}
       <div className="container py-3">
         <div className="row ">
@@ -144,7 +190,8 @@ const drawing = ({ data }) => {
                   <span>Prev </span>
                   <br />
                   <span className="project-title text-dark font-weight-bold">
-                    {data.project.prevLinkTitle}
+                    SOUTHERN PLAINS MUSEUM
+                    <br /> AND CULTURAL CENTER
                   </span>
                 </a>
               </li>
@@ -157,8 +204,7 @@ const drawing = ({ data }) => {
                 >
                   Next <br />
                   <span className="project-title text-dark font-weight-bold ">
-                    SOUTHERN PLAINS MUSEUM
-                    <br /> AND CULTURAL CENTER
+                    {data.project.nextLinkTitle}
                   </span>
                 </a>
               </li>
@@ -184,7 +230,7 @@ const drawing = ({ data }) => {
   )
 }
 export const query = graphql`
-  {
+  query GetProject4($slug: String) {
     contact: contentfulContactFooter {
       email
       copyright
@@ -193,7 +239,7 @@ export const query = graphql`
       mailToLink
       location
     }
-    project: contentfulGranadaTheatreProject(slug: { eq: "granada-theatre" }) {
+    project: contentfulArtForJusticeProject(slug: { eq: $slug }) {
       projectTitle
       product
       client
@@ -212,7 +258,6 @@ export const query = graphql`
         file {
           url
         }
-        description
       }
       images {
         title
@@ -231,6 +276,22 @@ export const query = graphql`
       prevLink
       nextLinkTitle
       nextLink
+      benefactors {
+        childMarkdownRemark {
+          html
+        }
+      }
+      organizers {
+        childMarkdownRemark {
+          html
+        }
+      }
+      advisors {
+        childMarkdownRemark {
+          html
+        }
+      }
+      musicCredit
     }
   }
 `
