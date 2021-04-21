@@ -24,12 +24,18 @@ const drawing = ({ data }) => {
           <div className="row  d-flex justify-content-between py-2">
             <div className="col-md-6">
               <div className="works-video embed-responsive embed-responsive-16by9">
-                <iframe src={data.project.video.description}></iframe>
+                <video controls muted autoPlay className="videos w-100">
+                  <source src={data.project.video.file.url} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
             <div className="col-md-6 py-4 py-md-0">
               <div className="works-video embed-responsive embed-responsive-16by9">
-                <iframe src={data.project.video2.description}></iframe>
+                <video controls muted autoPlay className="videos w-100">
+                  <source src={data.project.video2.file.url} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>

@@ -22,6 +22,7 @@ const drawing = ({ data }) => {
       <section className="pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
           <iframe src={data.project.video.description}></iframe>
+          {/* <iframe src={data.project.video.file.url}></iframe> */}
         </div>
         <div className="container">
           <div className="row d-flex justify-content-between  py-2 flex-wrap">
