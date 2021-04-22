@@ -9,12 +9,11 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
-      works1: allContentfulArchvillaProject {
+      works1: allContentfulArchvillaProjectTemplate {
         nodes {
           slug
         }
       }
-
       works2: allContentfulLePetitTrianonProject {
         nodes {
           slug

@@ -71,12 +71,23 @@ const drawing = ({ data }) => {
               }}
             ></h2>
           </div>
-          <div
-            className="description col-md-7 text-justify"
-            dangerouslySetInnerHTML={{
-              __html: data.project.contentDescription1.childMarkdownRemark.html,
-            }}
-          ></div>
+          <div className="description col-md-7 text-justify">
+            <div
+              dangerouslySetInnerHTML={{
+                __html:
+                  data.project.contentDescription1.childMarkdownRemark.html,
+              }}
+            ></div>
+            <div className="mt-5 pb-5 pb-md-0">
+              <a
+                href={data.project.livePreviewLink}
+                target="_blank"
+                className="text-uppercase text-left btn btn-sm navigate  pl-0"
+              >
+                View Live Preview
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -149,31 +160,33 @@ const drawing = ({ data }) => {
                 </a>
               </li>
             </ul>
-            <ul className="pagination">
-              <li className="page-item">
-                <a
-                  className="page-link text-center"
-                  href={data.project.nextLink}
-                >
-                  Next <br />
-                  <span className="project-title text-dark font-weight-bold ">
-                    {data.project.nextLinkTitle}
-                  </span>
-                </a>
-              </li>
-              <li className="page-item">
-                <a
-                  href={data.project.nextLink}
-                  className="page-link"
-                  aria-label="Next"
-                >
-                  <span aria-hidden="true">
-                    {" "}
-                    <i className="fas fa-arrow-right " aria-hidden="true"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
+            {data.project.nextLink !== null && (
+              <ul className="pagination">
+                <li className="page-item">
+                  <a
+                    className="page-link text-center"
+                    href={data.project.nextLink}
+                  >
+                    Next <br />
+                    <span className="project-title text-dark font-weight-bold ">
+                      {data.project.nextLinkTitle}
+                    </span>
+                  </a>
+                </li>
+                <li className="page-item">
+                  <a
+                    href={data.project.nextLink}
+                    className="page-link"
+                    aria-label="Next"
+                  >
+                    <span aria-hidden="true">
+                      {" "}
+                      <i className="fas fa-arrow-right " aria-hidden="true"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            )}
           </div>
         </div>
       </div>
@@ -192,11 +205,12 @@ export const query = graphql`
       mailToLink
       location
     }
-    project: contentfulArchvillaProject(slug: { eq: $slug }) {
+    project: contentfulArchvillaProjectTemplate(slug: { eq: $slug }) {
       projectTitle
       product
       client
       launched
+      livePreviewLink
       contentDescription1 {
         childMarkdownRemark {
           html
