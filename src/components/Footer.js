@@ -15,7 +15,7 @@ const Footer = ({ className, data1 }) => {
       <footer className={className}>
         <div className="container pt-lg-3 py-5">
           <div className="row d-flex justify-content-between">
-            <div className="col-lg-5 pb-4 pb-lg-0">
+            <div className="col-lg-4 pb-4 pb-lg-0">
               <h5 className="pb-3 pb-lg-5 footer-heading">CONTACT</h5>
               <p>
                 <a href="tel:+1 (832) 356-7656">
@@ -65,6 +65,16 @@ const Footer = ({ className, data1 }) => {
               <div className="social-icons d-inline p-2 mr-2">
                 <a href="https://g.page/invi-llc?gm" target="_blank">
                   <i className="fa fa-google fa-2x" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div className="social-icons d-inline p-2 mr-2">
+                <a href="https://twitter.com/InviStories" target="_blank">
+                  <i className="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div className="social-icons d-inline p-2 mr-2">
+                <a href="http://tiktok.com/@invi.stories" target="_blank">
+                  <i className="fab fa-tiktok fa-2x" aria-hidden="true"></i>
                 </a>
               </div>
             </div>

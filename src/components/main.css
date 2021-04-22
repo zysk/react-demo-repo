@@ -294,7 +294,8 @@ a:hover {
   font-size: 1.3em !important;
 }
 
-footer .fa {
+footer .fa,
+footer .fab {
   color: #eb483f !important;
   bottom: 0;
 }
@@ -670,18 +671,7 @@ video:hover {
     margin-top: 200px;
   }
 }
-.graffiti-city-park,
-.reimagine-virtual-art {
-  display: none;
-}
-.new-startup .artForJustice-media,
-.southern-plains-museum .artForJustice-media {
-  display: none;
-}
-.artForJustice .new-startup-media,
-.southern-plains-museum .new-startup-media {
-  display: none;
-}
+
 .benefactors ul {
   list-style: none;
   padding-left: 0;
@@ -689,7 +679,3 @@ video:hover {
 .benefactors h3 {
   color: #0471bc;
 }
-/* .new-startup .southern,
-.artForJustice .southern {
-  display: none !important;
-} */
