@@ -20,17 +20,57 @@ const drawing = ({ data }) => {
       </div>
       {/* <!--========Video Section=======--> */}
       <section className="pt-5 pb-2">
-        <div className="works-video embed-responsive embed-responsive-16by9">
-          {data.project.videoYoutubeLink !== null && (
+        {data.project.videoYoutubeLink !== null ? (
+          <div className="works-video embed-responsive embed-responsive-16by9">
             <iframe src={data.project.videoYoutubeLink}></iframe>
-          )}
-          {data.project.video !== null && (
-            <video controls muted autoPlay className="videos w-100">
-              <source src={data.project.video.file.url} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          )}
-        </div>
+          </div>
+        ) : (
+          <>
+            {" "}
+            {data.project.video2 !== null ? (
+              <div className="container">
+                <div className="row  d-flex justify-content-between py-2">
+                  <div className="col-md-6">
+                    <div className="works-video embed-responsive embed-responsive-16by9">
+                      <video controls muted autoPlay className="videos w-100">
+                        <source
+                          src={data.project.video.file.url}
+                          type="video/mp4"
+                          alt={data.project.video.title}
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div className="col-md-6 py-4 py-md-0">
+                    <div className="works-video embed-responsive embed-responsive-16by9">
+                      <video controls muted autoPlay className="videos w-100">
+                        <source
+                          src={data.project.video2.file.url}
+                          type="video/mp4"
+                          alt={data.project.video2.title}
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="works-video embed-responsive embed-responsive-16by9">
+                <video controls muted autoPlay className="videos w-100">
+                  <source
+                    src={data.project.video.file.url}
+                    type="video/mp4"
+                    alt={data.project.video.title}
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            )}
+          </>
+        )}
+
         <div className="container">
           <div className="row d-flex justify-content-between  py-2 flex-wrap">
             <div className="col-md-4 col-12">
@@ -252,7 +292,7 @@ const drawing = ({ data }) => {
                 >
                   <span>Prev </span>
                   <br />
-                  <span className="project-title text-dark font-weight-bold">
+                  <span className="project-title w-50 text-dark font-weight-bold">
                     {data.project.prevLinkTitle}
                   </span>
                 </a>
@@ -323,6 +363,13 @@ export const query = graphql`
         file {
           url
         }
+        title
+      }
+      video2 {
+        file {
+          url
+        }
+        title
       }
       images {
         title

@@ -14,11 +14,6 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
-      works2: allContentfulLePetitTrianonProject {
-        nodes {
-          slug
-        }
-      }
     }
   `)
 
@@ -36,15 +31,6 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/works/${work.slug}`,
       component: path.resolve(`src/templates/works-template.js`),
-      context: {
-        slug: work.slug,
-      },
-    })
-  })
-  result.data.works2.nodes.forEach(work => {
-    createPage({
-      path: `/works/${work.slug}`,
-      component: path.resolve(`src/templates/lepetit-trianon-template.js`),
       context: {
         slug: work.slug,
       },
