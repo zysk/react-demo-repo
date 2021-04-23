@@ -55,6 +55,15 @@ const drawing = ({ data }) => {
               </p>
             </div>
           </div>
+          <div className="text-center mt-5 pb-5 pb-md-0">
+            <a
+              href={data.project.livePreviewLink}
+              target="_blank"
+              className="text-uppercase text-left btn btn-sm navigate  pl-0"
+            >
+              Enter Virtual Experience
+            </a>
+          </div>
         </div>
       </section>
       {/* <!--========Video Section=======--> */}
@@ -78,15 +87,6 @@ const drawing = ({ data }) => {
                   data.project.contentDescription1.childMarkdownRemark.html,
               }}
             ></div>
-            <div className="mt-5 pb-5 pb-md-0">
-              <a
-                href={data.project.livePreviewLink}
-                target="_blank"
-                className="text-uppercase text-left btn btn-sm navigate  pl-0"
-              >
-                View Live Preview
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -133,6 +133,47 @@ const drawing = ({ data }) => {
       </section>
       {/* 
     <!--======= Creative Process=======--> */}
+
+      {/* <!--===========Benefatcors=================--> */}
+      {data.project.benefactors !== null && (
+        <section className="container py-md-5">
+          <div className="row  d-flex justify-content-between">
+            <div className="col-md-12 d-flex justify-content-start">
+              {" "}
+              <p>
+                We thank all the following individuals and Institutions for
+                their generous contributions:
+              </p>
+            </div>
+            <div
+              className="benefactors col-md-3 d-flex justify-content-start"
+              dangerouslySetInnerHTML={{
+                __html: data.project.benefactors.childMarkdownRemark.html,
+              }}
+            ></div>
+
+            <div
+              className="benefactors  col-md-3 d-flex justify-content-md-center"
+              dangerouslySetInnerHTML={{
+                __html: data.project.organizers.childMarkdownRemark.html,
+              }}
+            ></div>
+            <div
+              className="benefactors  col-md-3  d-flex justify-content-md-end"
+              dangerouslySetInnerHTML={{
+                __html: data.project.advisors.childMarkdownRemark.html,
+              }}
+            ></div>
+            <div className="col-md-12">
+              {" "}
+              <p>
+                <span className="h5 title-desc">Music credit:</span>{" "}
+                {data.project.musicCredit}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
       {/* <!--=========Pagination Buttons=======--> */}
       <div className="container py-3">
         <div className="row ">
@@ -190,7 +231,7 @@ const drawing = ({ data }) => {
           </div>
         </div>
       </div>
-      {/* // <!--=========Pagination Buttons=======--> */}
+      {/* <!--=========Pagination Buttons=======--> */}
       <Footer data1={data} />
     </div>
   )
@@ -205,7 +246,7 @@ export const query = graphql`
       mailToLink
       location
     }
-    project: contentfulArchvillaProjectTemplate(slug: { eq: $slug }) {
+    project: contentfulWorksProjectTemplate(slug: { eq: $slug }) {
       projectTitle
       product
       client
@@ -243,6 +284,22 @@ export const query = graphql`
       prevLink
       nextLinkTitle
       nextLink
+      benefactors {
+        childMarkdownRemark {
+          html
+        }
+      }
+      organizers {
+        childMarkdownRemark {
+          html
+        }
+      }
+      advisors {
+        childMarkdownRemark {
+          html
+        }
+      }
+      musicCredit
     }
   }
 `
