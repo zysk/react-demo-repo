@@ -21,10 +21,15 @@ const drawing = ({ data }) => {
       {/* <!--========Video Section=======--> */}
       <section className="pt-5 pb-2">
         <div className="works-video embed-responsive embed-responsive-16by9">
-          <video controls muted autoPlay className="videos w-100">
-            <source src={data.project.video.file.url} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          {data.project.videoYoutubeLink !== null && (
+            <iframe src={data.project.videoYoutubeLink}></iframe>
+          )}
+          {data.project.video !== null && (
+            <video controls muted autoPlay className="videos w-100">
+              <source src={data.project.video.file.url} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
         </div>
         <div className="container">
           <div className="row d-flex justify-content-between  py-2 flex-wrap">
@@ -113,7 +118,7 @@ const drawing = ({ data }) => {
 
       {/* <!-- ======= Images Section =======--> */}
       {/* <!--======= Creative Process=======--> */}
-      <section className="product container py-md-5">
+      <section className="product container pt-md-5">
         <div className="row ">
           <div className="col-md-5 my-md-0 my-3 ">
             <h2
@@ -135,35 +140,44 @@ const drawing = ({ data }) => {
     <!--======= Creative Process=======--> */}
 
       {/* <!--===========Benefatcors=================--> */}
-      {data.project.benefactors !== null && (
-        <section className="container py-md-5">
-          <div className="row  d-flex justify-content-between">
-            <div className="col-md-12 d-flex justify-content-start">
-              {" "}
-              <p>
-                We thank all the following individuals and Institutions for
-                their generous contributions:
-              </p>
-            </div>
-            <div
-              className="benefactors col-md-3 d-flex justify-content-start"
-              dangerouslySetInnerHTML={{
-                __html: data.project.benefactors.childMarkdownRemark.html,
-              }}
-            ></div>
 
+      <section className="container py-md-5">
+        <div className="row  d-flex justify-content-between">
+          {data.project.benefactors !== null && (
+            <>
+              <div className="col-md-12 d-flex justify-content-start">
+                {" "}
+                <p>
+                  We thank all the following individuals and Institutions for
+                  their generous contributions:
+                </p>
+              </div>
+
+              <div
+                className="benefactors col-md-3 d-flex justify-content-start"
+                dangerouslySetInnerHTML={{
+                  __html: data.project.benefactors.childMarkdownRemark.html,
+                }}
+              ></div>
+            </>
+          )}
+          {data.project.organizers !== null && (
             <div
               className="benefactors  col-md-3 d-flex justify-content-md-center"
               dangerouslySetInnerHTML={{
                 __html: data.project.organizers.childMarkdownRemark.html,
               }}
             ></div>
+          )}
+          {data.project.advisors !== null && (
             <div
               className="benefactors  col-md-3  d-flex justify-content-md-end"
               dangerouslySetInnerHTML={{
                 __html: data.project.advisors.childMarkdownRemark.html,
               }}
             ></div>
+          )}
+          {data.project.musicCredit !== null && (
             <div className="col-md-12">
               {" "}
               <p>
@@ -171,9 +185,10 @@ const drawing = ({ data }) => {
                 {data.project.musicCredit}
               </p>
             </div>
-          </div>
-        </section>
-      )}
+          )}
+        </div>
+      </section>
+
       {/* <!--=========Pagination Buttons=======--> */}
       <div className="container py-3">
         <div className="row ">
@@ -280,6 +295,7 @@ export const query = graphql`
         }
       }
       contentTitle2
+      videoYoutubeLink
       prevLinkTitle
       prevLink
       nextLinkTitle

@@ -19,11 +19,6 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
-      works3: allContentfulGranadaTheatreProject {
-        nodes {
-          slug
-        }
-      }
 
       works5: allContentfulSouthernPlainsMuseumProject {
         nodes {
@@ -46,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.works1.nodes.forEach(work => {
     createPage({
       path: `/works/${work.slug}`,
-      component: path.resolve(`src/templates/archvilla-template.js`),
+      component: path.resolve(`src/templates/works-template.js`),
       context: {
         slug: work.slug,
       },
@@ -61,24 +56,7 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-  result.data.works3.nodes.forEach(work => {
-    createPage({
-      path: `/works/${work.slug}`,
-      component: path.resolve(`src/templates/granada-theatre-template.js`),
-      context: {
-        slug: work.slug,
-      },
-    })
-  })
-  // result.data.works4.nodes.forEach(work => {
-  //   createPage({
-  //     path: `/works/${work.slug}`,
-  //     component: path.resolve(`src/templates/artForJustice-template.js`),
-  //     context: {
-  //       slug: work.slug,
-  //     },
-  //   })
-  // })
+
   result.data.works5.nodes.forEach(work => {
     createPage({
       path: `/works/${work.slug}`,
