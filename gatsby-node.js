@@ -19,12 +19,6 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
-
-      works5: allContentfulSouthernPlainsMuseumProject {
-        nodes {
-          slug
-        }
-      }
     }
   `)
 
@@ -51,18 +45,6 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/works/${work.slug}`,
       component: path.resolve(`src/templates/lepetit-trianon-template.js`),
-      context: {
-        slug: work.slug,
-      },
-    })
-  })
-
-  result.data.works5.nodes.forEach(work => {
-    createPage({
-      path: `/works/${work.slug}`,
-      component: path.resolve(
-        `src/templates/southern-plains-museum-template.js`
-      ),
       context: {
         slug: work.slug,
       },

@@ -97,6 +97,48 @@ const drawing = ({ data }) => {
       </section>
 
       {/* <!-- ======= Product Section =======--> */}
+      {/* <!--======== Credits==========--> */}
+      {data.project.creditsContent !== null && (
+        <section className="container my-5">
+          <div className="row text-center d-flex justify-content-center">
+            <div className="col-md-8">
+              <h4 className="pb-3">
+                <u>CREDITS</u>
+              </h4>
+              <div
+                className="description"
+                dangerouslySetInnerHTML={{
+                  __html: data.project.creditsContent.childMarkdownRemark.html,
+                }}
+              ></div>
+            </div>
+            <div className="col-md-8 py-4 text-center">
+              <div className="row d-flex text-center justify-content-center align-itemms-center">
+                {data.project.creditsImages.map(image => {
+                  return (
+                    <div className="col-md-3 pb-4" key={image.id}>
+                      <a target="_blank" href="#">
+                        <img
+                          src={image.file.url}
+                          alt={image.title}
+                          className="img-fluid"
+                        />
+                      </a>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+            <div
+              className="col-md-8 description"
+              dangerouslySetInnerHTML={{
+                __html: data.project.creditsLinks.childMarkdownRemark.html,
+              }}
+            ></div>
+          </div>
+        </section>
+      )}
+      {/* <!--======== Credits==========--> */}
 
       {/* <!-- ======= Images Section ======= --> */}
 
@@ -316,6 +358,26 @@ export const query = graphql`
         }
       }
       musicCredit
+      creditsContent {
+        childMarkdownRemark {
+          html
+        }
+      }
+      creditsImages {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
+        file {
+          url
+        }
+        id
+        title
+      }
+      creditsLinks {
+        childMarkdownRemark {
+          html
+        }
+      }
     }
   }
 `
