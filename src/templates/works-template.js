@@ -292,7 +292,7 @@ const drawing = ({ data }) => {
                 >
                   <span>Prev </span>
                   <br />
-                  <span className="project-title w-50 text-dark font-weight-bold">
+                  <span className="project-title  text-dark font-weight-bold">
                     {data.project.prevLinkTitle}
                   </span>
                 </a>
@@ -306,7 +306,7 @@ const drawing = ({ data }) => {
                     href={data.project.nextLink}
                   >
                     Next <br />
-                    <span className="project-title text-dark font-weight-bold ">
+                    <span className="project-title text-dark font-weight-bold">
                       {data.project.nextLinkTitle}
                     </span>
                   </a>
