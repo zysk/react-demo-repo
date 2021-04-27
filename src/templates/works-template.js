@@ -100,15 +100,17 @@ const drawing = ({ data }) => {
               </p>
             </div>
           </div>
-          <div className="text-center mt-5 pb-5 pb-md-0">
-            <a
-              href={data.project.livePreviewLink}
-              target="_blank"
-              className="text-uppercase text-left btn btn-sm navigate  pl-0"
-            >
-              Enter Virtual Experience
-            </a>
-          </div>
+          {data.project.livePreviewLink !== null && (
+            <div className="text-center mt-5 pb-5 pb-md-0">
+              <a
+                href={data.project.livePreviewLink}
+                target="_blank"
+                className="text-uppercase text-left btn btn-sm navigate  pl-0"
+              >
+                Enter Virtual Experience
+              </a>
+            </div>
+          )}
         </div>
       </section>
       {/* <!--========Video Section=======--> */}
