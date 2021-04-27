@@ -28,21 +28,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     // CommonMark mode (default: true)
-    //     commonmark: true,
-    //     // Footnotes mode (default: true)
-    //     footnotes: true,
-    //     // Pedantic mode (default: true)
-    //     pedantic: true,
-    //     // GitHub Flavored Markdown mode (default: true)
-    //     gfm: true,
-    //     // Plugins configs
-    //     plugins: [],
-    //   },
-    // },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -70,25 +56,6 @@ module.exports = {
       },
     },
     `@contentful/gatsby-transformer-contentful-richtext`,
-    // {
-    //   resolve: `gatsby-source-wordpress`,
-    //   options: {
-    //     // the only required plugin option for WordPress is the GraphQL url.
-    //     url: `http://invi.zysk.in/graphql`,
-    //     // useACF: true,
-    //     baseUrl: "invi.zysk.in",
-    //     // The protocol. This can be http or https.
-    //     protocol: "http",
-    //     // Indicates whether the site is hosted on wordpress.com.
-    //     // If false, then the assumption is made that the site is self hosted.
-    //     // If true, then the plugin will source its content on wordpress.com using the JSON REST API V2.
-    //     // If your site is hosted on wordpress.org, then set this to false.
-    //     hostingWPCOM: false,
-    //     // If useACF is true, then the source plugin will try to import the Wordpress ACF Plugin contents.
-    //     // This feature is untested for sites hosted on wordpress.com.
-    //     // Defaults to true.
-    //     useACF: true,
-    //   },
-    // },
+    `gatsby-plugin-gatsby-cloud`,
   ],
 }
