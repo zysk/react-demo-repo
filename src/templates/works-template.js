@@ -159,7 +159,7 @@ const drawing = ({ data }) => {
                 {data.project.creditsImages.map(image => {
                   return (
                     <div className="col-md-3 pb-4" key={image.id}>
-                      <a target="_blank" href="#">
+                      <a target="_blank" href={image.description} download>
                         <img
                           src={image.file.url}
                           alt={image.title}
@@ -419,6 +419,7 @@ export const query = graphql`
         file {
           url
         }
+        description
         id
         title
       }
