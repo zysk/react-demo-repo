@@ -33,7 +33,7 @@ const index = ({ data }) => {
               {data.home.description.description}
             </p>
             <a
-              href="#"
+              href="/works/"
               className=" text-left virtual mt-4 font-weight-bold pl-0"
             >
               CREATE NOW
