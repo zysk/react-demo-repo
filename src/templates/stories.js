@@ -57,7 +57,7 @@ const stories = ({ data }) => {
                           className="fa fa-arrow-circle-o-right pr-1"
                           aria-hidden="true"
                         ></i>
-                        <a target="_blank" href={link.file.url}>
+                        <a target="_blank" href={link.description}>
                           {link.title}
                         </a>
                       </li>
@@ -165,6 +165,7 @@ export const query = graphql`
       mediaCoverage {
         title
         id
+        description
         file {
           url
         }
