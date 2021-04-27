@@ -14,7 +14,12 @@ body,
   background-color: #f6caba;
   font-weight: 300;
 }
-
+@media (min-width: 768px) {
+  .aframe-img {
+    width: 30%;
+    height: auto;
+  }
+}
 .title {
   font-size: 2rem;
   line-height: 3.2rem;
@@ -661,6 +666,10 @@ video:hover {
   .middle {
     width: 80%;
     left: 140%;
+  }
+  .middle-2 {
+    width: 80%;
+    left: -140%;
   }
 }
 @media (min-width: 768px) {

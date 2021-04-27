@@ -16,9 +16,9 @@ const index = ({ data }) => {
 
       <section className="container text-center py-4">
         <Image
-          fixed={data.home.homeImage.fixed}
+          fluid={data.home.homeImage.fluid}
           alt="aframe"
-          className="img-fluid"
+          className="mx-auto aframe-img img-fluid"
         />
       </section>
       {/* Aframe Section */}
@@ -44,7 +44,7 @@ const index = ({ data }) => {
             <Image
               fluid={data.home.image1.fluid}
               alt="aframe"
-              className="img-fluid"
+              className=" img-fluid"
             />
           </div>
         </div>
@@ -80,7 +80,7 @@ const index = ({ data }) => {
                 alt="Animation"
                 className="img-fluid"
               />
-              <h2 className="pt-md-5 pb-md-3 py-lg-3">
+              <h2 className="pt-md-5 py-3 pb-md-3 py-lg-3">
                 {data.home.virtual.title}
               </h2>
               <a href="./services/" className="font-weight-bold">
@@ -111,8 +111,8 @@ export const query = graphql`
     }
     image: file(relativePath: { eq: "aframe-illustration.png" }) {
       childImageSharp {
-        fixed(width: 600, height: 600) {
-          ...GatsbyImageSharpFixed_tracedSVG
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
@@ -126,8 +126,8 @@ export const query = graphql`
     home: contentfulHomePage {
       title
       homeImage {
-        fixed(width: 600, height: 600) {
-          ...GatsbyContentfulFixed
+        fluid {
+          ...GatsbyContentfulFluid
         }
       }
       image1 {

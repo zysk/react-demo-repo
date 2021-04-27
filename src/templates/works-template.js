@@ -44,7 +44,7 @@ const drawing = ({ data }) => {
                   </div>
                   <div className="col-md-6 py-4 py-md-0">
                     <div className="works-video embed-responsive embed-responsive-16by9">
-                      <video controls muted autoPlay className="videos w-100">
+                      <video controls muted className="videos w-100">
                         <source
                           src={data.project.video2.file.url}
                           type="video/mp4"

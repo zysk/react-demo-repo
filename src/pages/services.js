@@ -13,12 +13,12 @@ const services = ({ data }) => {
     <div>
       <div className="services">
         <Navbar />
-        <h1 className="text-center title pt-lg-5 text-uppercase">
+        <h1 className="text-center title pt-lg-5 pt-4 text-uppercase">
           {data.services.title}
         </h1>
         <p className="text-center title-desc ">{data.services.subtitle}</p>
 
-        <div className="container py-5">
+        <div className="container py-3 py-lg-5">
           <div className="row ">
             <div className="col-12">
               <Image fluid={data.services.bannerImage.fluid} alt="services" />

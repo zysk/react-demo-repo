@@ -137,7 +137,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle-2">
-                  <div className="text text-uppercase font-weight-bold pr-md-4 pt-5">
+                  <div className="text text-uppercase font-weight-bold pr-md-4  pt-5">
                     {data.drawing.name}
                   </div>
                 </div>

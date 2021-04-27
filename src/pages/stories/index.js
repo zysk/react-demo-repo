@@ -12,7 +12,7 @@ const stories = ({ data }) => {
       {/* <!--====== Graphics Section======--> */}
       <section className="container py-5 mt-lg-4">
         <div className="row d-flex justify-content-between align-items-center">
-          <div className="col-lg-5 text-lg-left text-center pt-5 pt-lg-0 ">
+          <div className="col-lg-5 text-lg-left text-center  pt-lg-0 ">
             <h1 className="title text-center text-lg-left m-0 pb-4 pb-md-0">
               {data.intro.title}
             </h1>
