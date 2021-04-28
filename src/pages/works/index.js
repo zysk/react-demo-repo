@@ -133,7 +133,7 @@ const index = ({ data }) => {
                   <Image
                     fluid={data.drawing.project.fluid}
                     alt="Drawing Gallery"
-                    className="img-fluid image m-lg-4"
+                    className="img-fluid image mr-5 m-xl-3"
                   />
                 </a>
                 <div className="middle-2">
