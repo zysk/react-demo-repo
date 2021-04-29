@@ -43,7 +43,7 @@ const sayhello = ({ data }) => {
                   //     alert(
                   //       "Thank you for contacting us! Our team will be in touch with you shortly"
                   //     )
-                  fetch("/static.server.js", {
+                  fetch("/static/server.js", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/x-www-form-urlencoded",
