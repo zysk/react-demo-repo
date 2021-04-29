@@ -32,32 +32,28 @@ const sayhello = ({ data }) => {
                   comment: "",
                 }}
                 onSubmit={(values, actions) => {
-                  axios({
-                    method: "post",
-                    url: "https://invi.us/static/functions/app",
-                    headers: { "content-type": "application/json" },
-                    // body: encode({
-                    //   "form-name": "contact",
-                    //   ...values,
-                    //   "g-recaptcha-response": recaptchaValue,
-                    // }),
-                    data: values,
+                  // axios({
+                  //   method: "post",
+                  //   url: "/",
+                  //   headers: { "content-type": "application/json" },
+
+                  //   data: values,
+                  // })
+                  //   .then(result => {
+                  //     alert(
+                  //       "Thank you for contacting us! Our team will be in touch with you shortly"
+                  //     )
+                  fetch("/static/functions/app.js", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: encode({ "form-name": "contact", ...values }),
                   })
-                    .then(result => {
+                    .then(() => {
                       alert(
-                        "Thank you for contacting us! Our team will be in touch with you shortly"
+                        "Thank you for subscribing! We will get back to you soon"
                       )
-                      // fetch("/static/functions/app.js", {
-                      //   method: "POST",
-                      //   headers: {
-                      //     "Content-Type": "application/x-www-form-urlencoded",
-                      //   },
-                      //   body: encode({ "form-name": "contact", ...values },  "g-recaptcha-response": recaptchaValue,),
-                      // })
-                      //   .then(() => {
-                      //     alert(
-                      //       "Thank you for subscribing! We will get back to you soon"
-                      //     )
                       actions.resetForm()
                     })
                     .catch(() => {
@@ -84,6 +80,7 @@ const sayhello = ({ data }) => {
                   <Form
                     name="contact"
                     method="post"
+                    action="https://invi.us/say-hello"
                     // data-netlify="true"
                     // data-netlify-honeypot="bot-field"
                   >

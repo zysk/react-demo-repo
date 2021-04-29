@@ -51,17 +51,20 @@ function ContactForm({ data }) {
                   //     alert(
                   //       "Thank you for contacting us! Our team will be in touch with you shortly"
                   //     )
-                  fetch("/static/functions/app.js", {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                    body: encode({
-                      "form-name": "contact",
-                      ...values,
-                      "g-recaptcha-response": token,
-                    }),
-                  })
+                  fetch(
+                    "https://getform.io/f/25698677-4704-4131-98cc-d696c60d418a",
+                    {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                      },
+                      body: encode({
+                        "form-name": "contact",
+                        ...values,
+                        "g-recaptcha-response": token,
+                      }),
+                    }
+                  )
                     .then(() => {
                       alert(
                         "Thank you for subscribing! We will get back to you soon"
@@ -92,6 +95,7 @@ function ContactForm({ data }) {
                   <Form
                     name="contact"
                     method="post"
+                    action="https://getform.io/f/25698677-4704-4131-98cc-d696c60d418a"
                     // data-netlify="true"
                     // data-netlify-honeypot="bot-field"
                   >
