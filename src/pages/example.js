@@ -159,6 +159,7 @@ function ContactForm({ data }) {
                     </div>
                     <div className="text-right">
                       <Recaptcha
+                        className="g-recaptcha"
                         sitekey="6LfOZr4aAAAAABnRDylsvQ7G_6D9sly9sjod-4T1"
                         render="explicit"
                         theme="dark"
@@ -169,6 +170,10 @@ function ContactForm({ data }) {
                           console.log("done loading!")
                         }}
                       />
+                      {/* <div
+                        class="g-recaptcha"
+                        data-sitekey="6LfOZr4aAAAAABnRDylsvQ7G_6D9sly9sjod-4T1"
+                      ></div> */}
                     </div>
                   </Form>
                 )}
