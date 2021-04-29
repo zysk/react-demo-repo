@@ -232,7 +232,6 @@ export default ({ data }) => {
                           onExpire={onExpire}
                           onVerify={onVerify}
                           onLoad={() => onLoad(() => resetForm)}
-                          size="invisible"
                         />
                       </div>
                       <button
