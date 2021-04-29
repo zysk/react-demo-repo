@@ -39,6 +39,7 @@ function ContactForm({ data }) {
                   name: "",
                   email: "",
                   comment: "",
+                  captcha: "",
                 }}
                 onSubmit={(values, actions) => {
                   axios({
@@ -90,6 +91,9 @@ function ContactForm({ data }) {
                   }
                   if (!values.comment) {
                     errors.comment = "Message Required*"
+                  }
+                  if (!values.captcha) {
+                    errors.captcha = "Please complete recaptcha"
                   }
                   return errors
                 }}
@@ -158,7 +162,21 @@ function ContactForm({ data }) {
                     </div>
 
                     <div className="text-md-right text-center mt-5">
-                      <Recaptcha
+                      <div
+                        value="captcha"
+                        name="captcha"
+                        class="g-recaptcha"
+                        data-sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+                        data-callback
+                        data-expired-callback
+                        required
+                      ></div>
+                      <ErrorMessage
+                        name="captcha"
+                        component="div"
+                        className="error font-weight-bold pt-3"
+                      />
+                      {/* <Recaptcha
                         sitekey="6Le7eb4aAAAAAMkB2ElvyDBEPO9P7DThYPfSW2rz"
                         render="explicit"
                         theme="light"
@@ -172,20 +190,13 @@ function ContactForm({ data }) {
                         onloadCallback={() => {
                           console.log("done loading!")
                         }}
-                      />
+                      /> */}
                       <button
                         type="submit"
                         className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold px-4 py-2"
                       >
                         Send Message
                       </button>
-                      <div
-                        class="g-recaptcha"
-                        data-sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
-                        data-callback
-                        data-expired-callback
-                        required
-                      ></div>
                     </div>
                     <div className="text-right"></div>
                   </Form>
