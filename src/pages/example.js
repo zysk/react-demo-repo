@@ -157,7 +157,7 @@ function ContactForm({ data }) {
 
                     <div className="text-md-right text-center mt-5">
                       <Recaptcha
-                        sitekey="${process.env.SITE_RECAPTCHA_KEY}"
+                        sitekey="6Le7eb4aAAAAAMkB2ElvyDBEPO9P7DThYPfSW2rz"
                         render="explicit"
                         theme="dark"
                         verifyCallback={response => {
