@@ -33,6 +33,7 @@
     "jquery": "^3.5.1",
     "lightbox-react": "^0.3.8",
     "lightbox2": "^2.11.3",
+    "mailgun-js": "^0.22.0",
     "pano": "^1.1.1",
     "panolens.js": "0.0.0",
     "popper.js": "^1.14.3",

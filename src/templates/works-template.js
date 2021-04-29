@@ -105,7 +105,7 @@ const drawing = ({ data }) => {
               <a
                 href={data.project.livePreviewLink}
                 target="_blank"
-                className="text-uppercase text-left btn btn-sm navigate  pl-0"
+                className="text-uppercase text-left btn btn-sm navigate  pl-0 font-weight-bold"
               >
                 Enter Virtual Experience
               </a>

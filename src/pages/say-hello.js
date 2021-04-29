@@ -31,6 +31,7 @@ const sayhello = ({ data }) => {
                 onSubmit={(values, actions) => {
                   fetch("/", {
                     method: "POST",
+                    url: "www.invi.us/static/functions/app.js",
                     headers: {
                       "Content-Type": "application/x-www-form-urlencoded",
                     },
@@ -66,8 +67,8 @@ const sayhello = ({ data }) => {
                   <Form
                     name="contact"
                     method="post"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
+                    // data-netlify="true"
+                    // data-netlify-honeypot="bot-field"
                   >
                     <input type="hidden" name="form-name" value="contact" />
 

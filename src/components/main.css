@@ -542,8 +542,13 @@ video:hover {
   color: #000000 !important;
   background-color: #fb9173 !important;
   letter-spacing: 6.5px;
-  font-weight: 500;
   padding: 12px 24px !important;
+}
+@media (max-width: 576px) {
+  .navigate {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
 }
 .images .zoom img {
   transition: transform 0.7s !important;
