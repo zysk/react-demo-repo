@@ -3,7 +3,7 @@ import "./main.css"
 import { graphql } from "gatsby"
 import { Formik, Form, Field } from "formik"
 import { data } from "jquery"
-
+import axios from "axios"
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -90,14 +90,28 @@ const Footer = ({ className, data1 }) => {
                   email: "",
                 }}
                 onSubmit={(values, actions) => {
-                  fetch("https://formspree.io/f/mzbydezy", {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                    body: encode({ "form-name": "subscribe", ...values }),
+                  // fetch("https://formspree.io/f/mzbydezy", {
+                  //   method: "POST",
+                  //   headers: {
+                  //     "Content-Type": "application/x-www-form-urlencoded",
+                  //   },
+                  //   body: encode({ "form-name": "subscribe", ...values }),
+                  // })
+                  //   .then(() => {
+                  //     alert(
+                  //       "Thank you for subscribing! We will get back to you soon"
+                  //     )
+                  axios({
+                    method: "post",
+                    url: "https://formspree.io/f/mzbydezy",
+                    headers: { "content-type": "application/json" },
+                    body: encode({
+                      "form-name": "subscribe",
+                      ...values,
+                    }),
+                    data: values,
                   })
-                    .then(() => {
+                    .then(result => {
                       alert(
                         "Thank you for subscribing! We will get back to you soon"
                       )
