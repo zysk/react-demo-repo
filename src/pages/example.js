@@ -18,13 +18,13 @@ const isDev = process.env.NODE_ENV === "development"
 function ContactForm({ data }) {
   const [token, setToken] = useState(null)
   const recaptchaRef = React.createRef()
-  useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "https://www.google.com/recaptcha/api.js"
-    script.async = true
-    script.defer = true
-    document.body.appendChild(script)
-  }, [])
+  // useEffect(() => {
+  //   const script = document.createElement("script")
+  //   script.src = "https://www.google.com/recaptcha/api.js"
+  //   script.async = true
+  //   script.defer = true
+  //   document.body.appendChild(script)
+  // }, [])
   return (
     <>
       <div className="contact">
@@ -42,15 +42,6 @@ function ContactForm({ data }) {
                   recaptcha: "",
                 }}
                 onSubmit={(values, actions) => {
-                  alert(
-                    JSON.stringify(
-                      {
-                        recaptcha: values.recaptcha,
-                      },
-                      null,
-                      2
-                    )
-                  )
                   axios({
                     method: "post",
                     url: "https://formspree.io/f/myylkezb",
@@ -65,6 +56,15 @@ function ContactForm({ data }) {
                     .then(result => {
                       alert(
                         "Thank you for contacting us! Our team will be in touch with you shortly"
+                      )
+                      alert(
+                        JSON.stringify(
+                          {
+                            recaptcha: values.recaptcha,
+                          },
+                          null,
+                          2
+                        )
                       )
                       // fetch("https://formspree.io/f/myylkezb", {
                       //   method: "POST",
@@ -82,7 +82,7 @@ function ContactForm({ data }) {
                       //       "Thank you for subscribing! We will get back to you soon"
                       //     )
                       actions.resetForm()
-                      recaptchaRef.reset()
+                      // recaptchaRef.reset()
                     })
                     .catch(() => {
                       alert("Error")
