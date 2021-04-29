@@ -16,6 +16,7 @@ const encode = data => {
 const isDev = process.env.NODE_ENV === "development"
 function ContactForm({ data }) {
   const [token, setToken] = useState(null)
+  let captcha
 
   useEffect(() => {
     const script = document.createElement("script")
@@ -71,6 +72,7 @@ function ContactForm({ data }) {
                       //       "Thank you for subscribing! We will get back to you soon"
                       //     )
                       actions.resetForm()
+                      captcha.reset()
                     })
                     .catch(() => {
                       alert("Error")
@@ -157,9 +159,12 @@ function ContactForm({ data }) {
 
                     <div className="text-md-right text-center mt-5">
                       <Recaptcha
-                        sitekey="6Le7eb4aAAAAAMkB2ElvyDBEPO9P7DThYPfSW2rz"
+                        sitekey={"${process.env.SITE_RECAPTCHA_KEY}"}
                         render="explicit"
                         theme="dark"
+                        ref={el => {
+                          captcha = el
+                        }}
                         verifyCallback={response => {
                           setToken(response)
                         }}
@@ -174,12 +179,7 @@ function ContactForm({ data }) {
                         Send Message
                       </button>
                     </div>
-                    <div className="text-right">
-                      {/* <div
-                        className="g-recaptcha"
-                        data-sitekey="6LfOZr4aAAAAABnRDylsvQ7G_6D9sly9sjod-4T1"
-                      ></div> */}
-                    </div>
+                    <div className="text-right"></div>
                   </Form>
                 )}
               </Formik>
