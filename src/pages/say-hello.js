@@ -29,9 +29,8 @@ const sayhello = ({ data }) => {
                   comment: "",
                 }}
                 onSubmit={(values, actions) => {
-                  fetch("/", {
+                  fetch("www.invi.us/static/functions/app.js", {
                     method: "POST",
-                    url: "www.invi.us/static/functions/app.js",
                     headers: {
                       "Content-Type": "application/x-www-form-urlencoded",
                     },
