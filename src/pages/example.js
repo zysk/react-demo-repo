@@ -66,21 +66,7 @@ function ContactForm({ data }) {
                           2
                         )
                       )
-                      // fetch("https://formspree.io/f/myylkezb", {
-                      //   method: "POST",
-                      //   headers: {
-                      //     "Content-Type": "application/x-www-form-urlencoded",
-                      //   },
-                      //   body: encode({
-                      //     "form-name": "contact",
-                      //     ...values,
-                      //     "g-recaptcha-response": token,
-                      //   }),
-                      // })
-                      //   .then(() => {
-                      //     alert(
-                      //       "Thank you for subscribing! We will get back to you soon"
-                      //     )
+
                       actions.resetForm()
                       // recaptchaRef.reset()
                     })

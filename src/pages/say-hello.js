@@ -16,7 +16,7 @@ const encode = data => {
 const isDev = process.env.NODE_ENV === "development"
 function ContactForm({ data }) {
   const [token, setToken] = useState(null)
-
+  let recaptchaRef
   useEffect(() => {
     const script = document.createElement("script")
     script.src = "https://www.google.com/recaptcha/api.js"
@@ -71,6 +71,7 @@ function ContactForm({ data }) {
                       //       "Thank you for subscribing! We will get back to you soon"
                       //     )
                       actions.resetForm()
+                      recaptchaRef.reset()
                     })
                     .catch(() => {
                       alert("Error")
@@ -156,17 +157,20 @@ function ContactForm({ data }) {
                     </div>
 
                     <div className="text-md-right text-center mt-5">
-                      {/* <Recaptcha
-                        sitekey="${process.env.SITE_RECAPTCHA_KEY}"
-                        render="explicit"
-                        theme="dark"
-                        verifyCallback={response => {
-                          setToken(response)
-                        }}
-                        onloadCallback={() => {
-                          console.log("done loading!")
-                        }}
-                      /> */}
+                      <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 g-recaptcha">
+                        <Recaptcha
+                          sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+                          render="explicit"
+                          ref={recaptchaRef}
+                          theme="light"
+                          verifyCallback={response => {
+                            setToken(response)
+                          }}
+                          onloadCallback={() => {
+                            console.log("done loading!")
+                          }}
+                        />
+                      </div>
                       <button
                         type="submit"
                         className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold px-4 py-2"
