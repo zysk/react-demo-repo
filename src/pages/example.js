@@ -159,7 +159,7 @@ function ContactForm({ data }) {
 
                     <div className="text-md-right text-center mt-5">
                       <Recaptcha
-                        sitekey={"${process.env.SITE_RECAPTCHA_KEY}"}
+                        sitekey={process.env.SITE_RECAPTCHA_KEY}
                         render="explicit"
                         theme="dark"
                         ref={el => {
