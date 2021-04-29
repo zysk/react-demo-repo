@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext, useState } from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
@@ -13,6 +13,7 @@ const encode = data => {
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
+
 const sayhello = ({ data }) => {
   return (
     <>
@@ -33,8 +34,13 @@ const sayhello = ({ data }) => {
                 onSubmit={(values, actions) => {
                   axios({
                     method: "post",
-                    url: "https://www.invi.us/static/functions/app",
+                    url: "https://invi.us/static/functions/app",
                     headers: { "content-type": "application/json" },
+                    // body: encode({
+                    //   "form-name": "contact",
+                    //   ...values,
+                    //   "g-recaptcha-response": recaptchaValue,
+                    // }),
                     data: values,
                   })
                     .then(result => {
@@ -46,7 +52,7 @@ const sayhello = ({ data }) => {
                       //   headers: {
                       //     "Content-Type": "application/x-www-form-urlencoded",
                       //   },
-                      //   body: encode({ "form-name": "contact", ...values }),
+                      //   body: encode({ "form-name": "contact", ...values },  "g-recaptcha-response": recaptchaValue,),
                       // })
                       //   .then(() => {
                       //     alert(
