@@ -161,7 +161,8 @@ function ContactForm({ data }) {
                       <Recaptcha
                         sitekey="6Le7eb4aAAAAAMkB2ElvyDBEPO9P7DThYPfSW2rz"
                         render="explicit"
-                        theme="dark"
+                        theme="light"
+                        required
                         ref={el => {
                           captcha = el
                         }}
