@@ -157,7 +157,7 @@ function ContactForm({ data }) {
                     </div>
 
                     <div className="text-md-right text-center mt-5">
-                      <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 g-recaptcha">
+                      <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 ">
                         <Recaptcha
                           sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
                           render="explicit"

@@ -167,7 +167,7 @@ function ContactForm({ data }) {
                         data-expired-callback
                         required
                       ></div> */}
-                      <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 g-recaptcha">
+                      <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 ">
                         <Recaptcha
                           sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
                           ref={recaptchaRef}
