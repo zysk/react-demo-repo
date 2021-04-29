@@ -16,8 +16,10 @@ const encode = data => {
 const isDev = process.env.NODE_ENV === "development"
 function ContactForm({ data }) {
   const [token, setToken] = useState(null)
-  let captcha
-
+  const recaptchaRef = React.createRef()
+  function onChange(value) {
+    console.log("Captcha value:", value)
+  }
   useEffect(() => {
     const script = document.createElement("script")
     script.src = "https://www.google.com/recaptcha/api.js"
@@ -39,9 +41,11 @@ function ContactForm({ data }) {
                   name: "",
                   email: "",
                   comment: "",
-                  captcha: "",
                 }}
                 onSubmit={(values, actions) => {
+                  const recaptchaValue = recaptchaRef.current.getValue()
+                  this.props.onSubmit(recaptchaValue)
+                  recaptchaRef.current.execute()
                   axios({
                     method: "post",
                     url: "https://formspree.io/f/myylkezb",
@@ -73,7 +77,7 @@ function ContactForm({ data }) {
                       //       "Thank you for subscribing! We will get back to you soon"
                       //     )
                       actions.resetForm()
-                      captcha.reset()
+                      recaptchaRef.reset()
                     })
                     .catch(() => {
                       alert("Error")
@@ -92,9 +96,7 @@ function ContactForm({ data }) {
                   if (!values.comment) {
                     errors.comment = "Message Required*"
                   }
-                  if (!values.captcha) {
-                    errors.captcha = "Please complete recaptcha"
-                  }
+
                   return errors
                 }}
               >
@@ -162,35 +164,30 @@ function ContactForm({ data }) {
                     </div>
 
                     <div className="text-md-right text-center mt-5">
-                      <div
+                      {/* <div
                         value="captcha"
                         name="captcha"
-                        class="g-recaptcha"
+                        className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 g-recaptcha"
                         data-sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
                         data-callback
                         data-expired-callback
                         required
-                      ></div>
-                      <ErrorMessage
-                        name="captcha"
-                        component="div"
-                        className="error font-weight-bold pt-3"
-                      />
-                      {/* <Recaptcha
-                        sitekey="6Le7eb4aAAAAAMkB2ElvyDBEPO9P7DThYPfSW2rz"
-                        render="explicit"
-                        theme="light"
-                        required
-                        ref={el => {
-                          captcha = el
-                        }}
-                        verifyCallback={response => {
-                          setToken(response)
-                        }}
-                        onloadCallback={() => {
-                          console.log("done loading!")
-                        }}
-                      /> */}
+                      ></div> */}
+                      <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 g-recaptcha">
+                        <Recaptcha
+                          sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+                          render="explicit"
+                          theme="light"
+                          required
+                          ref={recaptchaRef}
+                          verifyCallback={response => {
+                            setToken(response)
+                          }}
+                          onloadCallback={() => {
+                            console.log("done loading!")
+                          }}
+                        />
+                      </div>
                       <button
                         type="submit"
                         className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold px-4 py-2"
