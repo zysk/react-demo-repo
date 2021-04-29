@@ -43,7 +43,7 @@ const sayhello = ({ data }) => {
                   //     alert(
                   //       "Thank you for contacting us! Our team will be in touch with you shortly"
                   //     )
-                  fetch("/", {
+                  fetch("/static.server.js", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/x-www-form-urlencoded",
@@ -80,7 +80,7 @@ const sayhello = ({ data }) => {
                   <Form
                     name="contact"
                     method="post"
-                    action="https://invi.us/say-hello"
+
                     // data-netlify="true"
                     // data-netlify-honeypot="bot-field"
                   >

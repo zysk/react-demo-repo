@@ -10,7 +10,7 @@ const mailer = nodemailer.createTransport({
   service: "Gmail",
   auth: {
     user: "rishikalokesh@gmail.com",
-    pass: "Varshini@25",
+    pass: "Bangalore@123",
   },
 })
 app.post("/say-hello", function (req, res) {
