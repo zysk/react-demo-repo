@@ -40,32 +40,36 @@ function ContactForm({ data }) {
                   comment: "",
                 }}
                 onSubmit={(values, actions) => {
-                  // axios({
-                  //   method: "post",
-                  //   url: "https://invi.us/static/functions/app",
-                  //   headers: { "content-type": "application/json" },
-
-                  //   data: values,
-                  // })
-                  //   .then(result => {
-                  //     alert(
-                  //       "Thank you for contacting us! Our team will be in touch with you shortly"
-                  //     )
-                  fetch("https://formspree.io/f/myylkezb", {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/x-www-form-urlencoded",
-                    },
+                  axios({
+                    method: "post",
+                    url: "https://formspree.io/f/myylkezb",
+                    headers: { "content-type": "application/json" },
                     body: encode({
                       "form-name": "contact",
                       ...values,
                       "g-recaptcha-response": token,
                     }),
+                    data: values,
                   })
-                    .then(() => {
+                    .then(result => {
                       alert(
-                        "Thank you for subscribing! We will get back to you soon"
+                        "Thank you for contacting us! Our team will be in touch with you shortly"
                       )
+                      // fetch("https://formspree.io/f/myylkezb", {
+                      //   method: "POST",
+                      //   headers: {
+                      //     "Content-Type": "application/x-www-form-urlencoded",
+                      //   },
+                      //   body: encode({
+                      //     "form-name": "contact",
+                      //     ...values,
+                      //     "g-recaptcha-response": token,
+                      //   }),
+                      // })
+                      //   .then(() => {
+                      //     alert(
+                      //       "Thank you for subscribing! We will get back to you soon"
+                      //     )
                       actions.resetForm()
                     })
                     .catch(() => {

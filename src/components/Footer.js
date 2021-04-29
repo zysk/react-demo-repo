@@ -113,6 +113,7 @@ const Footer = ({ className, data1 }) => {
                   <Form
                     name="subscribe"
                     method="post"
+                    action="https://formspree.io/f/mzbydezy"
                     data-netlify={true}
                     data-netlify-honeypot="bot-field"
                   >
