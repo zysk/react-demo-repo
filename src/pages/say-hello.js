@@ -1,23 +1,31 @@
-import React, { useContext, useState } from "react"
+import React, { useState, useEffect } from "react"
+import { Formik, Field, Form, ErrorMessage } from "formik"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import axios from "axios"
 import Image from "gatsby-image"
 import "../components/main.css"
-import ReCaptcha from "react-google-recaptcha"
-import { Formik, Form, Field, ErrorMessage } from "formik"
+import Recaptcha from "react-google-recaptcha"
 
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
+const isDev = process.env.NODE_ENV === "development"
+function ContactForm({ data }) {
+  const [token, setToken] = useState(null)
 
-const sayhello = ({ data }) => {
+  useEffect(() => {
+    const script = document.createElement("script")
+    script.src = "https://www.google.com/recaptcha/api.js"
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+  }, [])
   return (
     <>
-      {" "}
       <div className="contact">
         <Navbar />
         {/* <!-- ======= Contact Section ======= --> */}
@@ -32,28 +40,36 @@ const sayhello = ({ data }) => {
                   comment: "",
                 }}
                 onSubmit={(values, actions) => {
-                  // axios({
-                  //   method: "post",
-                  //   url: "/",
-                  //   headers: { "content-type": "application/json" },
-
-                  //   data: values,
-                  // })
-                  //   .then(result => {
-                  //     alert(
-                  //       "Thank you for contacting us! Our team will be in touch with you shortly"
-                  //     )
-                  fetch("/static/server.js", {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                    body: encode({ "form-name": "contact", ...values }),
+                  axios({
+                    method: "post",
+                    url: "https://formspree.io/f/myylkezb",
+                    headers: { "content-type": "application/json" },
+                    body: encode({
+                      "form-name": "contact",
+                      ...values,
+                      "g-recaptcha-response": token,
+                    }),
+                    data: values,
                   })
-                    .then(() => {
+                    .then(result => {
                       alert(
-                        "Thank you for subscribing! We will get back to you soon"
+                        "Thank you for contacting us! Our team will be in touch with you shortly"
                       )
+                      // fetch("https://formspree.io/f/myylkezb", {
+                      //   method: "POST",
+                      //   headers: {
+                      //     "Content-Type": "application/x-www-form-urlencoded",
+                      //   },
+                      //   body: encode({
+                      //     "form-name": "contact",
+                      //     ...values,
+                      //     "g-recaptcha-response": token,
+                      //   }),
+                      // })
+                      //   .then(() => {
+                      //     alert(
+                      //       "Thank you for subscribing! We will get back to you soon"
+                      //     )
                       actions.resetForm()
                     })
                     .catch(() => {
@@ -80,7 +96,7 @@ const sayhello = ({ data }) => {
                   <Form
                     name="contact"
                     method="post"
-
+                    action="https://formspree.io/f/myylkezb"
                     // data-netlify="true"
                     // data-netlify-honeypot="bot-field"
                   >
@@ -138,13 +154,31 @@ const sayhello = ({ data }) => {
                         className="error font-weight-bold pt-3"
                       />
                     </div>
+
                     <div className="text-md-right text-center mt-5">
+                      {/* <Recaptcha
+                        sitekey="${process.env.SITE_RECAPTCHA_KEY}"
+                        render="explicit"
+                        theme="dark"
+                        verifyCallback={response => {
+                          setToken(response)
+                        }}
+                        onloadCallback={() => {
+                          console.log("done loading!")
+                        }}
+                      /> */}
                       <button
                         type="submit"
                         className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold px-4 py-2"
                       >
                         Send Message
                       </button>
+                    </div>
+                    <div className="text-right">
+                      {/* <div
+                        className="g-recaptcha"
+                        data-sitekey="6LfOZr4aAAAAABnRDylsvQ7G_6D9sly9sjod-4T1"
+                      ></div> */}
                     </div>
                   </Form>
                 )}
@@ -167,6 +201,7 @@ const sayhello = ({ data }) => {
     </>
   )
 }
+
 export const query = graphql`
   {
     contact: contentfulContactFooter {
@@ -186,4 +221,4 @@ export const query = graphql`
     }
   }
 `
-export default sayhello
+export default ContactForm
