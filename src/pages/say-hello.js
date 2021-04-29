@@ -29,7 +29,7 @@ const sayhello = ({ data }) => {
                   comment: "",
                 }}
                 onSubmit={(values, actions) => {
-                  fetch("www.invi.us/static/functions/app.js", {
+                  fetch("/static/functions/app.js", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/x-www-form-urlencoded",
