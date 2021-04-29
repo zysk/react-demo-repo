@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { Formik, Field, Form, ErrorMessage } from "formik"
+import { Formik, Field, Form, ErrorMessage, setFieldValue } from "formik"
+import yup from "yup"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
@@ -17,9 +18,6 @@ const isDev = process.env.NODE_ENV === "development"
 function ContactForm({ data }) {
   const [token, setToken] = useState(null)
   const recaptchaRef = React.createRef()
-  function onChange(value) {
-    console.log("Captcha value:", value)
-  }
   useEffect(() => {
     const script = document.createElement("script")
     script.src = "https://www.google.com/recaptcha/api.js"
@@ -41,11 +39,18 @@ function ContactForm({ data }) {
                   name: "",
                   email: "",
                   comment: "",
+                  recaptcha: "",
                 }}
                 onSubmit={(values, actions) => {
-                  const recaptchaValue = recaptchaRef.current.getValue()
-                  this.props.onSubmit(recaptchaValue)
-                  recaptchaRef.current.execute()
+                  alert(
+                    JSON.stringify(
+                      {
+                        recaptcha: values.recaptcha,
+                      },
+                      null,
+                      2
+                    )
+                  )
                   axios({
                     method: "post",
                     url: "https://formspree.io/f/myylkezb",
@@ -84,6 +89,9 @@ function ContactForm({ data }) {
                     })
                     .finally(() => actions.setSubmitting(false))
                 }}
+                validationSchema={yup.object().shape({
+                  recaptcha: yup.string().required(),
+                })}
                 validate={values => {
                   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
                   const errors = {}
@@ -176,12 +184,13 @@ function ContactForm({ data }) {
                       <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 g-recaptcha">
                         <Recaptcha
                           sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+                          ref={recaptchaRef}
                           render="explicit"
                           theme="light"
-                          required
-                          ref={recaptchaRef}
+                          render="explicit"
+                          theme="dark"
                           verifyCallback={response => {
-                            setToken(response)
+                            setFieldValue("recaptcha", response)
                           }}
                           onloadCallback={() => {
                             console.log("done loading!")

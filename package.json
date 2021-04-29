@@ -52,7 +52,8 @@
     "react-icons": "^4.2.0",
     "react-image-lightbox": "^5.1.1",
     "simple-react-lightbox": "^3.6.5",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "prettier": "2.2.1"
