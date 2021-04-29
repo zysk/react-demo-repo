@@ -2,8 +2,10 @@ import React from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
+import axios from "axios"
 import Image from "gatsby-image"
 import "../components/main.css"
+import ReCaptcha from "react-google-recaptcha"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 
 const encode = data => {
@@ -29,17 +31,27 @@ const sayhello = ({ data }) => {
                   comment: "",
                 }}
                 onSubmit={(values, actions) => {
-                  fetch("/static/functions/app.js", {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                    body: encode({ "form-name": "contact", ...values }),
+                  axios({
+                    method: "post",
+                    url: "https://www.invi.us/static/functions/app",
+                    headers: { "content-type": "application/json" },
+                    data: values,
                   })
-                    .then(() => {
+                    .then(result => {
                       alert(
-                        "Thank you for subscribing! We will get back to you soon"
+                        "Thank you for contacting us! Our team will be in touch with you shortly"
                       )
+                      // fetch("/static/functions/app.js", {
+                      //   method: "POST",
+                      //   headers: {
+                      //     "Content-Type": "application/x-www-form-urlencoded",
+                      //   },
+                      //   body: encode({ "form-name": "contact", ...values }),
+                      // })
+                      //   .then(() => {
+                      //     alert(
+                      //       "Thank you for subscribing! We will get back to you soon"
+                      //     )
                       actions.resetForm()
                     })
                     .catch(() => {
