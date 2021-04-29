@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Formik, Field, Form, ErrorMessage, setFieldValue } from "formik"
-import yup from "yup"
+import * as yup from "yup"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
