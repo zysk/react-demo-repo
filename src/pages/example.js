@@ -51,20 +51,17 @@ function ContactForm({ data }) {
                   //     alert(
                   //       "Thank you for contacting us! Our team will be in touch with you shortly"
                   //     )
-                  fetch(
-                    "https://getform.io/f/25698677-4704-4131-98cc-d696c60d418a",
-                    {
-                      method: "POST",
-                      headers: {
-                        "Content-Type": "application/x-www-form-urlencoded",
-                      },
-                      body: encode({
-                        "form-name": "contact",
-                        ...values,
-                        "g-recaptcha-response": token,
-                      }),
-                    }
-                  )
+                  fetch("https://formspree.io/f/myylkezb", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: encode({
+                      "form-name": "contact",
+                      ...values,
+                      "g-recaptcha-response": token,
+                    }),
+                  })
                     .then(() => {
                       alert(
                         "Thank you for subscribing! We will get back to you soon"
@@ -95,7 +92,7 @@ function ContactForm({ data }) {
                   <Form
                     name="contact"
                     method="post"
-                    action="https://getform.io/f/25698677-4704-4131-98cc-d696c60d418a"
+                    action="https://formspree.io/f/myylkezb"
                     // data-netlify="true"
                     // data-netlify-honeypot="bot-field"
                   >
@@ -153,18 +150,10 @@ function ContactForm({ data }) {
                         className="error font-weight-bold pt-3"
                       />
                     </div>
+
                     <div className="text-md-right text-center mt-5">
-                      <button
-                        type="submit"
-                        className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold px-4 py-2"
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                    <div className="text-right">
                       <Recaptcha
-                        className="g-recaptcha"
-                        sitekey="6LfOZr4aAAAAABnRDylsvQ7G_6D9sly9sjod-4T1"
+                        sitekey="${process.env.SITE_RECAPTCHA_KEY}"
                         render="explicit"
                         theme="dark"
                         verifyCallback={response => {
@@ -174,8 +163,16 @@ function ContactForm({ data }) {
                           console.log("done loading!")
                         }}
                       />
+                      <button
+                        type="submit"
+                        className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold px-4 py-2"
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                    <div className="text-right">
                       {/* <div
-                        class="g-recaptcha"
+                        className="g-recaptcha"
                         data-sitekey="6LfOZr4aAAAAABnRDylsvQ7G_6D9sly9sjod-4T1"
                       ></div> */}
                     </div>

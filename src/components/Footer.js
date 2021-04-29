@@ -35,7 +35,7 @@ const Footer = ({ className, data1 }) => {
               <p>{data1.contact.copyright}</p>
             </div>
 
-            <div className="col-lg-3 pb-4 pb-lg-0  text-lg-left ">
+            <div className="col-lg-4 col-xl-3 pb-4 pb-lg-0  text-lg-left ">
               <h5 className="pb-3 pb-lg-5 footer-heading">FOLLOW US</h5>
 
               <div className="social-icons d-inline pr-2 mr-2">
@@ -90,7 +90,7 @@ const Footer = ({ className, data1 }) => {
                   email: "",
                 }}
                 onSubmit={(values, actions) => {
-                  fetch("/", {
+                  fetch("https://formspree.io/f/mzbydezy", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/x-www-form-urlencoded",
