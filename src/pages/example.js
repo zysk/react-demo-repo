@@ -179,6 +179,13 @@ function ContactForm({ data }) {
                       >
                         Send Message
                       </button>
+                      <div
+                        class="g-recaptcha"
+                        data-sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+                        data-callback
+                        data-expired-callback
+                        required
+                      ></div>
                     </div>
                     <div className="text-right"></div>
                   </Form>
