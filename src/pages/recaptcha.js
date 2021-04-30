@@ -42,11 +42,11 @@ function ContactForm({ data }) {
                 onSubmit={(values, actions) => {
                   axios({
                     method: "post",
-                    url: "/server.js",
-                    headers: {
-                      "Content-Type": "multipart/form-data",
-                    },
-                    // headers: { "content-type": "application/json" },
+                    url: "../functions/app.js",
+                    // headers: {
+                    //   "Content-Type": "multipart/form-data",
+                    // },
+                    headers: { "content-type": "application/json" },
                     body: encode({
                       "form-name": "contact",
                       ...values,
