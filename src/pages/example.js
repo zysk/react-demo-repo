@@ -37,7 +37,7 @@ export default ({ data }) => {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         data: qs.stringify(data),
-        url: "https://formspree.io/f/myylkezb",
+        url: "/server.js",
       }
       try {
         await axios(options)
@@ -130,7 +130,7 @@ export default ({ data }) => {
                   rcRef.current.execute()
                   axios({
                     method: "post",
-                    url: "https://formspree.io/f/myylkezb",
+                    url: "/server.js",
                     headers: { "content-type": "application/json" },
                     body: encode({
                       "form-name": "contact",
@@ -225,14 +225,14 @@ export default ({ data }) => {
                           onLoad={() => onLoad(() => resetForm)}
                           size="invisible"
                         /> */}
-                        {/* <Reaptcha
-                          sitekey={process.env.SITE_RECAPTCHA_KEY}
+                        <Reaptcha
+                          sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
                           ref={rcRef}
                           onError={onError}
                           onExpire={onExpire}
                           onVerify={onVerify}
                           onLoad={() => onLoad(() => resetForm)}
-                        /> */}
+                        />
                       </div>
                       <button
                         type="submit"
