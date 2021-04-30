@@ -42,7 +42,7 @@ function ContactForm({ data }) {
                 onSubmit={(values, actions) => {
                   axios({
                     method: "post",
-                    url: "../functions/app.js",
+                    url: "/server.js",
                     headers: { "content-type": "application/json" },
                     body: encode({
                       "form-name": "contact",
@@ -96,7 +96,7 @@ function ContactForm({ data }) {
                   <Form
                     name="contact"
                     method="post"
-                    action="https://formspree.io/f/myylkezb"
+
                     // data-netlify="true"
                     // data-netlify-honeypot="bot-field"
                   >
