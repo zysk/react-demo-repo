@@ -42,7 +42,7 @@ function ContactForm({ data }) {
                 onSubmit={(values, actions) => {
                   axios({
                     method: "post",
-                    url: "https://formspree.io/f/myylkezb",
+                    url: "../functions/app.js",
                     headers: { "content-type": "application/json" },
                     body: encode({
                       "form-name": "contact",
@@ -156,7 +156,7 @@ function ContactForm({ data }) {
                     </div>
 
                     <div className="text-md-right text-center mt-5">
-                      <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 ">
+                      {/* <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 ">
                         <Recaptcha
                           sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
                           render="explicit"
@@ -169,7 +169,7 @@ function ContactForm({ data }) {
                             console.log("done loading!")
                           }}
                         />
-                      </div>
+                      </div> */}
                       <button
                         type="submit"
                         className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold px-4 py-2"

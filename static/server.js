@@ -1,30 +1,76 @@
-const bodyParser = require("body-parser")
-const express = require("express")
-const nodemailer = require("nodemailer")
-const app = express()
+/*
+    Video: https://www.youtube.com/watch?v=i62jmLC15qQ
+*/
+
 require("dotenv").config()
-const { GMAIL_ADDRESS, GMAIL_PASSWORD } = process.env
-app.use(bodyParser.urlencoded())
-const contactAddress = "hey@yourwebsite.com"
-const mailer = nodemailer.createTransport({
-  service: "Gmail",
+const {
+  MAILGUN_API_KEY,
+  MAILGUN_DOMAIN,
+  MAILGUN_URL,
+  FROM_EMAIL_ADDRESS,
+  CONTACT_TO_EMAIL_ADDRESS,
+} = process.env
+const nodemailer = require("nodemailer")
+const mailGun = require("nodemailer-mailgun-transport")
+const log = console.log
+
+// Step 1
+const auth = {
   auth: {
-    user: "rishikalokesh@gmail.com",
-    pass: "Bangalore@123",
+    api_key: process.env.MAILGUN_API_KEY || "mailgun_api_key", // TODO:
+    domain: process.env.MAILGUN_DOMAIN || "mailgun_domain", // TODO:
   },
-})
-app.post("/say-hello", function (req, res) {
-  mailer.sendMail(
-    {
-      from: req.body.from,
-      to: [contactAddress],
-      subject: req.body.subject || "[No subject]",
-      html: req.body.message || "[No message]",
-    },
-    function (err, info) {
-      if (err) return res.status(500).send(err)
-      res.json({ success: true })
+}
+
+// Step 2
+let transporter = nodemailer.createTransport(mailGun(auth))
+
+exports.handler = async event => {
+  if (event.httpMethod !== "POST") {
+    return {
+      statusCode: 405,
+      body: "Method Not Allowed",
+      headers: { Allow: "POST" },
     }
-  )
-})
-app.listen(8000)
+  }
+
+  const data = JSON.parse(event.body)
+  if (!data.comment || !data.name || !data.email) {
+    return { statusCode: 422, body: "Name, email, and comments are required." }
+  }
+
+  const mailgunData = {
+    from: data.email,
+    to: CONTACT_TO_EMAIL_ADDRESS,
+    "h:Reply-To": data.email,
+    subject: `New contact from ${data.name}`,
+    text: `Name: ${data.name}\nEmail: ${data.email}\nComment: ${data.comment}`,
+  }
+  return mailgun
+    .comments()
+    .send(mailgunData)
+    .then(() => ({
+      statusCode: 200,
+      body: "Your form was sent successfully! We'll be in touch.",
+    }))
+    .catch(error => ({
+      statusCode: 422,
+      body: `Error: ${error}`,
+    }))
+}
+
+// Step 3
+// let mailOptions = {
+//     from: 'abc@gmail.com', // TODO: email sender
+//     to: 'cba@gmail.com', // TODO: email receiver
+//     subject: 'Nodemailer - Test',
+//     text: 'Wooohooo it works!!'
+// };
+
+// Step 4
+// transporter.sendMail(mailOptions, (err, data) => {
+//     if (err) {
+//         return log('Error occurs');
+//     }
+//     return log('Email sent!!!');
+// });

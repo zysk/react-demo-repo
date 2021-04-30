@@ -225,14 +225,14 @@ export default ({ data }) => {
                           onLoad={() => onLoad(() => resetForm)}
                           size="invisible"
                         /> */}
-                        <Reaptcha
+                        {/* <Reaptcha
                           sitekey={process.env.SITE_RECAPTCHA_KEY}
                           ref={rcRef}
                           onError={onError}
                           onExpire={onExpire}
                           onVerify={onVerify}
                           onLoad={() => onLoad(() => resetForm)}
-                        />
+                        /> */}
                       </div>
                       <button
                         type="submit"
