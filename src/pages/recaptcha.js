@@ -43,7 +43,7 @@ function ContactForm({ data }) {
                   axios({
                     method: "post",
                     url: "/server.js",
-                    headers: { "content-type": "application/json" },
+                    // headers: { "content-type": "application/json" },
                     body: encode({
                       "form-name": "contact",
                       ...values,
@@ -100,7 +100,7 @@ function ContactForm({ data }) {
                     // data-netlify="true"
                     // data-netlify-honeypot="bot-field"
                   >
-                    <input type="hidden" name="form-name" value="contact" />
+                    {/* <input type="hidden" name="form-name" value="contact" /> */}
 
                     <div className="mb-5">
                       <label htmlFor="Name" className="form-label invisible">
