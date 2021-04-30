@@ -43,6 +43,10 @@ function ContactForm({ data }) {
                   axios({
                     method: "post",
                     url: "/server.js",
+                    headers: {
+                      "Content-Type":
+                        "multipart/form-data;boundary=----WebKitFormBoundaryyrV7KO0BoCBuDbTL",
+                    },
                     // headers: { "content-type": "application/json" },
                     body: encode({
                       "form-name": "contact",
