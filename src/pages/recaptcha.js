@@ -53,27 +53,14 @@ function ContactForm({ data }) {
                       ...values,
                       "g-recaptcha-response": token,
                     }),
+                    json: false,
                     data: values,
                   })
                     .then(result => {
                       alert(
                         "Thank you for contacting us! Our team will be in touch with you shortly"
                       )
-                      // fetch("https://formspree.io/f/myylkezb", {
-                      //   method: "POST",
-                      //   headers: {
-                      //     "Content-Type": "application/x-www-form-urlencoded",
-                      //   },
-                      //   body: encode({
-                      //     "form-name": "contact",
-                      //     ...values,
-                      //     "g-recaptcha-response": token,
-                      //   }),
-                      // })
-                      //   .then(() => {
-                      //     alert(
-                      //       "Thank you for subscribing! We will get back to you soon"
-                      //     )
+
                       actions.resetForm()
                     })
                     .catch(() => {
