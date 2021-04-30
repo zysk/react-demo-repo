@@ -44,8 +44,7 @@ function ContactForm({ data }) {
                     method: "post",
                     url: "/server.js",
                     headers: {
-                      "Content-Type":
-                        "multipart/form-data;boundary=----WebKitFormBoundaryyrV7KO0BoCBuDbTL",
+                      "Content-Type": "multipart/form-data",
                     },
                     // headers: { "content-type": "application/json" },
                     body: encode({
@@ -53,7 +52,7 @@ function ContactForm({ data }) {
                       ...values,
                       "g-recaptcha-response": token,
                     }),
-                    json: false,
+
                     data: values,
                   })
                     .then(result => {
