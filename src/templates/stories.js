@@ -4,10 +4,11 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
-
+import SEO from "../components/seo"
 const stories = ({ data }) => {
   return (
     <div className="stories">
+      <SEO title={data.story.title.title} />
       <Navbar />
 
       {/* <!-- ======= Stories ======= --> */}

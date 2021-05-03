@@ -4,10 +4,12 @@ import Footer from "../../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../../components/main.css"
+import SEO from "../../components/seo"
 
 const index = ({ data }) => {
   return (
     <div className="works">
+      <SEO title="Works" />
       <Navbar />
       <section className="circle-section" id="portfolio">
         <div className="container pb-5 mb-5 mb-md-0">

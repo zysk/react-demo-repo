@@ -8,6 +8,8 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
+import SEO from "../components/seo"
+
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -97,6 +99,7 @@ export default ({ data }) => {
   return (
     <>
       <div className="contact">
+        <SEO title="Contact" />
         <Navbar />
         {/* <!-- ======= Contact Section ======= --> */}
 

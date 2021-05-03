@@ -4,10 +4,13 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
+import SEO from "../components/seo"
 
 const about = ({ data }) => {
   return (
     <div className="about">
+      <SEO title="About" />
+
       <Navbar className="About" />
       <section className="container py-5 mt-lg-4">
         <div className="row d-flex align-items-center justify-content-between">

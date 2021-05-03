@@ -6,11 +6,13 @@ import Image from "gatsby-image"
 import "../components/main.css"
 import animation from "../images/animation-illustration.gif"
 import virtual from "../images/invi-virtual.gif"
+import SEO from "../components/seo"
 
 const index = ({ data }) => {
   return (
     <div className="home">
       <Navbar className="Home" />
+      <SEO title="Home" />
 
       {/* Aframe Section */}
 

@@ -7,11 +7,13 @@ import "../components/main.css"
 import video1 from "../images/animationhover.mp4"
 import video2 from "../images/virtualworld.mp4"
 import HoverVideoPlayer from "react-hover-video-player"
-
+import SEO from "../components/seo"
 const services = ({ data }) => {
   return (
     <div>
       <div className="services">
+        <SEO title="Services" />
+
         <Navbar />
         <h1 className="text-center title pt-lg-5 pt-4 text-uppercase">
           {data.services.title}

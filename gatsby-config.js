@@ -12,7 +12,7 @@ module.exports = {
   },
 
   siteMetadata: {
-    title: `INVI`,
+    title: `INVI - Innovative Visuals`,
     description: `INVI is a Virtual Experience Design Studio that helps clients create virtual experiences through architecture, storytelling, and design.`,
     author: `@zysk`,
   },

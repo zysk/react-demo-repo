@@ -4,10 +4,12 @@ import Footer from "../../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../../components/main.css"
+import SEO from "../../components/seo"
 
 const stories = ({ data }) => {
   return (
     <div className="stories">
+      <SEO title="Stories" />
       <Navbar />
       {/* <!--====== Graphics Section======--> */}
       <section className="container py-5 mt-lg-4">

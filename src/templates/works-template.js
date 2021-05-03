@@ -4,10 +4,12 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/main.css"
+import SEO from "../components/seo"
 
 const drawing = ({ data }) => {
   return (
     <div className="works">
+      <SEO title={data.project.projectTitle} />
       <div className="projects">
         <Navbar />
         <div className=" d-flex flex-wrap">
