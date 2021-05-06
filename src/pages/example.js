@@ -157,7 +157,7 @@ function ContactForm({ data }) {
 
                     <div className="text-md-right text-center mt-5">
                       <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 ">
-                        {/* <Recaptcha
+                        <Recaptcha
                           sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
                           render="explicit"
                           ref={recaptchaRef}
@@ -168,7 +168,7 @@ function ContactForm({ data }) {
                           onloadCallback={() => {
                             console.log("done loading!")
                           }}
-                        /> */}
+                        />
                       </div>
                       <button
                         type="submit"
