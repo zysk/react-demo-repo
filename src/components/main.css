@@ -585,6 +585,7 @@ video:hover {
 
 .middle-1,
 .middle-2,
+.middle-3,
 .middle {
   top: 50%;
   width: 100%;
@@ -593,7 +594,11 @@ video:hover {
   position: absolute;
 }
 .middle {
-  left: 100%;
+  left: 110%;
+}
+.middle-3 {
+  top: 70%;
+  left: 90%;
 }
 .middle-1 {
   left: -70%;
@@ -608,7 +613,8 @@ video:hover {
 
 .content_img:hover .middle,
 .content_img:hover .middle-1,
-.content_img:hover .middle-2 {
+.content_img:hover .middle-2,
+.content_img:hover .middle-3 {
   opacity: 1;
 }
 
@@ -641,6 +647,7 @@ video:hover {
   }
   .middle-1,
   .middle-2,
+  .middle-3,
   .middle {
     top: 100%;
     width: 100%;
@@ -650,6 +657,7 @@ video:hover {
   }
   .middle,
   .middle-2,
+  .middle-3,
   .middle-1 {
     left: 0%;
   }
@@ -659,7 +667,30 @@ video:hover {
       0 0 0 12px #0471bc, 0 0 0 20px #f6caba, 0 0 0 22px #0471bc;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .text {
+    font-size: 15px;
+    padding: 0;
+  }
+  .middle-1 {
+    width: 80%;
+    left: -50%;
+  }
+  .middle {
+    width: 70%;
+    left: 120%;
+  }
+  .middle-2 {
+    width: 80%;
+    left: -90%;
+  }
+  .middle-3 {
+    top: 80%;
+    width: 50%;
+    left: 130%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
   .text {
     font-size: 15px;
     padding: 0;
@@ -675,6 +706,10 @@ video:hover {
   .middle-2 {
     width: 80%;
     left: -140%;
+  }
+  .middle-3 {
+    width: 80%;
+    left: 170%;
   }
 }
 @media (min-width: 768px) {

@@ -28,7 +28,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle">
-                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0 pl-lg-5">
+                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0 pl-lg-3 pl-xl-4">
                     {data.archvilla.name}
                   </div>
                 </div>
@@ -45,7 +45,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle">
-                  <div className="text text-uppercase font-weight-bold w-100 pt-3 pt-md-0 ">
+                  <div className="text text-uppercase font-weight-bold w-100 pt-5 pt-md-0 pl-md-5">
                     {data.southern.name}
                   </div>
                 </div>
@@ -53,7 +53,7 @@ const index = ({ data }) => {
             </div>
           </div>
 
-          <div className="row d-flex justify-content-center align-items-center pb-md-3">
+          <div className="row d-flex justify-content-center align-items-center pb-md-3 pt-4 pt-md-0">
             {/* <div className="col-2"></div> */}
             <div className="col-md-4 mt-5 pt-5  pb-5 pb-lg-0 mt-md-0 pt-md-0 px-5 px-lg-0">
               <div className="content_img">
@@ -82,7 +82,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle">
-                  <div className="text text-uppercase font-weight-bold pl-xl-5 pt-5 pt-md-0">
+                  <div className="text text-uppercase font-weight-bold pl-xl-2 pt-5 pt-md-0">
                     {data.graffiti.name}
                   </div>
                 </div>
@@ -101,8 +101,8 @@ const index = ({ data }) => {
                     className="img-fluid image m-md-4"
                   />
                 </a>
-                <div className="middle">
-                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0 pl-lg-5 ml-lg-3">
+                <div className="middle-3">
+                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0  ">
                     {data.art.name}
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle">
-                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0">
+                  <div className="text text-uppercase font-weight-bold pt-5 pt-md-0 pl-md-5 pl-lg-4 pl-xl-5">
                     {data.granada.name}
                   </div>
                 </div>
@@ -139,7 +139,7 @@ const index = ({ data }) => {
                   />
                 </a>
                 <div className="middle-2">
-                  <div className="text text-uppercase font-weight-bold pr-md-4  pt-5">
+                  <div className="text text-uppercase font-weight-bold pr-md-4 pr-xl-0 pt-5">
                     {data.drawing.name}
                   </div>
                 </div>
