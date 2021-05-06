@@ -229,7 +229,7 @@ export default ({ data }) => {
                           size="invisible"
                         /> */}
                         <Reaptcha
-                          sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+                          sitekey="6Le7eb4aAAAAAMkB2ElvyDBEPO9P7DThYPfSW2rz"
                           ref={rcRef}
                           onError={onError}
                           onExpire={onExpire}
