@@ -1,105 +1,32 @@
-import React, { useRef, useEffect, useState } from "react"
-import { ErrorMessage, Field, Form, Formik } from "formik"
-import Reaptcha from "react-google-recaptcha"
-import axios from "axios"
-import qs from "qs"
+import React, { useState, useEffect } from "react"
+import { Formik, Field, Form, ErrorMessage } from "formik"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
+import axios from "axios"
 import Image from "gatsby-image"
 import "../components/main.css"
-import SEO from "../components/seo"
+import Recaptcha from "react-google-recaptcha"
 
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
-export default ({ data }) => {
-  const [errMsg, setErrMsg] = useState("")
-  const [executing, setExecuting] = useState(false)
-  const [formValues, setFormValues] = useState({})
-  const [formReset, setFormReset] = useState({})
-  const [loaded, setLoaded] = useState(false)
-  const [msgSent, setMsgSent] = useState(false)
-  const [rcError, setRcError] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [token, setToken] = useState("")
-  const [verified, setVerified] = useState(false)
-
-  const rcRef = useRef(null)
-
+const isDev = process.env.NODE_ENV === "development"
+function ContactForm({ data }) {
+  const [token, setToken] = useState(null)
+  let recaptchaRef
   useEffect(() => {
-    const handleSubmit = async (formValues, token) => {
-      const data = {
-        ...formValues,
-        "g-recaptcha-response": token,
-      }
-      const options = {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        data: qs.stringify(data),
-        url: "https://formspree.io/f/myylkezb",
-      }
-      try {
-        await axios(options)
-        setMsgSent(true)
-        formReset()
-      } catch (e) {
-        setErrMsg(e.message)
-      }
-    }
-    if (token) {
-      handleSubmit(formValues, token)
-    }
-  }, [formReset, formValues, token])
-
-  const onError = () => {
-    console.log("error...")
-    setRcError(true)
-  }
-
-  const onExpire = () => {
-    console.log("expired...")
-    console.log("resetting...")
-    resetReCaptcha()
-  }
-
-  const onLoad = resetForm => {
-    console.log("loaded...")
-    setLoaded(true)
-    setFormReset(resetForm)
-  }
-
-  const onVerify = token => {
-    console.log("verified...")
-    setToken(token)
-    setVerified(true)
-    setExecuting(false)
-  }
-
-  const resetEverything = resetForm => {
-    if (rcError) {
-      setRcError(false)
-    }
-    if (resetForm) {
-      setMsgSent(false)
-      setErrMsg(false)
-      resetForm()
-    }
-    resetReCaptcha()
-  }
-
-  const resetReCaptcha = async () => {
-    console.log("resetting...")
-    await rcRef.current.reset()
-    setVerified(false)
-  }
-
+    const script = document.createElement("script")
+    script.src = "https://www.google.com/recaptcha/api.js"
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+  }, [])
   return (
     <>
       <div className="contact">
-        <SEO title="Contact" />
         <Navbar />
         {/* <!-- ======= Contact Section ======= --> */}
 
@@ -112,25 +39,7 @@ export default ({ data }) => {
                   email: "",
                   comment: "",
                 }}
-                validate={values => {
-                  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-                  const errors = {}
-                  if (!values.name) {
-                    errors.name = "Name Required*"
-                  }
-                  if (!values.email || !emailRegex.test(values.email)) {
-                    errors.email = "Valid Email Required*"
-                  }
-                  if (!values.comment) {
-                    errors.comment = "Message Required*"
-                  }
-                  return errors
-                }}
                 onSubmit={(values, actions) => {
-                  setIsSubmitting(true)
-                  setFormValues({ ...values })
-                  setExecuting(true)
-                  rcRef.current.execute()
                   axios({
                     method: "post",
                     url: "https://formspree.io/f/myylkezb",
@@ -146,6 +55,21 @@ export default ({ data }) => {
                       alert(
                         "Thank you for contacting us! Our team will be in touch with you shortly"
                       )
+                      // fetch("https://formspree.io/f/myylkezb", {
+                      //   method: "POST",
+                      //   headers: {
+                      //     "Content-Type": "application/x-www-form-urlencoded",
+                      //   },
+                      //   body: encode({
+                      //     "form-name": "contact",
+                      //     ...values,
+                      //     "g-recaptcha-response": token,
+                      //   }),
+                      // })
+                      //   .then(() => {
+                      //     alert(
+                      //       "Thank you for subscribing! We will get back to you soon"
+                      //     )
                       actions.resetForm()
                     })
                     .catch(() => {
@@ -153,14 +77,28 @@ export default ({ data }) => {
                     })
                     .finally(() => actions.setSubmitting(false))
                 }}
+                validate={values => {
+                  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                  const errors = {}
+                  if (!values.name) {
+                    errors.name = "Name Required*"
+                  }
+                  if (!values.email || !emailRegex.test(values.email)) {
+                    errors.email = "Valid Email Required*"
+                  }
+                  if (!values.comment) {
+                    errors.comment = "Message Required*"
+                  }
+                  return errors
+                }}
               >
-                {({ resetForm }) => (
+                {() => (
                   <Form
                     name="contact"
                     method="post"
                     action="https://formspree.io/f/myylkezb"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
+                    // data-netlify="true"
+                    // data-netlify-honeypot="bot-field"
                   >
                     <input type="hidden" name="form-name" value="contact" />
 
@@ -219,22 +157,17 @@ export default ({ data }) => {
 
                     <div className="text-md-right text-center mt-5">
                       <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 ">
-                        {/* <Reaptcha
-                          ref={rcRef}
-                          sitekey="6Le_laEUAAAAACRNoby3_NLejhu0lCqb4_WeSotQ"
-                          onError={onError}
-                          onExpire={onExpire}
-                          onVerify={onVerify}
-                          onLoad={() => onLoad(() => resetForm)}
-                          size="invisible"
-                        /> */}
-                        <Reaptcha
-                          sitekey="6Le7eb4aAAAAAMkB2ElvyDBEPO9P7DThYPfSW2rz"
-                          ref={rcRef}
-                          onError={onError}
-                          onExpire={onExpire}
-                          onVerify={onVerify}
-                          onLoad={() => onLoad(() => resetForm)}
+                        <Recaptcha
+                          sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+                          render="explicit"
+                          ref={recaptchaRef}
+                          theme="light"
+                          verifyCallback={response => {
+                            setToken(response)
+                          }}
+                          onloadCallback={() => {
+                            console.log("done loading!")
+                          }}
                         />
                       </div>
                       <button
@@ -254,7 +187,6 @@ export default ({ data }) => {
                 )}
               </Formik>
             </div>
-
             <div className="col-md-6 mt-5 mt-md-0">
               {" "}
               <Image
@@ -292,3 +224,4 @@ export const query = graphql`
     }
   }
 `
+export default ContactForm
