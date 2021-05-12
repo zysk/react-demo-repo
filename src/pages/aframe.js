@@ -1,28 +1,30 @@
-import React from "react"
+import React, { Component } from "react"
+import Helmet from "react-helmet"
+import { withPrefix, Link } from "gatsby"
+import Navbar from "../components/Navbar"
+var __html = require("../../static/aframe.html.js")
+var template = { __html: __html }
 
-const aframe = () => {
-  return (
-    <div>
-      <a-scene>
-        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-cylinder
-          position="1 0.75 -3"
-          radius="0.5"
-          height="1.5"
-          color="#FFC65D"
-        ></a-cylinder>
-        <a-plane
-          position="0 0 -4"
-          rotation="-90 0 0"
-          width="4"
-          height="4"
-          color="#7BC8A4"
-        ></a-plane>
-        <a-sky color="#ECECEC"></a-sky>
-      </a-scene>
-    </div>
-  )
+class ScreenShare extends Component {
+  render() {
+    return (
+      <>
+        <Helmet>
+          {/* <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+          <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
+          <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+          <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/aframe-glow@1.0.1/src/glow.min.js"></script> */}
+          {/* <script src={withPrefix("hero.js")} type="text/javascript" />
+          <script src={withPrefix("stars.js")} type="text/javascript" />
+          <script src={withPrefix("orb.js")} type="text/javascript" />
+          <script src={withPrefix("lighting.js")} type="text/javascript" /> */}
+        </Helmet>
+        <div className="screen-share">
+          <span dangerouslySetInnerHTML={template} />
+        </div>
+      </>
+    )
+  }
 }
-
-export default aframe
+export default ScreenShare

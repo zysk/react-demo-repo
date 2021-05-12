@@ -58,7 +58,7 @@
   justify-content: center;
   align-items: center;
   font-weight: lighter;
-  color: #fff;
+  color: #fff !important;
 }
 
 #headline {
@@ -254,7 +254,7 @@ nav .icon-burger .line {
     float: none;
     position: fixed;
     z-index: 12;
-    background-color: #ffab8a;
+    background-color: #ffab8a !important;
     left: 0;
     right: 0;
     top: 90px;
