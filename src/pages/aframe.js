@@ -2,13 +2,14 @@ import React, { Component } from "react"
 import Helmet from "react-helmet"
 import { withPrefix, Link } from "gatsby"
 import Navbar from "../components/Navbar"
+import "../components/main.css"
 var __html = require("../../static/aframe.html.js")
 var template = { __html: __html }
 
 class ScreenShare extends Component {
   render() {
     return (
-      <>
+      <div>
         <Helmet>
           {/* <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
           <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
@@ -23,7 +24,7 @@ class ScreenShare extends Component {
         <div className="screen-share">
           <span dangerouslySetInnerHTML={template} />
         </div>
-      </>
+      </div>
     )
   }
 }
