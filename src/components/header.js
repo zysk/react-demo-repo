@@ -14,7 +14,10 @@ const Header = () => {
         href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
         rel="stylesheet"
       />
-
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap"
+        rel="stylesheet"
+      ></link>
       <script
         src="https://kit.fontawesome.com/ff32cb2647.js"
         crossOrigin="anonymous"
