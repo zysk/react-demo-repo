@@ -1,6 +1,5 @@
 import React from "react"
 import "../components/style.css"
-import "../components/main.css"
 import Header from "../components/header"
 import Navbar from "../components/navbar"
 const example = () => {
@@ -11,7 +10,7 @@ const example = () => {
         <div id="logo">invi</div>
         <nav id="top_nav">
           <input id="nav-toggle" type="checkbox" />
-          <ul class="links">
+          <ul className="links">
             <li>
               <a href="/">Home</a>
             </li>
@@ -28,9 +27,9 @@ const example = () => {
               <a href="#contact">Contact Us</a>
             </li>
           </ul>
-          <label for="nav-toggle" class="icon-burger">
-            <div class="line"></div>
-            <div class="line"></div>
+          <label htmlFor="nav-toggle" className="icon-burger">
+            <div className="line"></div>
+            <div className="line"></div>
           </label>
         </nav>
       </div>

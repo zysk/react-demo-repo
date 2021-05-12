@@ -22,7 +22,10 @@ const Header = () => {
         src="https://kit.fontawesome.com/ff32cb2647.js"
         crossOrigin="anonymous"
       ></script>
-
+      <script src="./js/hero.js"></script>
+      {/* <script src="./js/stars.js"></script>
+	<script src="./js/orb.js"></script>
+	<script src="./js/lighting.js"></script> */}
       <title>INVI - Innovative Visuals</title>
     </Helmet>
   )
