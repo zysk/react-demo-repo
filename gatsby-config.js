@@ -82,5 +82,29 @@ module.exports = {
       },
     },
     // `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "/js/hero.js", // Change to the script filename
+      },
+    },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "/js/stars.js", // Change to the script filename
+      },
+    },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "/js/lighting.js", // Change to the script filename
+      },
+    },
+    // {
+    //   resolve: "gatsby-plugin-load-script",
+    //   options: {
+    //     src: "/js/local.js", // Change to the script filename
+    //   },
+    // },
   ],
 }

@@ -1,227 +1,77 @@
-import React, { useState, useEffect } from "react"
-import { Formik, Field, Form, ErrorMessage } from "formik"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
-import { graphql } from "gatsby"
-import axios from "axios"
-import Image from "gatsby-image"
-import "../components/main.css"
-import Recaptcha from "react-google-recaptcha"
+import React from "react"
+import "../components/style.css"
+import Header from "../components/header"
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
-const isDev = process.env.NODE_ENV === "development"
-function ContactForm({ data }) {
-  const [token, setToken] = useState(null)
-  let recaptchaRef
-  useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "https://www.google.com/recaptcha/api.js"
-    script.async = true
-    script.defer = true
-    document.body.appendChild(script)
-  }, [])
+const example = () => {
   return (
     <>
-      <div className="contact">
-        <Navbar />
-        {/* <!-- ======= Contact Section ======= --> */}
-
-        <section className="container ">
-          <div className="row d-md-flex justify-content-md-between py-5">
-            <div className="col-md-5 col-12">
-              <Formik
-                initialValues={{
-                  name: "",
-                  email: "",
-                  comment: "",
-                }}
-                onSubmit={(values, actions) => {
-                  axios({
-                    method: "post",
-                    url: "https://formspree.io/f/myylkezb",
-                    headers: { "content-type": "application/json" },
-                    body: encode({
-                      "form-name": "contact",
-                      ...values,
-                      "g-recaptcha-response": token,
-                    }),
-                    data: values,
-                  })
-                    .then(result => {
-                      alert(
-                        "Thank you for contacting us! Our team will be in touch with you shortly"
-                      )
-                      // fetch("https://formspree.io/f/myylkezb", {
-                      //   method: "POST",
-                      //   headers: {
-                      //     "Content-Type": "application/x-www-form-urlencoded",
-                      //   },
-                      //   body: encode({
-                      //     "form-name": "contact",
-                      //     ...values,
-                      //     "g-recaptcha-response": token,
-                      //   }),
-                      // })
-                      //   .then(() => {
-                      //     alert(
-                      //       "Thank you for subscribing! We will get back to you soon"
-                      //     )
-                      actions.resetForm()
-                    })
-                    .catch(() => {
-                      alert("Error")
-                    })
-                    .finally(() => actions.setSubmitting(false))
-                }}
-                validate={values => {
-                  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-                  const errors = {}
-                  if (!values.name) {
-                    errors.name = "Name Required*"
-                  }
-                  if (!values.email || !emailRegex.test(values.email)) {
-                    errors.email = "Valid Email Required*"
-                  }
-                  if (!values.comment) {
-                    errors.comment = "Message Required*"
-                  }
-                  return errors
-                }}
-              >
-                {() => (
-                  <Form
-                    name="contact"
-                    method="post"
-                    action="https://formspree.io/f/myylkezb"
-                    // data-netlify="true"
-                    // data-netlify-honeypot="bot-field"
-                  >
-                    <input type="hidden" name="form-name" value="contact" />
-
-                    <div className="mb-5">
-                      <label htmlFor="Name" className="form-label invisible">
-                        Full Name
-                      </label>
-                      <Field
-                        type="text"
-                        className="form-control contact-input w-100"
-                        id="name"
-                        placeholder="Full Name"
-                        name="name"
-                      />
-                      <ErrorMessage
-                        name="name"
-                        component="div"
-                        className="error font-weight-bold pt-3"
-                      />
-                    </div>
-                    <div className="mb-5">
-                      <label htmlFor="Email" className="form-label invisible">
-                        Email Address
-                      </label>
-                      <Field
-                        type="text"
-                        name="email"
-                        className="form-control contact-input w-100"
-                        id="Email"
-                        placeholder="Email Address"
-                      />
-                      <ErrorMessage
-                        name="email"
-                        component="div"
-                        className="error font-weight-bold pt-3"
-                      />
-                    </div>
-                    <div className="mb-3 comment">
-                      <label htmlFor="comment" className="form-label invisible">
-                        Comment
-                      </label>
-                      <Field
-                        className="form-control contact-input w-100"
-                        name="comment"
-                        component="textarea"
-                        id="comment"
-                        rows="5"
-                        placeholder="Comment"
-                      />
-                      <ErrorMessage
-                        name="comment"
-                        component="div"
-                        className="error font-weight-bold pt-3"
-                      />
-                    </div>
-
-                    <div className="text-md-right text-center mt-5">
-                      <div className=" d-flex w-100 justify-content-md-end justify-content-center pb-3 ">
-                        <Recaptcha
-                          sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
-                          render="explicit"
-                          ref={recaptchaRef}
-                          theme="light"
-                          verifyCallback={response => {
-                            setToken(response)
-                          }}
-                          onloadCallback={() => {
-                            console.log("done loading!")
-                          }}
-                        />
-                      </div>
-                      <button
-                        type="submit"
-                        className=" submit-btn btn btn-outline-dark btn-md text-uppercase font-weight-bold px-4 py-2"
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                    <div className="text-right">
-                      {/* <div
-                        className="g-recaptcha"
-                        data-sitekey="6LfOZr4aAAAAABnRDylsvQ7G_6D9sly9sjod-4T1"
-                      ></div> */}
-                    </div>
-                  </Form>
-                )}
-              </Formik>
-            </div>
-            <div className="col-md-6 mt-5 mt-md-0">
-              {" "}
-              <Image
-                fluid={data.intro.image.fluid}
-                className="img-fluid"
-                alt="contact-gif"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* <!-- ======= Contact Section =======--> */}
-        <Footer className="contact-footer mt-lg-5" data1={data} />
+      <div id="container">
+        <div id="logo">invi</div>
+        <nav id="top_nav">
+          <input id="nav-toggle" type="checkbox" />
+          <ul class="links">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#blog">Blog</a>
+            </li>
+            <li>
+              <a href="#team">Team</a>
+            </li>
+            <li>
+              <a href="#contact">Contact Us</a>
+            </li>
+          </ul>
+          <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+          </label>
+        </nav>
       </div>
+      <div id="hero_text">
+        <p id="headline">We are designers of virtual experiences</p>
+        <p id="enter_btn">Enter our virtual home</p>
+        <p id="home_text">
+          Welcome to our home. Our home reflects who we are as people. We have
+          curated a range of our work for you to explore.
+        </p>
+      </div>
+      <div id="instructions">
+        <p id="click_drag">use arrow keys to move | click + drag to rotate</p>
+      </div>
+      <a-scene
+        renderer="colorManagement: true; highRefreshRate: true"
+        vr-mode-ui="enabled: false"
+        background="color: #ced4da"
+        raycaster="objects: .collidable"
+        cursor="rayOrigin:mouse; fuse:false"
+      >
+        <a-sky
+          id="sky"
+          visible="false"
+          radius="200"
+          theta-length="180"
+          material="shader: gradientshader; topColor: #5582ec; bottomColor: #f2c4c4"
+        ></a-sky>
+        <a-entity id="orb" orb position="0 0 0"></a-entity>
+        <a-entity id="lighting" lighting position="0 0 0"></a-entity>
+        <a-entity id="stars_1" stars position="0 0 0"></a-entity>
+
+        <a-entity id="cameraRig" hero lighting>
+          <a-entity
+            id="head"
+            camera
+            position="0 1 0"
+            wasd-controls="acceleration: 3"
+          ></a-entity>
+        </a-entity>
+      </a-scene>
     </>
   )
 }
 
-export const query = graphql`
-  {
-    contact: contentfulContactFooter {
-      email
-      copyright
-      phoneLink
-      phone
-      mailToLink
-      location
-    }
-    intro: contentfulSayHello {
-      image {
-        fluid {
-          ...GatsbyContentfulFluid
-        }
-      }
-    }
-  }
-`
-export default ContactForm
+export default example
