@@ -7,7 +7,7 @@ const example = () => {
   return (
     <>
       <div id="container">
-        <Navbar />
+        {/* <Navbar /> */}
         <div id="logo">invi</div>
         <nav id="top_nav">
           <input id="nav-toggle" type="checkbox" />
