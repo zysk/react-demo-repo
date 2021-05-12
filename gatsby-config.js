@@ -100,11 +100,11 @@ module.exports = {
         src: "/js/lighting.js", // Change to the script filename
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-load-script",
-    //   options: {
-    //     src: "/js/local.js", // Change to the script filename
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "/js/orb.js", // Change to the script filename
+      },
+    },
   ],
 }

@@ -1,11 +1,13 @@
 import React from "react"
 import "../components/style.css"
+import "../components/main.css"
 import Header from "../components/header"
-
+import Navbar from "../components/navbar"
 const example = () => {
   return (
     <>
       <div id="container">
+        <Navbar />
         <div id="logo">invi</div>
         <nav id="top_nav">
           <input id="nav-toggle" type="checkbox" />
