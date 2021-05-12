@@ -1,7 +1,7 @@
 import React from "react"
 import "../components/style.css"
 import Header from "../components/header"
-import Navbar from "../components/navbar"
+import Navbar from "../components/Navbar"
 const example = () => {
   return (
     <>
