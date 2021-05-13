@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Helmet from "react-helmet"
 import { withPrefix, Link } from "gatsby"
-import Navbar from "../components/Navbar"
+import Navbar from "../components/navbar"
 import "../components/main.css"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
