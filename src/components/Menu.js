@@ -33,7 +33,7 @@ const Navbar = ({ className }) => {
           <ul className="navbar-nav mx-auto">
             <li className="nav-item ">
               <Link
-                to="/"
+                to="https://invi.us/"
                 activeClassName="active"
                 className="nav-link"
                 refresh="true"
