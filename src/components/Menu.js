@@ -29,7 +29,12 @@ const Navbar = ({ className }) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item ">
-              <Link to="/" activeClassName="active" className="nav-link">
+              <Link
+                to="/"
+                activeClassName="active"
+                className="nav-link"
+                refresh="true"
+              >
                 HOME<span className="sr-only ">(current)</span>
               </Link>
             </li>
