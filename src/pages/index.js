@@ -13,7 +13,7 @@ const index = ({ data }) => {
   return (
     <div className="home">
       <Helmet>
-        <meta http-equiv="refresh" content="0;url=https://invi.us/" />
+        <meta http-equiv="refresh" content="-1;url=https://invi.us/" />
       </Helmet>
       {/* <Navbar className="Home" /> */}
       <SEO title="Home" />
