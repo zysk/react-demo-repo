@@ -2,6 +2,7 @@ import React from "react"
 import Header from "./header"
 import img from "../images/invi-logo.png"
 import "./main.css"
+
 import { Link } from "gatsby"
 const Navbar = ({ className }) => {
   const refreshHandler = () => {
@@ -35,7 +36,6 @@ const Navbar = ({ className }) => {
                 to="/"
                 activeClassName="active"
                 className="nav-link"
-                refresh="true"
                 onClick={refreshHandler}
               >
                 HOME<span className="sr-only ">(current)</span>
