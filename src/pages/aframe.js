@@ -7,6 +7,7 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import SEO from "../components/seo"
+import { FaArrowRight } from "react-icons/fa"
 
 var __html = require("../../static/aframe.html.js")
 var template = { __html: __html }
@@ -59,10 +60,11 @@ const ScreenShare = ({ data }) => {
               <h2 className="py-3">{data.home.animation.title}</h2>
               <a href="./services/" className="font-weight-bold">
                 Explore
-                <i
+                <FaArrowRight className="pl-1 ml-1" />
+                {/* <i
                   className="fa fa-arrow-right pl-1 ml-2"
                   aria-hidden="true"
-                ></i>
+                ></i> */}
               </a>
             </div>
           </div>
@@ -77,11 +79,11 @@ const ScreenShare = ({ data }) => {
                 {data.home.virtual.title}
               </h2>
               <a href="./services/" className="font-weight-bold">
-                Explore{" "}
-                <i
+                Explore <FaArrowRight className="pl-1 ml-1" />
+                {/* <i
                   className="fa fa-arrow-right pl-1 ml-2"
                   aria-hidden="true"
-                ></i>
+                ></i> */}
               </a>
             </div>
           </div>
