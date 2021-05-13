@@ -81,12 +81,7 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-node-reload",
-      options: {
-        watch: ["/"],
-      },
-    },
+
     // `gatsby-plugin-gatsby-cloud`,
     // {
     //   resolve: "gatsby-plugin-load-script",

@@ -4,6 +4,9 @@ import img from "../images/invi-logo.png"
 import "./main.css"
 import { Link } from "gatsby"
 const Navbar = ({ className }) => {
+  const refreshHandler = () => {
+    window.location.reload()
+  }
   return (
     <>
       <Header />
@@ -33,6 +36,7 @@ const Navbar = ({ className }) => {
                 activeClassName="active"
                 className="nav-link"
                 refresh="true"
+                onClick={refreshHandler}
               >
                 HOME<span className="sr-only ">(current)</span>
               </Link>
