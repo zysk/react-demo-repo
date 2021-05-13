@@ -13,9 +13,9 @@ const index = ({ data }) => {
   return (
     <div className="home">
       <Helmet>
-        <meta httpEquiv="Pragma" content="no-cache" />
-        <meta httpEquiv="Expires" content="-1;url=https://invi.us/" />
-        {/* <meta http-equiv="refresh" content="-1;url=https://invi.us/" /> */}
+        <meta httpEquiv="cache-control" content="no-cache" />
+        <meta httpEquiv="expires" content="-1" />
+        {/* <meta http-equiv="refresh" content="-1" /> */}
       </Helmet>
       {/* <Navbar className="Home" /> */}
       <SEO title="Home" />
