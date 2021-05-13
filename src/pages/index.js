@@ -7,27 +7,27 @@ import "../components/main.css"
 import animation from "../images/animation-illustration.gif"
 import virtual from "../images/invi-virtual.gif"
 import SEO from "../components/seo"
-
+import Frame from "./aframe"
 const index = ({ data }) => {
   return (
     <div className="home">
-      <Navbar className="Home" />
+      {/* <Navbar className="Home" /> */}
       <SEO title="Home" />
-
+      <Frame data={data} />
       {/* Aframe Section */}
 
-      <section className="container text-center py-4">
+      {/* <section className="container text-center py-4">
         <Image
           fluid={data.home.homeImage.fluid}
           alt="aframe"
           className="mx-auto aframe-img img-fluid"
         />
-      </section>
+      </section> */}
       {/* Aframe Section */}
 
       {/* <!-- ======= Create Your Virtual World ======= --> */}
 
-      <section className="container py-5">
+      {/* <section className="container py-5 ">
         <h1 className="text-center title">{data.home.title}</h1>
         <div className="row justify-content-between align-items-center py-5">
           <div className="col-md-6 text-center text-md-left">
@@ -50,12 +50,12 @@ const index = ({ data }) => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- ======= Create Your Virtual World ======= --> */}
 
       {/* <!-- ======= Services Section ======= --> */}
 
-      <section className="container pb-4 pt-1">
+      {/* <section className="container pb-4 pt-1">
         <h1 className="title text-center">{data.home.services}</h1>
         <div className="row py-3 ">
           <div className="col-md-6 text-center">
@@ -95,9 +95,9 @@ const index = ({ data }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- ======= Services Section ======= --> */}
-      <Footer data1={data} />
+      {/* <Footer data1={data} /> */}
     </div>
   )
 }
