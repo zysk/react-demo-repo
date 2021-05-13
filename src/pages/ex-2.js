@@ -2,7 +2,7 @@ import React from "react"
 import "../components/style.css"
 
 import { withPrefix, Link } from "gatsby"
-import Navbar from "../components/Navbar"
+import Navbar from "../components/navbar"
 import "../components/main.css"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
