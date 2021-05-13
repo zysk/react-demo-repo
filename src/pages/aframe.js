@@ -58,7 +58,7 @@ const ScreenShare = ({ data }) => {
               />
               <h2 className="py-3">{data.home.animation.title}</h2>
               <a href="./services/" className="font-weight-bold">
-                Explore{" "}
+                Explore
                 <i
                   className="fa fa-arrow-right pl-1 ml-2"
                   aria-hidden="true"
