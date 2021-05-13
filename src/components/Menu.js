@@ -5,6 +5,9 @@ import "./main.css"
 
 import { Link } from "gatsby"
 const Navbar = ({ className }) => {
+  const refreshHandler = () => {
+    window.location.reload()
+  }
   return (
     <>
       <Header />
@@ -34,6 +37,7 @@ const Navbar = ({ className }) => {
                 activeClassName="active"
                 className="nav-link"
                 refresh="true"
+                onEnter={refreshHandler}
               >
                 HOME<span className="sr-only ">(current)</span>
               </Link>
