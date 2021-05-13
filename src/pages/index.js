@@ -13,8 +13,8 @@ const index = ({ data }) => {
   return (
     <div className="home">
       <Helmet>
-        <META HTTP-EQUIV="Pragma" CONTENT="no-cache" />
-        <META HTTP-EQUIV="Expires" CONTENT="-1" />
+        <meta HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+        <meta HTTP-EQUIV="Expires" CONTENT="-1" />
         {/* <meta http-equiv="refresh" content="-1;url=https://invi.us/" /> */}
       </Helmet>
       {/* <Navbar className="Home" /> */}
