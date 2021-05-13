@@ -13,7 +13,7 @@ var template = { __html: __html }
 
 const ScreenShare = ({ data }) => {
   return (
-    <div className="">
+    <div className="home">
       <div className="screen-share ">
         <span dangerouslySetInnerHTML={template} />
       </div>
