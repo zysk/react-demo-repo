@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "../components/navbar"
+import TopMenu from "../components/Menu"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
@@ -14,7 +14,7 @@ const services = ({ data }) => {
       <div className="services">
         <SEO title="Services" />
 
-        <Navbar />
+        <TopMenu />
         <h1 className="text-center title pt-lg-5 pt-4 text-uppercase">
           {data.services.title}
         </h1>

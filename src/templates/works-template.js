@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "../components/navbar"
+import TopMenu from "../components/Menu"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
@@ -11,7 +11,7 @@ const drawing = ({ data }) => {
     <div className="works">
       <SEO title={data.project.projectTitle} />
       <div className="projects">
-        <Navbar />
+        <TopMenu />
         <div className=" d-flex flex-wrap">
           <div className="d-flex col-12 align-items-center justify-content-center">
             <h1 className="title  pt-5 text-lg-left text-uppercase text-center">

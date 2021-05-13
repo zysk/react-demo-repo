@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "../../components/navbar"
+import TopMenu from "../../components/Menu"
 import Footer from "../../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
@@ -10,7 +10,7 @@ const stories = ({ data }) => {
   return (
     <div className="stories">
       <SEO title="Stories" />
-      <Navbar />
+      <TopMenu />
       {/* <!--====== Graphics Section======--> */}
       <section className="container py-5 mt-lg-4">
         <div className="row d-flex justify-content-between align-items-center">

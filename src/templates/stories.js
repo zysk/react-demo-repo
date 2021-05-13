@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "../components/navbar"
+import TopMenu from "../components/Menu"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
@@ -9,7 +9,7 @@ const stories = ({ data }) => {
   return (
     <div className="stories">
       <SEO title={data.story.title.title} />
-      <Navbar />
+      <TopMenu />
 
       {/* <!-- ======= Stories ======= --> */}
       <section className="container py-5">

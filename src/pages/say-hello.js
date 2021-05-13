@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Formik, Field, Form, ErrorMessage } from "formik"
-import Navbar from "../components/navbar"
+import TopMenu from "../components/Menu"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import axios from "axios"
@@ -27,7 +27,7 @@ function ContactForm({ data }) {
   return (
     <>
       <div className="contact">
-        <Navbar />
+        <TopMenu />
         {/* <!-- ======= Contact Section ======= --> */}
 
         <section className="container ">

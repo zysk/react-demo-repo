@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "../../components/navbar"
+import TopMenu from "../../components/Menu"
 import Footer from "../../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
@@ -10,7 +10,7 @@ const index = ({ data }) => {
   return (
     <div className="works">
       <SEO title="Works" />
-      <Navbar />
+      <TopMenu />
       <section className="circle-section" id="portfolio">
         <div className="container pb-5 mb-5 mb-md-0">
           <div className="content-section-heading text-center">

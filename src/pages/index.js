@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "../components/navbar"
+import TopMenu from "../components/Menu"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
