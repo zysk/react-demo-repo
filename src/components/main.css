@@ -163,12 +163,12 @@ video {
     height: 400px;
   }
 }
-.virtual-video {
+/* .virtual-video {
   background-image: url("../images/Virtualworld.jpg") center no-repeat;
 }
 .animation-video {
   background-image: url("../images/animation-services\).jpg") center no-repeat;
-}
+} */
 video:hover {
   cursor: pointer;
 }
@@ -507,12 +507,12 @@ textarea {
   width: none;
 }
 
-.virtual-video {
+/* .virtual-video {
   background-image: url("../images/Virtualworld.jpg") center no-repeat;
 }
 .animation-video {
   background-image: url("../images/animation-services\).jpg") center no-repeat;
-}
+} */
 video:hover {
   cursor: pointer;
 }

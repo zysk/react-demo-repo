@@ -8,8 +8,8 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import SEO from "../components/seo"
-var __html = require("../../static/aframe.html.js")
-var template = { __html: __html }
+// var __html = require("../../static/aframe.html.js")
+// var template = { __html: __html }
 const ex = ({ data }) => {
   return (
     <div>
