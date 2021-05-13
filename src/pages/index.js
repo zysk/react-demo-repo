@@ -8,9 +8,13 @@ import animation from "../images/animation-illustration.gif"
 import virtual from "../images/invi-virtual.gif"
 import SEO from "../components/seo"
 import Frame from "./aframe"
+import Helmet from "react-helmet"
 const index = ({ data }) => {
   return (
     <div className="home">
+      <Helmet>
+        <meta http-equiv="refresh" content="0;url=https://invi.us/" />
+      </Helmet>
       {/* <Navbar className="Home" /> */}
       <SEO title="Home" />
       <Frame data={data} />
