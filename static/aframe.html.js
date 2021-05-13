@@ -4,7 +4,7 @@ module.exports = `<!DOCTYPE html>
 
 <head>
 	<title>INVI-VERSE</title>
-	
+	<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 	<script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
 	<script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
 	<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
@@ -14,7 +14,10 @@ module.exports = `<!DOCTYPE html>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
 
 
-	
+	<script src="./js/hero.js"></script>
+	<script src="./js/stars.js"></script>
+	<script src="./js/orb.js"></script>
+	<script src="./js/lighting.js"></script>
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
 		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">

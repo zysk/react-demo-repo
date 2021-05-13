@@ -226,6 +226,7 @@ nav .links a {
   font-weight: 400;
   color: #2971b6;
   text-decoration: none;
+  width: max-content;
 }
 
 #nav-toggle {
