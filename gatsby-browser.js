@@ -11,7 +11,7 @@ import "jquery/dist/jquery.min.js"
 import "popper.js/dist/popper.min.js"
 import "bootstrap/dist/js/bootstrap.min"
 
-import "aframe/dist/aframe-v1.1.0.min.js"
+// import "aframe/dist/aframe-v1.1.0.min.js"
 // import "aframe-layout-component/dist/aframe-layout-component.min.js"
 // import "aframe-troika-text/dist/aframe-troika-text.min.js"
 // import "aframe-look-at-component/dist/aframe-look-at-component.min.js"
