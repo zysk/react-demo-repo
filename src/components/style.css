@@ -47,8 +47,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
-  font-weight: lighter;
+  font-size: 70px;
+  font-weight: 200;
   color: #eb483f;
 }
 
@@ -240,7 +240,7 @@ nav .links a {
 nav .icon-burger {
   display: none;
   position: absolute !important;
-  right: 5%;
+  right: 20%;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -330,7 +330,7 @@ nav .icon-burger .line {
 }
 @media (max-width: 768px) {
   #top_nav {
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     flex-direction: column;
     justify-content: center;

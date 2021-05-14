@@ -22,7 +22,7 @@ const ScreenShare = ({ data }) => {
       </Helmet>
       {/* <Navbar className="Home" /> */}
       <SEO title="Home" />
-      <TopMenu />
+      {/* <TopMenu /> */}
       <div className="screen-share ">
         <span dangerouslySetInnerHTML={template} />
       </div>
