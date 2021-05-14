@@ -300,7 +300,11 @@ a:hover {
 .fa-google {
   font-size: 1.3em !important;
 }
-
+.fa-icons {
+  color: #eb483f !important;
+  bottom: 0;
+  font-size: 22px !important;
+}
 footer .fa,
 footer .fab {
   color: #eb483f !important;

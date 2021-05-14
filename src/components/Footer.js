@@ -4,6 +4,15 @@ import { graphql } from "gatsby"
 import { Formik, Form, Field } from "formik"
 import { data } from "jquery"
 import axios from "axios"
+import {
+  FaYoutube,
+  FaGoogle,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa"
+import { SiTiktok } from "react-icons/si"
+
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -43,7 +52,8 @@ const Footer = ({ className, data1 }) => {
                   href="https://www.instagram.com/invi.stories/"
                   target="_blank"
                 >
-                  <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                  <FaInstagram className="fa-icons " />
+                  {/* <i className="fa fa-instagram fa-2x" aria-hidden="true"></i> */}
                 </a>
               </div>
               <div className="social-icons d-inline p-2 mr-2">
@@ -51,7 +61,8 @@ const Footer = ({ className, data1 }) => {
                   href="https://www.linkedin.com/company/invi-llc/"
                   target="_blank"
                 >
-                  <i className="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                  <FaLinkedinIn className="fa-icons " />
+                  {/* <i className="fa fa-linkedin fa-2x" aria-hidden="true"></i> */}
                 </a>
               </div>
               <div className="social-icons d-inline p-2 mr-2">
@@ -59,22 +70,26 @@ const Footer = ({ className, data1 }) => {
                   href="https://www.youtube.com/channel/UCK_9VVNxQg11pNVy8TBazRw"
                   target="_blank"
                 >
-                  <i className="fa fa-youtube fa-2x" aria-hidden="true"></i>
+                  <FaYoutube className="fa-icons " />
+                  {/* <i className="fa fa-youtube fa-2x" aria-hidden="true"></i> */}
                 </a>
               </div>
               <div className="social-icons d-inline p-2 mr-2">
                 <a href="https://g.page/invi-llc?gm" target="_blank">
-                  <i className="fa fa-google fa-2x" aria-hidden="true"></i>
+                  <FaGoogle className="fa-icons " />
+                  {/* <i className="fa fa-google fa-2x" aria-hidden="true"></i> */}
                 </a>
               </div>
               <div className="social-icons d-inline p-2 mr-2">
                 <a href="https://twitter.com/InviStories" target="_blank">
-                  <i className="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                  <FaTwitter className="fa-icons " />
+                  {/* <i className="fa fa-twitter fa-2x" aria-hidden="true"></i> */}
                 </a>
               </div>
               <div className="social-icons d-inline p-2 mr-2">
                 <a href="http://tiktok.com/@invi.stories" target="_blank">
-                  <i className="fab fa-tiktok fa-2x" aria-hidden="true"></i>
+                  <SiTiktok className="fa-icons " />
+                  {/* <i className="fab fa-tiktok fa-2x" aria-hidden="true"></i> */}
                 </a>
               </div>
             </div>
