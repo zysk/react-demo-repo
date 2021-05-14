@@ -14,7 +14,7 @@
   #container {
     justify-content: center;
   }
-  .nav .links a {
+  nav .links a {
     border-right: 1px solid #0471bc;
   }
 }

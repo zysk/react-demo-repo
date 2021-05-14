@@ -14,7 +14,7 @@
   #container {
     justify-content: center;
   }
-  .nav links a {
+  nav .links a {
     border-right: 1px solid #0471bc;
   }
 }
@@ -29,7 +29,8 @@ body {
 #top_nav {
   /* margin-top: 40px; */
   float: center;
-  height: 100px;
+  height: 50px;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,14 +64,14 @@ body {
 #logo1 {
   z-index: 10;
   position: absolute;
-  top: 0px;
+  top: -15px;
   margin-bottom: 10px;
   float: left;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 65px;
   font-weight: lighter !important;
   color: #eb483f;
   font-family: "Lato", sans-serif;
@@ -336,7 +337,7 @@ nav .icon-burger .line {
 
   nav .links a {
     padding: 0 1em;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
   }
 
@@ -380,7 +381,7 @@ nav .icon-burger .line {
 @media (min-width: 1024px) and (max-width: 1439px) {
   nav .links a {
     padding: 0 1.5em !important;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #2971b6;
   }
