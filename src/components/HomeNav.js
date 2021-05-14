@@ -5,44 +5,27 @@ import "./main.css"
 
 import { Link } from "gatsby"
 const Navbar = ({ className }) => {
-  const refreshHandler = () => {
-    window.location.reload()
-  }
   return (
     <>
       <Header />
-      {/* <a className="navbar-brand logo text-center w-100" href="/">
-        <img src={img} alt="Invi Logo" width="150" />
-      </a> */}
-      <nav className="navbar navbar-expand-lg navbar-light container-fluid py-3">
-        <a className="navbar-brand d-lg-none" href="/">
-          <img src={img} alt="Invi Logo" width="150" />
-        </a>
-        <button
-          className="navbar-toggler custom-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon text-white"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item ">
+      <div id="logo1">invi</div>
+      <div id="container">
+        <div id="logo">invi</div>
+
+        <nav id="top_nav">
+          <input id="nav-toggle" type="checkbox" />
+          <ul class="links">
+            <li>
               <Link
                 to="https://invi.us/"
                 activeClassName="active"
                 className="nav-link"
                 refresh="true"
-                onEnter={refreshHandler}
               >
                 HOME<span className="sr-only ">(current)</span>
               </Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link
                 to="/about"
                 className="nav-link"
@@ -53,7 +36,7 @@ const Navbar = ({ className }) => {
                 ABOUT
               </Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link
                 to="/services"
                 className="nav-link"
@@ -64,7 +47,7 @@ const Navbar = ({ className }) => {
                 SERVICES
               </Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link
                 to="/stories/"
                 className="nav-link"
@@ -75,7 +58,7 @@ const Navbar = ({ className }) => {
                 STORIES
               </Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link
                 to="/works/"
                 className="nav-link"
@@ -86,7 +69,7 @@ const Navbar = ({ className }) => {
                 WORKS
               </Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link
                 to="/say-hello"
                 className="nav-link say-hello"
@@ -98,8 +81,12 @@ const Navbar = ({ className }) => {
               </Link>
             </li>
           </ul>
-        </div>
-      </nav>
+          <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+          </label>
+        </nav>
+      </div>
     </>
   )
 }
