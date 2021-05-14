@@ -47,7 +47,7 @@ module.exports = `<!DOCTYPE html>
 					<a href="/works/">Works</a>
 				</li>
 				<li>
-					<a href="/say-hello">Say hello</a>
+					<a href="/say-hello" class="say-hello">Say hello</a>
 				</li>
                 
 			</ul>

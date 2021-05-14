@@ -1,7 +1,7 @@
 #container {
   position: absolute;
   z-index: 10;
-  /* left: 50px; */
+  left: 30px;
   top: 0;
   font-family: "Lato", sans-serif;
   padding: 0;
@@ -9,7 +9,11 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+@media (min-width: 1024px) {
+  #container {
+    justify-content: center;
+  }
 }
 body {
   position: relative !important;
@@ -239,18 +243,21 @@ nav .links {
   text-transform: uppercase;
   width: 100%;
   padding: 0;
-  margin: 0;
   height: 100%;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
 }
-
+.say-hello {
+  border: none;
+}
 nav .links a {
+  border-right: 1px solid #0471bc;
   float: center;
   display: block;
-  padding: 2.5em;
+  padding: 0 2em;
   font-size: 20px;
   font-weight: 400;
   color: #2971b6;
