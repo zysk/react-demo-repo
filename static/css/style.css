@@ -1,7 +1,7 @@
 #container {
   position: absolute;
   z-index: 10;
-  left: 50px;
+  /* left: 50px; */
   top: 0;
   font-family: "Lato", sans-serif;
   padding: 0;
@@ -9,6 +9,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 body {
   position: relative !important;
@@ -19,6 +20,7 @@ body {
   width: 100% !important;
 }
 #top_nav {
+  margin-top: 40px;
   float: center;
   height: 100px;
   display: flex;
@@ -51,7 +53,31 @@ body {
   font-weight: 200;
   color: #eb483f;
 }
-
+#logo1 {
+  z-index: 10;
+  position: absolute;
+  top: 2px;
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  font-weight: lighter !important;
+  color: #eb483f;
+  font-family: "Lato", sans-serif;
+}
+@media (min-width: 1023px) {
+  #logo {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  #logo1 {
+    display: none;
+  }
+}
 #hero_text {
   pointer-events: none;
   position: fixed;
@@ -253,8 +279,28 @@ nav .icon-burger .line {
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
-
 @media screen and (max-width: 768px) {
+  #headline {
+    top: 25vh;
+    font-weight: 300;
+    font-size: 45px;
+  }
+
+  #enter_btn {
+    top: 70vh;
+    padding: 0.5em;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  #home_text {
+    font-size: 14px;
+    line-height: 1.2rem;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
   #logo {
     float: none;
     width: auto;
@@ -300,25 +346,6 @@ nav .icon-burger .line {
   nav :checked ~ .icon-burger .line:nth-child(2) {
     transform: translateY(-5px) rotate(-225deg);
   }
-
-  #headline {
-    top: 25vh;
-    font-weight: 300;
-    font-size: 45px;
-  }
-
-  #enter_btn {
-    top: 70vh;
-    padding: 0.5em;
-    max-width: 100%;
-    font-size: 16px;
-  }
-
-  #home_text {
-    font-size: 14px;
-    line-height: 1.2rem;
-    max-width: 90%;
-  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #enter_btn {
@@ -343,7 +370,7 @@ nav .icon-burger .line {
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   nav .links a {
-    padding: 1.5em !important;
+    padding: 0.8em !important;
     font-size: 18px;
     font-weight: 400;
     color: #2971b6;

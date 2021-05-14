@@ -24,8 +24,10 @@ module.exports = `<!DOCTYPE html>
 </head>
 
 <body class="position-relative">
+<div id="logo1">invi</div>
     <div id="container">
 		<div id="logo">invi</div>
+		
 		<nav id="top_nav">
 			<input id="nav-toggle" type="checkbox">
 			<ul class="links" >
