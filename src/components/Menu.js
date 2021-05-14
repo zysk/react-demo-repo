@@ -14,12 +14,12 @@ const Navbar = ({ className }) => {
       <a className="navbar-brand logo text-center w-100 home-nav" href="/">
         <img src={img} alt="Invi Logo" width="150" />
       </a>
-      <nav className="navbar navbar-expand-lg navbar-light container-fluid py-3">
+      <nav className="navbar navbar-expand-lg navbar-dark container-fluid py-3">
         <a className="navbar-brand d-lg-none" href="/">
           <img src={img} alt="Invi Logo" width="150" />
         </a>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler custom-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -27,7 +27,7 @@ const Navbar = ({ className }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon white-toggler"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">

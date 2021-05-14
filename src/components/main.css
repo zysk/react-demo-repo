@@ -17,6 +17,9 @@ body,
 h2 {
   font-weight: 300 !important;
 }
+.custom-toggler.navbar-toggler {
+  border-color: transparent;
+}
 @media (min-width: 768px) {
   .aframe-img {
     width: 30%;

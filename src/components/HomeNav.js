@@ -19,7 +19,7 @@ const Navbar = ({ className }) => {
           <img src={img} alt="Invi Logo" width="150" />
         </a>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler custom-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -27,7 +27,7 @@ const Navbar = ({ className }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon text-white"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
