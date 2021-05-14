@@ -30,11 +30,11 @@ const Navbar = ({ className }) => {
           <span className="navbar-toggler-icon white-toggler"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto">
+          <ul className="navbar-nav mx-auto text-center">
             <li className="nav-item ">
               <Link
                 to="https://invi.us/"
-                activeClassName="active"
+                // activeClassName="active"
                 className="nav-link"
                 refresh="true"
                 onEnter={refreshHandler}
