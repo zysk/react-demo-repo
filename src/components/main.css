@@ -300,6 +300,12 @@ a:hover {
 .fa-google {
   font-size: 1.3em !important;
 }
+@media (max-width: 1023px) {
+  .home-nav {
+    display: none !important;
+  }
+}
+
 .fa-icons {
   color: #eb483f !important;
   bottom: 0;

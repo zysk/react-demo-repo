@@ -11,9 +11,9 @@ const Navbar = ({ className }) => {
   return (
     <>
       <Header />
-      <a className="navbar-brand logo text-center w-100 home-nav" href="/">
+      {/* <a className="navbar-brand logo text-center w-100" href="/">
         <img src={img} alt="Invi Logo" width="150" />
-      </a>
+      </a> */}
       <nav className="navbar navbar-expand-lg navbar-light container-fluid py-3">
         <a className="navbar-brand d-lg-none" href="/">
           <img src={img} alt="Invi Logo" width="150" />
