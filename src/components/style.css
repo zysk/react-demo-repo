@@ -1,7 +1,7 @@
 #container {
   position: absolute;
   z-index: 10;
-  left: 50px;
+  left: 30px;
   top: 0;
   font-family: "Lato", sans-serif;
   padding: 0;
@@ -13,6 +13,9 @@
 @media (min-width: 1024px) {
   #container {
     justify-content: center;
+  }
+  .nav links a {
+    border-right: 1px solid #0471bc;
   }
 }
 body {
@@ -254,7 +257,6 @@ nav .links {
   border: none;
 }
 nav .links a {
-  border-right: 1px solid #0471bc;
   float: center;
   display: block;
   padding: 0 2em;
@@ -319,7 +321,7 @@ nav .icon-burger .line {
     /* float: none; */
     position: fixed;
     z-index: 12;
-    background-color: #ffab8a;
+    background-color: #f6caba;
     left: 0;
     right: 0;
     top: 90px;
