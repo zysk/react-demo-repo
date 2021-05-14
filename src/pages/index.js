@@ -1,13 +1,18 @@
-import React from "react"
+import React, { Component } from "react"
+import Helmet from "react-helmet"
+import { withPrefix, Link } from "gatsby"
 import TopMenu from "../components/Menu"
+import "../components/main.css"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
-import "../components/main.css"
 import SEO from "../components/seo"
-import Frame from "./aframe"
-import Helmet from "react-helmet"
-const index = ({ data }) => {
+import { FaArrowRight } from "react-icons/fa"
+
+var __html = require("../../static/aframe.html.js")
+var template = { __html: __html }
+
+const ScreenShare = ({ data }) => {
   return (
     <div className="home">
       <Helmet>
@@ -17,10 +22,86 @@ const index = ({ data }) => {
       </Helmet>
       {/* <Navbar className="Home" /> */}
       <SEO title="Home" />
-      <Frame data={data} />
+      <div className="screen-share ">
+        <span dangerouslySetInnerHTML={template} />
+      </div>
+
+      <section className="container py-5 ">
+        <h1 className="text-center title">{data.home.title}</h1>
+        <div className="row justify-content-between align-items-center py-5">
+          <div className="col-md-6 text-center text-md-left">
+            <p className="description text-justify ">
+              {data.home.description.description}
+            </p>
+            <a
+              href="/works/"
+              className=" text-left virtual mt-4 font-weight-bold pl-0"
+            >
+              CREATE NOW
+            </a>
+          </div>
+
+          <div className="col-md-5 pt-5 pt-md-0">
+            <Image
+              fluid={data.home.image1.fluid}
+              alt="aframe"
+              className=" img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+      {/* <!-- ======= Create Your Virtual World ======= --> */}
+
+      {/* <!-- ======= Services Section ======= --> */}
+
+      <section className="container pb-4 pt-1">
+        <h1 className="title text-center">{data.home.services}</h1>
+        <div className="row py-3 ">
+          <div className="col-md-6 text-center">
+            <div className="icon-box mt-5 mt-lg-0 ">
+              <img
+                src={data.home.animation.file.url}
+                alt="Animation"
+                className="img-fluid"
+              />
+              <h2 className="py-3">{data.home.animation.title}</h2>
+              <a href="./services/" className="font-weight-bold">
+                Explore
+                <FaArrowRight className="pl-1 ml-1" />
+                {/* <i
+                  className="fa fa-arrow-right pl-1 ml-2"
+                  aria-hidden="true"
+                ></i> */}
+              </a>
+            </div>
+          </div>
+          <div className="col-md-6 text-center">
+            <div className="icon-box mt-4 mt-lg-0 ">
+              <img
+                src={data.home.virtual.file.url}
+                alt="Animation"
+                className="img-fluid"
+              />
+              <h2 className="pt-md-5 py-3 pb-md-3 py-lg-3">
+                {data.home.virtual.title}
+              </h2>
+              <a href="./services/" className="font-weight-bold">
+                Explore <FaArrowRight className="pl-1 ml-1" />
+                {/* <i
+                  className="fa fa-arrow-right pl-1 ml-2"
+                  aria-hidden="true"
+                ></i> */}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <!-- ======= Services Section ======= --> */}
+      <Footer data1={data} />
     </div>
   )
 }
+
 export const query = graphql`
   {
     contact: contentfulContactFooter {
@@ -83,4 +164,5 @@ export const query = graphql`
     }
   }
 `
-export default index
+
+export default ScreenShare
