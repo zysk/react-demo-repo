@@ -11,7 +11,7 @@ module.exports = `<!DOCTYPE html>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/styles.css">
 
 	<script src="/js-new/hero.js"></script>
 	<script src="/js-new/stars.js"></script>
