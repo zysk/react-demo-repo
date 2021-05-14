@@ -70,7 +70,7 @@ AFRAME.registerComponent('hero', {
         this.scope.setAttribute('position', '0 0 -0.015')
         this.scope.setAttribute('material', {
             shader: 'flat',
-            color: '#eab49f'
+            color: '#f6caba'
         })
 
         // let grain_src = '../assets/grainy.png'
