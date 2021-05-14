@@ -1,5 +1,4 @@
 module.exports = `<!DOCTYPE html>
-
 <html>
 
 <head>
@@ -12,7 +11,7 @@ module.exports = `<!DOCTYPE html>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
-
+	<link rel="stylesheet" href="/css/style.css">
 
 	<script src="/js/hero.js"></script>
 	<script src="/js/stars.js"></script>
@@ -84,6 +83,7 @@ module.exports = `<!DOCTYPE html>
 		</a-entity>
 
 	</a-scene>
+
 
 </body>
 <script>

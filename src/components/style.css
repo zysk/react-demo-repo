@@ -6,12 +6,12 @@
   font-family: "Lato", sans-serif;
   padding: 0;
   height: 100px;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 body {
   position: relative !important;
-  overflow: hidden !important;
 }
 
 .aframe-height {
@@ -19,6 +19,7 @@ body {
   width: 100% !important;
 }
 #top_nav {
+  float: center;
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -41,7 +42,7 @@ body {
   left: 20;
   top: 10;
   float: left;
-  width: 70%;
+  width: 20%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -57,8 +58,8 @@ body {
   z-index: 7;
   top: 10;
   float: left;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,8 +74,8 @@ body {
   z-index: 7;
   top: 35vh;
   float: left;
-  /* width: 100%;
-  height: 100%; */
+  width: 100%;
+  height: 100%;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   color: black;
@@ -208,6 +209,7 @@ body {
 }
 
 nav .links {
+  float: center;
   text-transform: uppercase;
   width: 100%;
   padding: 0;
@@ -220,13 +222,14 @@ nav .links {
 }
 
 nav .links a {
+  float: center;
   display: block;
   padding: 2.5em;
   font-size: 20px;
   font-weight: 400;
   color: #2971b6;
   text-decoration: none;
-  width: max-content;
+  width: max-content !important;
 }
 
 #nav-toggle {
@@ -259,7 +262,8 @@ nav .icon-burger .line {
   }
 
   nav .links {
-    float: none;
+    float: center;
+    /* float: none; */
     position: fixed;
     z-index: 12;
     background-color: #ffab8a;
