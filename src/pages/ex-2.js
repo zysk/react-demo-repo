@@ -1,6 +1,5 @@
 import React from "react"
 import "../components/style.css"
-
 import { withPrefix, Link } from "gatsby"
 import TopMenu from "../components/Menu"
 import "../components/main.css"
@@ -8,6 +7,7 @@ import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import SEO from "../components/seo"
+
 // var __html = require("../../static/aframe.html.js")
 // var template = { __html: __html }
 const ex = ({ data }) => {
