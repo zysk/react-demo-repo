@@ -71,6 +71,7 @@ function ContactForm({ data }) {
                       //       "Thank you for subscribing! We will get back to you soon"
                       //     )
                       actions.resetForm()
+                      recaptchaRef.reset()
                     })
                     .catch(() => {
                       alert("Error")
