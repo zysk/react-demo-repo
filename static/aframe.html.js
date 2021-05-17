@@ -54,6 +54,7 @@ module.exports = `<!DOCTYPE html>
 			<label for="nav-toggle" class="icon-burger">
 				<div class="line"></div>
 				<div class="line"></div>
+				<div class="line"></div>
 			</label>
 		</nav>
 	</div>
