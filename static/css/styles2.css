@@ -1,6 +1,6 @@
 body {
-  height: 100vh;
-  overflow-y: scroll;
+  height: 100vh !important;
+  overflow-y: scroll !important;
 }
 #container {
   position: absolute;

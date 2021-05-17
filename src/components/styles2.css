@@ -11,8 +11,8 @@
   align-items: center;
 }
 body {
-  height: 100vh;
-  overflow-y: scroll;
+  height: 100vh !important;
+  overflow-y: scroll !important;
 }
 @media (min-width: 1024px) {
   #container {
