@@ -5,9 +5,6 @@ import "./main.css"
 
 import { Link } from "gatsby"
 const Navbar = ({ className }) => {
-  const refreshHandler = () => {
-    window.location.reload()
-  }
   return (
     <>
       <Header />
@@ -33,11 +30,10 @@ const Navbar = ({ className }) => {
           <ul className="navbar-nav mx-auto text-center">
             <li className="nav-item ">
               <Link
-                to="https://invi.us/"
+                to="https://www.invi.us/"
                 // activeClassName="active"
                 className="nav-link"
                 refresh="true"
-                onEnter={refreshHandler}
               >
                 HOME<span className="sr-only ">(current)</span>
               </Link>

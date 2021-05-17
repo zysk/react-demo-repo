@@ -1,5 +1,5 @@
 import React from "react"
-import "../components/styles2.css"
+import "../components/styles3.css"
 import { withPrefix, Link } from "gatsby"
 import TopMenu from "../components/Menu"
 import "../components/main.css"

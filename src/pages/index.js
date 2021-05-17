@@ -15,11 +15,11 @@ var template = { __html: __html }
 const ScreenShare = ({ data }) => {
   return (
     <div className="home">
-      <Helmet>
+      {/* <Helmet>
         <meta httpEquiv="cache-control" content="no-cache" />
         <meta httpEquiv="expires" content="-1" />
-        {/* <meta http-equiv="refresh" content="-1" /> */}
-      </Helmet>
+       
+      </Helmet> */}
       {/* <Navbar className="Home" /> */}
       <SEO title="Home" />
       {/* <TopMenu /> */}
