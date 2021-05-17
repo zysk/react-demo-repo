@@ -13,8 +13,8 @@ body,
   font-family: "Lato", sans-serif !important;
   background-color: #f6caba;
   font-weight: 300 !important;
-  height: 100vh !important;
-  overflow-y: scroll !important;
+  /* height: 100vh !important;
+  overflow-y: scroll !important; */
 }
 h2 {
   font-weight: 300 !important;
