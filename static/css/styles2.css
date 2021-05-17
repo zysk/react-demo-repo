@@ -137,6 +137,7 @@ body {
   position: absolute;
   top: 85vh;
   display: none;
+  z-index: 6;
   /* padding:2em; */
   cursor: pointer;
   pointer-events: auto;
@@ -144,7 +145,7 @@ body {
   text-align: center;
   max-width: 40%;
   font-weight: 400;
-  color: #ffff;
+  color: #2971b6;
   font-size: 16px;
   font-family: "Lato", sans-serif;
   letter-spacing: 1px;
