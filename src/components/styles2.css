@@ -10,6 +10,10 @@
   display: flex;
   align-items: center;
 }
+body {
+  height: 100vh;
+  overflow-y: scroll;
+}
 @media (min-width: 1024px) {
   #container {
     justify-content: center;
