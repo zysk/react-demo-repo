@@ -340,6 +340,9 @@ a:hover {
     /* margin-top: auto;
     margin-bottom: auto; */
   }
+  .say-hello {
+    border-right: none !important;
+  }
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
@@ -354,7 +357,7 @@ a:hover {
   color: #eb483f !important;
 }
 .navbar-dark .navbar-nav .nav-link {
-  border-right: 1px solid #0471bc !important;
+  border-right: 1px solid #0471bc;
   line-height: 15px !important;
   font-weight: bold !important;
   color: #0471bc !important;
