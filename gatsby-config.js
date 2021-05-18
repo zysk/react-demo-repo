@@ -12,11 +12,20 @@ module.exports = {
   },
 
   siteMetadata: {
+    siteUrl: "https://invi.us/",
     title: `INVI - Innovative Visuals`,
     description: `INVI is a Virtual Experience Design Studio that helps clients create virtual experiences through architecture, storytelling, and design.`,
     author: `@zysk`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://invi.us/",
+        sitemap: "https://invi.us//sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
