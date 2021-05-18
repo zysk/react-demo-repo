@@ -20,11 +20,11 @@ module.exports = {
   plugins: [
     {
       resolve: "gatsby-plugin-robots-txt",
-      // options: {
-      //   host: "https://invi.us/",
-      //   sitemap: "https://invi.us/sitemap.xml",
-      //   policy: [{ userAgent: "*", allow: "/" }],
-      // },
+      options: {
+        host: "https://invi.us/",
+        sitemap: "https://invi.us/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     `gatsby-plugin-react-helmet`,
     {
