@@ -50,7 +50,16 @@ body {
   padding: 0 2%;
   height: auto;
 }
-
+#logo1 a,
+#logo a {
+  text-decoration: none;
+  color: #eb483f !important;
+}
+#logo1 a:hover,
+#logo a:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 #logo {
   z-index: 10;
   left: 20;
