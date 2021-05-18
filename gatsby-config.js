@@ -22,7 +22,7 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://invi.us/",
-        sitemap: "https://invi.us//sitemap.xml",
+        sitemap: "https://invi.us/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
