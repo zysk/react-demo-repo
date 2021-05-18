@@ -65,7 +65,9 @@ const ScreenShare = ({ data }) => {
                 alt="Animation"
                 className="img-fluid"
               />
-              <h2 className="py-3">{data.home.animation.title}</h2>
+              <h2 className="py-3 font-weight-light">
+                {data.home.animation.title}
+              </h2>
               <a href="./services/" className="font-weight-bold">
                 Explore
                 <FaArrowRight className="pl-1 ml-1" />
@@ -83,7 +85,7 @@ const ScreenShare = ({ data }) => {
                 alt="Animation"
                 className="img-fluid"
               />
-              <h2 className="pt-md-5 py-3 pb-md-3 py-lg-3">
+              <h2 className="pt-md-5 py-3 pb-md-3 py-lg-3 font-weight-light">
                 {data.home.virtual.title}
               </h2>
               <a href="./services/" className="font-weight-bold">

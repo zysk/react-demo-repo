@@ -15,9 +15,9 @@ body,
   font-weight: 300 !important;
 }
 
-h2 {
+/* h2 {
   font-weight: 300 !important;
-}
+} */
 .custom-toggler.navbar-toggler {
   border-color: transparent;
 }
