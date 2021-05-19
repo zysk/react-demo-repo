@@ -34,7 +34,7 @@ body {
   /* margin-top: 40px; */
   float: center;
   height: 50px;
-  margin-top: 5%;
+  margin-top: 164px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +61,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 70px;
+  font-size: 110px;
   font-weight: 200;
   color: #eb483f;
 }
@@ -75,7 +75,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 65px;
+  font-size: 110px;
   font-weight: lighter !important;
   color: #eb483f;
   font-family: "Lato", sans-serif;
