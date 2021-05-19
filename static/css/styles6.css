@@ -34,7 +34,7 @@ body {
   /* margin-top: 40px; */
   float: center;
   height: 50px;
-  margin-top: 164px;
+  margin-top: 134px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,7 +68,7 @@ body {
 #logo1 {
   z-index: 10;
   position: absolute;
-  top: -15px;
+  top: -25px;
   margin-bottom: 10px;
   float: left;
   width: 100%;
