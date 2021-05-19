@@ -1,7 +1,12 @@
+body {
+  height: 100vh !important;
+  overflow-y: scroll !important;
+}
+
 #container {
   position: absolute;
   z-index: 10;
-  left: 30px;
+  /* left: 30px; */
   top: 0;
   font-family: "Lato", sans-serif;
   padding: 0;
@@ -9,10 +14,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-}
-body {
-  height: 100vh !important;
-  overflow-y: scroll !important;
 }
 @media (min-width: 1024px) {
   #container {
@@ -22,19 +23,15 @@ body {
     border-right: 1px solid #0471bc;
   }
 }
-body {
-  position: relative !important;
-}
 
 .aframe-height {
   height: 100vh;
   width: 100% !important;
 }
 #top_nav {
-  /* margin-top: 40px; */
   float: center;
   height: 50px;
-  margin-top: 5%;
+  margin-top: 164px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,44 +47,36 @@ body {
   padding: 0 2%;
   height: auto;
 }
-#logo1 a,
-#logo a {
-  text-decoration: none;
-  cursor: pointer;
-  color: #eb483f !important;
-}
-#logo1 a:hover,
-#logo a:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
+
 #logo {
   z-index: 10;
-  left: 20;
-  top: 10;
-  float: left;
-  width: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 70px;
-  font-weight: 200;
-  color: #eb483f;
-}
-#logo1 {
-  z-index: 10;
   position: absolute;
-  top: -15px;
+  top: -41px;
   margin-bottom: 10px;
   float: left;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 65px;
+  font-size: 117px;
   font-weight: lighter !important;
-  color: #eb483f;
+  color: #eb483f99;
+  font-family: "Lato", sans-serif;
+}
+
+#logo1 {
+  z-index: 10;
+  position: absolute;
+  top: -41px;
+  margin-bottom: 10px;
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 117px;
+  font-weight: lighter !important;
+  color: #eb483f99;
   font-family: "Lato", sans-serif;
 }
 @media (min-width: 1023px) {
@@ -272,15 +261,22 @@ nav .links {
 .say-hello {
   border: none;
 }
+
 nav .links a {
   float: center;
   display: block;
-  padding: 0 2em;
-  font-size: 20px;
-  font-weight: 400;
-  color: #2971b6;
+  font-size: 16px;
+  font-weight: 900 !important;
+  line-height: 2em;
+  color: #0471bc !important;
+  letter-spacing: 3px !important;
   text-decoration: none;
   width: max-content !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+.links li:last-child a {
+  border-right: none;
 }
 nav .links a:hover {
   color: #eb483f !important;
@@ -296,7 +292,7 @@ nav .links a:active {
 nav .icon-burger {
   display: none;
   position: absolute !important;
-  right: 20%;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -345,7 +341,7 @@ nav .icon-burger .line {
     background-color: #f6caba;
     left: 0;
     right: 0;
-    top: 90px;
+    top: 110px;
     bottom: 100%;
     flex-direction: column;
     justify-content: space-evenly;
@@ -357,8 +353,10 @@ nav .icon-burger .line {
 
   nav .links a {
     padding: 0 1em;
+    font-weight: 700 !important;
+    color: #0471bc !important;
+    letter-spacing: 3px !important;
     font-size: 16px;
-    font-weight: 400;
   }
 
   nav :checked ~ .links {
@@ -368,17 +366,6 @@ nav .icon-burger .line {
   nav .icon-burger {
     display: block;
   }
-
-  /* nav :checked ~ .icon-burger .line:nth-child(1) {
-    transform: translateY(5px) rotate(225deg);
-  }
-
-  nav :checked ~ .icon-burger .line:nth-child(2) {
-    transform: translateY(-5px) rotate(-225deg);
-  }
-  nav :checked ~ .icon-burger .line:nth-child(3) {
-    display: none;
-  } */
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #enter_btn {
@@ -389,6 +376,11 @@ nav .icon-burger .line {
   }
 }
 @media (max-width: 768px) {
+  #container {
+    top: 17px;
+    padding: 0.5rem;
+  }
+
   #top_nav {
     /* position: fixed; */
     display: flex;
@@ -400,12 +392,13 @@ nav .icon-burger .line {
     top: 0;
     height: 100px;
   }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  nav .links a {
-    padding: 0 1.5em !important;
-    font-size: 16px;
-    font-weight: 400;
-    color: #2971b6;
+
+  nav .icon-burger {
+    right: 25px;
   }
 }
+/* @media (min-width: 1024px) and (max-width: 1439px) {
+  nav .links a {
+    padding: 0 1.5em !important;
+  }
+} */

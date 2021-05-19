@@ -68,6 +68,7 @@ AFRAME.registerComponent('hero', {
         this.scope = this.createMeshModel('scope.gltf', 'scope')
         this.scope.setAttribute('id', 'scope')
         this.scope.setAttribute('position', '0 0 -0.015')
+        this.scope.setAttribute('scale', '.9 .9 .9')
         this.scope.setAttribute('material', {
             shader: 'flat',
             color: '#f6caba'

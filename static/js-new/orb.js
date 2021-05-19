@@ -141,9 +141,9 @@ AFRAME.registerComponent('orb', {
             let thumb_src = `../assets/${project.thumb}.png`
             let thumb = this.create('a-entity')
             thumb.setAttribute('id', `thumb_${project.id}`)
-            thumb.setAttribute('position', '0 -0.002 -.029')
+            thumb.setAttribute('position', '0 -0.001 -.029')
             thumb.setAttribute('scale', '0 0 0')
-            thumb.setAttribute('geometry', {primitive: 'plane', width: .04, height: .04})
+            thumb.setAttribute('geometry', {primitive: 'plane', width: .035, height: .035})
             thumb.setAttribute('material', { src: thumb_src, shader: 'flat', transparent: false, opacity: 0, alphaTest: 0.01 })
             thumb.setAttribute('look-at', '[camera]')
             thumb.classList.add('collidable') 
@@ -276,7 +276,7 @@ AFRAME.registerComponent('orb', {
         let info_container = this.create('a-entity')
         info_container.setAttribute('id', 'info_container')
         info_container.setAttribute('scale', '.16 .16 .16')
-        info_container.setAttribute('position', '0 0.015 0.001')
+        info_container.setAttribute('position', '0 0.013 0.001')
 
         let head_text = this.create('a-entity')
         head_text.setAttribute('position', `0 ${z_pos} 0`)
@@ -325,7 +325,8 @@ AFRAME.registerComponent('orb', {
         info_container.appendChild(tag_text)
 
         let btn_container = this.create('a-entity')
-        btn_container.setAttribute('position', '0 -0.16 0.001')
+        btn_container.setAttribute('position', '0 -0.14 0.001')
+        info_container.appendChild(btn_container)
 
         btn_container.setAttribute('layout', { type: 'box', columns: 2, margin: .025, align: 'center' }) 
 
@@ -399,7 +400,6 @@ AFRAME.registerComponent('orb', {
         })
         btn_container.appendChild(close_btn)
 
-        info_container.appendChild(btn_container)
 
         return info_container
     },

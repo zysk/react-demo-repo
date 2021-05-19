@@ -10,7 +10,7 @@ module.exports = `<!DOCTYPE html>
 	<script src="https://cdn.jsdelivr.net/npm/aframe-glow@1.0.1/src/glow.min.js"></script>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/css/styles3.css">
 
 	<script src="/js-new/hero.js"></script>
@@ -23,8 +23,8 @@ module.exports = `<!DOCTYPE html>
 
 </head>
 
-<body class="position-relative">
-<div id="logo1">invi</div>
+<body id="body" >
+	<div id="logo1">invi</div>
     <div id="container">
 		<div id="logo">invi</div>
 		
@@ -86,8 +86,6 @@ module.exports = `<!DOCTYPE html>
 		</a-entity>
 
 	</a-scene>
-
-
 </body>
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
@@ -99,6 +97,18 @@ module.exports = `<!DOCTYPE html>
 			let click_drag = document.getElementById('click_drag')
 			click_drag.innerText = 'click + drag to rotate'
 		}
+
+		let doc = document.getElementsByTagName('html')[0]
+		let nav_bar_toggle = document.getElementById('nav-toggle')
+		
+		nav_bar_toggle.onclick = (e) => {
+			if (nav_bar_toggle.checked){
+				doc.style.overflow = 'hidden'
+			} else {
+				doc.style.overflow = 'visible'
+			}
+		}
+		
 	})
 
 </script>
