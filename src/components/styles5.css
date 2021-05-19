@@ -1,10 +1,7 @@
 body {
   height: 100vh !important;
   overflow-y: scroll !important;
-  position: relative !important;
-  overflow-x: hidden !important;
 }
-
 #container {
   position: absolute;
   z-index: 10;
@@ -25,6 +22,10 @@ body {
     border-right: 1px solid #0471bc;
   }
 }
+body {
+  position: relative !important;
+}
+
 .aframe-height {
   height: 100vh;
   width: 100% !important;
@@ -33,7 +34,7 @@ body {
   /* margin-top: 40px; */
   float: center;
   height: 50px;
-  margin-top: 164px;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,35 +50,34 @@ body {
   padding: 0 2%;
   height: auto;
 }
+
 #logo {
   z-index: 10;
-  position: absolute;
-  top: -41px;
-  margin-bottom: 10px;
+  left: 20;
+  top: 10;
   float: left;
-  width: 100%;
+  width: 20%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 117px;
-  font-weight: lighter !important;
-  color: #eb483f99;
-  font-family: "Lato", sans-serif;
+  font-size: 70px;
+  font-weight: 200;
+  color: #eb483f;
 }
-
 #logo1 {
   z-index: 10;
   position: absolute;
-  top: -41px;
+  top: -15px;
   margin-bottom: 10px;
   float: left;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 117px;
+  font-size: 65px;
   font-weight: lighter !important;
-  color: #eb483f99;
+  color: #eb483f;
   font-family: "Lato", sans-serif;
 }
 @media (min-width: 1023px) {
