@@ -99,13 +99,16 @@ module.exports = `<!DOCTYPE html>
 		}
 
 		let doc = document.getElementsByTagName('html')[0]
+		let cont = document.getElementById('container')
 		let nav_bar_toggle = document.getElementById('nav-toggle')
 		
 		nav_bar_toggle.onclick = (e) => {
 			if (nav_bar_toggle.checked){
-				doc.style.overflow = 'hidden'
+				doc.style.overflow = 'hidden';
+				cont.style.position = 'absolute';
 			} else {
-				doc.style.overflow = 'visible'
+				doc.style.overflow = 'visible';
+				cont.style.position = 'fixed';
 			}
 		}
 		

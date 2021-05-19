@@ -1,6 +1,11 @@
+html,
+body {
+  overflow-x: hidden !important;
+}
 body {
   height: 100vh !important;
   overflow-y: scroll !important;
+  position: relative !important;
 }
 #container {
   position: absolute;
@@ -14,16 +19,16 @@ body {
   display: flex;
   align-items: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
   #container {
     justify-content: center;
   }
   nav .links a {
     border-right: 1px solid #0471bc;
   }
-}
-body {
-  position: relative !important;
+  body {
+    position: relative !important;
+  }
 }
 
 .aframe-height {
