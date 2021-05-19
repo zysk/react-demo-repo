@@ -11,12 +11,12 @@ module.exports = `<!DOCTYPE html>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/css/styles3.css">
+	<link rel="stylesheet" href="/css/styles4.css">
 
-	<script src="/js-new/hero.js"></script>
-	<script src="/js-new/stars.js"></script>
-	<script src="/js-new/orb.js"></script>
-	<script src="/js-new/lighting.js"></script>
+	<script src="/js-aframe/hero.js"></script>
+	<script src="/js-aframe/stars.js"></script>
+	<script src="/js-aframe/orb.js"></script>
+	<script src="/js-aframe/lighting.js"></script>
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
 		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
