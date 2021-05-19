@@ -105,10 +105,10 @@ module.exports = `<!DOCTYPE html>
 		nav_bar_toggle.onclick = (e) => {
 			if (nav_bar_toggle.checked){
 				doc.style.overflow = 'hidden';
-				cont.style.position = 'absolute';
+				cont.style.position = 'fixed';
 			} else {
 				doc.style.overflow = 'visible';
-				cont.style.position = 'fixed';
+				cont.style.position = 'absolute';
 			}
 		}
 		
