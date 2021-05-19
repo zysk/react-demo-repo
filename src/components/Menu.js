@@ -8,10 +8,12 @@ const Navbar = ({ className }) => {
   return (
     <>
       <Header />
-      <a className="navbar-brand logo text-center w-100 home-nav" href="/">
+      <a className="navbar-brand logo text-center w-100 home-nav " href="/">
+        {" "}
+        {/* <span className="nav-logo">invi</span> */}
         <img src={img} alt="Invi Logo" width="150" />
       </a>
-      <nav className="navbar navbar-expand-lg navbar-dark container-fluid py-3">
+      <nav className="navbar navbar-expand-lg navbar-dark container-fluid pb-3">
         <a className="navbar-brand d-lg-none" href="/">
           <img src={img} alt="Invi Logo" width="150" />
         </a>

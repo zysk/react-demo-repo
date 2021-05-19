@@ -295,7 +295,10 @@ a:hover {
   .navbar-brand {
     z-index: 999;
   }
-
+  .nav-logo {
+    color: #eb483f !important;
+    font-size: 117px !important;
+  }
   .navbar-dark .navbar-toggler-icon {
     color: #0471bc !important;
     font-size: 25px;
