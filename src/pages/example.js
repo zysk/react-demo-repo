@@ -9,7 +9,7 @@ import Image from "gatsby-image"
 import SEO from "../components/seo"
 import { FaArrowRight } from "react-icons/fa"
 
-var __html = require("../../static/aframe.html.js")
+var __html = require("../../static/example.html.js")
 var template = { __html: __html }
 
 const ScreenShare = ({ data }) => {
