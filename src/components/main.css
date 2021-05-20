@@ -14,12 +14,21 @@ body,
   background-color: #f6caba;
   font-weight: 300 !important;
 }
-
+body,
+.about,
+.contact,
+.services,
+.works,
+.stories,
+.projects {
+  height: 100vh !important;
+  /* overflow-y: scroll; */
+}
 /* h2 {
   font-weight: 300 !important;
 } */
 .custom-toggler.navbar-toggler {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 @media (min-width: 768px) {
   .aframe-img {
@@ -366,7 +375,7 @@ a:hover {
   color: #0471bc !important;
   letter-spacing: 3px !important;
 }
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .navbar-dark .navbar-nav .nav-link {
     border-right: none !important;
     padding: 2rem 0;
@@ -390,8 +399,8 @@ a:hover {
   }
 }
 .navbar-dark .navbar-toggler-icon {
-  color: rgb(4, 113, 188);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%284, 113, 188%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  color: rgb(4, 113, 188) !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%284, 113, 188%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 .line {
   width: 30px;
