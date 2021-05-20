@@ -27,7 +27,40 @@ module.exports = `<!DOCTYPE html>
 </head>
 
 <body id="body" >
-	
+	<div id="logo1"><img src="/css/invi-logo.png" alt="Invi Logo" width="150" /></div>
+    <div id="container">
+		<div id="logo"><img src="/css/invi-logo.png" alt="Invi Logo" width="150" /></div>
+		
+		<nav id="top_nav">
+			<input id="nav-toggle" type="checkbox">
+			<ul class="links" >
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/about">About</a>
+				</li>
+				<li>
+					<a href="/services">Services</a>
+				</li>
+				<li>
+					<a href="/stories">Stories</a>
+				</li>
+				<li>
+					<a href="/works/">Works</a>
+				</li>
+				<li>
+					<a href="/say-hello" class="say-hello">Say hello</a>
+				</li>
+                
+			</ul>
+			<label for="nav-toggle" class="icon-burger">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</label>
+		</nav>
+	</div>
 	<div id="hero_text" class="position-absolute  d-flex justify-content-center w-100 text-center flex-column align-items-center  my-auto">
    
             <p class="text-uppercase text-center headline" id="headline">We are designers of <br class="d-sm-none d-lg-block"/>virtual experiences</p>

@@ -14,16 +14,7 @@ body,
   background-color: #f6caba;
   font-weight: 300 !important;
 }
-body,
-.about,
-.contact,
-.services,
-.works,
-.stories,
-.projects {
-  height: 100vh !important;
-  /* overflow-y: scroll; */
-}
+
 /* h2 {
   font-weight: 300 !important;
 } */
