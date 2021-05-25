@@ -24,7 +24,7 @@ module.exports = `<!DOCTYPE html>
 </head>
 
 <body id="body" >
-	<a id="scroll_down" href="#"></a>
+	
 
 	<div id="aframe_container">
 		<a-scene embedded class="aframe-height" renderer="colorManagement: true; highRefreshRate: true"

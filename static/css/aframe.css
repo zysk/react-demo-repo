@@ -4,7 +4,7 @@ body {
   z-index: 1;
 }
 .aframe-height {
-  height: 90vh !important;
+  height: 50vh !important;
   width: 100%;
 }
 #aframe_container {
