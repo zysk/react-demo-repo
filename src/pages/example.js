@@ -20,9 +20,9 @@ const ScreenShare = ({ data }) => {
       <div className="screen-share ">
         <span dangerouslySetInnerHTML={template} />
       </div>
-      <div className="text-center">
+      <div className="text-center position-relative w-100">
         {" "}
-        <a href="#next-section" className="text-center position-relative w-100">
+        <a href="#next-section" className="text-center">
           <FaChevronDown className="scroll-down-icon" />
         </a>{" "}
       </div>

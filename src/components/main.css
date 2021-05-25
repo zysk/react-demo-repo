@@ -1,6 +1,6 @@
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 body,
 .home,
@@ -16,7 +16,7 @@ body,
 }
 .scroll-down-icon {
   position: absolute;
-  top: 75vh;
+  top: -10vh;
   font-size: 30px;
 }
 /* h2 {
