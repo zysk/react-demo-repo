@@ -14,7 +14,10 @@ body,
   background-color: #f6caba;
   font-weight: 300 !important;
 }
-
+.scroll-down-icon {
+  top: 95vh;
+  font-size: 30px;
+}
 /* h2 {
   font-weight: 300 !important;
 } */

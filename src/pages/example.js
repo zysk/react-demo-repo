@@ -8,23 +8,23 @@ import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import SEO from "../components/seo"
 import { FaArrowRight } from "react-icons/fa"
-
+import { FaChevronDown } from "react-icons/fa"
 var __html = require("../../static/home.html.js")
 var template = { __html: __html }
 
 const ScreenShare = ({ data }) => {
   return (
     <div className="home">
-      {/* <Helmet>
-        <meta httpEquiv="cache-control" content="no-cache" />
-        <meta httpEquiv="expires" content="-1" />
-       
-      </Helmet> */}
-      {/* <Navbar className="Home" /> */}
       <SEO title="Home" />
       <TopMenu />
       <div className="screen-share ">
         <span dangerouslySetInnerHTML={template} />
+      </div>
+      <div className="text-center">
+        {" "}
+        <a href="#next-section" className="text-center ">
+          <FaChevronDown className="scroll-down-icon" />
+        </a>{" "}
       </div>
 
       <section className="container py-5 " id="next-section">

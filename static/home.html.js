@@ -44,9 +44,7 @@ module.exports = `<!DOCTYPE html>
 
 		</a-scene>
 	</div>
-	<section id="next-section">
 	
-	</section>
 </body>
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
