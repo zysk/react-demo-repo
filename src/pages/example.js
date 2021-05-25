@@ -22,7 +22,7 @@ const ScreenShare = ({ data }) => {
       </div>
       <div className="text-center">
         {" "}
-        <a href="#next-section" className="text-center ">
+        <a href="#next-section" className="text-center position-relative w-100">
           <FaChevronDown className="scroll-down-icon" />
         </a>{" "}
       </div>

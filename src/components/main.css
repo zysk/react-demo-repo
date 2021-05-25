@@ -15,7 +15,8 @@ body,
   font-weight: 300 !important;
 }
 .scroll-down-icon {
-  top: 95vh;
+  position: absolute;
+  top: 75vh;
   font-size: 30px;
 }
 /* h2 {
