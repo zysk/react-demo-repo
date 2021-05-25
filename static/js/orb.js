@@ -76,6 +76,9 @@ AFRAME.registerComponent('orb', {
             let scale_out = { property: 'scale', to: '4 4 4', dur: 5000, loop: 'false', easing: 'easeInOutCirc'}
             this.scope = document.getElementById('scope')
             // this.scope.setAttribute('animation', scale_out)
+
+            
+           
             
             let clouds_scale_out = { property: 'scale', form: '.3 .3 .3' , to: '10 10 10', dur: 3000, loop: 'false'}
             this.clouds.setAttribute('animation__scale-out', clouds_scale_out)
@@ -104,6 +107,7 @@ AFRAME.registerComponent('orb', {
         this.home.setAttribute('material', { transparent: true, opacity: '0.01', blending: 'normal', emissive: '#e64c4c', shader: 'standard', color: '#eab49f' })
 
         this.home.appendChild(this.home_orb)
+
 
         this.el.appendChild(this.home)
         this.el.appendChild(this.clouds)
@@ -173,10 +177,8 @@ AFRAME.registerComponent('orb', {
 
             let max_width
             
-            console.log('len', project.text.title.length)
             if(project.text.title.length > 10){
                 max_width = .5
-                console.log()
             } else {
                 max_width = 1
             }

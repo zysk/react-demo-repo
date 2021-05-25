@@ -22,12 +22,12 @@ const ScreenShare = ({ data }) => {
       </Helmet> */}
       {/* <Navbar className="Home" /> */}
       <SEO title="Home" />
-      {/* <TopMenu /> */}
+      <TopMenu />
       <div className="screen-share ">
         <span dangerouslySetInnerHTML={template} />
       </div>
 
-      <section className="container py-5 ">
+      <section className="container py-5 " id="next-section">
         <h1 className="text-center title">{data.home.title}</h1>
         <div className="row justify-content-between align-items-center py-5">
           <div className="col-md-6 text-center text-md-left">
