@@ -14,7 +14,7 @@ module.exports = `<!DOCTYPE html>
 	href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap"
 	rel="stylesheet"
   />
-	<link rel="stylesheet" href="/css/aframe.css">
+	<link rel="stylesheet" href="/css/home.css">
 
 	<script src="/js-1/hero.js"></script>
 	<script src="/js-1/stars.js"></script>
