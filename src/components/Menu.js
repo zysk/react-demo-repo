@@ -24,8 +24,8 @@ const Navbar = ({ className }) => {
         {/* <span className="nav-logo">invi</span> */}
         <img src={img} alt="Invi Logo" width="150" />
       </a>
-      <nav className="navbar navbar-expand-lg navbar-dark container-fluid pb-3">
-        <a className="navbar-brand d-lg-none" href="/">
+      <nav className="navbar navbar-expand-xl navbar-dark container-fluid pb-3">
+        <a className="navbar-brand d-xl-none" href="/">
           <img src={img} alt="Invi Logo" width="150" />
         </a>
         <button

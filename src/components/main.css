@@ -14,18 +14,13 @@ body,
   background-color: #f6caba;
   font-weight: 300 !important;
 }
-.navbar-height {
-  height: 100vh;
-  overflow: hidden;
-}
+
 .scroll-down-icon {
   position: absolute;
   top: -15vh;
   font-size: 30px;
 }
-/* h2 {
-  font-weight: 300 !important;
-} */
+
 .custom-toggler.navbar-toggler {
   border-color: transparent !important;
 }
@@ -175,12 +170,7 @@ video {
     height: 400px;
   }
 }
-/* .virtual-video {
-  background-image: url("../images/Virtualworld.jpg") center no-repeat;
-}
-.animation-video {
-  background-image: url("../images/animation-services\).jpg") center no-repeat;
-} */
+
 video:hover {
   cursor: pointer;
 }
@@ -282,7 +272,16 @@ a:hover {
   text-decoration: none !important;
   color: #eb483f !important;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
+  .navbar .navbar-collapse.collapse {
+    overflow: hidden;
+    height: 100vh;
+    background-color: #f6caba;
+    transition: all 200ms ease;
+  }
+}
+/* 
+@media (max-width: 1199px) {
   .navbar .navbar-collapse {
     background-color: #f6caba;
     opacity: 0;
@@ -298,6 +297,7 @@ a:hover {
     align-content: center;
     text-align: center !important;
     z-index: 1;
+    overflow: hidden;
   }
   .navbar .navbar-toggler,
   .navbar-brand {
@@ -346,16 +346,18 @@ a:hover {
     top: 0px;
     transform: translateY(0);
     pointer-events: auto;
+    position: fixed;
+    overflow: hidden;
+    height: 100vh;
   }
   .navbar .navbar-collapse .navbar-nav {
     margin-right: initial !important;
-    /* margin-top: auto;
-    margin-bottom: auto; */
+   
   }
   .say-hello {
     border-right: none !important;
   }
-}
+} */
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
@@ -375,7 +377,13 @@ a:hover {
   color: #0471bc !important;
   letter-spacing: 3px !important;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
+  .navbar-dark .navbar-nav .nav-link {
+    border-right: none !important;
+    padding: 2.5rem 0;
+  }
+}
+@media (max-width: 768px) {
   .navbar-dark .navbar-nav .nav-link {
     border-right: none !important;
     padding: 2rem 0;
@@ -393,7 +401,7 @@ a:hover {
 .fa-google {
   font-size: 1.3em !important;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .home-nav {
     display: none !important;
   }
@@ -514,8 +522,8 @@ footer .fab {
     max-height: 568.04px;
   }
 }
-@media (min-width: 992px) {
-  .navbar-expand-lg .navbar-nav .nav-link {
+@media (min-width: 1199px) {
+  .navbar-expand-xl .navbar-nav .nav-link {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
