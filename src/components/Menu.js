@@ -1,10 +1,20 @@
-import React from "react"
+import React, { useState } from "react"
 import Header from "./header"
 import img from "../images/invi-logo.png"
 import "./main.css"
-
 import { Link } from "gatsby"
 const Navbar = ({ className }) => {
+  const [btnClick, SetBtnClick] = useState(true)
+  const onToggleClick = e => {
+    console.log(btnClick)
+    SetBtnClick(value => !value)
+    if (btnClick === true) {
+      console.log("Btn")
+      document.body.classList.add("navbar-height")
+    } else {
+      document.body.classList.remove("navbar-height")
+    }
+  }
   return (
     <>
       <Header />
@@ -25,6 +35,7 @@ const Navbar = ({ className }) => {
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={onToggleClick}
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,7 +44,8 @@ const Navbar = ({ className }) => {
             <li className="nav-item ">
               <Link
                 to="https://www.invi.us/"
-                // activeClassName="active"
+                activeClassName="active"
+                activeStyle={{ color: "#eb483f" }}
                 className="nav-link"
                 refresh="true"
               >

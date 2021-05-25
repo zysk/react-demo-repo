@@ -10,7 +10,10 @@ module.exports = `<!DOCTYPE html>
 	<script src="https://cdn.jsdelivr.net/npm/aframe-glow@1.0.1/src/glow.min.js"></script>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700;900&display=swap" rel="stylesheet">
+	<link
+	href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap"
+	rel="stylesheet"
+  />
 	<link rel="stylesheet" href="/css/aframe.css">
 
 	<script src="/js-1/hero.js"></script>

@@ -14,9 +14,13 @@ body,
   background-color: #f6caba;
   font-weight: 300 !important;
 }
+.navbar-height {
+  height: 100vh;
+  overflow: hidden;
+}
 .scroll-down-icon {
   position: absolute;
-  top: -15vh;
+  top: -15px;
   font-size: 30px;
 }
 /* h2 {
@@ -326,6 +330,7 @@ a:hover {
     top: 0;
     transform: translateY(0);
     height: 100vh !important;
+    overflow: hidden !important;
   }
 
   .navbar .navbar-collapse.collapsing {
