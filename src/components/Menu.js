@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Header from "./header"
 import img from "../images/invi-logo.png"
 import "./main.css"
@@ -15,6 +15,9 @@ const Navbar = ({ className }) => {
       document.body.classList.remove("navbar-height")
     }
   }
+  useEffect(() => {
+    onToggleClick()
+  }, [])
   return (
     <>
       <Header />
@@ -35,7 +38,7 @@ const Navbar = ({ className }) => {
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          onClick={onToggleClick}
+          // onChange={onToggleClick}
         >
           <span class="navbar-toggler-icon"></span>
         </button>
