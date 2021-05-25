@@ -20,7 +20,7 @@ body,
 }
 .scroll-down-icon {
   position: absolute;
-  top: -15px;
+  top: -15vh;
   font-size: 30px;
 }
 /* h2 {
