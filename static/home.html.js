@@ -30,7 +30,7 @@ module.exports = `<!DOCTYPE html>
 			vr-mode-ui="enabled: false" background="color: #ced4da" raycaster="objects: .collidable"
 			cursor="rayOrigin:mouse; fuse:false">
 
-			<a-entity embedded class="collidable aframe-height">
+			<a-entity  class="collidable ">
 				<a-sky id="sky" visible="false" radius="200" theta-length="180"
 				material="shader: gradientshader; topColor: #5582ec; bottomColor: #f2c4c4"></a-sky>
 				<a-entity id="orb" orb position="0 0 0"></a-entity>
@@ -64,10 +64,5 @@ module.exports = `<!DOCTYPE html>
 	})
 
 </script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-	crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-	crossorigin="anonymous"></script>
+
 </html>`
