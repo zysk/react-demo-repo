@@ -4,6 +4,8 @@ body {
   z-index: 1;
 }
 .aframe-height {
+  z-index: 0 !important;
+  margin-top: -20px !important;
   height: 90vh !important;
   width: 100%;
 }

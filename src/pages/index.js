@@ -16,7 +16,10 @@ const ScreenShare = ({ data }) => {
   return (
     <div className="home">
       <SEO title="Home" />
-      <TopMenu />
+      <div style={{ zIndex: "333" }}>
+        <TopMenu />
+      </div>
+
       <div className="screen-share ">
         <span dangerouslySetInnerHTML={template} />
       </div>
