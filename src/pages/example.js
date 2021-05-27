@@ -16,7 +16,10 @@ const ScreenShare = ({ data }) => {
   return (
     <div className="home">
       <SEO title="Home" />
-      <TopMenu />
+      <div className="position-absolute w-100">
+        <TopMenu />
+      </div>
+
       <div className="screen-share ">
         <span dangerouslySetInnerHTML={template} />
       </div>
