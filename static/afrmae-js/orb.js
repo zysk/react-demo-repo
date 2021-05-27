@@ -102,7 +102,7 @@ AFRAME.registerComponent('orb', {
         this.home = this.createModel('home_2.glb', 'home')
         this.home.setAttribute('id', 'home')
         this.home.setAttribute('rotation', '0 30 0')
-        this.home.setAttribute('position', '-0.1 .3 -4')
+        this.home.setAttribute('position', '-0.1 .4 -4')
         this.home.setAttribute('visible', 'true')
         this.home.setAttribute('material', { transparent: true, opacity: '0.01', blending: 'normal', emissive: '#e64c4c', shader: 'standard', color: '#eab49f' })
 
@@ -117,7 +117,7 @@ AFRAME.registerComponent('orb', {
         this.rings_array = this.createMeshModel('rings.gltf', 'rings')
         this.rings_array.setAttribute('id', 'rings_array')
         this.rings_array.setAttribute('visible', 'true')
-        this.rings_array.setAttribute('position', '0 -0.25 4.1')
+        this.rings_array.setAttribute('position', '0 -0.2 4.1')
         this.rings_array.setAttribute('scale', '.1 .1 .1')
         this.rings_array.setAttribute('rotation', '0 0 0')
         this.rings_array.setAttribute('material', {color: '#ffab8a', opacity: 1, depthWrite: false, depthTest:false})

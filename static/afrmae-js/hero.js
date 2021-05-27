@@ -9,7 +9,7 @@ AFRAME.registerComponent('hero', {
 
         this.scope = this.createMeshModel('scope.gltf', 'scope')
         this.scope.setAttribute('id', 'scope')
-        this.scope.setAttribute('position', '0 0 -0.015')
+        this.scope.setAttribute('position', '0 0.004 -0.015')
         this.scope.setAttribute('scale', '.9 .9 .9')
         this.scope.setAttribute('material', { shader: 'flat', color: '#f6caba' })
 
@@ -108,7 +108,7 @@ AFRAME.registerComponent('hero', {
                 this.enter_btn.setAttribute('style', 'display: none')
             }, 700);
 
-            let home_slide_in = "property: position; from: -0.1 .3 -5; to: -0.1 .3 -2.25; dur: 2800; loop: false; easing: linear; "
+            let home_slide_in = "property: position; from: -0.1 .4 -5; to: -0.1 .4 -2.25; dur: 2800; loop: false; easing: linear; "
             let fade_in = { property: 'material.opacity', from: '0', to: '.5', dur: 5000, loop: 'false', }
             this.home.setAttribute('animation', fade_in)
             setTimeout(function(){ 
