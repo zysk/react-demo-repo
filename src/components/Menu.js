@@ -4,18 +4,6 @@ import img from "../images/invi-logo.png"
 import "./main.css"
 import { Link } from "gatsby"
 const Navbar = ({ className }) => {
-  // const [btnClick, SetBtnClick] = useState(true)
-  // const onToggleClick = e => {
-  //   console.log(btnClick)
-  //   SetBtnClick(value => !value)
-  //   if (btnClick === true) {
-  //     console.log("Btn")
-  //     document.body.classList.add("navbar-height")
-  //   } else {
-  //     document.body.classList.remove("navbar-height")
-  //   }
-  // }
-
   return (
     <>
       <Header />
