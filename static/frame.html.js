@@ -13,10 +13,10 @@ module.exports = `<!DOCTYPE html>
 	rel="stylesheet"
   />
 	<link rel="stylesheet" href="/css/aframe-index.css">
-	<script src="/js-aframe-files/hero.js"></script>
-	<script src="/js-aframe-files/stars.js"></script>
-	<script src="/js-aframe-files/orb.js"></script>
-	<script src="/js-aframe-files/lighting.js"></script>
+	<script src="/js-frame-files/hero.js"></script>
+	<script src="/js-frame-files/stars.js"></script>
+	<script src="/js-frame-files/orb.js"></script>
+	<script src="/js-frame-files/lighting.js"></script>
 	
 </head>
 <body id="body" >
