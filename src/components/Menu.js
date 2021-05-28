@@ -12,7 +12,7 @@ const Navbar = ({ className }) => {
         {/* <span className="nav-logo">invi</span> */}
         <img src={img} alt="Invi Logo" width="150" />
       </a>
-      <nav className="navbar navbar-expand-xl navbar-dark container-fluid pb-3">
+      <nav className="navbar navbar-expand-xl navbar-dark container-fluid py-3">
         <a className="navbar-brand d-xl-none" href="/">
           <img src={img} alt="Invi Logo" width="150" />
         </a>
